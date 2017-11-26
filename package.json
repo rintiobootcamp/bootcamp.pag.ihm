@@ -17,8 +17,13 @@
   },
   "homepage": "https://gitlab.com/hercege/monpag#README",
   "dependencies": {
-    "angular": "^1.6.7",
+    "@uirouter/angularjs": "^1.0.7",
+    "angular": "~1.6.2",
     "angular-material": "^1.1.5",
-    "angular-ui-router": "^0.2.18"
+    "angular-resource": "^1.6.7"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1"
   }
 }
