@@ -1,0 +1,24 @@
+{
+  "name": "monpag",
+  "version": "1.0.0",
+  "description": "Rintio project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/hercege/monpag.git"
+  },
+  "author": "rintio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/hercege/monpag/issues"
+  },
+  "homepage": "https://gitlab.com/hercege/monpag#README",
+  "dependencies": {
+    "angular": "^1.6.7",
+    "angular-material": "^1.1.5",
+    "angular-ui-router": "^0.2.18"
+  }
+}
