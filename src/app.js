@@ -33,12 +33,28 @@
                     label: 'Pilier'
                 }
             })
-            .state('axe', {
-                url: "/pilier/:idPilier/axe/:idAxe",
-                controller: "SiteOnePilierCtrl",
-                templateUrl: "views/site/piliers/pilier.html",
+            .state('axes', {
+                url: "/axes",
+                controller: "SiteAxesCtrl",
+                templateUrl: "views/site/axes/axes.html",
                 ncyBreadcrumb: {
-                    label: 'Pilier'
+                    label: 'Axes'
+                }
+            })
+            .state('secteurs', {
+                url: "/secteurs",
+                controller: "SiteSecteursCtrl",
+                templateUrl: "views/site/secteurs/secteurs.html",
+                ncyBreadcrumb: {
+                    label: 'Secteurs'
+                }
+            })
+            .state('projets', {
+                url: "/projets",
+                controller: "SiteProjetsCtrl",
+                templateUrl: "views/site/projets/projets.html",
+                ncyBreadcrumb: {
+                    label: 'Projets'
                 }
             })
 

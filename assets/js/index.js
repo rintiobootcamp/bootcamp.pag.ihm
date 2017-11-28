@@ -1,7 +1,7 @@
 $(document).ready(function() {
-    /*$('.slider').slider({
+    $('.slider').slider({
       full_width: true
-    });*/
+    });
     $(".button-collapse").sideNav();
     $('.modal').modal();
     //$('#login-modal').modal('open');
