@@ -12,6 +12,13 @@ angular.module('pag-site')
                     method: 'GET',
                     url: API.url + '/piliers.json'
                 });
-            }
+            },
+            listOther: function (){
+                return $http({
+                    method: 'GET',
+                    url: API.url + '/piliers.json'
+                });
+            },
+            
         }
     })

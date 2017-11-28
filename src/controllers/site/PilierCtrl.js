@@ -11,9 +11,20 @@ angular.module('pag-site')
         getListPiliers();
         
     })
-    .controller("SitePilierCtrl", function(ModelPilier, $scope) {
+    .controller("SiteOnePilierCtrl", function(ModelPilier, $scope,$stateParams){
+
         var getListPiliers = function () {
-            ModelPilier.get()
+            ModelPilier.list()
+                .then( function(data) {
+                    $scope.listPiliers = data.data;
+                }, function (error) {
+                    console.log(error);
+                });
+        }
+        getListPiliers();
+
+        var getPilier = function (id){
+            ModelPilier.get(id)
                 .then( function(data) {
                     console.log(data.data);
                     $scope.pilier = data.data;
@@ -21,7 +32,7 @@ angular.module('pag-site')
                     console.log(error);
                 });
         }
-        getListPiliers();
+        getPilier($stateParams.id);
     })
     ;
 

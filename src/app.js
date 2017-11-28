@@ -1,6 +1,6 @@
 (function() {
         'use strict';
-    angular.module('pag-site', ["ui.router","ngResource"])
+    angular.module('pag-site', ["ui.router","ngResource","ngMaterial","ncy-angular-breadcrumb"])
     .config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
 
         $urlRouterProvider.otherwise("/");
@@ -10,19 +10,36 @@
             .state('home', {
                 url: "/",
                 controller: "SiteHomeCtrl",
-                templateUrl: "views/site/home.html"
+                templateUrl: "views/site/home/home.html",
+                ncyBreadcrumb: {
+                    label: 'Accueil'
+                }
             })
 
             .state('piliers', {
                 url: "/piliers",
                 controller: "SitePiliersCtrl",
-                templateUrl: "views/site/piliers.html"
+                templateUrl: "views/site/piliers/piliers.html",
+                ncyBreadcrumb: {
+                    label: 'Piliers'
+                }
             })
 
             .state('pilier', {
-                url: "/pilier",
-                controller: "SitePilierCtrl",
-                templateUrl: "views/site/pilier.html"
+                url: "/pilier/:id",
+                controller: "SiteOnePilierCtrl",
+                templateUrl: "views/site/piliers/pilier.html",
+                ncyBreadcrumb: {
+                    label: 'Pilier'
+                }
+            })
+            .state('axe', {
+                url: "/pilier/:idPilier/axe/:idAxe",
+                controller: "SiteOnePilierCtrl",
+                templateUrl: "views/site/piliers/pilier.html",
+                ncyBreadcrumb: {
+                    label: 'Pilier'
+                }
             })
 
             ; // End stateProvider

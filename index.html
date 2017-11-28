@@ -6,9 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>monPAG</title>
   <link rel="shortcut icon" href="favicon.ico">
-  <link type="text/css" rel="stylesheet" href="assets/css/style.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="/node_modules/angular-material/angular-material.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="/assets/css/style.min.css"  media="screen,projection"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <base href="/monpag/">
+  <base href="/">
 </head>
 <body ng-app="pag-site">
 
@@ -18,24 +19,31 @@
 
   <div ng-include="'views/site/footer.html'"></div>
 
-  <!-- AngularJs core -->
-  <script src="node_modules/angular/angular.js"></script>
-
   <!-- Others dependencies-->
-  <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
-  <script src="node_modules/angular-material/angular-material.js"></script>
-  <script src="node_modules/angular-resource/angular-resource.js"></script>
+  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="/assets/js/index.js"></script>
+
+  <!-- node_modules dependencies-->
+
+    <!-- AngularJs core -->
+    <script src="/node_modules/angular/angular.js"></script>
+
+    <script src="/node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
+    <script src="/node_modules/angular-animate/angular-animate.js"></script>
+    <script src="/node_modules/angular-aria/angular-aria.js"></script>
+    <script src="/node_modules/angular-messages/angular-messages.js"></script>
+    <script src="/node_modules/angular-material/angular-material.js"></script>
+    <script src="/node_modules/angular-resource/angular-resource.js"></script>
+    <script src="/node_modules/angular-breadcrumb/dist/angular-breadcrumb.js"></script>
 
   <!-- Core application -->
     <!-- CONTROLLERS -->
-    <script src="src/app.js"></script>
+    <script src="/src/app.js"></script>
 
-    <script src="src/controllers/site/HomeCtrl.js"></script>
-    <script src="src/controllers/site/PilierCtrl.js"></script>
+    <script src="/src/controllers/site/HomeCtrl.js"></script>
+    <script src="/src/controllers/site/PilierCtrl.js"></script>
 
-    <script src="src/constantes/api.js"></script>
-    <script src="src/services/Factory.js"></script>
-    
-
-    
+    <script src="/src/constantes/api.js"></script>
+    <script src="/src/services/Factory.js"></script>
+  
 </body>

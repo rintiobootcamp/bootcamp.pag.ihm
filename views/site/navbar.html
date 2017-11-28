@@ -1,105 +1,126 @@
-  <!-- Static template header -->
 <div class="navbar-fixed">
-    <nav class="no-shadow">
-        <div class="nav-wrapper container">
-        <a ui-sref="home" ui-sref-opts="{reload: true}" class="brand-logo">mon<b>PAG</b></a>
-        <a href="#!"  class="button-collapse menu right valign navbar-toggle" data-activates="mobile-demo">
-            <span class="sr-only"></span>
-            <span class="icon-bar first-bar"></span>
-            <span class="icon-bar second-bar"></span>
-            <span class="icon-bar third-bar"></span>
-        </a>
-        <ul class="right hide-on-med-and-down">
-            <li><a href="assets/docs/synthese-pag-benin-revele.pdf" target="_blank"><i class="material-icons left">attachment</i>Le PAG</a></li>
-            <li><a ui-sref="piliers" ui-sref-opts="{reload: true}"><i class="material-icons left">account_balance</i>Les piliers</a></li>
-            <li><a href="index.php?page=projets"><i class="material-icons left">folder_open</i>Les projets</a></li>
-            <li><a class="" href="#!"><i class="material-icons left">exit_to_app</i>Connexion</a></li>
+        <nav class="white">
+          <div class="nav-wrapper container">
+            <ul class="right hide-on-med-and-down">
+            <li><a class="" href="chat.php"><i class="material-icons left">forum</i>Chat</a></li>
+              <li><a class="" href="index.php?page=login"><i class="material-icons left">exit_to_app</i>Connexion</a></li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="no-shadow main">
+          <div class="nav-wrapper container">
+            <a href="index.php" class="brand-logo">mon<b>PAG</b></a>
+            <a href="#!"  class="button-collapse menu right valign navbar-toggle" data-activates="mobile-demo">
+              <span class="sr-only"></span>
+              <span class="icon-bar first-bar"></span>
+              <span class="icon-bar second-bar"></span>
+              <span class="icon-bar third-bar"></span>
+            </a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="index.php"><i class="material-icons left">home</i>Accueil</a></li>
+              <li><a href="index.php?page=piliers" class="dropdown-button" href="#!" data-activates="pag-dropdown" data-beloworigin="true" data-hover="true"><i class="material-icons left">account_balance</i>Le Programme</a></li>
+                <li><a class="dropdown-button" href="#!" data-activates="download-dropdown" data-beloworigin="true" data-hover="true"><i class="material-icons left">file_download</i>Téléchargements</a></li>
+            </ul>
+          </div>
+        </nav>
+      
+        <ul id='account_dropdown' class='dropdown-content'>
+          <li><a href="#login-modal" class="modal-trigger">Connexion</a></li>
         </ul>
-        </div>
-    </nav>
-    
-    <ul id='account_dropdown' class='dropdown-content'>
-        <!--li><a href="#!">Connexion</a></li-->
-        <li><a href="#login-modal" class="modal-trigger">Connexion</a></li>
-    </ul>
-</div>
-    
-    <ul class="side-nav" id="">
-    <li><a href="assets/docs/synthese-pag-benin-revele.pdf" target="_blank"><i class="material-icons left">attachment</i>Le PAG</a></li>
-    <li><a ui-sref="piliers" ui-sref-opts="{reload: true}"><i class="material-icons left">account_balance</i>Les piliers</a></li>
-    <li><a href="index.php?page=projets"><i class="material-icons left">folder_open</i>Les projets</a></li>
-    <li><a class="" href="#!"><i class="material-icons left">exit_to_app</i>Connexion</a></li>
-    </ul>
-    
-    <ul class="collapsible no-shadow side-nav" data-collapsible="accordion" id="mobile-demo">
-    <li>
-        <a href="assets/docs/synthese-pag-benin-revele.pdf" target="_blank" class="collapsible-header "><i class="material-icons left" style="margin-right: 16px">attachment</i>Le PAG</a>
-    </li>
-    <li class="divider no-margin"></li>
-    <li>
-        <div class="collapsible-header "><i class="material-icons">account_balance</i>Les piliers</div>
-        <div class="collapsible-body no-padding-but-left">
-        <ul class="collapsible no-margin no-shadow no-border" data-collapsible="accordion">
-            <li>
-            <a href="index.php?page=pilier&number=1" class="collapsible-header teal-text text-pag left-align"><i class="material-icons left">looks_one</i>Pilier 1</a>
-            </li>
-            <li class="divider no-margin"></li>
-            <li>
-            <a href="index.php?page=pilier&number=2" class="collapsible-header teal-text text-pag left-align"><i class="material-icons left">looks_two</i>Pilier 2</a>
-            </li>
-            <li class="divider no-margin"></li>
-            <li>
-            <a href="index.php?page=pilier&number=3" class="collapsible-header teal-text text-pag left-align"><i class="material-icons left">looks_3</i>Piier 3</a>
-            </li>
-        </ul>
-        </div>
-    </li>
-    <li class="divider no-margin"></li>
-    <li>
-        <div class="collapsible-header "><i class="material-icons">folder_open</i>Les projets</div>
-        <div class="collapsible-body no-padding-but-left">
-        <ul class="collapsible no-margin no-shadow no-border" data-collapsible="accordion">
-            <li>
-            <a href="index.php?page=projet&type=agriculture-1" class="collapsible-header left-align"><i class="material-icons">local_florist</i>AGRICULTURE</a>
-            </li>
-            <li class="divider no-margin"></li>
-            <li>
-            <a href="index.php?page=projet&type=cdv-1" class="collapsible-header left-align"><i class="material-icons">location_city</i>CADRE DE VIE</a>
-            </li>
-            <li class="divider no-margin"></li>
-            <li>
-            <a href="index.php?page=projet&type=ciis-1" class="collapsible-header left-align"><i class="material-icons">local_library</i>CIIS</a>
-            </li>
-            <li class="divider no-margin"></li>
-            <li>
-            <a href="index.php?page=projet&type=eau-1" class="collapsible-header left-align"><i class="material-icons">whatshot</i>EAU</a>
-            </li>
-            <li class="divider no-margin"></li>
-            <li>
-            <a href="index.php?page=projet&type=electricite-1" class="collapsible-header left-align"><i class="material-icons">lightbulb_outline</i>ELECTRICITE</a>
-            </li>
-            <li class="divider no-margin"></li>
-            <li>
-            <a href="index.php?page=projet&type=infrastructure-1" class="collapsible-header left-align"><i class="material-icons">domain</i>INFRASTRUCTURE</a>
-            </li>
-            <li class="divider no-margin"></li>
-            <li>
-            <a href="index.php?page=projet&type=numerique-1" class="collapsible-header left-align"><i class="material-icons">local_library</i>numerique</a>
-            </li>
-            <li class="divider no-margin"></li>
-            <li>
-            <a href="index.php?page=projet&type=protectionsociale-1" class="collapsible-header left-align"><i class="material-icons">security</i>PROTECTION SOCIALE</a>
-            </li>
-            <li class="divider no-margin"></li>
-            <li>
-            <a href="index.php?page=projet&type=tourisme-1" class="collapsible-header left-align"><i class="material-icons">airport_shuttle</i>TOURISME</a>
-            </li>
-        </ul>
-        </div>
-    </li>
-    <li class="divider no-margin"></li>
+      </div>
+      
+      <ul id="download-dropdown" class="dropdown-content">
+        <li><a href="assets/docs/synthese-pag-benin-revele.pdf" target="_blank"><i class="material-icons left">attachment</i>Le PAG</a></li>
+        <li><a href="index.php?page=login"><i class="material-icons left">memory</i>Les API</a></li>
+      </ul>
+      
+      <ul id="pag-dropdown" class="dropdown-content">
+        <li><a href="index.php?page=piliers">Les piliers</a></li>
+        <li><a href="index.php?page=piliers">Les axes</a></li>
+        <li><a href="index.php?page=projets">Les secteurs</a></li>
+        <li><a href="index.php?page=projets">Les projets</a></li>
+      </ul>
+      
+      <ul class="side-nav" id="">
+        <li><a href="assets/docs/synthese-pag-benin-revele.pdf" target="_blank"><i class="material-icons left">attachment</i>Le PAG</a></li>
+        <li><a href="index.php?page=piliers"><i class="material-icons left">account_balance</i>Les piliers</a></li>
+        <li><a href="index.php?page=projets"><i class="material-icons left">folder_open</i>Les projets</a></li>
+        <li><a class="" href="#!"><i class="material-icons left">exit_to_app</i>Connexion</a></li>
+      </ul>
+      
+      <ul class="collapsible no-shadow side-nav" data-collapsible="accordion" id="mobile-demo">
         <li>
-        <a href="#!" class="collapsible-header "><i class="material-icons left" style="margin-right: 16px">exit_to_app</i>Connexion</a>
+          <a href="assets/docs/synthese-pag-benin-revele.pdf" target="_blank" class="collapsible-header "><i class="material-icons left" style="margin-right: 16px">attachment</i>Le PAG</a>
         </li>
-    </ul>
-    <!-- End -->
+        <li class="divider no-margin"></li>
+        <li>
+          <div class="collapsible-header "><i class="material-icons">account_balance</i>Les piliers</div>
+          <div class="collapsible-body no-padding-but-left">
+            <ul class="collapsible no-margin no-shadow no-border" data-collapsible="accordion">
+              <li>
+                <a href="index.php?page=pilier&number=1" class="collapsible-header teal-text text-pag left-align"><i class="material-icons left">looks_one</i>Pilier 1</a>
+              </li>
+              <li class="divider no-margin"></li>
+              <li>
+                <a href="index.php?page=pilier&number=2" class="collapsible-header teal-text text-pag left-align"><i class="material-icons left">looks_two</i>Pilier 2</a>
+              </li>
+              <li class="divider no-margin"></li>
+              <li>
+                <a href="index.php?page=pilier&number=3" class="collapsible-header teal-text text-pag left-align"><i class="material-icons left">looks_3</i>Piier 3</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="divider no-margin"></li>
+        <li>
+          <div class="collapsible-header "><i class="material-icons">folder_open</i>Les projets</div>
+          <div class="collapsible-body no-padding-but-left">
+            <ul class="collapsible no-margin no-shadow no-border" data-collapsible="accordion">
+              <li>
+                <a href="index.php?page=projet&type=agriculture-1" class="collapsible-header left-align"><i class="material-icons">local_florist</i>AGRICULTURE</a>
+              </li>
+              <li class="divider no-margin"></li>
+              <li>
+                <a href="index.php?page=projet&type=cdv-1" class="collapsible-header left-align"><i class="material-icons">location_city</i>CADRE DE VIE</a>
+              </li>
+              <li class="divider no-margin"></li>
+              <li>
+                <a href="index.php?page=projet&type=ciis-1" class="collapsible-header left-align"><i class="material-icons">local_library</i>CIIS</a>
+              </li>
+              <li class="divider no-margin"></li>
+              <li>
+                <a href="index.php?page=projet&type=eau-1" class="collapsible-header left-align"><i class="material-icons">whatshot</i>EAU</a>
+              </li>
+              <li class="divider no-margin"></li>
+              <li>
+                <a href="index.php?page=projet&type=electricite-1" class="collapsible-header left-align"><i class="material-icons">lightbulb_outline</i>ELECTRICITE</a>
+              </li>
+              <li class="divider no-margin"></li>
+              <li>
+                <a href="index.php?page=projet&type=infrastructure-1" class="collapsible-header left-align"><i class="material-icons">domain</i>INFRASTRUCTURE</a>
+              </li>
+              <li class="divider no-margin"></li>
+              <li>
+                <a href="index.php?page=projet&type=numerique-1" class="collapsible-header left-align"><i class="material-icons">local_library</i>numerique</a>
+              </li>
+              <li class="divider no-margin"></li>
+              <li>
+                <a href="index.php?page=projet&type=protectionsociale-1" class="collapsible-header left-align"><i class="material-icons">security</i>PROTECTION SOCIALE</a>
+              </li>
+              <li class="divider no-margin"></li>
+              <li>
+                <a href="index.php?page=projet&type=tourisme-1" class="collapsible-header left-align"><i class="material-icons">airport_shuttle</i>TOURISME</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="divider no-margin"></li>
+          <li>
+            <a href="chat.php" class="collapsible-header "><i class="material-icons left" style="margin-right: 16px">forum</i>Chat</a>
+          </li>
+          <li class="divider no-margin"></li>
+          <li>
+            <a href="#!" class="collapsible-header "><i class="material-icons left" style="margin-right: 16px">exit_to_app</i>Connexion</a>
+          </li>
+      </ul>
+      
