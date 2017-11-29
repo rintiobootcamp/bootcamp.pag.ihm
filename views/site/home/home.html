@@ -91,39 +91,37 @@
 </div>
 </div>
 </div>
-<script>
-function initMap() {
-  var uluru = {lat: 6.387754, lng: 2.449094};
+
+<script type="text/javascript">
+  var locations = [
+    ['Bondi Beach', -33.890542, 151.274856, 4],
+    ['Coogee Beach', -33.923036, 151.259052, 5],
+    ['Cronulla Beach', -34.028249, 151.157507, 3],
+    ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
+    ['Maroubra Beach', -33.950198, 151.259302, 1]
+  ];
 
   var map = new google.maps.Map(document.getElementById('google-map'), {
-    zoom: 4,
-    center: uluru
+    zoom: 10,
+    center: new google.maps.LatLng(-33.92, 151.25),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
   });
 
-  var contentString = '<div id="content">'+
-  '<div id="siteNotice">'+
-  '</div>'+
-  '<h4 id="firstHeading" class="firstHeading">Cotonou</h4>'+
-  '<div id="bodyContent">'+
-  'La ville la plus populaire du Benin</p>'+
-  '<p>Attribution: Ville Cotonou, <a href="#</a> '+
-  '(last visited Nov 29, 2017).</p>'+
-  '</div>'+
-  '</div>';
+  var infowindow = new google.maps.InfoWindow();
 
-  var infowindow = new google.maps.InfoWindow({
-    content: contentString,
-    maxWidth: 200
-  });
+  var marker, i;
 
-  var marker = new google.maps.Marker({
-    position: uluru,
-    map: map,
-    title: 'Cotonou (Benin)'
-  });
-  marker.addListener('click', function() {
-    infowindow.open(map, marker);
-  });
-}
+  for (i = 0; i < locations.length; i++) {
+    marker = new google.maps.Marker({
+      position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+      map: map
+    });
+
+    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+      return function() {
+        infowindow.setContent(locations[i][0]);
+        infowindow.open(map, marker);
+      }
+    })(marker, i));
+  }
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCD5_awlriWQ8qURTghd_aisC5FSXZj4z0&callback=initMap"></script>
