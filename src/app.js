@@ -1,6 +1,6 @@
 (function() {
         'use strict';
-    angular.module('pag-site', ["ui.router","ngResource","ngMaterial","ncy-angular-breadcrumb"])
+    angular.module('pag-site', ["ui.router","ngResource","ncy-angular-breadcrumb"])
     .config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
 
         $urlRouterProvider.otherwise("/");

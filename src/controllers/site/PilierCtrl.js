@@ -26,7 +26,7 @@ angular.module('pag-site')
         var getPilier = function (id){
             ModelPilier.get(id)
                 .then( function(data) {
-                    console.log(data.data);
+                    //console.log(data.data);
                     $scope.pilier = data.data;
                 }, function (error) {
                     console.log(error);

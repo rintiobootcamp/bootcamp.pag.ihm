@@ -1,24 +1,23 @@
 angular.module('pag-site')
-    .factory('ModelPilier', function ($http, API) {
+    .factory('ModelAxe', function ($http, API) {
         return {
             get: function (){
                 return $http({
                     method: 'GET',
-                    url: API.url + '/pilier.json'
+                    url: API.url + '/axe/axe.json'
                 });
             },
             list: function (){
                 return $http({
                     method: 'GET',
-                    url: API.url + '/piliers.json'
+                    url: API.url + '/axe/piliers_axes.json'
                 });
             },
-            listOther: function (){
+            countAxes: function (){
                 return $http({
                     method: 'GET',
-                    url: API.url + '/piliers.json'
+                    url: API.url + '/axe/count_axes.json'
                 });
-            },
-            
+            }
         }
-    })
+    });

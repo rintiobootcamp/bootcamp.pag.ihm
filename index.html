@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>monPAG</title>
   <link rel="shortcut icon" href="favicon.ico">
-  <link type="text/css" rel="stylesheet" href="/node_modules/angular-material/angular-material.min.css"  media="screen,projection"/>
   <link type="text/css" rel="stylesheet" href="/assets/css/style.min.css"  media="screen,projection"/>
   <link type="text/css" rel="stylesheet" href="/assets/css/style_front.css"  media="screen,projection"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -14,15 +13,15 @@
 </head>
 <body ng-app="pag-site">
 
-  <div ng-include="'views/site/navbar.html'"></div>
+  <div ng-include="'views/site/navbar.html'"></div>  
 
   <div ui-view></div>
 
   <div ng-include="'views/site/footer.html'"></div>
 
   <!-- Others dependencies-->
-  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
-  <!--<script src="/assets/js/index.js"></script>-->
+  <script type="text/javascript" src="/assets/js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/assets/js/materialize.min.js"></script>
 
   <!-- node_modules dependencies-->
 
@@ -30,22 +29,33 @@
     <script src="/node_modules/angular/angular.js"></script>
 
     <script src="/node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
-    <script src="/node_modules/angular-animate/angular-animate.js"></script>
-    <script src="/node_modules/angular-aria/angular-aria.js"></script>
-    <script src="/node_modules/angular-messages/angular-messages.js"></script>
-    <script src="/node_modules/angular-material/angular-material.js"></script>
     <script src="/node_modules/angular-resource/angular-resource.js"></script>
     <script src="/node_modules/angular-breadcrumb/dist/angular-breadcrumb.js"></script>
 
   <!-- Core application -->
-    <!-- CONTROLLERS -->
     <script src="/src/app.js"></script>
 
+    <!-- Controllers -->
     <script src="/src/controllers/site/HomeCtrl.js"></script>
     <script src="/src/controllers/site/NavBarCtrl.js"></script>
     <script src="/src/controllers/site/PilierCtrl.js"></script>
+    <script src="/src/controllers/site/AxeCtrl.js"></script>
+    <script src="/src/controllers/site/SecteurCtrl.js"></script>
 
+    <!-- Consatantes -->
     <script src="/src/constantes/api.js"></script>
-    <script src="/src/services/Factory.js"></script>
+
+    <!-- Sevices -->
+    <script src="/src/services/PilierFactory.js"></script>
+    <script src="/src/services/ProjetFactory.js"></script>
+    <script src="/src/services/AxeFactory.js"></script>
+    <script src="/src/services/SecteurFactory.js"></script>
+
+    <!-- Directives -->
+    <script src="/src/directives/dropdownDirective.js"></script>
+    <script src="/src/directives/tabsDirective.js"></script>
+
+  <!-- End Core application -->
+    
   
 </body>

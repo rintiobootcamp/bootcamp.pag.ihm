@@ -1,0 +1,26 @@
+{
+  "id":1,
+  "nom":"Agriculture",
+  "dateMiseAJour" : 1,
+  "icon":"<i class=\"material-icons\">local_florist</i>",
+  "dateCreation" : 1222485454524,
+  "projets" : [ {
+    "reference" : "aeiou",
+    "budgetReel" : 1.024645700144157789424070870154537260532379150390625,
+    "phaseActuelle" : {
+      "dateDebut" : 7,
+      "id" : 2,
+      "dateFin" : 9,
+      "nom" : "aeiou"
+    },
+    "description" : "aeiou",
+    "id" : 5,
+    "dateDebutPrevisionel" : 4,
+    "dateDebutReel" : 3,
+    "budgetPrevisionel" : 1.231513536777255612975068288506008684635162353515625,
+    "nom" : "aeiou",
+    "dateFinPrevisionel" : 7,
+    "coutReel" : 1.489415909854170383397331534069962799549102783203125,
+    "dateFinReel" : 2
+  } ]
+}
