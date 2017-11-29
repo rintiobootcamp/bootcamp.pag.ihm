@@ -10,7 +10,7 @@ angular.module('pag-site')
             list: function (){
                 return $http({
                     method: 'GET',
-                    url: API.url + '/projet/projets.json'
+                    url: API.url + '/projet/projets_secteurs.json'
                 });
             },
             countProjets: function (){

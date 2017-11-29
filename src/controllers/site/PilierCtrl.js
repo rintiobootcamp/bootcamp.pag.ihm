@@ -12,7 +12,6 @@ angular.module('pag-site')
         
     })
     .controller("SiteOnePilierCtrl", function(ModelPilier, $scope,$stateParams){
-
         var getListPiliers = function () {
             ModelPilier.list()
                 .then( function(data) {

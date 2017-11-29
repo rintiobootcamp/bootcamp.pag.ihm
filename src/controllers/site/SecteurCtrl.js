@@ -3,13 +3,11 @@ angular.module('pag-site')
         var getListSecteurs = function () {
             ModelSecteur.list()
                 .then( function(data) {
-                    $scope.listPiliers = data.data;
+                    $scope.listSecteurs = data.data;
                 }, function (error) {
                     console.log(error);
                 });
         }
         getListSecteurs();
-        
-    })
-    ;
+    });
 

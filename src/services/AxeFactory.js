@@ -7,10 +7,16 @@ angular.module('pag-site')
                     url: API.url + '/axe/axe.json'
                 });
             },
-            list: function (){
+            listPiliers: function (){
                 return $http({
                     method: 'GET',
                     url: API.url + '/axe/piliers_axes.json'
+                });
+            },
+            list: function (){
+                return $http({
+                    method: 'GET',
+                    url: API.url + '/axe/axes.json'
                 });
             },
             countAxes: function (){

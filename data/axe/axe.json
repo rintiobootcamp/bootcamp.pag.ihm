@@ -7,5 +7,31 @@
   "descriptionFocus":"Cet axe stratégique insistera sur la mise en place d’instruments juridiques ayant vocation à répondre aux défis de l’État de droit tels que la révision de la Constitution du 11 décembre 1990, l’adoption de la loi organique sur l’administration publique, la revitalisation du système partisan et la modernisation dusystème électoral.De plus, d’autres instruments juridiques auront pour objectif de renforcer les institutions de contre-pouvoir, dont la Cour Constitutionnelle et la Haute Cour de justice, et l’indépendance de la justice. La cour des comptes sera créée en tant qu’institution constitutionnelle.",
   "dateCreation":"1511890840",
   "dateMiseAJour":"1511890840",
-  "medias":""
+  "listComments": [
+    {
+      "author":"John Doe",
+      "comment":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a cursus neque. In hac habitasse platea dictumst. Aliquam et feugiat risus, id volutpat libero. Etiam sed vestibulum augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed fringilla ornare ante eget venenatis. Morbi rutrum consequat tincidunt"
+    },
+    {
+      "author":"Jeanne Donne",
+      "comment":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a cursus neque. In hac habitasse platea dictumst. Aliquam et feugiat risus, id volutpat libero. Etiam sed vestibulum augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed fringilla ornare ante eget venenatis. Morbi rutrum consequat tincidunt"
+    }
+  ],
+  "listMedia": [
+    {
+      "link": "https://lorempixel.com/580/250/nature/1",
+      "mediaType": "IMAGE",
+      "nom": "string"
+    },
+    {
+      "link": "https://lorempixel.com/580/250/nature/2",
+      "mediaType": "IMAGE",
+      "nom": "string"
+    },
+    {
+      "link": "https://lorempixel.com/580/250/nature/3",
+      "mediaType": "IMAGE",
+      "nom": "string"
+    }
+  ]
 }
