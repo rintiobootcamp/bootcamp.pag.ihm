@@ -9,7 +9,7 @@
                   <div class="row no-margin">
                     <div class="col s12">
                       <a ui-sref="pilier({id:pilier.id})" class="card-panel pilier">
-                        <p class="no-margin white-text">{{pilier.name}}</p>
+                        <p class="no-margin white-text">{{pilier.nom}}</p>
                         <p class="divider description grey lighten-3"></p>
                         <p class="no-margin-bottom description white-text">
                           {{pilier.description}}
@@ -17,8 +17,8 @@
                       </a>
                     </div>
                     <div class="col s12" ng-repeat="axe in pilier.listAxes">
-                      <a href="" class="card-panel axe">
-                        <b class="grey-text">{{axe.name}}</b>
+                      <a ui-sref="axe({id:axe.id})" class="card-panel axe">
+                        <b class="grey-text">{{axe.nom}}</b>
                         <p class="divider grey lighten-1"></p>
                         <p class="no-margin-bottom grey-text">
                           {{axe.description}}

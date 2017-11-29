@@ -24,7 +24,6 @@
                     label: 'Piliers'
                 }
             })
-
             .state('pilier', {
                 url: "/pilier/:id",
                 controller: "SiteOnePilierCtrl",
@@ -33,6 +32,7 @@
                     label: 'Pilier'
                 }
             })
+
             .state('axes', {
                 url: "/axes",
                 controller: "SiteAxesCtrl",
@@ -41,6 +41,15 @@
                     label: 'Axes'
                 }
             })
+            .state('axe', {
+                url: "/axe/:id",
+                controller: "SiteOneAxeCtrl",
+                templateUrl: "views/site/axes/axe.html",
+                ncyBreadcrumb: {
+                    label: 'Axe'
+                }
+            })
+
             .state('secteurs', {
                 url: "/secteurs",
                 controller: "SiteSecteursCtrl",
@@ -49,12 +58,21 @@
                     label: 'Secteurs'
                 }
             })
+
             .state('projets', {
                 url: "/projets",
                 controller: "SiteProjetsCtrl",
                 templateUrl: "views/site/projets/projets.html",
                 ncyBreadcrumb: {
                     label: 'Projets'
+                }
+            })
+            .state('projet', {
+                url: "/projet/:id",
+                controller: "SiteOneProjetCtrl",
+                templateUrl: "views/site/projets/projet.html",
+                ncyBreadcrumb: {
+                    label: 'Projet'
                 }
             })
 

@@ -22,7 +22,7 @@
           {
             "link": "https://lorempixel.com/580/250/nature/1",
             "mediaType": "IMAGE",
-            "name": "string"
+            "nom": "string"
           }
         ],
         "listSectors": [
@@ -47,7 +47,7 @@
               {
                 "link": "string",
                 "mediaType": "IMAGE",
-                "name": "string"
+                "nom": "string"
               }
             ],
             "listProjects": [
@@ -73,7 +73,7 @@
                   {
                     "link": "string",
                     "mediaType": "IMAGE",
-                    "name": "string"
+                    "nom": "string"
                   }
                 ],
                 "listRegions": [
@@ -83,7 +83,7 @@
                     "typeRegion": "COMMUNE"
                   }
                 ],
-                "name": "string",
+                "nom": "string",
                 "objectives": [
                   "string"
                 ],
@@ -92,12 +92,12 @@
                 "updateAt": 0
               }
             ],
-            "name": "string",
+            "nom": "string",
             "objective": "string",
             "updateAt": 0
           }
         ],
-        "name": "Axe stratégique 1",
+        "nom": "Axe stratégique 1",
         "updateAt": 12355444455
       },
       {
@@ -119,7 +119,7 @@
           {
             "link": "https://lorempixel.com/580/250/nature/1",
             "mediaType": "IMAGE",
-            "name": "string"
+            "nom": "string"
           }
         ],
         "listSectors": [
@@ -144,7 +144,7 @@
               {
                 "link": "string",
                 "mediaType": "IMAGE",
-                "name": "string"
+                "nom": "string"
               }
             ],
             "listProjects": [
@@ -170,7 +170,7 @@
                   {
                     "link": "string",
                     "mediaType": "IMAGE",
-                    "name": "string"
+                    "nom": "string"
                   }
                 ],
                 "listRegions": [
@@ -180,7 +180,7 @@
                     "typeRegion": "COMMUNE"
                   }
                 ],
-                "name": "string",
+                "nom": "string",
                 "objectives": [
                   "string"
                 ],
@@ -189,12 +189,12 @@
                 "updateAt": 0
               }
             ],
-            "name": "string",
+            "nom": "string",
             "objective": "string",
             "updateAt": 0
           }
         ],
-        "name": "Axe stratégique 1",
+        "nom": "Axe stratégique 1",
         "updateAt": 12355444455
       }
      
@@ -213,20 +213,20 @@
       {
         "link": "https://lorempixel.com/580/250/nature/1",
         "mediaType": "IMAGE",
-        "name": "string"
+        "nom": "string"
       },
       {
         "link": "https://lorempixel.com/580/250/nature/2",
         "mediaType": "IMAGE",
-        "name": "string"
+        "nom": "string"
       },
       {
         "link": "https://lorempixel.com/580/250/nature/3",
         "mediaType": "IMAGE",
-        "name": "string"
+        "nom": "string"
       }
     ],
-    "name": "Pilier 1",
+    "nom": "Pilier 1",
     "aPropos":" La stabilité démocratique et institutionnelle du Bénin est reconnue sur la scène internationale. Elle constitue d’ores et déjà un atout fort pour le pays, un véritable gage de confiance à mettre au service de son développement.Cependant",
     "updateAt": 12355444455
 }
