@@ -1,0 +1,70 @@
+<div class="main-content">
+        <div class="container">
+          <h4 class="no-margin-bottom title">Projet n° {{projet.id}} - {{projet.nom}}<span class=" hide-on-small-only"></span> <a ui-sref="home" class="btn blue pag hide-on-small-only">Commenter</a></h4>
+          <p class="flow-text subtitle grey-text text-lighten-1 no-margin-top">Secteur : {{projet.secteur.nom}}</p>
+          <p class="no-margin grey-text breadcrumbs"><!--<span ncy-breadcrumb-text="{{ncyBreadcrumbLabel}}"></span>--></p>
+          <div class="divider"></div>
+          <div class="row no-margin">
+						<div class="col s12 m8">
+							<div class="row">
+								<div class="col s12">
+									<ul self-tabs class="tabs tabs-fixed-width">
+										<li class="tab col s3"><a class="active" href="#projet">LE PROJET</a></li>
+										<li class="tab col s3"><a href="#calendrier">CALENDRIER</a></li>
+										<li class="tab col s3"><a href="#gallerie">GALLERIE</a></li>
+										<li class="tab col s3"><a href="#commentaires">COMMENTAIRES</a></li>
+									</ul>
+								</div>
+								<div class="col s12"><p class="no-margin">&nbsp;</p></div>
+								<div id="projet" class="col s12">
+										{{projet.description}}
+								</div>
+								<div id="calendrier" class="col s12">
+									<div class="row no-margin">
+										Calendrier du projet
+									</div>
+								</div>
+								<div id="gallerie" class="col s12">
+									<ul>
+										<li ng-repeat="media in projet.listMedia">
+											<img ng-if="media.mediaType=='IMAGE'" ng-src="{{media.link}}" alt="{{media.nom}}">
+											<iframe ng-if="media.mediaType=='VIDEO'" ng-src="{{media.link}}" frameborder="0"></iframe>
+										</li>
+									</ul>
+								</div>
+								<div id="commentaires" class="col s12">
+									<ul>
+										<li ng-repeat="commentLine in projet.listComments">
+											<p>
+												<strong>{{commentLine.author}}</strong> : {{commentLine.comment}}
+											</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+            <div class="col hide-on-small-and-down m4">
+                <ul self-collpase class="collapsible no-shadow" data-collapsible="accordion">
+                    <li class="active">
+                        <div class="collapsible-header amber pag white-text active">Autres projets dans le même secteur</div>
+                        <div class="collapsible-body no-padding" style="display: block;">
+                        <ul class="collapsible no-margin no-shadow no-border" data-collapsible="accordion">
+                            <li ng-repeat="oth in listProjetsSecteur.projets" ng-if="oth.id != projet.id">
+                                <a ui-sref="projet({id:oth.id})" class="collapsible-header amber-text text-pag">{{oth.nom}}</a>
+                            </li>
+                        </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      
+        <div class="fixed-action-btn">
+          <a class="btn-floating btn-large blue pag" href="index.php?page=comment">
+            <i class="large material-icons">mode_edit</i>
+          </a>
+        </div>
+      
+      </div>
+      

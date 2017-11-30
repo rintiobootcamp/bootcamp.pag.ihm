@@ -9,5 +9,27 @@ angular.module('pag-site')
                 });
         }
         getListProjets();
-    });
+    })
+    .controller("SiteOneProjetCtrl", function(ModelProjet, $scope,$stateParams){
+        var getListProjetsBySeceteur = function (idProjet) {
+            ModelProjet.listBySecteur(idProjet)
+                .then( function(data) {
+                    $scope.listProjetsSecteur = data.data;
+                }, function (error) {
+                    console.log(error);
+                });
+        }
+
+        var getProjet = function (id){
+            ModelProjet.get(id)
+                .then( function(data) {
+                    $scope.projet = data.data;
+                    getListProjetsBySeceteur(projet.id);
+                }, function (error) {
+                    console.log(error);
+                });
+        }
+        getProjet($stateParams.id);
+    })
+    ;
 
