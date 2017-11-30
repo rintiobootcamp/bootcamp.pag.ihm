@@ -10,10 +10,12 @@
   <link type="text/css" rel="stylesheet" href="/assets/css/style_front.css"  media="screen,projection"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <base href="/">
+  <script src="http://maps.google.com/maps/api/js?sensor=false"
+          type="text/javascript"></script>
 </head>
 <body ng-app="pag-site">
 
-  <div ng-include="'views/site/navbar.html'"></div>  
+  <div ng-include="'views/site/navbar.html'"></div>
 
   <div ui-view></div>
 
@@ -58,6 +60,6 @@
     <script src="/src/directives/collapseDirective.js"></script>
 
   <!-- End Core application -->
-    
-  
+
+
 </body>
