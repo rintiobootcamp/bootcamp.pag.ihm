@@ -1,0 +1,6 @@
+/* Envoyer en POST le média lié à une entité */
+{
+    "files": "files",
+    "entityId" : 0, // Id entity return by Service Web when save entity
+    "entityType" : "COMMENTAIRE" // CHOOSE ENTITY TYPE
+}

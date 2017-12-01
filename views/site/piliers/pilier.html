@@ -17,22 +17,21 @@
 								</div>
 								<div class="col s12"><p class="no-margin">&nbsp;</p></div>
 								<div id="about" class="col s12">
-										{{pilier.aPropos}}
 								</div>
 								<div id="axes" class="col s12">
 									<div class="row no-margin">
-											<div ng-repeat="axe in pilier.listAxes">
+											<div ng-repeat="axe in pilier.axes">
 													<div class='col s12 m6'>
 														<div class='card small'>
 															<div class='card-image'>
-																<img ng-src="{{axe.listMedia[0].link}}" alt="{{axe.listMedia[0].nom}}">
+																<img ng-init="axe.img = getImage(axe)" ng-src="{{axe.img}}" alt="Image {{axe.nom}}">
 																<span class='card-title'>{{axe.nom}}</span>
 															</div>
 															<div class='card-content'>
 															<p>{{axe.description}}</p>
 															</div>
 															<div class='card-action'>
-															<a ui-sref="home" class='teal-text text-pag'>Voir</a>
+															<a ui-sref="axe({id:axe.id})" class='teal-text text-pag'>Voir</a>
 															</div>
 														</div>
 													</div>
@@ -41,7 +40,7 @@
 								</div>
 								<div id="gallerie" class="col s12">
 									<ul>
-										<li ng-repeat="media in pilier.listMedia">
+										<li ng-repeat="media in pilier.medias">
 											<img ng-if="media.mediaType=='IMAGE'" ng-src="{{media.link}}" alt="{{media.nom}}">
 											<iframe ng-if="media.mediaType=='VIDEO'" ng-src="{{media.link}}" frameborder="0"></iframe>
 										</li>

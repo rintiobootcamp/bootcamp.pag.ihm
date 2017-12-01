@@ -13,6 +13,5 @@ angular.module('pag-site')
                     url: API.url + '/pilier/piliers.json'
                 });
             }
-            
         }
     });
