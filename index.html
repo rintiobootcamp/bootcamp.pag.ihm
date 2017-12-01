@@ -10,8 +10,6 @@
   <link type="text/css" rel="stylesheet" href="/assets/css/style_front.css"  media="screen,projection"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <base href="/">
-  <script src="http://maps.google.com/maps/api/js?sensor=false"
-          type="text/javascript"></script>
 </head>
 <body ng-app="pag-site">
 
@@ -21,11 +19,8 @@
 
   <div ng-include="'views/site/footer.html'"></div>
 
-  <!-- Others dependencies-->
   <script type="text/javascript" src="/assets/js/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/assets/js/materialize.min.js"></script>
-
-  <!-- node_modules dependencies-->
 
     <!-- AngularJs core -->
     <script src="/node_modules/angular/angular.js"></script>
@@ -33,8 +28,11 @@
     <script src="/node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
     <script src="/node_modules/angular-resource/angular-resource.js"></script>
     <script src="/node_modules/angular-breadcrumb/dist/angular-breadcrumb.js"></script>
+    <script src="/assets/js/lodash.js"></script>
+    <script src="/node_modules/angular-simple-logger/dist/angular-simple-logger.js"></script>
+    <script src="/node_modules/angular-google-maps/dist/angular-google-maps.js"></script>
 
-  <!-- Core application -->
+    <!-- Core application -->
     <script src="/src/app.js"></script>
 
     <!-- Controllers -->

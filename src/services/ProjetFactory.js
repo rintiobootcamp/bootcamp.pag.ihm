@@ -24,6 +24,12 @@ angular.module('pag-site')
                     method: 'GET',
                     url: API.url + '/projet/count_projets.json'
                 });
+            },
+            listByRegions: function (){
+                return $http({
+                    method:'GET',
+                    url:API.url + '/projet/projets_regions.json'
+                });
             }
         }
     });

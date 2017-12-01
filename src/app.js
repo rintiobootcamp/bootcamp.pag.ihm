@@ -1,7 +1,12 @@
 (function() {
         'use strict';
-    angular.module('pag-site', ["ui.router","ngResource","ncy-angular-breadcrumb"])
-    .config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
+    angular.module('pag-site', ["ui.router","ngResource","ncy-angular-breadcrumb","uiGmapgoogle-maps"])
+    .config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider,uiGmapGoogleMapApiProvider) {
+
+        uiGmapGoogleMapApiProvider.configure({
+            key: 'AIzaSyCD5_awlriWQ8qURTghd_aisC5FSXZj4z0',
+            libraries: 'weather,geometry,visualization'
+        });
 
         $urlRouterProvider.otherwise("/");
           // Now set up the states

@@ -1,4 +1,4 @@
-#google-map {
-  overflow: initial !important;
-  min-height: 200px;
-}
+.angular-google-map-container {
+  height: 600px; }
+
+/*# sourceMappingURL=style_front.css.map */

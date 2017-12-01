@@ -40,88 +40,11 @@
     </div>
   </div>
 </div>
-<div class="container">
-  <div class="row">
-    <div id="google-map"></div>
-  </div>
-
-  <div class="row">
-      <!-- <object type="image/svg+xml" data="assets/images/benin1.svg">
-      Your browser does not support SVG
-    </object> -->
-
-  <div class='col s6 offset-s2'>
-    <!-- <ul class="departementList">
-    <li id="dep1">Alibori</li>
-    <li id="dep2">Atacora</li>
-    <li id="dep3">Borgou</li>
-    <li id="dep4">Donga</li>
-    <li id="dep5">Collines</li>
-    <li id="dep6">Zou</li>
-    <li id="dep7">Plateau</li>
-    <li id="dep8">Couffo</li>
-    <li id="dep9">Mono</li>
-    <li id="dep10">Littoral</li>
-    <li id="dep11">Ouémé</li>
-    <li id="dep12">Plateau</li>
-  </ul> -->
-
-  <ul class='collapsible no-shadow another-projects' data-collapsible='accordion'>
-    <li>
-      <div class='collapsible-header white pag black-text'><i class='material-icons'>local_florist</i>Autres projets de la même catégorie</div>
-      <div class='collapsible-body no-padding-but-left'>
-        <ul class='collapsible no-margin no-shadow no-border' data-collapsible='accordion'>
-          <li>
-            <a href='index.php?page=projet&type=agriculture-2' class='collapsible-header teal-text text-pag left-align'>8 - Filières conventionnelles (riz, maïs, manioc)</a>
-          </li>
-          <li>
-            <a href='index.php?page=projet&type=agriculture-3' class='collapsible-header teal-text text-pag left-align'>9 - Aquaculture continentale</a>
-          </li>
-          <li>
-            <a href='index.php?page=projet&type=agriculture-4' class='collapsible-header teal-text text-pag left-align'>10 - Mise en valeur de la basse et moyenne vallée de l'Ouémé</a>
-          </li>
-          <li>
-            <a href='index.php?page=projet&type=agriculture-5' class='collapsible-header teal-text text-pag left-align'>11 - Viande, lait, œufs de table</a>
-          </li>
-        </ul>
-      </div>
-    </li>
-  </ul>
-
+<div class="map-carte">
+  <ui-gmap-google-map center="map.center" zoom="map.zoom">
+    <ui-gmap-window show="map.window.show" coords="map.window.model" options="map.window.options" closeclick="map.window.closeClick()" templateUrl="'views/site/home/regions_projets.tpl.html'" templateParameter="map.window">
+    </ui-gmap-window>
+    <ui-gmap-markers idkey="'id'" models="map.markers" coords="'self'" icon="'icon'" events="map.markersEvents" options="'options'">
+    </ui-gmap-markers>
+  </ui-gmap-google-map>
 </div>
-</div>
-</div>
-
-<script type="text/javascript">
-  var locations = [
-    ['Bondi Beach', -33.890542, 151.274856, 4],
-    ['Coogee Beach', -33.923036, 151.259052, 5],
-    ['Cronulla Beach', -34.028249, 151.157507, 3],
-    ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
-    ['Maroubra Beach', -33.950198, 151.259302, 1]
-  ];
-
-  var map = new google.maps.Map(document.getElementById('google-map'), {
-    zoom: 10,
-    center: new google.maps.LatLng(-33.92, 151.25),
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  });
-
-  var infowindow = new google.maps.InfoWindow();
-
-  var marker, i;
-
-  for (i = 0; i < locations.length; i++) {
-    marker = new google.maps.Marker({
-      position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-      map: map
-    });
-
-    google.maps.event.addListener(marker, 'click', (function(marker, i) {
-      return function() {
-        infowindow.setContent(locations[i][0]);
-        infowindow.open(map, marker);
-      }
-    })(marker, i));
-  }
-</script>

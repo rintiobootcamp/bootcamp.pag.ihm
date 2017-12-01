@@ -1,0 +1,8 @@
+{
+    "entityId" : 3,
+    "entityType" : "PROJET",
+    "contenu" : "contenu du commentaire à enrégistrer ici",
+    "pseudo" : "Baom", // Or empty if anonyme
+    "userId" : 23, // Or 0 if anonyme
+    "userMail" : ""
+}
