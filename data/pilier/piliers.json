@@ -9,7 +9,7 @@
     "axes": [
       {
         "id": 0,
-        "nom": "string",
+        "nom": "axe1",
         "titre": "string",
         "titreFocus": "string",
         "description": "string",
@@ -73,7 +73,7 @@
     "axes": [
       {
         "id": 0,
-        "nom": "string",
+        "nom": "axe2",
         "titre": "string",
         "titreFocus": "string",
         "description": "string",
@@ -137,7 +137,7 @@
     "axes": [
       {
         "id": 0,
-        "nom": "string",
+        "nom": "axe3",
         "titre": "string",
         "titreFocus": "string",
         "description": "string",
