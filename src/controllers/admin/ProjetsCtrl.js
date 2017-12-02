@@ -10,3 +10,6 @@ angular.module('pag-site')
     }
     getListProjets();
 })
+.controller("AdminNewProjetsCtrl", function (ModelPilier, $scope) {
+  console.log('Admin Nouveau projet controller');
+});
