@@ -10,4 +10,8 @@ angular.module('pag-site')
           });
   }
   getListPiliers();
+})
+
+.controller("AdminNewPiliersCtrl", function (ModelPilier, $scope) {
+  console.log('Admin Nouveau Piliers controller');
 });
