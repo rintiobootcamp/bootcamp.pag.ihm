@@ -16,15 +16,15 @@
                 <b>Veuillez remplir ce formulaire</b>
               </div>
               <div class="input-field col s12 m8">
-                <input id="name" type="text" class="validate">
+                <input id="name" type="text" class="validate" ng-model="nom">
                 <label for="name"> Nom du pilier</label>
               </div>
               <div class="input-field col s12 m4">
-                <input id="nbAxe" type="text" class="validate">
+                <input id="nbAxe" type="text" class="validate" ng-model="nbAxe">
                 <label for="nbAxe"> Nombre d'axe</label>
               </div>
               <div class="input-field col s12">
-                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <textarea id="textarea1" class="materialize-textarea" ng-model="desc"></textarea>
                 <label for="textarea1">Description du pilier</label>
               </div>
             </div>
