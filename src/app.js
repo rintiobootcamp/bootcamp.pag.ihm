@@ -41,6 +41,14 @@
                   label: 'Piliersnew'
               }
           })
+          .state('admin.axes', {
+              url: '/axes',
+              controller: "AdminAxesCtrl",
+              templateUrl: 'views/admin/axes/axes.html',
+              ncyBreadcrumb: {
+                  label: 'Axes'
+              }
+          })
 
           // HOME
             .state('home', {
