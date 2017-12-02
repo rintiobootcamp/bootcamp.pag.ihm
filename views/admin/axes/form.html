@@ -20,13 +20,8 @@
                 <label for="name"> Nom de l'axe</label>
               </div>
               <div class="input-field col s12 m4">
-                <select>
-                  <option value="" disabled selected>- -</option>
-                  <option value="1">Pilier 1</option>
-                  <option value="2">Pilier 2</option>
-                  <option value="3">Pilier 3</option>
-                </select>
-                <label>Pilier</label>
+                <label class="custom-label">Pilier</label>
+                <select ng-model="pilier.name" ng-options="axe.nom for axe in listPiliers"></select>
               </div>
               <div class="input-field col s12">
                 <textarea id="textarea1" class="materialize-textarea"></textarea>
