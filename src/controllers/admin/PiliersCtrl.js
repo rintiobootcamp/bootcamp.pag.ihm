@@ -1,4 +1,13 @@
 angular.module('pag-site')
-.controller("PiliersCtrl", function ($scope) {
+.controller("AdminPiliersCtrl", function (ModelPilier, $scope) {
   console.log('Admin Piliers controller');
+  var getListPiliers = function () {
+      ModelPilier.list()
+          .then( function(data) {
+              $scope.listPiliers = data.data;
+          }, function (error) {
+              console.log(error);
+          });
+  }
+  getListPiliers();
 });

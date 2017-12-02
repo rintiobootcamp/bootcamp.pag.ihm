@@ -27,8 +27,8 @@
           })
           .state('admin.piliers', {
               url: '/piliers',
-              controller: "PiliersCtrl",
-              templateUrl: 'views/admin/dashboard/piliers.html',
+              controller: "AdminPiliersCtrl",
+              templateUrl: 'views/admin/piliers/piliers.html',
               ncyBreadcrumb: {
                   label: 'Piliers'
               }
