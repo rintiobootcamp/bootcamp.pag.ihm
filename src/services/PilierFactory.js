@@ -14,27 +14,17 @@ angular.module('pag-site')
                 });
             },
             create: function(pilier) {
-              var headers = new Headers({ 'Content-Type': 'application/json' });
-              var options = new RequestOptions({ headers: headers });
-              var body = JSON.stringify(pilier);
-
               return $http({
                 method: 'POST',
                 url: API.url + '/pilier',
-                body: body,
-                option: option
+                body: body
               })
             },
             update: function(pilier) {
-              var headers = new Headers({ 'Content-Type': 'application/json' });
-              var options = new RequestOptions({ headers: headers });
-              var body = JSON.stringify(pilier);
-
               return $http({
                 method: 'POST',
                 url: API.url + '/pilier' + pilier_id,
-                body: body,
-                option: option
+                body: body
               }).map((res: Response) => res.json());
             },
             delete(pilier_id) {
