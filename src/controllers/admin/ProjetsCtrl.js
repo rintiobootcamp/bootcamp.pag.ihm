@@ -10,6 +10,17 @@ angular.module('pag-site')
     }
     getListProjets();
 })
-.controller("AdminNewProjetsCtrl", function (ModelPilier, $scope) {
+.controller("AdminNewProjetCtrl", function (ModelPilier, $scope) {
   console.log('Admin Nouveau projet controller');
+  var getListPiliers = function () {
+      ModelPilier.list()
+          .then( function(data) {
+              $scope.listPiliers = data.data;
+          }, function (error) {
+              console.log(error);
+          });
+  }
+  getListPiliers();
+
+  $scope.pilier = {name: ''};
 });
