@@ -40,8 +40,6 @@
     <!-- Content -->
   </div>
 
-
-
   <div class="fixed-action-btn">
       <a class="btn-floating btn-large green pag" href="index.php?comment">
         <i class="large material-icons">check</i>
