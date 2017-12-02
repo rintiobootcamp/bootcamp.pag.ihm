@@ -8,7 +8,7 @@
 				<div class="col s12 m4" ng-repeat="secteur in listProjets">
 						<ul self-collapse class="collapsible no-shadow" data-collapsible="accordion">
 							<li>
-								<div class="collapsible-header teal pag white-text active"><i class="material-icons">{{secteur.icon}}</i>{{secteur.nom | uppercase}}</div>
+								<div class="collapsible-header teal pag white-text active"><i class="material-icons">{{secteur.icone}}</i>{{secteur.nom | uppercase}}</div>
 								<div class="collapsible-body no-padding-but-left">
 									<ul class="collapsible no-margin no-shadow no-border" data-collapsible="accordion">
 										<li ng-repeat="pil in secteur.projets">

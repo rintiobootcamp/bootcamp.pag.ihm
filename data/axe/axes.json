@@ -1,84 +1,294 @@
 [
-  {
-      "id":1,
-      "nom":"Axe stratégique 1",
-      "titre":"Renforcement des bases de la démocratie et de l’État de droit",
-      "description":"Cela passera notamment par une révision de la Constitution, par le renforcement des institutions de contre-pouvoir et par un meilleur accès à la justice.",
-      "titreFocus":"un cadre institutionnel et démocratique plus équilibré",
-      "descriptionFocus":"Cet axe stratégique insistera sur la mise en place d’instruments juridiques ayant vocation à répondre aux défis de l’État de droit tels que la révision de la Constitution du 11 décembre 1990, l’adoption de la loi organique sur l’administration publique, la revitalisation du système partisan et la modernisation dusystème électoral.De plus, d’autres instruments juridiques auront pour objectif de renforcer les institutions de contre-pouvoir, dont la Cour Constitutionnelle et la Haute Cour de justice, et l’indépendance de la justice. La cour des comptes sera créée en tant qu’institution constitutionnelle.",
-      "dateCreation":"1511890840",
-      "dateMiseAJour":"1511890840",
-      "medias":""
-  },
-
-  {
-      "id":2,
-      "nom":"Axe stratégique 2",
-      "titre":"Assainissement du cadre macroéconomique et maintien de la stabilité",
-      "description":"Cela inclura, entre autres, l’informatisation et la dématérialisation de l’administration (smart gouv), ainsi que la fusion de la gendarmerie et de la police nationale. Par ailleurs, la diplomatie sera mise au service du développement, afin de mieux faire connaître l’offre économique du Bénin au monde. Enfin, le pacte de partenariat signé entre le Gouvernement et la diaspora sera mis en oeuvre : des facilitations d’investissements directs au Bénin seront accordées et les compétences et talents des Béninoisde l’extérieur seront promus.",
-      "titreFocus":"la diplomatie économique",
-      "descriptionFocus":"Le réseau diplomatique béninois sera modernisé et mobilisé pour la réalisation du Programme « Bénin Révélé ». Les ambassades joueront un rôle crucial dans la conclusion de nouveaux marchés, la mise en valeur de la culture béninoise et la promotion du potentiel touristique de notre pays auprès des investisseurs. Il sera également mis en place une diplomatie plus efficace envers le Nigéria en vue de favoriser le libre-échange commercial, conformément aux dispositionsdes accords communautaireset bilatéraux.L’objectif est de faire de la diplomatie béninoise un véritable instrument de rayonnement et de mobilisation de ressources au service du développement.",
-      "dateCreation":"1511890840",
-      "dateMiseAJour":"1511890840",
-      "medias":""
-  },
-
-  {
-      "id":3,
-      "nom":"Axe stratégique 3",
-      "titre":"Assainissement du cadre macroéconomique et maintien de la stabilité",
-      "description":"Cela se traduira notamment par l’adoption d’un cadre réglementaire unifié pour les opérations de partenariats public-privé, la modernisation et la professionnalisation du système de passation des marchés publics, l’amélioration de la transparence budgétaire, la prise de mesures fiscales en faveur de l’investissement privé, l’accélération de l’intégration sous régionale et la promotion de l’industrie de transformation, principalement pour alimenter le marché sous-régionale.",
-      "titreFocus":"la diplomatie économique",
-      "descriptionFocus":"Le Gouvernement prendra un ensemble de mesures visant à améliorer les performances du Bénin sur l’indice Doing Business. Ces mesures comprendront, entre autres, l’amélioration des réglementations régissant la création, les opérations et la fermeture des entreprises, le renforcement de la compétitivité de la plateforme logistique de Cotonou, ainsi que l’accès au foncier industriel et rural. Le code des investissements sera également réformé et des dispositifs de promotion de la concurrence dans les secteurs clés de l’économie seront mis en place.",
-      "dateCreation":"1511890840",
-      "dateMiseAJour":"1511890840",
-      "medias":""
-  },
-
-  {
-      "id":4,
-      "nom":"Axe stratégique 4",
-      "titre":"Assainissement du cadre macroéconomique et maintien de la stabilité",
-      "description":"La relance économique s’appuiera sur des secteurs stratégiques qui sont aujourd´hui sous-valorisés, malgré un potentiel solide.",
-      "titreFocus":"les secteurs stratégiques de la relance économique",
-      "descriptionFocus":"Économie numérique Le Gouvernement du Bénin ambitionne d’utiliser les TIC (Technologie de l’Information et de Communication)comme catalyseur de dynamique économique et de modernisation du Bénin pour l’accélération de la croissance économique et l’inclusion sociale d’ici à 2021. L’enjeu est de transformer à moyen terme le Bénin en une plateforme de services numériques pour toute l’Afrique de l’Ouest. Cette nouvelle stratégie s’appuiera, notamment, sur le développement massif des infrastructures et la généralisation de l’accès au haut débit en vue d’atteindre un taux de couverture de 80% ainsi que sur l’assainissement et la dynamisation du secteur. Tout ceci permettra de doubler la taille du marché et de créer 90 000 emplois nets directs dans les TIC. Agriculture Pour faire du secteur agricole le principal levier de développement économique, de création de richesses et d’emplois, le Gouvernement va créer 7 pôles régionaux de développement agricole, et promouvoir le développement des filières à haute valeur ajoutée : ananas, anacarde, coton, maïs, manioc et riz.En soutien à l’investissement massif dans le secteur agricole, le Gouvernement envisage la création de structures de recherche spécifiques à chaque filière et des écoles professionnelles agricoles pour chaque pôle de développement agricole. Un accent particulier sera également mis sur les instruments et les mesures favorisant l’investissement privé dans le secteur agricole et rural. Ceci se traduira, entre autres, par l’aménagement de 6 000 ha de terres cultivables dans la vallée de l’Ouémé pour favoriser l’installation de 2 500 jeunes entrepreneurs agricoles.Tourisme et CultureAu Bénin, la contribution du tourisme de 0,7% au PIB apparaît bien modeste. Paradoxalement, le Bénin est l’un des pays africains disposant d’un potentiel touristique exceptionnel. L’ambition du nouveau Gouvernement est de faire du tourisme une filière de développement économique, créatrice de richesses et d’emplois et un outil du rayonnement du Bénin, à l’international.Pour atteindre cet objectif, le Bénin dispose de nombreux atouts, parmi lesquels on peut citer le plus riche parc animalier et naturel d’Afrique de l’Ouest (la Pendjari et le parc W), les vestiges et la mémoire de la traite négrière qui seront utilisés pour reconstruire la cité historique de Ouidah, et la plus grande cité lacustre d’Afrique (Ganvié).Transports Le Bénin, grâce à sa position géographique, constitue un couloir naturel qui relie certains pays de l’Afrique de l’Ouest. Pour exploiter cet atout stratégique, le Gouvernement fera des infrastructures de transport un levier important pour soutenir la croissance économique et faciliter le développement des exportations. Un accent particulier sera mis sur l’amélioration des infrastructures de transport, de logistique et de commerce, à travers notamment : La modernisation et l’extensiondu Port autonome de Cotonou. Le réaménagement de l’axe routier autour du Port autonomede Cotonou La construction d’un nouvel aéroport international à Glo-Djigbé La réhabilitation, la modernisation et l’extension du réseau routier national sur environ 1 362 km Énergies et Mines Afin d’instituer un système énergétique largement autonome, compétitif et une fourniture d’électricité fiable et de qualité aux unités de production et aux populations béninoises, le Gouvernement prévoit la modernisation et l’extension de la filière thermique. Le développement des énergies renouvelables avec l’implantation de fermes photovoltaïques d’une capacité totale de 95 MW est aussi une des alternatives retenues, pour renforcer les capacités énergétiques du Bénin. Enfin, pour le Gouvernement, la valorisation des potentialités du sous-sol passe par le développement des capacités d’exploitation des ressources minières du pays. ArtisanatLe Programme du Gouvernement permettra d’accroître la production du secteur artisanal. Il vise non seulement à construire, étendre et équiper les infrastructures d’appui au développement de l’artisanat, mais aussi à renforcer les capacités techniques des artisans.",
-      "dateCreation":"1511890840",
-      "dateMiseAJour":"1511890840",
-      "medias":""
-  },
-
-  {
-      "id":5,
-      "nom":"Axe stratégique 5",
-      "titre":"Amélioration des performances de l’éducation",
-      "description":"Le système éducatif sera reconstruit et modernisé par l’élaboration d’une nouvelle gouvernance et l’amélioration de la qualité de l’enseignement, l’adaptation du système d’enseignement aux besoins du pays et des entreprises, et le renforcement de la recherche scientifique.",
-      "titreFocus":"les secteurs stratégiques de la relance économique",
-      "descriptionFocus":"Économie numérique Le Gouvernement du Bénin ambitionne d’utiliser les TIC (Technologie de l’Information et de Communication)comme catalyseur de dynamique économique et de modernisation du Bénin pour l’accélération de la croissance économique et l’inclusion sociale d’ici à 2021. L’enjeu est de transformer à moyen terme le Bénin en une plateforme de services numériques pour toute l’Afrique de l’Ouest. Cette nouvelle stratégie s’appuiera, notamment, sur le développement massif des infrastructures et la généralisation de l’accès au haut débit en vue d’atteindre un taux de couverture de 80% ainsi que sur l’assainissement et la dynamisation du secteur. Tout ceci permettra de doubler la taille du marché et de créer 90 000 emplois nets directs dans les TIC. Agriculture Pour faire du secteur agricole le principal levier de développement économique, de création de richesses et d’emplois, le Gouvernement va créer 7 pôles régionaux de développement agricole, et promouvoir le développement des filières à haute valeur ajoutée : ananas, anacarde, coton, maïs, manioc et riz.En soutien à l’investissement massif dans le secteur agricole, le Gouvernement envisage la création de structures de recherche spécifiques à chaque filière et des écoles professionnelles agricoles pour chaque pôle de développement agricole. Un accent particulier sera également mis sur les instruments et les mesures favorisant l’investissement privé dans le secteur agricole et rural. Ceci se traduira, entre autres, par l’aménagement de 6 000 ha de terres cultivables dans la vallée de l’Ouémé pour favoriser l’installation de 2 500 jeunes entrepreneurs agricoles.Tourisme et CultureAu Bénin, la contribution du tourisme de 0,7% au PIB apparaît bien modeste. Paradoxalement, le Bénin est l’un des pays africains disposant d’un potentiel touristique exceptionnel. L’ambition du nouveau Gouvernement est de faire du tourisme une filière de développement économique, créatrice de richesses et d’emplois et un outil du rayonnement du Bénin, à l’international.Pour atteindre cet objectif, le Bénin dispose de nombreux atouts, parmi lesquels on peut citer le plus riche parc animalier et naturel d’Afrique de l’Ouest (la Pendjari et le parc W), les vestiges et la mémoire de la traite négrière qui seront utilisés pour reconstruire la cité historique de Ouidah, et la plus grande cité lacustre d’Afrique (Ganvié).Transports Le Bénin, grâce à sa position géographique, constitue un couloir naturel qui relie certains pays de l’Afrique de l’Ouest. Pour exploiter cet atout stratégique, le Gouvernement fera des infrastructures de transport un levier important pour soutenir la croissance économique et faciliter le développement des exportations. Un accent particulier sera mis sur l’amélioration des infrastructures de transport, de logistique et de commerce, à travers notamment : La modernisation et l’extensiondu Port autonome de Cotonou. Le réaménagement de l’axe routier autour du Port autonomede Cotonou La construction d’un nouvel aéroport international à Glo-Djigbé La réhabilitation, la modernisation et l’extension du réseau routier national sur environ 1 362 km Énergies et Mines Afin d’instituer un système énergétique largement autonome, compétitif et une fourniture d’électricité fiable et de qualité aux unités de production et aux populations béninoises, le Gouvernement prévoit la modernisation et l’extension de la filière thermique. Le développement des énergies renouvelables avec l’implantation de fermes photovoltaïques d’une capacité totale de 95 MW est aussi une des alternatives retenues, pour renforcer les capacités énergétiques du Bénin. Enfin, pour le Gouvernement, la valorisation des potentialités du sous-sol passe par le développement des capacités d’exploitation des ressources minières du pays. ArtisanatLe Programme du Gouvernement permettra d’accroître la production du secteur artisanal. Il vise non seulement à construire, étendre et équiper les infrastructures d’appui au développement de l’artisanat, mais aussi à renforcer les capacités techniques des artisans.",
-      "dateCreation":"1511890840",
-      "dateMiseAJour":"1511890840",
-      "medias":""
-  },
-  {
-      "id":6,
-      "nom":"Axe stratégique 6",
-      "titre":"Renforcement des services sociaux de base et protection sociale",
-      "description":"Cela inclut la mise en place dans toutes les localités d’infrastructures et équipements pour la santé, l’accès à l’eau et à l’électricité, ainsi que le recrutement de médecins pour favoriser l’accès aux soins. De plus, l’adoption d’un nouveau cadre législatif et réglementaire permettra la mise en place d’un mécanisme de protection sociale incluant une politique de cotisations individuelles des bénéficiaires complétées par une subvention de l’État. Cela visera également l’instauration de l’assurance pour le renforcement du capital humain (ARCH), qui comprend quatre prestations pour les agriculteurs, les commerçants, les transporteurs, les artistes et les artisans. Un guichet unique de promotion de l’emploi sera également créé pour améliorer les services d’appui à l’emploi. Concernant le volet sportif, des associations universitaires, militaires et communales seront créées et 12 académies sportives seront mises en place pour la prise en charge des talents au niveau départemental.",
-      "titreFocus":"protection sociale, amélioration du cadre de vie et du bien-être de tous les Béninois",
-      "descriptionFocus":"Objectif stratégique Le Gouvernement mettra en place une protection pour les plus pauvres et vulnérables afin de soutenir à terme 4 millions de Béninois grâce au système d’assurance maladie universelle. Les mesures de protection sociale ciblent en particulier les commerçants, les agriculteurs, les artisans, les artistes et les transporteurs du secteur informel. Description Ce projet phare se composera de 4 paquets de services sociaux :Emplois directsLe nombre d’emplois créés grâce à ce projet phare est évalué à 2 000. pour améliorer le cadre de vie des populations et servir de levier au décollage économique. Un programme immobilier de 20 000 logements dans les chefs-lieux de départements sera lancé, le système de collecte et de gestion des déchets sera modernisé ; le marché de Dantokpa, le plus grand marché d’Afrique de l’Ouest, ainsi que le centre-ville de Cotonou seront rénovés. Le marché international de Parakou sera modernisé, pour devenir un véritable support pour le développement de la région environnante. Les voiries primaires, secondaires et tertiaires dans les villes de Cotonou, Porto-Novo, Parakou, Bohicon, Abomey, Sèmè, Abomey-Calavi, Natitingou seront réhabilitées et aménagées.",
-      "dateCreation":"1511890840",
-      "dateMiseAJour":"1511890840",
-      "medias":""
-  },
-
-  {
-      "id":7,
-      "nom":"Axe stratégique 7",
-      "titre":"Développement équilibré et durable de l’espace national",
-      "description":"Cela se traduira notamment par une intervention significative en matière d’aménagement équilibré et durable de l’espace national, en lien avec les Objectifs de Développement Durable (ODD).Les pistes d’intervention privilégiées sont : la réalisation de grands projets urbains améliorant le cadre de vie des populations, le développement économique, le renforcement de la démocratie locale, la correction des disparités spatiales et la réduction des inégalités en termes d’accès aux services publics.",
-      "titreFocus":"accès à l’eau potable à toute la population à l’horizon 2021 - le marché central de Parakou - Agences de mise en oeuvre",
-      "descriptionFocus":"Cela se traduira notamment par une intervention significative en matière d’aménagement équilibré et durable de l’espace national, en lien avec les Objectifs de Développement Durable (ODD).Les pistes d’intervention privilégiées sont : la réalisation de grands projets urbains améliorant le cadre de vie des populations, le développement économique, le renforcement de la démocratie locale, la correction des disparités spatiales et la réduction des inégalités en termes d’accès aux services publics.A ce jour, presque 50% de la population totale du Bénin n’a pas accès à l’eau potable. Face à cette situation, et en vertu du droit à l’eau potable de tous les citoyens où qu’ils se trouvent, le Gouvernement ambitionne d’assurer l’accès à l’eau potable à toute la population à l’horizon 2021. La réalisation de cette ambition confirmera nos efforts dans la réalisation de l’Objectif de Développement Durable (ODD) n°6 consacré à l’accès de tous à l’eau, à l’assainissement et à la gestion durable des ressources en eau. Cette ambition d’accès universel à l’eau potable se concrétisera par la mise en oeuvre des réformes et projets de développement des capacités de production et de distribution d’eau en milieux urbain, péri-urbain et rural au profit de 5,8 millions de personnes. Une meilleure gouvernance du secteur sera assurée afin de mobiliser davantage de partenariats public-privé en liaison avec les communes, les partenaires et la société civile. Objectif stratégique L’objectif du Gouvernement est d’améliorer le fonctionnement du marché pour en faire un véritable support au développement économique de la région. De plus, il faudra rendre le marché plus accessible et mieux connecté à l’agglomération de Parakou. Description Les installations marchandes seront modernisées, la circulation autour du marché améliorée, la voirie et les espaces de stationnement réaménagés. Enfin, un effort sera porté sur l’assainissement de la zone et la gestion durable des déchets. Impacts économiques et sociaux à 10 ans Stimuler des activités commerciales et améliorer les conditions d’hygiène et de travail des commerçants. Emplois directs 1 200 emplois seront directement créés grâce à ce projet phare.",
-      "dateCreation":"1511890840",
-      "dateMiseAJour":"1511890840",
-      "medias":""
-  }
+    {
+        "id":1,
+        "nom":"Axe stratégique 1",
+        "titre":"Renforcement des bases de la démocratie et de l’État de droit",
+        "description":"Cela passera notamment par une révision de la Constitution, par le renforcement des institutions de contre-pouvoir et par un meilleur accès à la justice.",
+        "titreFocus":"un cadre institutionnel et démocratique plus équilibré",
+        "descriptionFocus":"Cet axe stratégique insistera sur la mise en place d’instruments juridiques ayant vocation à répondre aux défis de l’État de droit tels que la révision de la Constitution du 11 décembre 1990, l’adoption de la loi organique sur l’administration publique, la revitalisation du système partisan et la modernisation dusystème électoral.De plus, d’autres instruments juridiques auront pour objectif de renforcer les institutions de contre-pouvoir, dont la Cour Constitutionnelle et la Haute Cour de justice, et l’indépendance de la justice. La cour des comptes sera créée en tant qu’institution constitutionnelle.",
+        "dateCreation":"1511890840",
+        "dateMiseAJour":"1511890840",
+        "pilier": {
+          "id": 0,
+          "nom": "string",
+          "description": "string",
+          "dateCreation": 0,
+          "dateMiseAJour": 0
+        },
+        "medias": [
+          {
+            "id": 1,
+            "lien": "https://lorempixel.com/580/250/nature/1",
+            "mediaType": "IMAGE",
+            "nom": "lorem 1"
+          },
+          {
+            "id": 2,
+            "lien": "https://lorempixel.com/580/250/nature/2",
+            "mediaType": "IMAGE",
+            "nom": "lorem 2"
+          },
+          {
+            "id": 3,
+            "lien": "https://lorempixel.com/580/250/nature/3",
+            "mediaType": "IMAGE",
+            "nom": "lorem 3"
+          }
+        ],
+        "secteurs": [
+          {
+            "id": 0,
+            "nom": "string",
+            "icone": "string",
+            "projets": [
+              {
+                "id": 0,
+                "nom": "string",
+                "reference": "string",
+                "description": "string",
+                "dateDebutReel": 0,
+                "dateFinReel": 0,
+                "dateDebutPrevisionel": 0,
+                "dateFinPrevisionel": 0,
+                "budgetPrevisionel": 0,
+                "budgetReel": 0,
+                "coutReel": 0,
+                "phaseActuelle": {
+                  "id": 0,
+                  "nom": "string",
+                  "dateDebut": 0,
+                  "dateFin": 0
+                },
+                "phases": [
+                  {
+                    "id": 0,
+                    "nom": "string",
+                    "dateDebut": 0,
+                    "dateFin": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+    },
+    {
+        "id":2,
+        "nom":"Axe stratégique 2",
+        "titre":"Renforcement des bases de la démocratie et de l’État de droit",
+        "description":"Cela passera notamment par une révision de la Constitution, par le renforcement des institutions de contre-pouvoir et par un meilleur accès à la justice.",
+        "titreFocus":"un cadre institutionnel et démocratique plus équilibré",
+        "descriptionFocus":"Cet axe stratégique insistera sur la mise en place d’instruments juridiques ayant vocation à répondre aux défis de l’État de droit tels que la révision de la Constitution du 11 décembre 1990, l’adoption de la loi organique sur l’administration publique, la revitalisation du système partisan et la modernisation dusystème électoral.De plus, d’autres instruments juridiques auront pour objectif de renforcer les institutions de contre-pouvoir, dont la Cour Constitutionnelle et la Haute Cour de justice, et l’indépendance de la justice. La cour des comptes sera créée en tant qu’institution constitutionnelle.",
+        "dateCreation":"1511890840",
+        "dateMiseAJour":"1511890840",
+        "pilier": {
+          "id": 0,
+          "nom": "string",
+          "description": "string",
+          "dateCreation": 0,
+          "dateMiseAJour": 0
+        },
+        "medias": [
+          {
+            "id": 1,
+            "lien": "https://lorempixel.com/580/250/nature/1",
+            "mediaType": "IMAGE",
+            "nom": "lorem 1"
+          },
+          {
+            "id": 2,
+            "lien": "https://lorempixel.com/580/250/nature/2",
+            "mediaType": "IMAGE",
+            "nom": "lorem 2"
+          },
+          {
+            "id": 3,
+            "lien": "https://lorempixel.com/580/250/nature/3",
+            "mediaType": "IMAGE",
+            "nom": "lorem 3"
+          }
+        ],
+        "secteurs": [
+          {
+            "id": 0,
+            "nom": "string",
+            "icone": "string",
+            "projets": [
+              {
+                "id": 0,
+                "nom": "string",
+                "reference": "string",
+                "description": "string",
+                "dateDebutReel": 0,
+                "dateFinReel": 0,
+                "dateDebutPrevisionel": 0,
+                "dateFinPrevisionel": 0,
+                "budgetPrevisionel": 0,
+                "budgetReel": 0,
+                "coutReel": 0,
+                "phaseActuelle": {
+                  "id": 0,
+                  "nom": "string",
+                  "dateDebut": 0,
+                  "dateFin": 0
+                },
+                "phases": [
+                  {
+                    "id": 0,
+                    "nom": "string",
+                    "dateDebut": 0,
+                    "dateFin": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+    },
+    {
+        "id":3,
+        "nom":"Axe stratégique 3",
+        "titre":"Renforcement des bases de la démocratie et de l’État de droit",
+        "description":"Cela passera notamment par une révision de la Constitution, par le renforcement des institutions de contre-pouvoir et par un meilleur accès à la justice.",
+        "titreFocus":"un cadre institutionnel et démocratique plus équilibré",
+        "descriptionFocus":"Cet axe stratégique insistera sur la mise en place d’instruments juridiques ayant vocation à répondre aux défis de l’État de droit tels que la révision de la Constitution du 11 décembre 1990, l’adoption de la loi organique sur l’administration publique, la revitalisation du système partisan et la modernisation dusystème électoral.De plus, d’autres instruments juridiques auront pour objectif de renforcer les institutions de contre-pouvoir, dont la Cour Constitutionnelle et la Haute Cour de justice, et l’indépendance de la justice. La cour des comptes sera créée en tant qu’institution constitutionnelle.",
+        "dateCreation":"1511890840",
+        "dateMiseAJour":"1511890840",
+        "pilier": {
+          "id": 0,
+          "nom": "string",
+          "description": "string",
+          "dateCreation": 0,
+          "dateMiseAJour": 0
+        },
+        "medias": [
+          {
+            "id": 1,
+            "lien": "https://lorempixel.com/580/250/nature/1",
+            "mediaType": "IMAGE",
+            "nom": "lorem 1"
+          },
+          {
+            "id": 2,
+            "lien": "https://lorempixel.com/580/250/nature/2",
+            "mediaType": "IMAGE",
+            "nom": "lorem 2"
+          },
+          {
+            "id": 3,
+            "lien": "https://lorempixel.com/580/250/nature/3",
+            "mediaType": "IMAGE",
+            "nom": "lorem 3"
+          }
+        ],
+        "secteurs": [
+          {
+            "id": 0,
+            "nom": "string",
+            "icone": "string",
+            "projets": [
+              {
+                "id": 0,
+                "nom": "string",
+                "reference": "string",
+                "description": "string",
+                "dateDebutReel": 0,
+                "dateFinReel": 0,
+                "dateDebutPrevisionel": 0,
+                "dateFinPrevisionel": 0,
+                "budgetPrevisionel": 0,
+                "budgetReel": 0,
+                "coutReel": 0,
+                "phaseActuelle": {
+                  "id": 0,
+                  "nom": "string",
+                  "dateDebut": 0,
+                  "dateFin": 0
+                },
+                "phases": [
+                  {
+                    "id": 0,
+                    "nom": "string",
+                    "dateDebut": 0,
+                    "dateFin": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+    },
+    {
+        "id":4,
+        "nom":"Axe stratégique 4",
+        "titre":"Renforcement des bases de la démocratie et de l’État de droit",
+        "description":"Cela passera notamment par une révision de la Constitution, par le renforcement des institutions de contre-pouvoir et par un meilleur accès à la justice.",
+        "titreFocus":"un cadre institutionnel et démocratique plus équilibré",
+        "descriptionFocus":"Cet axe stratégique insistera sur la mise en place d’instruments juridiques ayant vocation à répondre aux défis de l’État de droit tels que la révision de la Constitution du 11 décembre 1990, l’adoption de la loi organique sur l’administration publique, la revitalisation du système partisan et la modernisation dusystème électoral.De plus, d’autres instruments juridiques auront pour objectif de renforcer les institutions de contre-pouvoir, dont la Cour Constitutionnelle et la Haute Cour de justice, et l’indépendance de la justice. La cour des comptes sera créée en tant qu’institution constitutionnelle.",
+        "dateCreation":"1511890840",
+        "dateMiseAJour":"1511890840",
+        "pilier": {
+          "id": 0,
+          "nom": "string",
+          "description": "string",
+          "dateCreation": 0,
+          "dateMiseAJour": 0
+        },
+        "medias": [
+          {
+            "id": 1,
+            "lien": "https://lorempixel.com/580/250/nature/1",
+            "mediaType": "IMAGE",
+            "nom": "lorem 1"
+          },
+          {
+            "id": 2,
+            "lien": "https://lorempixel.com/580/250/nature/2",
+            "mediaType": "IMAGE",
+            "nom": "lorem 2"
+          },
+          {
+            "id": 3,
+            "lien": "https://lorempixel.com/580/250/nature/3",
+            "mediaType": "IMAGE",
+            "nom": "lorem 3"
+          }
+        ],
+        "secteurs": [
+          {
+            "id": 0,
+            "nom": "string",
+            "icone": "string",
+            "projets": [
+              {
+                "id": 0,
+                "nom": "string",
+                "reference": "string",
+                "description": "string",
+                "dateDebutReel": 0,
+                "dateFinReel": 0,
+                "dateDebutPrevisionel": 0,
+                "dateFinPrevisionel": 0,
+                "budgetPrevisionel": 0,
+                "budgetReel": 0,
+                "coutReel": 0,
+                "phaseActuelle": {
+                  "id": 0,
+                  "nom": "string",
+                  "dateDebut": 0,
+                  "dateFin": 0
+                },
+                "phases": [
+                  {
+                    "id": 0,
+                    "nom": "string",
+                    "dateDebut": 0,
+                    "dateFin": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+    }
 ]

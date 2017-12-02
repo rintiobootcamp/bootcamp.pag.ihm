@@ -7,31 +7,67 @@
   "descriptionFocus":"Cet axe stratégique insistera sur la mise en place d’instruments juridiques ayant vocation à répondre aux défis de l’État de droit tels que la révision de la Constitution du 11 décembre 1990, l’adoption de la loi organique sur l’administration publique, la revitalisation du système partisan et la modernisation dusystème électoral.De plus, d’autres instruments juridiques auront pour objectif de renforcer les institutions de contre-pouvoir, dont la Cour Constitutionnelle et la Haute Cour de justice, et l’indépendance de la justice. La cour des comptes sera créée en tant qu’institution constitutionnelle.",
   "dateCreation":"1511890840",
   "dateMiseAJour":"1511890840",
-  "listComments": [
+  "pilier": {
+    "id": 0,
+    "nom": "string",
+    "description": "string",
+    "dateCreation": 0,
+    "dateMiseAJour": 0
+  },
+  "medias": [
     {
-      "author":"John Doe",
-      "comment":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a cursus neque. In hac habitasse platea dictumst. Aliquam et feugiat risus, id volutpat libero. Etiam sed vestibulum augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed fringilla ornare ante eget venenatis. Morbi rutrum consequat tincidunt"
+      "id": 1,
+      "lien": "https://lorempixel.com/580/250/nature/1",
+      "mediaType": "IMAGE",
+      "nom": "lorem 1"
     },
     {
-      "author":"Jeanne Donne",
-      "comment":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a cursus neque. In hac habitasse platea dictumst. Aliquam et feugiat risus, id volutpat libero. Etiam sed vestibulum augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed fringilla ornare ante eget venenatis. Morbi rutrum consequat tincidunt"
+      "id": 2,
+      "lien": "https://lorempixel.com/580/250/nature/2",
+      "mediaType": "IMAGE",
+      "nom": "lorem 2"
+    },
+    {
+      "id": 3,
+      "lien": "https://lorempixel.com/580/250/nature/3",
+      "mediaType": "IMAGE",
+      "nom": "lorem 3"
     }
   ],
-  "listMedia": [
+  "secteurs": [
     {
-      "link": "https://lorempixel.com/580/250/nature/1",
-      "mediaType": "IMAGE",
-      "nom": "string"
-    },
-    {
-      "link": "https://lorempixel.com/580/250/nature/2",
-      "mediaType": "IMAGE",
-      "nom": "string"
-    },
-    {
-      "link": "https://lorempixel.com/580/250/nature/3",
-      "mediaType": "IMAGE",
-      "nom": "string"
+      "id": 0,
+      "nom": "string",
+      "icone": "string",
+      "projets": [
+        {
+          "id": 0,
+          "nom": "string",
+          "reference": "string",
+          "description": "string",
+          "dateDebutReel": 0,
+          "dateFinReel": 0,
+          "dateDebutPrevisionel": 0,
+          "dateFinPrevisionel": 0,
+          "budgetPrevisionel": 0,
+          "budgetReel": 0,
+          "coutReel": 0,
+          "phaseActuelle": {
+            "id": 0,
+            "nom": "string",
+            "dateDebut": 0,
+            "dateFin": 0
+          },
+          "phases": [
+            {
+              "id": 0,
+              "nom": "string",
+              "dateDebut": 0,
+              "dateFin": 0
+            }
+          ]
+        }
+      ]
     }
   ]
 }
