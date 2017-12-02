@@ -11,6 +11,21 @@
         $urlRouterProvider.otherwise("/");
           // Now set up the states
         $stateProvider
+          // ADMIN
+          .state('admin', {
+              url: '/admin',
+              abstract: true,
+              template: '<ui-view/>'
+          })
+          .state('admin.main', {
+              url: '/main',
+              controller: "AdminHomeCtrl",
+              templateUrl: 'views/admin/home.html',
+              ncyBreadcrumb: {
+                  label: 'Admin'
+              }
+          })
+
           // HOME
             .state('home', {
                 url: "/",
@@ -85,4 +100,3 @@
           $locationProvider.html5Mode(true);
     });
     })();
-    
