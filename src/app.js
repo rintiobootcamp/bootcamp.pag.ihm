@@ -15,7 +15,7 @@
           .state('admin', {
               url: '/admin',
               abstract: true,
-              template: '<ui-view/>'
+              templateUrl: 'views/admin/template.html'
           })
           .state('admin.main', {
               url: '/main',
@@ -23,6 +23,14 @@
               templateUrl: 'views/admin/home.html',
               ncyBreadcrumb: {
                   label: 'Admin'
+              }
+          })
+          .state('admin.piliers', {
+              url: '/piliers',
+              controller: "PiliersCtrl",
+              templateUrl: 'views/admin/dashboard/piliers.html',
+              ncyBreadcrumb: {
+                  label: 'Piliers'
               }
           })
 
