@@ -10,7 +10,7 @@ angular.module('pag-site')
         }
         getListProjets();
     })
-    .controller("SiteOneProjetCtrl", function(ModelProjet, $scope,$stateParams){
+    .controller("SiteOneProjetCtrl", function(ModelProjet, ModelComment, $scope,$stateParams){
         var getListProjetsBySeceteur = function (idProjet) {
             ModelProjet.listBySecteur(idProjet)
                 .then( function(data) {
@@ -30,6 +30,16 @@ angular.module('pag-site')
                 });
         }
         getProjet($stateParams.id);
+
+        var getListComments = function (params) {
+            ModelComment.list(params)
+                .then( function(data) {
+                    $scope.listComments = data.data;
+                }, function (error) {
+                    console.log(error);
+                });
+        }
+        getListComments({entityId:$stateParams.id,entityType: 'PROJET'});
     })
     ;
 

@@ -4,6 +4,7 @@
   "description": "string",
   "dateCreation": 0,
   "dateMiseAJour": 0,
+  "aPropos":"La stabilité démocratique et institutionnelle du Bénin est reconnue sur la scène internationale. Elle constitue d’ores et déjà un atout fort pour le pays, un véritable gage de confiance à mettre au service de son développement.",
   "axes": [
     {
       "id": 0,
@@ -56,8 +57,22 @@
   ],
   "medias": [
     {
-      "id": 0,
-      "lien": "audio"
+      "id": 1,
+      "lien": "https://lorempixel.com/580/250/nature/1",
+      "mediaType": "IMAGE",
+      "nom": "lorem 1"
+    },
+    {
+      "id": 2,
+      "lien": "https://lorempixel.com/580/250/nature/2",
+      "mediaType": "IMAGE",
+      "nom": "lorem 2"
+    },
+    {
+      "id": 3,
+      "lien": "https://lorempixel.com/580/250/nature/3",
+      "mediaType": "IMAGE",
+      "nom": "lorem 3"
     }
   ]
 }

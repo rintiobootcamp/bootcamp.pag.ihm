@@ -17,6 +17,7 @@
 								</div>
 								<div class="col s12"><p class="no-margin">&nbsp;</p></div>
 								<div id="about" class="col s12">
+									{{pilier.aPropos}}
 								</div>
 								<div id="axes" class="col s12">
 									<div class="row no-margin">
@@ -39,16 +40,20 @@
 									</div>
 								</div>
 								<div id="gallerie" class="col s12">
-									<ul>
-										<li ng-repeat="media in pilier.medias">
-											<img ng-if="media.mediaType=='IMAGE'" ng-src="{{media.link}}" alt="{{media.nom}}">
-											<iframe ng-if="media.mediaType=='VIDEO'" ng-src="{{media.link}}" frameborder="0"></iframe>
-										</li>
-									</ul>
+									<div class="slider" self-slider>
+										<ul class="slides">
+											<li ng-repeat="media in pilier.medias" ng-if="media.mediaType =='IMAGE'">
+												<img ng-src="{{media.lien}}">
+												<div class="caption center-align">
+													<h5 class="light grey-text text-lighten-3"></h5>
+												</div>
+											</li>
+										</ul>
+									</div>
 								</div>
 								<div id="commentaires" class="col s12">
 									<ul>
-										<li ng-repeat="commentLine in pilier.commentaires"></li>
+										<li ng-repeat="commentLine in listComments">
 											<p>
 												<strong>{{commentLine.pseudo}}</strong> : {{commentLine.contenu}}
 											</p>
@@ -67,7 +72,6 @@
                             <li ng-repeat="oth in listPiliers" ng-if="oth.id != pilier.id">
                                 <a ui-sref="pilier({id:oth.id})" class="collapsible-header amber-text text-pag">{{oth.nom}}</a>
                             </li>
-                            
                         </ul>
                         </div>
                     </li>

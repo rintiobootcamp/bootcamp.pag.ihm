@@ -11,7 +11,7 @@ angular.module('pag-site')
         getListPiliers();
         
     })
-    .controller("SiteOnePilierCtrl", function(ModelPilier, ModelMedia, $scope,$stateParams){
+    .controller("SiteOnePilierCtrl", function(ModelPilier, ModelMedia, ModelComment, CONST, $scope,$stateParams){
         var getListPiliers = function () {
             ModelPilier.list()
                 .then( function(data) {
@@ -40,9 +40,19 @@ angular.module('pag-site')
                 }, function (error) {
                     console.log(error);
                 });
-                return 'https://lorempixel.com/580/250/nature/1'
+                return CONST.defaultImageEntity;
         }
-        getPilier($stateParams.id);
+
+        var getListComments = function (params) {
+            ModelComment.list(params)
+                .then( function(data) {
+                    $scope.listComments = data.data;
+                }, function (error) {
+                    console.log(error);
+                });
+        }
+        getListComments({entityId:$stateParams.id,entityType: 'PILIER'});
+
     })
-    ;
+;
 

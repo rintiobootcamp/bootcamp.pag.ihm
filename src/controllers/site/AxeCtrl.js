@@ -11,7 +11,7 @@ angular.module('pag-site')
         getListAxes();
         
     })
-    .controller("SiteOneAxeCtrl", function(ModelAxe, $scope,$stateParams){
+    .controller("SiteOneAxeCtrl", function(ModelAxe, ModelMedia, ModelComment, $scope,$stateParams){
         var getListAxes = function () {
             ModelAxe.list()
                 .then( function(data) {
@@ -25,13 +25,32 @@ angular.module('pag-site')
         var getAxe = function (id){
             ModelAxe.get(id)
                 .then( function(data) {
-                    //console.log(data.data);
                     $scope.axe = data.data;
                 }, function (error) {
                     console.log(error);
                 });
         }
         getAxe($stateParams.id);
+
+        $scope.getImage = function (axe){
+            ModelMedia.list(axe.id)
+                .then( function(data) {
+                    axe.img = data.data[0].link;
+                }, function (error) {
+                    console.log(error);
+                });
+                return CONST.defaultImageEntity;
+        }
+
+        var getListComments = function (params) {
+            ModelComment.list(params)
+                .then( function(data) {
+                    $scope.listComments = data.data;
+                }, function (error) {
+                    console.log(error);
+                });
+        }
+        getListComments({entityId:$stateParams.id,entityType: 'AXE'});
     })
     ;
 
