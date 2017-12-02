@@ -73,6 +73,14 @@
                   label: 'Secteursnew'
               }
           })
+          .state('admin.projets', {
+              url: '/projets',
+              controller: "AdminProjetsCtrl",
+              templateUrl: 'views/admin/projets/projets.html',
+              ncyBreadcrumb: {
+                  label: 'Projets'
+              }
+          })
 
           // HOME
             .state('home', {
