@@ -1,6 +1,10 @@
 (function() {
         'use strict';
-    angular.module('pag-site', ["ui.router","ngResource","ncy-angular-breadcrumb","uiGmapgoogle-maps"])
+    angular.module('pag-site', [
+      "ui.router", "ngResource",
+      "ncy-angular-breadcrumb", "uiGmapgoogle-maps",
+      "leaflet-directive",
+    ])
     .config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider,uiGmapGoogleMapApiProvider) {
 
         uiGmapGoogleMapApiProvider.configure({

@@ -40,11 +40,7 @@
     </div>
   </div>
 </div>
-<div class="map-carte">
-  <ui-gmap-google-map center="map.center" zoom="map.zoom">
-    <ui-gmap-window show="map.window.show" coords="map.window.model" options="map.window.options" closeclick="map.window.closeClick()" templateUrl="'views/site/home/regions_projets.tpl.html'" templateParameter="map.window">
-    </ui-gmap-window>
-    <ui-gmap-markers idkey="'id'" models="map.markers" coords="'self'" icon="'icon'" events="map.markersEvents" options="'options'">
-    </ui-gmap-markers>
-  </ui-gmap-google-map>
-</div>
+
+<leaflet lf-center="center" paths="paths" markers="markers" event-broadcast="events" width="100%" height="480px"></leaflet>
+<button type="button" ng-click="addShape('circle')" class="btn btn-default">circle</button>
+<h1>Add/remove markers easily example</h1>

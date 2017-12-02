@@ -23,7 +23,8 @@
     "angular-breadcrumb": "^0.5.0",
     "angular-google-maps": "^2.4.1",
     "angular-resource": "^1.6.7",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "leaflet": "^1.2.0"
   },
   "devDependencies": {
     "browser-sync": "^2.18.13",

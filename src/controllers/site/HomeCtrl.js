@@ -35,7 +35,7 @@ angular.module('pag-site')
                     },
                     options: {} // define when map is ready
                 }
-                
+
             };
         }
 
@@ -58,5 +58,120 @@ angular.module('pag-site')
                 });
         }
         getCountProjets();
-    });
 
+        var europeCapitals = {
+            Berlin: {
+                lat: 52.5166667,
+                lng: 13.4
+            },
+            Rome: {
+                lat: 41.9,
+                lng: 12.4833333
+            },
+            Paris: {
+                lat: 48.866667,
+                lng: 2.333333
+            },
+            Brussels: {
+                lat: 50.8333,
+                lng: 4
+            }
+
+        };
+
+        var pathsDict = {
+          circle: {
+              type: "circle",
+              radius: 500 * 1000,
+              latlngs: europeCapitals.Brussels
+          },
+
+          circleMarker: {
+              type: "circleMarker",
+              radius: 50,
+              latlngs: europeCapitals.Rome
+          }
+        };
+
+        angular.extend($scope, {
+            center: {
+                lat: 51.505,
+                lng: -0.09,
+                zoom: 3
+            },
+            events: {},
+            paths: {}
+        });
+
+        $scope.addShape = function(shape) {
+            $scope.paths = {};
+            $scope.paths[shape] = pathsDict[shape];
+        };
+        $scope.markers = [
+          {
+            lat: 7.876355,
+            lng: 2.284468,
+            message: "My Added Marker",
+            icon: {
+              iconUrl: '/node_modules/leaflet/dist/images/marker-icon.png',
+              shadowUrl: '/node_modules/leaflet/dist/images/marker-shadow.png',
+            }
+          },
+
+          {
+            lat: 6.522945,
+            lng: 2.666289,
+            message: "Ouémé",
+            icon: {
+              iconUrl: '/node_modules/leaflet/dist/images/marker-icon.png',
+              shadowUrl: '/node_modules/leaflet/dist/images/marker-shadow.png',
+            }
+          },
+
+          {
+            lat: 9.389607,
+            lng:  2.634361,
+            message: "Parakou",
+            icon: {
+              iconUrl: '/node_modules/leaflet/dist/images/marker-icon.png',
+              shadowUrl: '/node_modules/leaflet/dist/images/marker-shadow.png',
+            }
+          },
+
+          {
+            lat: 10.189803,
+            lng: 1.452991,
+            message: "Nati",
+            icon: {
+              iconUrl: '/node_modules/leaflet/dist/images/marker-icon.png',
+              shadowUrl: '/node_modules/leaflet/dist/images/marker-shadow.png',
+            }
+          },
+
+          {
+            lat: 10.029513,
+            lng:  3.187786,
+            message: "Nikki",
+            icon: {
+              iconUrl: '/node_modules/leaflet/dist/images/marker-icon.png',
+              shadowUrl: '/node_modules/leaflet/dist/images/marker-shadow.png',
+            }
+          }
+        ];
+        // $scope.$on("leafletDirectiveMap.click", function(event, args){
+        //     var leafEvent = args.leafletEvent;
+        //
+        //     $scope.markers.push({
+        //         lat: leafEvent.latlng.lat,
+        //         lng: leafEvent.latlng.lng,
+        //         message: "My Added Marker",
+        //         icon: {
+        //           iconUrl: '/node_modules/leaflet/dist/images/marker-icon.png',
+        //           shadowUrl: '/node_modules/leaflet/dist/images/marker-shadow.png',
+        //         }
+        //     });
+        //     console.log('test');
+        //
+        // });
+
+    });
