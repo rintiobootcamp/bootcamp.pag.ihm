@@ -33,6 +33,14 @@
                   label: 'Piliers'
               }
           })
+          .state('admin.newpilier', {
+              url: '/piliers/new',
+              controller: "AdminNewPiliersCtrl",
+              templateUrl: 'views/admin/piliers/form.html',
+              ncyBreadcrumb: {
+                  label: 'Piliersnew'
+              }
+          })
 
           // HOME
             .state('home', {
