@@ -65,6 +65,14 @@
                   label: 'Secteurs'
               }
           })
+          .state('admin.newsecteur', {
+              url: '/secteurs/new',
+              controller: "AdminNewSecteurCtrl",
+              templateUrl: 'views/admin/secteurs/form.html',
+              ncyBreadcrumb: {
+                  label: 'Secteursnew'
+              }
+          })
 
           // HOME
             .state('home', {
