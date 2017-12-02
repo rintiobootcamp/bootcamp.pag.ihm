@@ -17,12 +17,12 @@
               </div>
               <div class="input-field col s12 m6">
                 <label class="custom-label">Pilier</label>
-                <select ng-model="pilier.name" ng-options="axe.nom for axe in listPiliers"></select>
+                <select self-select ng-model="pilier.name" ng-options="axe.nom for axe in listPiliers"></select>
               </div>
               <div class="input-field col s12 m6">
                 <label class="custom-label">Axe</label>
                 <!-- Liste dynamique fonction du pilier choisi -->
-                <select ng-model="user.branch"
+                <select self-select ng-model="user.branch"
                   ng-options="axe.nom for axe in pilier.name.axes">
                 </select>
               </div>
