@@ -1,9 +1,9 @@
 angular.module('pag-site')
-.directive("selfDropdown", function () {
+  .directive("selfDropdown", function () {
     return {
-        restrict: 'A',
-        link: function(scope, element){
-            element.dropdown();
-        } 
+      restrict: 'A',
+      link: function(scope, element){
+        element.dropdown();
+      }
     }
-});
+  });

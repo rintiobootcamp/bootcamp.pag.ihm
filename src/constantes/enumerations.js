@@ -1,5 +1,5 @@
 angular.module('pag-site')
-.constant("ENUM",{
+  .constant("ENUM",{
     ENTITIES: ['PROJET','AXE','PILIER', 'MEDIA', 'SECTEUR']
-}
-);
+  }
+  );

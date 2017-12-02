@@ -14,12 +14,12 @@ angular.module('pag-site')
   console.log('Admin Nouveau secteur controller');
 
   var getListPiliers = function () {
-      ModelPilier.list()
-          .then( function(data) {
-              $scope.listPiliers = data.data;
-          }, function (error) {
-              console.log(error);
-          });
+    ModelPilier.list()
+    .then( function(data) {
+      $scope.listPiliers = data.data;
+    }, function (error) {
+      console.log(error);
+    });
   }
   getListPiliers();
 
