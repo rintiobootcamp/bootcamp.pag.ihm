@@ -16,23 +16,16 @@
                 <b>Veuillez remplir ce formulaire</b>
               </div>
               <div class="input-field col s12 m6">
-                <select>
-                  <option value="" disabled selected>- -</option>
-                  <option value="1">Pilier 1</option>
-                  <option value="2">Pilier 2</option>
-                  <option value="3">Pilier 3</option>
-                </select>
-                <label>Pilier</label>
+                <label class="custom-label">Pilier</label>
+                <select ng-model="pilier.name" ng-options="axe.nom for axe in listPiliers"></select>
               </div>
+
               <div class="input-field col s12 m6">
                 <!-- Liste dynamique fonction du pilier choisi -->
-                <select>
-                  <option value="" disabled selected>- -</option>
-                  <option value="1">Axe 1</option>
-                  <option value="2">Axe 2</option>
-                  <option value="3">Axe 3</option>
+                <label class="custom-label">Axe</label>
+                <select ng-model="user.branch" ng-if="pilier.name"
+                  ng-options="axe.nom for axe in pilier.name.axes">
                 </select>
-                <label>Axe</label>
               </div>
               <div class="input-field col s12">
                 <input id="name" type="text" class="validate">
