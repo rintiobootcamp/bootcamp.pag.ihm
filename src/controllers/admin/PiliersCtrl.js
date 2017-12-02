@@ -12,6 +12,6 @@ angular.module('pag-site')
   getListPiliers();
 })
 
-.controller("AdminNewPiliersCtrl", function (ModelPilier, $scope) {
+.controller("AdminNewPiliersCtrl", function (ModelPilier, $scope, $http) {
   console.log('Admin Nouveau Piliers controller');
 });
