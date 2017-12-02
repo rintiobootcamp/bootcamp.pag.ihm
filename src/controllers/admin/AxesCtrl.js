@@ -14,6 +14,17 @@ angular.module('pag-site')
   getListAxes();
 })
 
-.controller("AdminNewAxeCtrl", function (ModelAxe, $scope) {
+.controller("AdminNewAxeCtrl", function (ModelAxe, ModelPilier, $scope) {
   console.log('Admin Nouveau axes controller');
+  var getListPiliers = function () {
+      ModelPilier.list()
+          .then( function(data) {
+              $scope.listPiliers = data.data;
+          }, function (error) {
+              console.log(error);
+          });
+  }
+  getListPiliers();
+
+  $scope.pilier = {name: ''};
 });
