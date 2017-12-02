@@ -2,3 +2,15 @@
   margin-top: 50px; }
 
 /*# sourceMappingURL=style_admin.css.map */
+.input-field>select {
+  display: block;
+  position: inherit;
+  width: 100%;
+  pointer-events: all;
+  height: 3rem;
+  opacity: 1;
+}
+
+.custom-label {
+  position: relative !important;
+}
