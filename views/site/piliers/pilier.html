@@ -48,9 +48,9 @@
 								</div>
 								<div id="commentaires" class="col s12">
 									<ul>
-										<li ng-repeat="commentLine in pilier.listComments">
+										<li ng-repeat="commentLine in pilier.commentaires"></li>
 											<p>
-												<strong>{{commentLine.author}}</strong> : {{commentLine.comment}}
+												<strong>{{commentLine.pseudo}}</strong> : {{commentLine.contenu}}
 											</p>
 										</li>
 									</ul>
