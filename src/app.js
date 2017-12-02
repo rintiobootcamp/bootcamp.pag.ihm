@@ -49,6 +49,14 @@
                   label: 'Axes'
               }
           })
+          .state('admin.newaxe', {
+              url: '/axes/new',
+              controller: "AdminNewAxeCtrl",
+              templateUrl: 'views/admin/axes/form.html',
+              ncyBreadcrumb: {
+                  label: 'Axesnew'
+              }
+          })
 
           // HOME
             .state('home', {
