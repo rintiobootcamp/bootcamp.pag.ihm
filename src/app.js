@@ -81,6 +81,14 @@
                   label: 'Projets'
               }
           })
+          .state('admin.newprojet', {
+              url: '/projets/new',
+              controller: "AdminNewProjetCtrl",
+              templateUrl: 'views/admin/projets/form.html',
+              ncyBreadcrumb: {
+                  label: 'Projetsnew'
+              }
+          })
 
           // HOME
             .state('home', {
