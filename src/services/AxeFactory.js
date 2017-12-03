@@ -10,7 +10,7 @@ angular.module('pag-site')
       listPiliers: function (){
         return $http({
           method: 'GET',
-          url: API.url + '/axe/axes_axes.json'
+          url: API.url + '/pilier/piliers.json'
         });
       },
       list: function (){
