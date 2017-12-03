@@ -108,6 +108,19 @@
                 }
             })
 
+            .state('search', {
+                url: "/search",
+                controller: "SiteSearchCtrl",
+                templateUrl: "views/site/searchs/search.html",
+                ncyBreadcrumb: {
+                    label: 'Recherche'
+                },
+                params: {
+                    params: null,
+                    do:false
+                }
+            })
+
             ; // End stateProvider
           $locationProvider.html5Mode(true);
     });

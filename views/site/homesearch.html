@@ -1,0 +1,87 @@
+<div id="search-bar" class="grey lighten-4" ng-show="search.show">
+    <form style="width:100%;" class="">
+        <div class="row no-margin">
+        <div class="input-field col s9">
+            <input id="search" ng-model="search.content" type="search" style="border: none;" placeholder="Entrez votre recherche ">
+            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons close" ng-click="closeSearch()">close</i>
+        </div>
+        <div class="input-field col s1">
+            <a href="" ng-click="runSearch()" class="btn btn-large teal pag"><span class="hide-on-small-only">Trouver</span><span class="hide-on-med-and-up">OK</span></a>
+        </div>
+        <div class="input-filed col s2 recherche-avancee">
+            <p>
+            <input type="checkbox" class="filled-in" id="recherche-avancee" ng-click="toggleAdvancedSearch()"/>
+            <label for="recherche-avancee">Recherche avancée</label>
+            </p>
+        </div>
+        </div>
+        <div class="row no-margin filter-row" ng-show="search.showAdvancedSearch">
+            <div class="col s6 m3">
+                <ul self-collapse class="collapsible no-shadow" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">account_balance</i>Piliers</div>
+                        <div class="collapsible-body">
+                        <p ng-repeat="pilier in listPiliers">
+                            <input type="checkbox" class="filled-in" id="pilier-{{pilier.id}}" checked="checked" />
+                            <label for="pilier-{{pilier.id}}">{{pilier.nom}}</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" class="filled-in" id="pilier-all" checked="checked" />
+                            <label for="pilier-all">Tous</label>
+                        </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col s6 m3">
+                <ul self-collapse class="collapsible no-shadow" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">zoom_out_map</i>Axes</div>
+                        <div class="collapsible-body">
+                        <p ng-repeat="axe in listAxes">
+                            <input type="checkbox" class="filled-in" id="axe-{{axe.id}}" checked="checked" />
+                            <label for="axe-{{axe.id}}">{{axe.nom}}</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" class="filled-in" id="axe-all" checked="checked" />
+                            <label for="axe-all">Tous</label>
+                        </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col s6 m3">
+                <ul self-collapse class="collapsible no-shadow" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">donut_small</i>Secteurs</div>
+                        <div class="collapsible-body">
+                        <p ng-repeat="secteur in listSecteurs">
+                            <input type="checkbox" class="filled-{{secteur.id}}" id="secteur-{{secteur.id}}" checked="checked" />
+                            <label for="secteur-{{secteur.id}}">{{secteur.nom}}</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" class="filled-in" id="secteur-all" checked="checked" />
+                            <label for="secteur-all">Tous</label>
+                        </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col s6 m3">
+                <ul self-collapse class="collapsible no-shadow" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">folder_open</i>Projets</div>
+                        <div class="collapsible-body">
+                        <p>
+                            <input type="checkbox" class="filled-in" id="secteur-all" checked="checked" />
+                            <label for="secteur-all">Tous</label>
+                        </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </form>
+</div>
+      
