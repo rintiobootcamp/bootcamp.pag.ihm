@@ -1,9 +1,9 @@
 angular.module('pag-site')
-.directive("selfCollapse", function () {
+  .directive("selfCollapse", function () {
     return {
-        restrict: 'A',
-        link: function(scope, element){
-            element.collapsible();
-        } 
+      restrict: 'A',
+      link: function(scope, element){
+        element.collapsible();
+      }
     }
-});
+  });

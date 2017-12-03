@@ -1,30 +1,29 @@
 <div class="main-content left-align">
-    <div class="container">
-        <h4 class="no-margin-bottom title">Liste des axes du PAG</h4>
-        <p class="subtitle grey-text text-lighten-1 no-margin-top">Tous les axes stratégiques du PAG classés par pilier</p>
-        <div class="divider"></div>
-        <div class="valign-wrapper">
-            <div class="row no-margin">
-            <div class="col m4" ng-repeat="pilier in listPiliers">
-                <div class="row no-margin">
-                    <div class="col s12">
-                        <span class="card-panel pilier">
-                        <p class="no-margin white-text">{{pilier.nom}}</p>
-                        </span>
-                    </div>
-                    <div class="col s12" ng-repeat="axe in pilier.listAxes">
-                        <a ui-sref="axe({id:axe.id})" class="card-panel axe">
-                        <b class="grey-text">{{axe.nom}}</b>
-                        <p class="divider grey lighten-1"></p>
-                        <p class="no-margin-bottom grey-text">
-                            {{axe.description}}
-                        </p>
-                        </a>
-                    </div>
-                </div>
+  <div class="container">
+    <h4 class="no-margin-bottom title">Liste des axes du PAG</h4>
+    <p class="subtitle grey-text text-lighten-1 no-margin-top">Tous les axes stratégiques du PAG classés par pilier</p>
+    <div class="divider"></div>
+    <div class="valign-wrapper">
+      <div class="row no-margin">
+        <div class="col m4" ng-repeat="pilier in listPiliers">
+          <div class="row no-margin">
+            <div class="col s12">
+              <span class="card-panel pilier">
+                <p class="no-margin white-text">{{pilier.nom}}</p>
+              </span>
             </div>
+            <div class="col s12" ng-repeat="axe in pilier.axes">
+              <a ui-sref="axe({id:axe.id})" class="card-panel axe">
+                <b class="grey-text">{{axe.nom}}</b>
+                <p class="divider grey lighten-1"></p>
+                <p class="no-margin-bottom grey-text">
+                {{axe.description}}
+                </p>
+              </a>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
-      

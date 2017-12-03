@@ -1,6 +1,6 @@
 angular.module('pag-site')
-    .constant("API",{
-        url: 'data/',
-        assets:''
-    }
-);
+  .constant("API",{
+    url: 'data/',
+    assets:''
+  }
+  );

@@ -1,8 +1,8 @@
 <div class="main-content white">
   <div class="container">
-    <h4 class="no-margin-bottom title <?php echo $color;?>"><?php echo $title;?> -- <a href="dashboard.php" class="btn teal pag">Terminer</a></h4>
-    <p class="flow-text subtitle grey-text text-lighten-1 no-margin-top"><?php echo $subtitle;?></p>
-    <p class="no-margin grey-text breadcrumbs"><?php echo $breadcrumbs; ?></p>
+    <h4 class="no-margin-bottom title">Nouvel axe stratégique -- <a href="#" class="btn teal pag">Terminer</a></h4>
+    <p class="flow-text subtitle grey-text text-lighten-1 no-margin-top">Créer un nouvel axe stratégique</p>
+    <p class="no-margin grey-text breadcrumbs">Accueil > Projets ></p>
     <div class="divider"></div>
     <!-- Content -->
     <div class="row no-margin">
@@ -17,20 +17,20 @@
               </div>
               <div class="input-field col s12 m8">
                 <input id="name" type="text" class="validate">
-                <label for="name"> Nom du pilier</label>
+                <label for="name"> Nom de l'axe</label>
               </div>
               <div class="input-field col s12 m4">
-                <input id="nbAxe" type="text" class="validate">
-                <label for="nbAxe"> Nombre d'axe</label>
+                <label class="custom-label">Pilier</label>
+                <select self-select ng-model="pilier.name" ng-options="axe.nom for axe in listPiliers"></select>
               </div>
               <div class="input-field col s12">
                 <textarea id="textarea1" class="materialize-textarea"></textarea>
-                <label for="textarea1">Description du pilier</label>
+                <label for="textarea1">Description de l'axe</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12 center center-align">
-                <a href="dashboard.php" class="btn btn-large teal pag">Terminer</a>
+                <a href="#" class="btn btn-large teal pag">Terminer</a>
               </div>
             </div>
           </form>
@@ -41,9 +41,8 @@
   </div>
 
   <div class="fixed-action-btn">
-      <a class="btn-floating btn-large green pag" href="index.php?comment">
-        <i class="large material-icons">check</i>
-      </a>
-    </div>
-
+    <a class="btn-floating btn-large green pag" href="#">
+      <i class="large material-icons">check</i>
+    </a>
+  </div>
 </div>

@@ -32,10 +32,18 @@ $(document).ready(function() {
   $("#to-videos-btn").click(function() {
     $('ul.tabs').tabs('select_tab', 'videos');
   });
-  $("#tbakc-o-videos-btn").click(function() {
+  $("#back-to-videos-btn").click(function() {
     $('ul.tabs').tabs('select_tab', 'videos');
   });
   $("#to-audio-btn").click(function() {
     $('ul.tabs').tabs('select_tab', 'audio');
+  });
+
+  $('.search-trigger').click(function() {
+    $('#search-bar').toggleClass('hide');
+  });
+
+  $('#recherche-avancee').click(function() {
+    $(".filter-row").toggleClass('hide');
   });
 });
