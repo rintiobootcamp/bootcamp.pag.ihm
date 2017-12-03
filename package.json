@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/hercege/monpag.git"
+    "url": "git+https://gitlab.com/desmart9/monpag.git"
   },
   "author": "rintio",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/hercege/monpag/issues"
+    "url": "https://gitlab.com/desmart9/monpag/issues"
   },
-  "homepage": "https://gitlab.com/hercege/monpag#README",
+  "homepage": "https://gitlab.com/desmart9/monpag#README",
   "dependencies": {
     "@uirouter/angularjs": "^1.0.11",
     "angular": "~1.6.2",
