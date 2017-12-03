@@ -17,20 +17,20 @@ angular.module('pag-site')
         return $http({
           method: 'POST',
           url: API.url + '/pilier',
-          body: body
+          data: angular.toJson(pilier)
         })
       },
       update: function(pilier) {
         return $http({
           method: 'POST',
-          url: API.url + '/pilier' + pilier_id,
-          body: body
-        }).map((res: Response) => res.json());
+          url: API.url + '/pilier/' + pilier.id,
+          data: angular.toJson(pilier)
+        });
       },
       delete(pilier_id) {
         return $http({
           method: 'DELETE',
-          url: API.url + '/pilier' + pilier_id
+          url: API.url + '/pilier/' + pilier_id
         })
       }
     }

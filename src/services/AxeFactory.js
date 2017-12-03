@@ -29,20 +29,20 @@ angular.module('pag-site')
         return $http({
           method: 'POST',
           url: API.url + '/axe',
-          body: body
+          data: angular.toJson(axe)
         })
       },
       update: function(axe) {
         return $http({
           method: 'POST',
-          url: API.url + '/axe' + axe_id,
-          body: body
-        }).map((res: Response) => res.json());
+          url: API.url + '/axe/' + axe.id,
+          data: angular.toJson(axe)
+        });
       },
       delete(axe_id) {
         return $http({
           method: 'DELETE',
-          url: API.url + '/axe' + axe_id
+          url: API.url + '/axe/' + axe_id
         })
       }
     }

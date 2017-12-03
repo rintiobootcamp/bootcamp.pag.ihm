@@ -35,20 +35,20 @@ angular.module('pag-site')
         return $http({
           method: 'POST',
           url: API.url + '/projet',
-          body: body
+          data: angular.toJson(projet)
         })
       },
       update: function(projet) {
         return $http({
           method: 'POST',
-          url: API.url + '/projet' + projet_id,
-          body: body
-        }).map((res: Response) => res.json());
+          url: API.url + '/projet/' + projet.id,
+          data: angular.toJson(projet)
+        });
       },
       delete(projet_id) {
         return $http({
           method: 'DELETE',
-          url: API.url + '/projet' + projet_id
+          url: API.url + '/projet/' + projet_id
         })
       }
     }
