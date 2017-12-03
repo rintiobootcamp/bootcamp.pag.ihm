@@ -17,7 +17,7 @@
 !/log/.keep
 !/tmp/.keep
 
-
+/node_modules
 /bower_components
 /yarn-error.log
 /vendor
