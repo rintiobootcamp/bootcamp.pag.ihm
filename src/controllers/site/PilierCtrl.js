@@ -22,6 +22,16 @@ angular.module('pag-site')
     }
     getListPiliers();
 
+    var getPilier = function (id){
+        ModelPilier.get(id)
+            .then( function(data) {
+                $scope.pilier = data.data;
+            }, function (error) {
+                console.log(error);
+            });
+    }
+    getPilier($stateParams.id);
+
     $scope.getImage = function (axe){
         ModelMedia.list(axe.id)
             .then( function(data) {
