@@ -62,13 +62,45 @@
                 </ul>
             </div>
           </div>
+          <div id="gallerie" class="col s12">
+            <ul>
+              <li ng-repeat="media in projet.listMedia">
+                <img ng-if="media.mediaType=='IMAGE'" ng-src="{{media.link}}" alt="{{media.nom}}">
+                <iframe ng-if="media.mediaType=='VIDEO'" ng-src="{{media.link}}" frameborder="0"></iframe>
+              </li>
+            </ul>
+          </div>
+          <div id="commentaires" class="col s12">
+            <ul>
+              <li ng-repeat="commentLine in projet.listComments">
+                <p>
+                <strong>{{commentLine.author}}</strong> : {{commentLine.comment}}
+                </p>
+              </li>
+            </ul>
+          </div>
         </div>
-      
-        <div class="fixed-action-btn">
-          <a class="btn-floating btn-large blue pag" href="index.php?page=comment">
-            <i class="large material-icons">mode_edit</i>
-          </a>
-        </div>
-      
       </div>
-      
+      <div class="col hide-on-small-and-down m4">
+        <ul self-collpase class="collapsible no-shadow" data-collapsible="accordion">
+          <li class="active">
+            <div class="collapsible-header amber pag white-text active">Autres projets dans le même secteur</div>
+            <div class="collapsible-body no-padding" style="display: block;">
+              <ul class="collapsible no-margin no-shadow no-border" data-collapsible="accordion">
+                <li ng-repeat="oth in listProjetsSecteur.projets" ng-if="oth.id != projet.id">
+                  <a ui-sref="projet({id:oth.id})" class="collapsible-header amber-text text-pag">{{oth.nom}}</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large blue pag" href="index.php?page=comment">
+      <i class="large material-icons">mode_edit</i>
+    </a>
+  </div>
+</div>
+

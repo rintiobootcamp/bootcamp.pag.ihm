@@ -52,5 +52,4 @@ angular.module('pag-site')
         }
         getListComments({entityId:$stateParams.id,entityType: 'AXE'});
     })
-    ;
-
+;

@@ -1,9 +1,9 @@
 angular.module('pag-site')
-  .directive("selfDropdown", function () {
+  .directive("selfSelect", function () {
     return {
       restrict: 'A',
       link: function(scope, element){
-        element.dropdown();
+        element.material_select();
       }
     }
   });

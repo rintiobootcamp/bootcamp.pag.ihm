@@ -37,6 +37,62 @@
                   label: 'Piliers'
               }
           })
+          .state('admin.newpilier', {
+              url: '/piliers/new',
+              controller: "AdminNewPiliersCtrl",
+              templateUrl: 'views/admin/piliers/form.html',
+              ncyBreadcrumb: {
+                  label: 'Piliersnew'
+              }
+          })
+          .state('admin.axes', {
+              url: '/axes',
+              controller: "AdminAxesCtrl",
+              templateUrl: 'views/admin/axes/axes.html',
+              ncyBreadcrumb: {
+                  label: 'Axes'
+              }
+          })
+          .state('admin.newaxe', {
+              url: '/axes/new',
+              controller: "AdminNewAxeCtrl",
+              templateUrl: 'views/admin/axes/form.html',
+              ncyBreadcrumb: {
+                  label: 'Axesnew'
+              }
+          })
+          .state('admin.secteurs', {
+              url: '/secteurs',
+              controller: "AdminSecteursCtrl",
+              templateUrl: 'views/admin/secteurs/secteurs.html',
+              ncyBreadcrumb: {
+                  label: 'Secteurs'
+              }
+          })
+          .state('admin.newsecteur', {
+              url: '/secteurs/new',
+              controller: "AdminNewSecteurCtrl",
+              templateUrl: 'views/admin/secteurs/form.html',
+              ncyBreadcrumb: {
+                  label: 'Secteursnew'
+              }
+          })
+          .state('admin.projets', {
+              url: '/projets',
+              controller: "AdminProjetsCtrl",
+              templateUrl: 'views/admin/projets/projets.html',
+              ncyBreadcrumb: {
+                  label: 'Projets'
+              }
+          })
+          .state('admin.newprojet', {
+              url: '/projets/new',
+              controller: "AdminNewProjetCtrl",
+              templateUrl: 'views/admin/projets/form.html',
+              ncyBreadcrumb: {
+                  label: 'Projetsnew'
+              }
+          })
 
           // HOME
             .state('home', {

@@ -1,16 +1,16 @@
 angular.module('pag-site')
-    .controller("SiteHomeCtrl", function (ModelProjet, ModelAxe, $scope) {
+  .controller("SiteHomeCtrl", function (ModelProjet, ModelAxe, $scope) {
 
-        var getListProjetsByRegions = function (){
-            ModelProjet.listByRegions()
-                .then(function(data){
-                    $scope.markersProjets = data.data;
-                    initializeMap();
-                }, function (error){
-                    console.log(error);
-                });
-        };
-        getListProjetsByRegions();
+    var getListProjetsByRegions = function (){
+      ModelProjet.listByRegions()
+        .then(function(data){
+          $scope.markersProjets = data.data;
+          initializeMap();
+        }, function (error){
+          console.log(error);
+        });
+    };
+    getListProjetsByRegions();
 
         var initializeMap = function (){
             $scope.listProjetsRegions = [];
@@ -158,20 +158,6 @@ angular.module('pag-site')
             }
           }
         ];
-        // $scope.$on("leafletDirectiveMap.click", function(event, args){
-        //     var leafEvent = args.leafletEvent;
-        //
-        //     $scope.markers.push({
-        //         lat: leafEvent.latlng.lat,
-        //         lng: leafEvent.latlng.lng,
-        //         message: "My Added Marker",
-        //         icon: {
-        //           iconUrl: '/node_modules/leaflet/dist/images/marker-icon.png',
-        //           shadowUrl: '/node_modules/leaflet/dist/images/marker-shadow.png',
-        //         }
-        //     });
-        //     console.log('test');
-        //
-        // });
 
-    });
+    })
+;
