@@ -11,7 +11,7 @@ angular.module('pag-site')
         getListPiliers();
         
     })
-  .controller("SiteOnePilierCtrl", function(ModelPilier, ModelMedia, ModelComment, $scope,$stateParams){
+  .controller("SiteOnePilierCtrl", function(ModelPilier, ModelMedia, ModelComment, $scope,$stateParams, CONST){
     var getListPiliers = function () {
       ModelPilier.list()
         .then( function(data) {
