@@ -80,22 +80,22 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="results-axes" ng-show="">
+                    <div class="results-axes" ng-show="results.returnAxes">
                         <h6><i class="material-icons">arrow_forward</i> Axes</h6>
                         <ul>
-                            <li ng-repeat="listPiliersSearch"></li>
+                            <li ng-repeat="axe in listAxesSearch"></li>
                         </ul>
                     </div>
-                    <div class="results-secteurs" ng-show="">
+                    <div class="results-secteurs" ng-show="results.returnSecteurs">
                         <h6><i class="material-icons">arrow_forward</i> Secteurs</h6>
                         <ul>
-                            <li ng-repeat="listPiliersSearch"></li>
+                            <li ng-repeat="secteur in listSecteursSearch"></li>
                         </ul>
                     </div>
-                    <div class="results-projets" ng-show="">
+                    <div class="results-projets" ng-show="results.returnProjets">
                         <h6><i class="material-icons">arrow_forward</i> Projets</h6>
                         <ul>
-                            <li ng-repeat="listPiliersSearch"></li>
+                            <li ng-repeat="projet in listProjetsSearch"></li>
                         </ul>
                     </div>
                 </div>
