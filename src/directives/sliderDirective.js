@@ -3,7 +3,6 @@ angular.module('pag-site')
     return {
         restrict: 'A',
         link: function(scope, element){
-            console.log(element);
             element.slider();
         } 
     }
