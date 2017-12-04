@@ -73,6 +73,12 @@
         "lien": "https://lorempixel.com/580/250/nature/3",
         "mediaType": "IMAGE",
         "nom": "lorem 3"
+      },
+      {
+        "id": 4,
+        "lien": "http://localhost:8080/assets/docs/projet-1.pdf",
+        "mediaType": "DOCUMENT",
+        "nom": "fiche-projet"
       }
     ]
 }
