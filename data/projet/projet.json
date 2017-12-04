@@ -76,7 +76,7 @@
       },
       {
         "id": 4,
-        "lien": "http://localhost:8080/assets/docs/projet-1.pdf",
+        "lien": "http://monpag.herokuapp.com/assets/docs/projet-1.pdf",
         "mediaType": "DOCUMENT",
         "nom": "fiche-projet"
       }
