@@ -1,13 +1,27 @@
 
 [
     {
-        "link": "https://lorempixel.com/580/250/nature/2",
+        "id":1,
+        "lien": "https://lorempixel.com/580/250/nature/1",
         "mediaType": "IMAGE",
         "nom": "string"
     },
     {
-        "link": "https://lorempixel.com/580/250/nature/3",
+        "id":2,
+        "lien": "https://lorempixel.com/580/250/nature/2",
         "mediaType": "IMAGE",
         "nom": "string"
-    }
+    },
+    {
+        "id":3,
+        "lien": "https://lorempixel.com/580/250/nature/3",
+        "mediaType": "IMAGE",
+        "nom": "string"
+    },
+    {
+        "id": 4,
+        "lien": "http://monpag.herokuapp.com/assets/docs/projet-1.pdf",
+        "mediaType": "document",
+        "nom": "fiche-projet"
+      }
 ]
