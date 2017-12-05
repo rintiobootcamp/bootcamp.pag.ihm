@@ -1,7 +1,7 @@
 angular.module('pag-site')
-    .controller("SiteAxesCtrl", function (ModelAxe, $scope) {
+    .controller("SiteAxesCtrl", function (ModelAxe, ModelPilier, $scope) {
         var getListAxes = function () {
-            ModelAxe.listPiliers()
+            ModelPilier.list()
                 .then( function(data) {
                     $scope.listPiliers = data.data;
                 }, function (error) {
@@ -22,15 +22,20 @@ angular.module('pag-site')
         }
         getListAxes();
 
-        var getAxe = function (id){
-            ModelAxe.get(id)
+        var params_get_entity = {
+            id:$stateParams.id
+        }
+
+        var getAxe = function (params){
+            ModelAxe.get(params)
                 .then( function(data) {
+                    console.log(data);
                     $scope.axe = data.data;
                 }, function (error) {
                     console.log(error);
                 });
         }
-        getAxe($stateParams.id);
+        getAxe(params_get_entity);
 
         $scope.getImage = function (axe){
             ModelMedia.list(axe.id)
@@ -42,6 +47,11 @@ angular.module('pag-site')
                 return CONST.defaultImageEntity;
         }
 
+        var params_get_comments = {
+            entityId:$stateParams.id,
+            entityType: 'AXE'
+        }
+
         var getListComments = function (params) {
             ModelComment.list(params)
                 .then( function(data) {
@@ -50,6 +60,6 @@ angular.module('pag-site')
                     console.log(error);
                 });
         }
-        getListComments({entityId:$stateParams.id,entityType: 'AXE'});
+        getListComments(params_get_comments);
     })
 ;
