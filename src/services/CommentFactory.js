@@ -4,17 +4,17 @@ angular.module('pag-site')
             list: function (params){
                 return $http({
                     method: 'GET',
-                    // params : 
-                        //  "entityId" : params.entityId //0
-                        //  "entityType" : params.entityType //"COMMENTAIRE"
-                    url: API.url + '/comment/comments.json'
+                    //url: API.url + '/comment/comments.json'
+                    //url: API.comment_fonct_url + 'entityId=' + params.entityId + '&entityType=' + params.entityType
+                    url: API.comment_fonct_url + params.entityType +'/' + params.entityId
                 });
             },
-            save: function (obj){
+            post: function (obj){
                 return $http({
                     method: 'POST',
                     data: angular.toJson(obj),
-                    url: API.url + '/comment/post_comment.json'
+                    //url: API.url + '/comment/post_comment.json'
+                    url: API.comment_fonct_url
                 })
             }
         }

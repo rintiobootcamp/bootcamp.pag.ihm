@@ -1,16 +1,18 @@
 angular.module('pag-site')
   .factory('ModelSecteur', function ($http, API) {
     return {
-      get: function (){
+      get: function (obj){
         return $http({
           method: 'GET',
-          url: API.url + '/secteur/secteur.json'
+          //url: API.url + '/secteur/secteur.json',
+          url: API.cat_fonct_url + 'secteurs/'+ obj.id
         });
       },
       list: function (){
         return $http({
           method: 'GET',
-          url: API.url + '/secteur/projets_secteurs.json'
+          //url: API.url + '/secteur/projets_secteurs.json'
+          url: API.cat_fonct_url + 'secteurs'
         });
       },
       create: function(secteur) {
