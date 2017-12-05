@@ -43,8 +43,6 @@ angular.module('pag-site')
       },
 
     };
-    $scope.markers = new Array();
-
     $scope.$on('leafletDirectiveMap.zoomend', function (event, args) {
       if (args.leafletObject._zoom >= 9) {
         $scope.map.paths = '';
@@ -53,7 +51,7 @@ angular.module('pag-site')
           {
             lat: 9.357793,
             lng: 2.601571,
-            message: "Parakou",
+            message: "",
             icon: {
               iconUrl: '/node_modules/leaflet/dist/images/marker-icon.png',
               shadowUrl: '/node_modules/leaflet/dist/images/marker-shadow.png',
@@ -63,7 +61,7 @@ angular.module('pag-site')
           {
             lat: 6.522945,
             lng: 2.666289,
-            message: "Ouémé",
+            message: "",
             icon: {
               iconUrl: '/node_modules/leaflet/dist/images/marker-icon.png',
               shadowUrl: '/node_modules/leaflet/dist/images/marker-shadow.png',
@@ -73,7 +71,7 @@ angular.module('pag-site')
           {
             lat: 9.389607,
             lng:  2.634361,
-            message: "Parakou",
+            message: "",
             icon: {
               iconUrl: '/node_modules/leaflet/dist/images/marker-icon.png',
               shadowUrl: '/node_modules/leaflet/dist/images/marker-shadow.png',
@@ -83,7 +81,7 @@ angular.module('pag-site')
           {
             lat: 10.189803,
             lng: 1.452991,
-            message: "Nati",
+            message: "",
             icon: {
               iconUrl: '/node_modules/leaflet/dist/images/marker-icon.png',
               shadowUrl: '/node_modules/leaflet/dist/images/marker-shadow.png',
@@ -93,7 +91,7 @@ angular.module('pag-site')
           {
             lat: 10.029513,
             lng:  3.187786,
-            message: "Nikki",
+            message: "",
             icon: {
               iconUrl: '/node_modules/leaflet/dist/images/marker-icon.png',
               shadowUrl: '/node_modules/leaflet/dist/images/marker-shadow.png',
@@ -102,10 +100,20 @@ angular.module('pag-site')
         ];
 
         $scope.map.markers = markers;
+        $scope.$on('leafletDirectiveMarker.click', function(event, args){
+          if(!$scope.$$phase) {
+
+          console.log($('.waves-effect'));
+          $('.waves-effect').trigger('click');
+        };
+
+        });
+
       };
     });
 
   }
+
 
   initializeMap();
 
