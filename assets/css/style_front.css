@@ -22,4 +22,10 @@ a.pres_link {
     .search-page .content-search .reultats .material-icons {
       font-size: 14px !important; }
 
+.close-menu-site {
+  float: right;
+  display: inline-block;
+  margin-top: 10px;
+  color: #e95151; }
+
 /*# sourceMappingURL=style_front.css.map */

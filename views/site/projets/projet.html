@@ -1,7 +1,7 @@
 <div class="main-content">
         <div class="container">
           <h4 class="no-margin-bottom title">Projet n° {{projet.id}} - {{projet.nom}}<span class=" hide-on-small-only"></span> <a ui-sref="home" class="btn blue pag hide-on-small-only">Commenter</a></h4>
-          <p class="flow-text subtitle grey-text text-lighten-1 no-margin-top">Secteur : {{projet.secteur.nom}}</p>
+          <p class="flow-text subtitle grey-text text-lighten-1 no-margin-top">Secteur : {{projet.secteur.nom}} <span><a class="btn blue pag" target="_blank" href="{{get_synthese_file.lien}}" download="synthese-projet.pdf"><i class="material-icons left">file_download</i> fiche projet</a></span></p>
           <p class="no-margin grey-text breadcrumbs"><!--<span ncy-breadcrumb-text="{{ncyBreadcrumbLabel}}"></span>--></p>
           <div class="divider"></div>
           <div class="row no-margin">

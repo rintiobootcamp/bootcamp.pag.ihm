@@ -10,7 +10,7 @@ angular.module('pag-site')
         }
         getListProjets();
     })
-    .controller("SiteOneProjetCtrl", function(ModelProjet, ModelComment, $scope,$stateParams){
+    .controller("SiteOneProjetCtrl", function(ModelProjet, ModelComment, $scope,$stateParams, $filter){
         var getListProjetsBySeceteur = function (idProjet) {
             ModelProjet.listBySecteur(idProjet)
                 .then( function(data) {
@@ -25,6 +25,9 @@ angular.module('pag-site')
                 .then( function(data) {
                     $scope.projet = data.data;
                     getListProjetsBySeceteur(projet.id);
+                    // Filter medias to get .pdf file synthese
+                    var medias_projets = $scope.projet.medias;
+                    $scope.get_synthese_file = $filter('filter')(medias_projets,{'mediaType':'DOCUMENT','nom':'fiche-projet'})[0];
                 }, function (error) {
                     console.log(error);
                 });
