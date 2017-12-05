@@ -1,16 +1,18 @@
 angular.module('pag-site')
   .factory('ModelProjet', function ($http, API) {
     return {
-      get: function (){
+      get: function (obj){
         return $http({
           method: 'GET',
-          url: API.url + '/projet/projet.json'
+          //url: API.url + '/projet/projet.json'
+          url: API.proj_fonct_url + 'projets/'+ obj.id
         });
       },
       list: function (){
         return $http({
           method: 'GET',
-          url: API.url + '/projet/projets_secteurs.json'
+          //url: API.url + '/projet/projets.json'
+          url: API.proj_fonct_url + 'projets'
         });
       },
       listBySecteur: function (idSecteur){
@@ -22,7 +24,8 @@ angular.module('pag-site')
       countProjets: function (){
         return $http({
           method: 'GET',
-          url: API.url + '/projet/count_projets.json'
+          //url: API.url + '/projet/count_projets.json',
+          url: API.proj_fonct_url + 'projets/count'
         });
       },
       listByRegions: function (){
