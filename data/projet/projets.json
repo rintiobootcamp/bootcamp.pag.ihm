@@ -1,666 +1,767 @@
 [
-    {
-      "createAt": 12355444455,
-      "description": "CONSOLIDER LA DÉMOCRATIE, L’ÉTAT DE DROIT ET LA BONNE GOUVERNANCE",
+  {
       "id": 1,
-      "listAxes": [
-        {
-          "createAt": 12355444455,
-          "description": "Renforcement des bases de la démocratie et de l’État de droit",
-          "focus": "un cadre institutionnel et démocratique plus équilibré",
-          "id": 1,
-          "listComments": [
-            {
-              "author":"string",
-              "comment":"blabla"
-            },
-            {
-              "author":"string",
-              "comment":"blabla"
-            }
-          ],
-          "listMedia": [
-            {
-              "link": "string",
-              "mediaType": "IMAGE",
-              "nom": "string"
-            }
-          ],
-          "listSectors": [
-            {
-              "createAt": 0,
-              "description": "string",
-              "id": 0,
-              "listAxes": [
-                {}
-              ],
-              "listComments": [
-                {
-                  "author":"string",
-                  "comment":"blabla"
-                },
-                {
-                  "author":"string",
-                  "comment":"blabla"
-                }
-              ],
-              "listMedia": [
-                {
-                  "link": "string",
-                  "mediaType": "IMAGE",
-                  "nom": "string"
-                }
-              ],
-              "listProjects": [
-                {
-                  "actualBudget": 0,
-                  "actualEndDate": 0,
-                  "actualStartDate": 0,
-                  "createAt": 0,
-                  "description": "string",
-                  "forecastedBudget": 0,
-                  "id": 0,
-                  "listComments": [
-                    {
-                      "author":"string",
-                      "comment":"blabla"
-                    },
-                    {
-                      "author":"string",
-                      "comment":"blabla"
-                    }
-                  ],
-                  "listMedia": [
-                    {
-                      "link": "string",
-                      "mediaType": "IMAGE",
-                      "nom": "string"
-                    }
-                  ],
-                  "listRegions": [
-                    {
-                      "id": 0,
-                      "nom": "string",
-                      "typeRegion": "COMMUNE"
-                    }
-                  ],
-                  "nom": "string",
-                  "objectives": [
-                    "string"
-                  ],
-                  "plannedEndDate": 0,
-                  "plannedStartDate": 0,
-                  "updateAt": 0
-                }
-              ],
-              "nom": "string",
-              "objective": "string",
-              "updateAt": 0
-            }
-          ],
-          "nom": "Axe stratégique 1",
-          "updateAt": 12355444455
-        },
-        {
-          "createAt": 12355444455,
-          "description": "Renforcement des bases de la démocratie et de l’État de droit",
-          "focus": "un cadre institutionnel et démocratique plus équilibré",
-          "id": 1,
-          "listComments": [
-            {
-              "author":"string",
-              "comment":"blabla"
-            },
-            {
-              "author":"string",
-              "comment":"blabla"
-            }
-          ],
-          "listMedia": [
-            {
-              "link": "string",
-              "mediaType": "IMAGE",
-              "nom": "string"
-            }
-          ],
-          "listSectors": [
-            {
-              "createAt": 0,
-              "description": "string",
-              "id": 0,
-              "listAxes": [
-                {}
-              ],
-              "listComments": [
-                {
-                  "author":"string",
-                  "comment":"blabla"
-                },
-                {
-                  "author":"string",
-                  "comment":"blabla"
-                }
-              ],
-              "listMedia": [
-                {
-                  "link": "string",
-                  "mediaType": "IMAGE",
-                  "nom": "string"
-                }
-              ],
-              "listProjects": [
-                {
-                  "actualBudget": 0,
-                  "actualEndDate": 0,
-                  "actualStartDate": 0,
-                  "createAt": 0,
-                  "description": "string",
-                  "forecastedBudget": 0,
-                  "id": 0,
-                  "listComments": [
-                    {
-                      "author":"string",
-                      "comment":"blabla"
-                    },
-                    {
-                      "author":"string",
-                      "comment":"blabla"
-                    }
-                  ],
-                  "listMedia": [
-                    {
-                      "link": "string",
-                      "mediaType": "IMAGE",
-                      "nom": "string"
-                    }
-                  ],
-                  "listRegions": [
-                    {
-                      "id": 0,
-                      "nom": "string",
-                      "typeRegion": "COMMUNE"
-                    }
-                  ],
-                  "nom": "string",
-                  "objectives": [
-                    "string"
-                  ],
-                  "plannedEndDate": 0,
-                  "plannedStartDate": 0,
-                  "updateAt": 0
-                }
-              ],
-              "nom": "string",
-              "objective": "string",
-              "updateAt": 0
-            }
-          ],
-          "nom": "Axe stratégique 1",
-          "updateAt": 12355444455
-        }
-       
-      ],
-      "listComments": [
-        {
-          "author":"string",
-          "comment":"blabla"
-        },
-        {
-          "author":"string",
-          "comment":"blabla"
-        }
-      ],
-      "listMedia": [
-        {
-          "link": "string",
-          "mediaType": "IMAGE",
-          "nom": "string"
-        }
-      ],
-      "nom": "Pilier 1",
-      "updateAt": 12355444455
-    },
-    {
-      "createAt": 12355444455,
-      "description": "CONSOLIDER LA DÉMOCRATIE, L’ÉTAT DE DROIT ET LA BONNE GOUVERNANCE",
+      "nom": "Faire de la Pendjari/W le parc de référence de l'Afrique de l'Ouest ",
+      "reference": "",
+      "description": "Revitalisation animalière (introduction d’espèces telles que le rhinocéros, le guépard, la girafe) Renforcement des infrastructures du parc (aménagement des pistes, construction d’une piste d’atterrissage, autonomie énergétique…) Construction de lodges de luxe, aménagement d’une zone de chasse Renforcement des capacités (installation d’un camp militaire, formation des guides, promotion, élaboration d’un circuit touristique intégré…)",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 9,
+      "regions": []
+  },
+  {
       "id": 2,
-      "listAxes": [
-        {
-          "createAt": 12355444455,
-          "description": "Renforcement des bases de la démocratie et de l’État de droit",
-          "focus": "un cadre institutionnel et démocratique plus équilibré",
-          "id": 1,
-          "listComments": [
-            {
-              "author":"string",
-              "comment":"blabla"
-            },
-            {
-              "author":"string",
-              "comment":"blabla"
-            }
-          ],
-          "listMedia": [
-            {
-              "link": "string",
-              "mediaType": "IMAGE",
-              "nom": "string"
-            }
-          ],
-          "listSectors": [
-            {
-              "createAt": 0,
-              "description": "string",
-              "id": 0,
-              "listAxes": [
-                {}
-              ],
-              "listComments": [
-                {
-                  "author":"string",
-                  "comment":"blabla"
-                },
-                {
-                  "author":"string",
-                  "comment":"blabla"
-                }
-              ],
-              "listMedia": [
-                {
-                  "link": "string",
-                  "mediaType": "IMAGE",
-                  "nom": "string"
-                }
-              ],
-              "listProjects": [
-                {
-                  "actualBudget": 0,
-                  "actualEndDate": 0,
-                  "actualStartDate": 0,
-                  "createAt": 0,
-                  "description": "string",
-                  "forecastedBudget": 0,
-                  "id": 0,
-                  "listComments": [
-                    {
-                      "author":"string",
-                      "comment":"blabla"
-                    },
-                    {
-                      "author":"string",
-                      "comment":"blabla"
-                    }
-                  ],
-                  "listMedia": [
-                    {
-                      "link": "string",
-                      "mediaType": "IMAGE",
-                      "nom": "string"
-                    }
-                  ],
-                  "listRegions": [
-                    {
-                      "id": 0,
-                      "nom": "string",
-                      "typeRegion": "COMMUNE"
-                    }
-                  ],
-                  "nom": "string",
-                  "objectives": [
-                    "string"
-                  ],
-                  "plannedEndDate": 0,
-                  "plannedStartDate": 0,
-                  "updateAt": 0
-                }
-              ],
-              "nom": "string",
-              "objective": "string",
-              "updateAt": 0
-            }
-          ],
-          "nom": "Axe stratégique 1",
-          "updateAt": 12355444455
-        },
-        {
-          "createAt": 12355444455,
-          "description": "Renforcement des bases de la démocratie et de l’État de droit",
-          "focus": "un cadre institutionnel et démocratique plus équilibré",
-          "id": 1,
-          "listComments": [
-            {
-              "author":"string",
-              "comment":"blabla"
-            },
-            {
-              "author":"string",
-              "comment":"blabla"
-            }
-          ],
-          "listMedia": [
-            {
-              "link": "string",
-              "mediaType": "IMAGE",
-              "nom": "string"
-            }
-          ],
-          "listSectors": [
-            {
-              "createAt": 0,
-              "description": "string",
-              "id": 0,
-              "listAxes": [
-                {}
-              ],
-              "listComments": [
-                {
-                  "author":"string",
-                  "comment":"blabla"
-                },
-                {
-                  "author":"string",
-                  "comment":"blabla"
-                }
-              ],
-              "listMedia": [
-                {
-                  "link": "string",
-                  "mediaType": "IMAGE",
-                  "nom": "string"
-                }
-              ],
-              "listProjects": [
-                {
-                  "actualBudget": 0,
-                  "actualEndDate": 0,
-                  "actualStartDate": 0,
-                  "createAt": 0,
-                  "description": "string",
-                  "forecastedBudget": 0,
-                  "id": 0,
-                  "listComments": [
-                    {
-                      "author":"string",
-                      "comment":"blabla"
-                    },
-                    {
-                      "author":"string",
-                      "comment":"blabla"
-                    }
-                  ],
-                  "listMedia": [
-                    {
-                      "link": "string",
-                      "mediaType": "IMAGE",
-                      "nom": "string"
-                    }
-                  ],
-                  "listRegions": [
-                    {
-                      "id": 0,
-                      "nom": "string",
-                      "typeRegion": "COMMUNE"
-                    }
-                  ],
-                  "nom": "string",
-                  "objectives": [
-                    "string"
-                  ],
-                  "plannedEndDate": 0,
-                  "plannedStartDate": 0,
-                  "updateAt": 0
-                }
-              ],
-              "nom": "string",
-              "objective": "string",
-              "updateAt": 0
-            }
-          ],
-          "nom": "Axe stratégique 1",
-          "updateAt": 12355444455
-        }
-       
-      ],
-      "listComments": [
-        {
-          "author":"string",
-          "comment":"blabla"
-        },
-        {
-          "author":"string",
-          "comment":"blabla"
-        }
-      ],
-      "listMedia": [
-        {
-          "link": "string",
-          "mediaType": "IMAGE",
-          "nom": "string"
-        }
-      ],
-      "nom": "Pilier 2",
-      "updateAt": 0
-    },
-    {
-      "createAt": 12355444455,
-      "description": "CONSOLIDER LA DÉMOCRATIE, L’ÉTAT DE DROIT ET LA BONNE GOUVERNANCE",
+      "nom": "Réinventer la cité lacustre de Ganvié",
+      "reference": "",
+      "description": "Assainissement du lac et gestion des déchets  Reconstruction d’habitations en utilisant des matériaux durables et respectueux de l’environnement Réhabilitation du marché flottant et des espaces de vie sociale Construction d’un hôtel sur pilotis Réaménagement des installations de l’embarcadère, des barques de transport…",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 9,
+      "regions": []
+  },
+  {
       "id": 3,
-      "listAxes": [
-        {
-          "createAt": 12355444455,
-          "description": "Renforcement des bases de la démocratie et de l’État de droit",
-          "focus": "un cadre institutionnel et démocratique plus équilibré",
-          "id": 1,
-          "listComments": [
-            {
-              "author":"string",
-              "comment":"blabla"
-            },
-            {
-              "author":"string",
-              "comment":"blabla"
-            }
-          ],
-          "listMedia": [
-            {
-              "link": "string",
-              "mediaType": "IMAGE",
-              "nom": "string"
-            }
-          ],
-          "listSectors": [
-            {
-              "createAt": 0,
-              "description": "string",
-              "id": 0,
-              "listAxes": [
-                {}
-              ],
-              "listComments": [
-                {
-                  "author":"string",
-                  "comment":"blabla"
-                },
-                {
-                  "author":"string",
-                  "comment":"blabla"
-                }
-              ],
-              "listMedia": [
-                {
-                  "link": "string",
-                  "mediaType": "IMAGE",
-                  "nom": "string"
-                }
-              ],
-              "listProjects": [
-                {
-                  "actualBudget": 0,
-                  "actualEndDate": 0,
-                  "actualStartDate": 0,
-                  "createAt": 0,
-                  "description": "string",
-                  "forecastedBudget": 0,
-                  "id": 0,
-                  "listComments": [
-                    {
-                      "author":"string",
-                      "comment":"blabla"
-                    },
-                    {
-                      "author":"string",
-                      "comment":"blabla"
-                    }
-                  ],
-                  "listMedia": [
-                    {
-                      "link": "string",
-                      "mediaType": "IMAGE",
-                      "nom": "string"
-                    }
-                  ],
-                  "listRegions": [
-                    {
-                      "id": 0,
-                      "nom": "string",
-                      "typeRegion": "COMMUNE"
-                    }
-                  ],
-                  "nom": "string",
-                  "objectives": [
-                    "string"
-                  ],
-                  "plannedEndDate": 0,
-                  "plannedStartDate": 0,
-                  "updateAt": 0
-                }
-              ],
-              "nom": "string",
-              "objective": "string",
-              "updateAt": 0
-            }
-          ],
-          "nom": "Axe stratégique 1",
-          "updateAt": 12355444455
-        },
-        {
-          "createAt": 12355444455,
-          "description": "Renforcement des bases de la démocratie et de l’État de droit",
-          "focus": "un cadre institutionnel et démocratique plus équilibré",
-          "id": 1,
-          "listComments": [
-            {
-              "author":"string",
-              "comment":"blabla"
-            },
-            {
-              "author":"string",
-              "comment":"blabla"
-            }
-          ],
-          "listMedia": [
-            {
-              "link": "string",
-              "mediaType": "IMAGE",
-              "nom": "string"
-            }
-          ],
-          "listSectors": [
-            {
-              "createAt": 0,
-              "description": "string",
-              "id": 0,
-              "listAxes": [
-                {}
-              ],
-              "listComments": [
-                {
-                  "author":"string",
-                  "comment":"blabla"
-                },
-                {
-                  "author":"string",
-                  "comment":"blabla"
-                }
-              ],
-              "listMedia": [
-                {
-                  "link": "string",
-                  "mediaType": "IMAGE",
-                  "nom": "string"
-                }
-              ],
-              "listProjects": [
-                {
-                  "actualBudget": 0,
-                  "actualEndDate": 0,
-                  "actualStartDate": 0,
-                  "createAt": 0,
-                  "description": "string",
-                  "forecastedBudget": 0,
-                  "id": 0,
-                  "listComments": [
-                    {
-                      "author":"string",
-                      "comment":"blabla"
-                    },
-                    {
-                      "author":"string",
-                      "comment":"blabla"
-                    }
-                  ],
-                  "listMedia": [
-                    {
-                      "link": "string",
-                      "mediaType": "IMAGE",
-                      "nom": "string"
-                    }
-                  ],
-                  "listRegions": [
-                    {
-                      "id": 0,
-                      "nom": "string",
-                      "typeRegion": "COMMUNE"
-                    }
-                  ],
-                  "nom": "string",
-                  "objectives": [
-                    "string"
-                  ],
-                  "plannedEndDate": 0,
-                  "plannedStartDate": 0,
-                  "updateAt": 0
-                }
-              ],
-              "nom": "string",
-              "objective": "string",
-              "updateAt": 0
-            }
-          ],
-          "nom": "Axe stratégique 1",
-          "updateAt": 12355444455
-        }
-       
-      ],
-      "listComments": [
-        {
-          "author":"string",
-          "comment":"blabla"
-        },
-        {
-          "author":"string",
-          "comment":"blabla"
-        }
-      ],
-      "listMedia": [
-        {
-          "link": "string",
-          "mediaType": "IMAGE",
-          "nom": "string"
-        }
-      ],
-      "nom": "Pilier 3",
-      "updateAt": 0
-    }
-   
-  ]
+      "nom": "Pole touristique d'Abomey/Porto-Novo: Arts,Cultures, et Arènesd'expression Vaudou",
+      "reference": "",
+      "description": "Construction d’un parc thématique autour de la geste des rois d’Abomey Construction d’un musée des arts, des civilisations et des cultures vaudous aux environs de Porto-Novo Constructions d’arènes d’expression et de sortie : – des vaudous masqués (Porto-Novo) – des vaudous non masqués (Abomey)",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 9,
+      "regions": []
+  },
+  {
+      "id": 4,
+      "nom": "Créer une expérience touristique premium autour  des TATA SOMBA",
+      "reference": "",
+      "description": "Construction d’une quarantaine de logements de standing inspirés de l’architecture des tata somba Organisation de manifestations culturelles et artistiques (danses, chants…) pour promouvoir les cultures du Nord Renforcement des capacités (formation des guides et du personnel hôtelier…)",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 9,
+      "regions": []
+  },
+  {
+      "id": 5,
+      "nom": "Recréer à l’identique la cité historique de ouidah",
+      "reference": "",
+      "description": "Requalification urbaine de la cité historique, avec notamment une  reconstruction à l’identique et un réaménagement des forts Promotion du patrimoine et de la culture, avec notamment l’aménagement d’un parcours mémoriel et la requalification des circuits historiques Amélioration de l’accueil touristique (aménagement d’espaces de loisirs et de promenade, signalétique, gare routière, village artisanal)",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 9,
+      "regions": []
+  },
+  {
+      "id": 6,
+      "nom": "AMéNAGER DES STATiONS BAlNéAiRES",
+      "reference": "",
+      "description": "Aménagement de plans d’eau pour rendre praticables les bains de mer Aménagement de fronts de mer pour en faire des espaces de loisirs et de détente Développement de 2 types d’établissements d’accueil : hôtels de standing d’une capacité de 150 chambres et établissement de luxe composé d’une vingtaine de lodges nichés dans la mangrove sur la Route des Pêches",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 9,
+      "regions": []
+  },
+  {
+      "id": 7,
+      "nom": " FilièRES à HAuTE VAlEuR AjOuTéE  (ANANAS, ANACARDE, PRODuiTS MARAîCHERS)",
+      "reference": "",
+      "description": "ananas : rendements de 50 à 70 tonnes par ha, baisse des écarts de tri avec une cible de 20% à horizon 2021  (vs. 80% en 2015), développement des chaînes de valeur, exportations vers les marchés cibles et amélioration  de la transformation locale anacarde : mise en place de nouvelles plantations avec des plans greffés, entretien des anciennes plantations, élaboration et mise en œuvre d’un plan d’industrialisation pour transformer localement 50% des noix brutes  en 2021, mesures incitatives pour la transformation Produits maraîchers : augmentation de la production des cultures de grande consommation de 25% à travers  l’accès aux intrants, la maîtrise de l’eau et les productions de contre-saison ; développement des exports",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 1,
+      "regions": []
+  },
+  {
+      "id": 8,
+      "nom": "RENFORCER lES FilièRES CONVENTiONNEllES  (Riz, MAïS, MANiOC)",
+      "reference": "",
+      "description": "riz : Amélioration de la productivité à travers l’accessibilité de semences de qualité et d’intrants spécifiques,  la maîtrise de l’eau et l’accès aux équipements et aux innovations techniques  Amélioration de la transformation et des conditions de mise en marché maïs :  Amélioration de la productivité (semences, intrants, mécanisation)  Renforcement des activités de transformation (stockage, conservation, transformation artisanale  et semi-industrielle, équipements) Facilitation de l’accès aux marchés (système de commercialisation, cadre réglementaire et fiscal) manioc :  – Amélioration de la productivité et la compétitivité – Modernisation des systèmes de transformation – Facilitation et organisation de la commercialisation des produits dérivés",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 1,
+      "regions": []
+  },
+  {
+      "id": 9,
+      "nom": "DéVElOPPER l’AquACulTuRE CONTiNENTAlE",
+      "reference": "",
+      "description": "Renforcement de la production des alevins et des géniteurs de qualité à travers l’installation de deux écloseries d’une capacité de production totale de 35 millions d’alevins en appui à l’existant Renforcement de l’accessibilité aux intrants aquacoles pour atteindre 37 000 tonnes d’aliments extrudés en 5 ans Mise en place d’infrastructures aquacoles et appui à l’accès à des équipements adaptés ; aménagement de 500 ha de zones aquacoles Formation et renforcement des capacités des professionnels",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 1,
+      "regions": []
+  },
+  {
+      "id": 10,
+      "nom": "METTRE EN VAlEuR lA BASSE ET MOyENNE VAlléE  DE l’OuéMé",
+      "reference": "",
+      "description": "Aménagements hydroagricoles portant sur 10 000 ha dont : – 1 000 ha pour lesquels des études ont déjà été réalisées (APS, APD) – 540 ha à Tangbédji, pour lesquels des études APD sont en cours – 1 000 ha à Hlankpa (commune d’Adjohoun) – 5 000 ha sur la rive droite pour l’installation de jeunes exploitants infrastructures de désenclavement : aménagement de 600 km de pistes dont 80 km de digues-pistes et construction de 20 embarcadères modernes Appui à la mise en valeur des aménagements portant sur : – l’installation de 5 000 jeunes entrepreneurs agricoles – l’accès aux intrants spécifiques, la formation et la professionnalisation – des mesures de sauvegarde environnementales et sociales",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 1,
+      "regions": []
+  },
+  {
+      "id": 11,
+      "nom": " AuGMENTER lA PRODuCTiON DE ViANDE, DE lAiT  ET D’œuFS DE TABlE",
+      "reference": "",
+      "description": "Amélioration de l’accès aux intrants par l’augmentation des unités de production d’aliments ; développement  d’élevage villageois de volailles et de la fourniture de poussin d’un jour Développement de l’insémination artificielle pour améliorer la productivité Mise en œuvre du Programme national d’amélioration génétique Acquisition de 40 millions de doses de vaccins (iTANEW/VPV) Gestion des pâturages et renforcement du dispositif de points d’eau Construction d’infrastructures de transformation (abattoirs, laiteries) et de commercialisation, amélioration  de la santé animale et renforcement des capacités des acteurs et de l’accès aux financement",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 1,
+      "regions": []
+  },
+  {
+      "id": 12,
+      "nom": "CONSTRuCTiON D’uN NOuVEl AéROPORT iNTERNATiONAl",
+      "reference": "",
+      "description": "Renforcement de la production des alevins et des géniteurs de qualité à travers l’installation de deux écloseries d’une capacité de production totale de 35 millions d’alevins en appui à l’existant Renforcement de l’accessibilité aux intrants aquacoles pour atteindre 37 000 tonnes d’aliments extrudés en 5 ans Mise en place d’infrastructures aquacoles et appui à l’accès à des équipements adaptés ; aménagement de 500 ha de zones aquacoles Formation et renforcement des capacités des professionnels",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 3,
+      "regions": []
+  },
+  {
+      "id": 13,
+      "nom": "MODERNiSATiON ET ExTENSiON Du PORT",
+      "reference": "",
+      "description": "Reconstruction des quais Nord pour augmenter la capacité d’accueil Aménagement des terre-pleins et du quai ORyx Extension du bassin du Port sur 900 mètres Construction d’une nouvelle tour de contrôle Acquisition d’un remorqueur, de 2 grues mobiles et d’autres équipements Construction d’un centre des affaires maritimes à Cotonou",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 3,
+      "regions": []
+  },
+  {
+      "id": 14,
+      "nom": "DéVElORéAMéNAGEMENT DE l’AxE ROuTiER AuTOuR Du PORT",
+      "reference": "",
+      "description": "Reconstruction du tronçon Ancien pont de Cotonou-loterie Nationale-Hôtel du Port-Carrefour CENSAD (Erevan) sur une longueur de 5,8 km Aménagements comprenant une emprise de 40 m, 2 chaussées de largeur 23 m (côté mer) et 8 m (côté TP) séparé par un terre-plein central de 3 m de large, un trottoir de largeur variable, la mise en place d’un séparateur de type New jersey sur la chaussée gauche (côté mer), une structure de chaussée en béton armé notamment sur les voies (côté mer) à dédier au trafic de poids lourds en partance du port",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 3,
+      "regions": []
+  },
+  {
+      "id": 15,
+      "nom": " CONSTRuCTiON D’uNE ROuTE DE CONTOuRNEMENT  NORD DE COTONOu",
+      "reference": "",
+      "description": "Construction d’un axe autoroutier de contournement nord de la ville de Cotonou (40 km environ) Construction d’un pont de franchissement de la lagune de Cotonou composé de 2x4 voies équipées d’un séparateur installation de 3 stations de pompage dans les zones basses pour recueillir les eaux des différents exutoires • Construction d’aménagements (postes de péage/pesage, ouvrages d’assainissement, écluses d’évacuation, dragage du lac…)",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 3,
+      "regions": []
+  },
+  {
+      "id": 16,
+      "nom": "AMéNAGEMENT DE lA ROuTE DES PêCHES (PHASE 2)",
+      "reference": "",
+      "description": "Aménagement et bitumage de l’axe principal Adounko-Porte du non-retour (22,3 km) en 2x2 voies avec un revêtement bitumineux Aménagement et bitumage en 2x2 voies de la bretelle Adounko-Cococodji (5,2 km) avec l’aménagement d’un giratoire de distribution de trafic à l’intersection avec la RNiE 1 à Cococodji Aménagement et bitumage en 2x2 voies de la bretelle Avlékété-Pahou (5,5 km) avec l’aménagement d’un giratoire de distribution de trafic à l’intersection avec la RNiE 1 à Pahou Pavage de la bretelle Porte du non-retour-Bouche du roi (12,8 km)  Aménagement et bitumage en 2x1 voie de la bretelle Porte du non-retour – RNiE1 (8 km)",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 3,
+      "regions": []
+  },
+  {
+      "id": 17,
+      "nom": "Construction d'une autoroute entre SéMé KPODji  et PORTO-NOVO",
+      "reference": "",
+      "description": "Construction d’une liaison autoroutière entre le carrefour Sèmè et Porto-Novo sur une longueur de 10 km (emprise des travaux de 30 m, route de 2x2 voies) Construction d’un pont sur la lagune de Porto-Novo composé de 2x2 voies et équipé d’un séparateur • Aménagement des voies d’accès à la route, construction d’un poste de péage/pesage, réhabilitation d’infrastructures socio-économiques situées en bordure de la route…",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 3,
+      "regions": []
+  },
+  {
+      "id": 18,
+      "nom": "AMENAGEMENT DE lA ROUTE DjOuGOu-PéHuNCO-KéROu",
+      "reference": "",
+      "description": "Aménagement et bitumage de la route Djougou-Péhunco-Kérou-Banikoara (212 km) Aménagements socio-économiques connexes et appui aux associations féminine",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 3,
+      "regions": []
+  },
+  {
+      "id": 19,
+      "nom": "EXTENSiON DU RESEAU ROUTIER SUR 1 362 KM",
+      "reference": "",
+      "description": "l’extension et la modernisation du réseau routier concernent notamment : – la rocade de Porto-Novo (10 km) en 2x2 voies – la route Dassa-Savalou-Djougou (260 km) – la route Nikki-Kalalé-Ségbana (148 km) – la RNiE n° 2, Tronçon : Béroubouay-Kandi-Malanville (177 km) – la RNiE n° 2, Tronçon : Bohicon-Dassa-Parakou (291 km) – la RNiE n° 7, Tronçon : Banikoara-Kérémou-Burkina Faso (53 km) – les routes Kétou-idigny-igbodja-Savè (83 km), Omou-iladji-Mossokagbé-Ayékotonia (27 km) et Savè-OkéowoNigéria (27 km), Abomey-Djidja (32 km), Toffo-lalo(38 km), zangnanado-Banamè-Paouignan (53 km) – route Guessou Sud-Sinendé (62 km)",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 3,
+      "regions": []
+  },
+  {
+      "id": 20,
+      "nom": "DEPlOiEMENT DE l’INTERNET HD ET THD SuR l’ENSEMBlE  DU TERRITOIRE",
+      "reference": "",
+      "description": "• Réalisation du projet PDI2T prévu par BTI pour le déploiement de 1 983 Km (backbone) de fibre optique,  280 km de boucle métropolitaine pour le Grand Cotonou et 30 sites lTE (déjà financé) • Déploiement de 565 km de fibre optique supplémentaire (Backbone du Sud-Ouest du Pays) afin de connecter les 10 communes restantes • Déploiement de 2 450 km de réseau d’accès fibre (FTTx) • Déploiement de 800 antennes (3G/4G) et raccordement backhaul • Déploiement de 375 sites lTE • Rénovation des antennes TNT et raccordement backhaul • Définition d’un cadre incitatif pour la concurrence sur la capacité d’accès aux câbles sous-marins",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 2,
+      "regions": []
+  },
+  {
+      "id": 21,
+      "nom": "TRANSITiON DE lA DIFFuSiON ANAlOGIQUE VERS lA TNT",
+      "reference": "",
+      "description": "•Mise en place du cadre juridique de passage (loi sur la radiodiffusion numérique) • Rénovation des 35 antennes existantes en analogique et passage au numérique pour 26 d’entre elles • Acquisition et installation des équipements pour les réseaux de diffusion, de collecte et de transmission • Renforcement des capacités • Communication, sensibilisation et accompagnement de la population",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 2,
+      "regions": []
+  },
+  {
+      "id": 22,
+      "nom": "MiSE EN OEUVRE DE l’ADMiNiSTRATiON INTEllIGENTE  (SMART GOuV)",
+      "reference": "",
+      "description": "•Mettre en œuvre le socle technologique, juridique et institutionnel permettant la digitalisation des services publics, l’interconnexion et l’ouverture de l’administration (e-signature, interopérabilité, Open Data...) • Mettre en œuvre l’e-identité : permettre l’accès à la protection sociale, l’identité sociale et la formation professionnelle par corps de métier et par département • Mettre en place les différents systèmes d’information nationaux et sectoriels, avec un focus sur : – le registre national de l’état civil – gestion des RH et de la paie du personnel de l’état – gestion intégrée du budget de l’état, achats et paiements publics – simplification des démarches administratives pour l’ensemble des usagers, notamment à travers les guichets uniques communaux",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 2,
+      "regions": []
+  },
+  {
+      "id": 23,
+      "nom": "GéNéRAliSATiON DE l’uSAGE DE l’E-COMMERCE",
+      "reference": "",
+      "description": "•Mise en place d’une plateforme de e-marketplace universelle (multisectorielle) pour les biens et les services B2B et B2C • Mise en place d’un cadre réglementaire et juridique favorable • Développement de l’écosystème pour les startups numériques et accompagnement des incubateurs • Mise en place d’une plateforme nationale de paiement électronique et mobile (switch national interoperable) • Développement de services payables via mobile et en ligne (achat de crédit, paiement abonnement, paiement aux commerçants, transfert d’argent, paiement de factures, services postecash, e-tontine ..) • Normalisation et standardisation des adresses postales • Numérisation des cartes géographiques et adresses postales • Mise en place du service de courrier hybride",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 2,
+      "regions": []
+  },
+  {
+      "id": 24,
+      "nom": "GENERALISATION DE l’USAGE DU NUMERIQUE  PAR l’EDuCATION ET lA FORMATiON",
+      "reference": "",
+      "description": "•Connexion des établissements primaires, secondaires et universitaires à l’internet HD • Mise en place d’espaces numériques de travail (ENT) pour les élèves, les enseignants, l’administration et les parents (inscription en ligne, suivi de la vie scolaire, résultats scolaires et universitaires en ligne…) • Mise à disposition de salles multimédias dans les écoles primaires et secondaires • Mise en ligne des supports (modules de formations, programmes de cours, TD, exercices et corrigés...) dans toutes les universités • Mise à disposition de contenus numériques (livres électroniques, e-learning...), dans les établissements secondaires et les universités • interconnecter les centres de recherche • Développement de programmes de formation au numérique à l’attention des professionnels béninois (artisans, agriculteurs, commerçants...) • Actions de sensibilisation à l’usage du numérique à travers les associations professionnelles",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 2,
+      "regions": []
+  },
+  {
+      "id": 25,
+      "nom": "PROMOTION ET DEVElOPPEMENT DE CONTENUS NUMERIQUES",
+      "reference": "",
+      "description": "•Renforcer les capacités des professionnels de la création, de la diffusion et de la promotion de contenus numériques par la spécialisation et la création d’une école béninoise du multimédia et du numerique ; assurer la protection de la propriété intellectuelle • Encourager le développement d’un contenu « made in Benin » de qualité et diversifié notamment à travers le lancement de nouvelles chaînes thématiques numériques (culturel, régional, éducative…) et la création de centres de production régionaux • Créer un centre d’archives multimédia numérique béninois (numérisation des œuvres existantes, rachat des archives conservées à l’iNA Paris, collecte d’éléments liés à l’héritage culturel béninois) • Favoriser l’émergence de nouvelles plateformes de distribution telles que la vidéo à la demande ainsi que d’initiatives qui permettent de fidéliser les audiences et de générer de nouvelles opportunités pour les annonceurs (applications second écran etc.) • Mettre en place des mesures incitatives pour l’investissement dans la production de contenu local ; cibler notamment les entreprises générant des revenus par la vente d’espaces publicitaires ou de services d’abonnement • Mettre en place ou attirer une agence/un fonds de financement et de garantie des prêts aux conditions favorables pour les initiatives privées de création de contenus numériques multimédias",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 2,
+      "regions": []
+  },
+  {
+      "id": 26,
+      "nom": "MODERNiSER ET ETENDRE lA FilièRE THERMIQUE  POUR GARANTIR uN ACCES COMPETITIF A l’ElECTRICITE",
+      "reference": "",
+      "description": "•Réhabilitation du parc de production de la SBEE • Réhabilitation de la centrale thermique de Maria-Gléta : porter à 120 MW la puissance installée – installation bicombustible • Construction d’une nouvelle centrale bicombustible de 120 MW • Construction d’un terminal de regazéification flottant (FSRu) dans le Port de Cotonou : alimenter les centrales au gaz d’une puissance totale de 500 MW • location de groupe secours de production de 2016 jusqu’à 2018",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 5,
+      "regions": []
+  },
+  {
+      "id": 27,
+      "nom": "DEVElOPPER lES ENERGiES RENOUVElABlES",
+      "reference": "",
+      "description": "•Construction de deux centrales hydroélectriques (Adjarala et Dogo Bis) : rééquilibrage du parc de production thermique grâce à une énergie hydroélectrique peu chère à destination des populations rurales et urbaines • implantation de fermes PVs : capacité totale de 95 MW • Structuration d’une filière biomasse-combustible (potentiel de 15 MW) : utilisation des déchets de l’agriculture (tiges de coton, palmier à huile)",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 5,
+      "regions": []
+  },
+  {
+      "id": 28,
+      "nom": "RESTRUCTuRER l’OPéRATEUR NATIONAl ET SON RESEAU",
+      "reference": "",
+      "description": "•Construction d’un dispatching pour la SBEE (centre national de conduite des réseaux de distribution) et modernisation des modes d’exploitation de la SBEE (amélioration des capacités de gestion du réseau) • Renforcement des réseaux de distribution • Refonte du système de gestion clientèle de la SBEE : facturation, achats, développement et renforcement des compétences des acteurs institutionnels",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 5,
+      "regions": []
+  },
+  {
+      "id": 29,
+      "nom": "MAîTRISE DES CONSOMMATIONS ENERGéTiquES",
+      "reference": "",
+      "description": "•Mettre en place des normes contraignantes de réduction des consommations énergétiques • installations sur les toits des principaux bâtiments administratifs de centrales PV avec stockage ; remplacement des climatisations, installation de chauffe-eau solaires • éclairage public : substitution des ampoules à incandescence par des lED basse consommation ; énergie solaire • Efficacité énergétique dans les ménages",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 5,
+      "regions": []
+  },
+  {
+      "id": 30,
+      "nom": "Aménager les berges de la lagune de Cotonou et assainir son plan d’eau",
+      "reference": "",
+      "description": "Objectif stratégique :• Requalifier l’ensemble du tissu urbain qui longe les berges • Disposer d’un espace urbain d’activités, de loisirs et de plaisance qui valorise le plan d’eau lagunaire et ses abords • Améliorer les conditions environnementales de la ville de Cotonou Description : • Libération et assainissement des berges (dépollution de la lagune, mise en service d’une station d’épuration des eaux usées, création d’une décharge pour les déchets solides) • Aménagement d’une promenade sur 4 km le long du chenal avec un système de passerelle, des équipements légers etdes restaurants • Aménagement d’espaces de loisirs et de détente (aires de jeux, aires de repos, espaces de sport, esplanade de spectacles, galerie commerciale…) en ciblant plusieurs niveaux de standing • Construction d’hôtels",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 6,
+      "regions": []
+  },
+  {
+      "id": 31,
+      "nom": "Aménagement de la lagune de Porto -Novo",
+      "reference": "",
+      "description": "Objectif stratégique : • Aménager les berges pour en faire un espace de détente et de loisirs • Favoriser l’investissement privé dans les commerces et les restaurants Description : • Assainissement des berges et rechargement en sable • Aménagement d’une promenade sur 1,5 km avec des équipements légers, des commerces et des restaurants • Aménagement d’espaces de loisirs et de détente (aires de jeux, aires de repos, espaces de sport…)",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 6,
+      "regions": []
+  },
+  {
+      "id": 32,
+      "nom": "Mener une gestion efficace des déchets dans l’agglomération de Cotonou",
+      "reference": "",
+      "description": "Objectif stratégique : • Améliorer le cadre de vie et assurer la propreté de la ville de Cotonou • Améliorer l’image de la ville et accroître son attractivité • Reformer la gestion des déchets dans l’agglomération pour une meilleure efficacité et un autofinancement. Description : • Construction des infrastructures et équipements (points de regroupement, centres de transfert, décharges) et aménagement des voies d’accès • Fonctionnement et contrôle du respect des cahiers de charges • Étude de faisabilité pour la réforme de la gestion des déchets (structuration, différents modes de gestion et d’exploitation, recommandations) • Mise en oeuvre des résultats de l’étude/opérationnalisation de la nouvelle filière",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 6,
+      "regions": []
+  },
+  {
+      "id": 33,
+      "nom": "Rénover le vieux centre-ville de Cotonou (Ganhi et Akpakpa -DodomE)",
+      "reference": "",
+      "description": "Objectif stratégique : • Renforcer la vocation commerciale du vieux centre-ville et le développement immobilier (logements) • Promouvoir une nouvelle image urbaine de loisirs et de détente Description : • Développement immobilier des deux côtés de la rive portant sur 200 000 m2 de logements sur une superficie de 10 ha, avec une couverture des segments luxe (10%), haut standing (30%), moyen standing (50%) et économique amélioré (10%) • Aménagement d’une corniche en front de mer sur une longueur de 2,5 km pour en faire un espace de loisirs et de détente • Modernisation du marché avec l’aménagement de galeries marchandes ainsi que le recentrage fonctionnel sur les fruits, légumes et épices • Requalification de la circulation (voirie, espaces de stationnement…) et aménagement d’espaces verts",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 6,
+      "regions": []
+  },
+  {
+      "id": 34,
+      "nom": "Faire de Dantokpa un marché moderne de référence",
+      "reference": "",
+      "description": "Objectif stratégique : • Créer une zone commerciale moderne recentrée sur le textile, la bijouterie et les cosmétiques • Assurer une meilleure interconnexion avec l’agglomération de Cotonou Description : • Transfert du marché de gros • Transfert de certaines activités (friperie, alimentaire, équipements des ménages…) vers des marchés secondaires • Libération des emprises publiques • Dépollution, assainissement de la zone et gestion durable des déchets • Réaménagement de la voirie et des espaces de stationnement • Modernisation des installations marchandes • Appui au déplacement des commerçants",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 6,
+      "regions": []
+  },
+  {
+      "id": 35,
+      "nom": "Constr uction d’un nouveau marché international à Parakou",
+      "reference": "",
+      "description": "Objectif stratégique : • Améliorer le fonctionnement du marché pour en faire un véritable support au développement économique de la région • Assurer une meilleure accessibilité et une meilleure interconnexion avec l’agglomération de Parakou Description : • Assainissement de la zone et gestion durable des déchets • Modernisation des installations marchandes • Amélioration de la circulation autour du marché • Réaménagement de la voirie et des espaces de stationnement",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 6,
+      "regions": []
+  },
+  {
+      "id": 36,
+      "nom": "Créer un comp lexe international à Cotonou (théâtre, conférence, hôtel de luxe)",
+      "reference": "",
+      "description": "Objectif stratégique : • Construire un complexe urbain multidisciplinaire dédié aux rencontres internationales et à la rencontre des cultures et des peuples • Promouvoir l’identité du Bénin et le développement culturel • Marquer le renouveau du Bénin et refléter une modernité ancrée dans la tradition, mais tournée vers l’avenir Description : • Grand Théâtre national – 3 000 places (salle de théâtre, salle de spectacles et salles polyvalentes, cinémas, commerces et terrasses, espaces de réception, village des artistes et des techniciens) • Centre de conférences international – 3 500 places (salle de conférences principale, salles de conférences, salles de commissions, salle de banquets/bal) • Parkings en surface, parc, espaces verts et esplanades, sports et jeux",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 6,
+      "regions": []
+  },
+  {
+      "id": 37,
+      "nom": "Aménager le camp Ghézo et en faire un centre d’affaires de référence",
+      "reference": "",
+      "description": "Objectif stratégique : • Positionner Cotonou en centre d’affaires attractif en Afrique de l’Ouest, à proximité du Nigéria, avec un accent sur les métiers de la finance, des services et des technologies Description : • Aménagement d’un centre d’affaires à vocation sous-régionales avec comme composantes : – 180 000 m2 de bureaux (dont 75% dédiées à l’installation d’entreprises et 25% de bureaux prêts à l’emploi) – 135 000 m2 de logements d’affaires – 54 000 m2 d’espaces commerciaux et de restaurants – 45 000 m2 d’espaces de loisirs, de culture et d’entertainment – 36 000 m2 d’infrastructures socio-communautaires",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 6,
+      "regions": []
+  },
+  {
+      "id": 38,
+      "nom": "Réhabilitat ion et aménagement des voiries des villes de Cotono u, Porto -Novo , Parako u, Abomey-Calavi, Seme-Kpodji, Abomey, Bohicon et Nat itingou",
+      "reference": "",
+      "description": "Objectif stratégique : • Améliorer les conditions de circulation dans les villes du projet • Améliorer l’accès des ménages aux services d’assainissement pluvial et aux équipements sociocommunautaires • Contribuer à la rénovation des principales zones d’habitat et d’activités dans les villes concernées • Réduire les niveaux de pollution et de nuisances dans ces principaux centres urbains et contribuer a la propreté des rues Description : • Aménagement et réhabilitation des 850 kilomètres de voiries urbaines primaires, secondaires et tertiaires : Cotonou (300 km), Porto-Novo (150 km), Parakou (100 km), Abomey-Calavi (100 km), Seme-Kpodji (50 km), Abomey (50 km), Bohicon (50 km), Natitingou (50 km)",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 6,
+      "regions": []
+  },
+  {
+      "id": 39,
+      "nom": "Assainissement pluvial de Cotonou",
+      "reference": "",
+      "description": "Objectif stratégique : • Améliorer substantiellement l’environnement urbain et la situation d’hygiène et d’assainissement dans Cotonou • Réduire les niveaux de pollution et d’insalubrité dans la ville • Améliorer la mobilité urbaine • Renforcer les capacités des communes bénéficiaires en matière de gestion des infrastructures urbaines et de leurs territoires Description : • Libération des exutoires naturels, des bas-fonds et des couloirs d’écoulement des eaux • Dédommagement des populations déplacées • Construction de collecteurs primaires dans les bassins • Dragage des couloirs d’écoulement des eaux pluviales • Confortement des berges",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 6,
+      "regions": []
+  },
+  {
+      "id": 40,
+      "nom": "Développement de programmes immobiliers d’habitat social et économique",
+      "reference": "",
+      "description": "Objectif stratégique : • Mettre en place les conditions de production de logements par le secteur privé, avec des prix de cession de logements abordables • Promouvoir de nouveaux modes de construction, de nouveaux types de logements et de nouveau modes d’habiter en ville, ainsi que de nouvelles approches en termes d’urbanisme • Dynamiser l’emploi dans les zones d’intervention du projet Description : • Construction de 20 000 logements • Création d’au moins 100 000 emplois nationaux dans le cadre des chantiers correspondants • Accès aux services de protection sociale, au crédit des ménages bénéficiaires et des travailleurs des chantiers • Formation des jeunes et des artisans aux métiers de la construction, et transfert de compétences vers les opérateurs nationaux du BTP",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 6,
+      "regions": []
+  },
+  {
+      "id": 41,
+      "nom": "Créat ion de la Cité Internat ionale de l’Innovation et du Savoir",
+      "reference": "",
+      "description": "Objectif stratégique : • Création d’une Cité internationale de l’innovation et du savoir pour promouvoir l’émergence en Afrique de centres d’excellence dans l’enseignement supérieur, la recherche scientifique et l’entrepreneuriat, et favoriser l’éclosion de champions nationaux et régionaux dans des domaines innovants • Offrir un cadre stimulant pour former les étudiants et les participants aux compétences nécessaires pour réussir sur les marchés africains en constante évolution • A long terme au moins un tiers des diplômés et des participants de la CIIS créent leur propre emploi Description : • Trois pôles d’activités : enseignement supérieur, recherche et incubation ; avantages attractifs pour les adhérents y compris défiscalisation totale • Marché cible prioritaire composé de pays africains représentant environ 4 millions d’étudiants potentiels en 2015 • Offre éducative multidisciplinaire, multilingue et à fort lien avec les entreprises et la recherche, comprenant des programmes de formation diplômante ou qualifiante, des programmes de formation professionnelle et technique ainsi que des programmes de formation continue. Des partenariats d’envergure mondiale destinés à former l’élite de la sous-région et préparant à des diplômes allant des licences aux doctorats seront mis en place • Filières et curricula qui soutiennent les chantiers prioritaires du gouvernement ainsi que les objectifs de développement inclusif et durable: mathématiques et informatique; sciences physiques; sciences de la vie; ingénierie; architecture et urbanisme; agriculture; services (tourisme…) • Aménagement en plusieurs phases sur une superficie de +100 ha selon les principes d’une ville intelligente et durable, adaptée au contexte local, avec infrastructures modernes et écologiques (Internet très haut débit, centre de données, domotique, espaces verts, énergies renouvelables, transports ZE CO2, politique 0-déchets…)",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 4,
+      "regions": []
+  },
+  {
+      "id": 42,
+      "nom": "Moderniser et développer l’exploitation responsab le des ressources hydrologiques",
+      "reference": "",
+      "description": "Objectif stratégique : • Promouvoir la gestion intégrée des ressources en eau au niveau des bassins (Ouémé, Volta, Niger, Mono-Couffo) hydrographiques et construire des infrastructures hydrauliques multifonctions • Poursuivre la mise en place du cadre juridique et réglementaire relatif aux ressources en eau Description : • Élaboration des outils de planification et de gestion des ressources en eau pour les 4 bassins • Études et réalisation de 11 micro-barrages à vocation multiple • Aménagement des forages artésiens non maîtrisés • Implémentation du suivi de la ressource en eau : Système d’alerte précoce ; Système national d’information sur l’eau",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 7,
+      "regions": []
+  },
+  {
+      "id": 43,
+      "nom": "Donner accès à l’eau potable à l’ensemble de la population rurale et semi-urbaine",
+      "reference": "",
+      "description": "Objectif stratégique : • Desservir en eau potable 2,5 millions de personnes supplémentaires en milieu rural d’ici 2021, et 11 800 localités sans aucun point d’eau moderne fonctionnel Description : • Réalisation de 952 forages à gros débit, réalisation de 1 275 nouvelles adductions (réservoir, bornes fontaines, réseau et branchements privés) • Réalisation ou réhabilitation de 5 580 forages équipés de pompes à motricité humaine • Appui à l’intermédiation sociale, mise en affermage ou en gestion déléguée de l’ensemble des ouvrages, renforcement de la maîtrise d’ouvrage communale",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 7,
+      "regions": []
+  },
+  {
+      "id": 44,
+      "nom": "Développer les capacités de production et de distribution en milieu urbain et périurbain",
+      "reference": "",
+      "description": "Objectif stratégique : • Desservir environ 2,7 millions de personnes supplémentaires en milieux urbain et périurbain à l’horizon 2021 dans la perspective de l’accès universel à l’eau potable • Réaliser des campagnes de branchements subventionnés pour les plus démunis, divisant par 2 le prix du branchement Description : • Faire passer la capacité de production en milieu urbain de 277 000 m3/j à 441 250 m3/j (horizon 2021) • Augmenter la capacité de stockage d’eau potable de 20 000 m3 • Renforcer la capacité de traitement de l’eau brute • Densification des réseaux de distribution • Acquisition de 280 000 kits de branchements privés revendus aux ménages à faibles revenus à un prix subventionné (50 000 FCFA)",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 7,
+      "regions": []
+  },
+  {
+      "id": 45,
+      "nom": "Mise en place d’une protection sociale pour les plus démunis et réduction de la précarité",
+      "reference": "",
+      "description": "Objectif stratégique : • Mettre en place une protection pour les plus pauvres et vulnérables : soutenir à terme 4 millions de Béninois grâce au système d’assurance maladie, réduire la contrefaçon de médicaments, améliorer la formation du capital humain • Faire passer les agriculteurs, artisans et transporteurs du secteur informel au secteur formel Description : • 4 paquets de services sociaux : – assurance maladie – formation – retraite – microcrédit • Création d’une Agence nationale et d’Agences départementales de protection sociale",
+      "dateDebutReel": 1511890346,
+      "dateFinReel": 1511890346,
+      "dateDebutPrevisionnel": 0,
+      "dateFinPrevisionnel": 0,
+      "budgetPrevisionnel": 0,
+      "budgetReel": 1511890346,
+      "coutReel": 1511890346,
+      "objectif": "",
+      "phases": [],
+      "idSecteur": 8,
+      "regions": []
+  }
+]
