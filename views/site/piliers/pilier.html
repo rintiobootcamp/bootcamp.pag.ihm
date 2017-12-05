@@ -52,6 +52,43 @@
 									</div>
 								</div>
 								<div id="commentaires" class="col s12">
+									<button class="btn" ng-show="!comment.show" ng-click="showComment()"><i class="material-icons">comment</i> Commenter </button>
+									<div ng-show="comment.show">
+										<div class="row">
+											<div class="input-field col s4">
+												<input type="text" id="pseudo" class="validate" ng-model="comment.pseudo">
+												<label for="peudo">Pseudo</label>
+											</div>
+											<div class="col s2" align="center">
+												OU
+											</div>
+
+											<div class="input-field col s6">
+												<input type="text" id="email" class="validate" ng-model="comment.email">
+												<label for="email">Adresse email</label>
+											</div>
+										</div>
+										<div class="row">
+											<textarea ng-model="comment.contenu" name="commentaire" id="contenu" cols="30" rows="10" placeholder="Votre commentaire" class="materialize-textarea"></textarea>
+										</div>
+
+										<div class="row">
+											<form name="formFile">
+												<div class="file-field input-field">
+													<div class="btn">
+														<span>Ajouter fichiers</span>
+														<input type="file" ngf-select ng-model="comment.files" ngf-max-size="20MB" ngf-min-height="100" ngf-accept="'image/*,audio/*,video/*'" ngf-multiple="true">
+													</div>
+													<div class="file-path-wrapper">
+														<input class="file-path validate" type="text" placeholder="Envoyer des fichiers">
+													</div>
+												</div>
+											</form>
+										</div>
+										<div class="row">
+											<button class="btn" ng-click="postComment()">Commenter</button>
+										</div>
+									</div>
 									<ul>
 										<li ng-repeat="commentLine in listComments">
 											<p>
