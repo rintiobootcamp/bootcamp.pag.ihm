@@ -104,17 +104,20 @@ angular.module('pag-site')
       if (args.leafletObject._zoom >= 9) {
         $scope.map.paths = [];
         $scope.map.markers = markers;
+
+        $scope.$on('leafletDirectiveMarker.click', function(event, args){
+          $('#modal1').modal('open');
+        });
+
       }else{
         $scope.map.paths = paths;
         $scope.map.markers = [];
       }
     });
+
   }
 
-
   initializeMap();
-
-
 
   var getCountAxes = function (){
     ModelAxe.countAxes()
