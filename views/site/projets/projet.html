@@ -53,7 +53,7 @@
                         <div class="collapsible-header amber pag white-text active">Autres projets dans le même secteur</div>
                         <div class="collapsible-body no-padding" style="display: block;">
                         <ul class="collapsible no-margin no-shadow no-border" data-collapsible="accordion">
-                            <li ng-repeat="oth in listProjetsSecteur.projets" ng-if="oth.id != projet.id">
+                            <li ng-repeat="oth in listOtherProjetsSecteur" ng-if="oth.id != projet.id">
                                 <a ui-sref="projet({id:oth.id})" class="collapsible-header amber-text text-pag">{{oth.nom}}</a>
                             </li>
                         </ul>

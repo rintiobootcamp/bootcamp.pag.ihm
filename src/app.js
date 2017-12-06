@@ -4,6 +4,7 @@
       "ui.router", "ngResource",
       "ncy-angular-breadcrumb", "uiGmapgoogle-maps",
       "leaflet-directive",
+      "ngFileUpload"
     ])
     .config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider,uiGmapGoogleMapApiProvider) {
 

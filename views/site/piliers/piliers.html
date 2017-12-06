@@ -12,7 +12,8 @@
                 <p class="no-margin white-text">{{pilier.nom}}</p>
                 <p class="divider description grey lighten-3"></p>
                 <p class="no-margin-bottom description white-text">
-                {{pilier.description}}
+                {{pilier.description | limitTo: 150}}
+                <span ng-show="pilier.description.length > 150">...</span>
                 </p>
               </a>
             </div>
@@ -21,7 +22,8 @@
                 <b class="grey-text">{{axe.nom}}</b>
                 <p class="divider grey lighten-1"></p>
                 <p class="no-margin-bottom grey-text">
-                {{axe.description}}
+                {{axe.description | limitTo: 150}}
+                <span ng-show="axe.description.length > 150">...</span>
                 </p>
               </a>
             </div>
