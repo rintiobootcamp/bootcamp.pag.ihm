@@ -9,6 +9,7 @@ angular.module('pag-site')
     .then(function(data){
       $scope.markersProjets = data.data;
       console.log($scope.markersProjets);
+      console.log($scope.markersProjets[0].projets);
       initializeMap();
     }, function (error){
       console.log(error);
