@@ -8,6 +8,7 @@ angular.module('pag-site')
     ModelProjet.listByRegions()
     .then(function(data){
       $scope.markersProjets = data.data;
+      console.log($scope.markersProjets);
       initializeMap();
     }, function (error){
       console.log(error);
