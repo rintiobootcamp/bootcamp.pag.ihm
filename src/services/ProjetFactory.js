@@ -5,7 +5,7 @@ angular.module('pag-site')
         return $http({
           method: 'GET',
           //url: API.url + '/projet/projet.json'
-          url: API.proj_fonct_url + obj.id
+          url: API.proj_fonct_url + '/' + obj.id
         });
       },
       list: function (){
