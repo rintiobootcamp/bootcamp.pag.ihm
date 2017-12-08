@@ -6,7 +6,7 @@ angular.module('pag-site')
                     method: 'GET',
                     //url: API.url + '/comment/comments.json'
                     //url: API.comment_fonct_url + 'entityId=' + params.entityId + '&entityType=' + params.entityType
-                    url: API.comment_fonct_url + params.entityType +'/' + params.entityId
+                    url: API.comment_fonct_url + '/' + params.entityType +'/' + params.entityId
                 });
             },
             post: function (obj){
