@@ -4,8 +4,8 @@ angular.module('pag-site')
       list: function (params){
         return $http({
           method: 'GET',
-          url: API.url + '/media/get_media.json'
-          //url: API.media_fonct_url + '?entityId=' + params.entityId + '&entityType=' + params.entityType
+          //url: API.url + '/media/get_media.json'
+          url: API.media_fonct_url + '/' + params.entityType + '/' + params.entityId 
         });
       },
       save: function (obj){
