@@ -165,6 +165,24 @@
                 }
             })
 
+            .state('forum', {
+                url: "/forum",
+                controller: "SiteForumCtrl",
+                templateUrl: "views/site/forum/index.html",
+                ncyBreadcrumb: {
+                    label: 'Forum'
+                  }
+            })
+
+            .state('discussion', {
+                url: "/discussion",
+                controller: "SiteDiscussionCtrl",
+                templateUrl: "views/site/forum/discussion.html",
+                ncyBreadcrumb: {
+                    label: 'Discussion'
+                  }
+            })
+
             .state('search', {
                 url: "/search",
                 controller: "SiteSearchCtrl",

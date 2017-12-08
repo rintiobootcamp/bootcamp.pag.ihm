@@ -1,108 +1,107 @@
 <div class="main-content">
-        <div class="row no-margin">
-          <div class="col m2">
-            <ul self-collapse class="collapsible no-shadow" data-collapsible="accordion">
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">account_balance</i>Piliers</div>
-                    <div class="collapsible-body">
-                    <p ng-repeat="pilier in listPiliers">
-                        <input type="checkbox" class="filled-in" id="pilier-{{pilier.id}}" checked="checked" />
-                        <label for="pilier-{{pilier.id}}">{{pilier.nom}}</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" class="filled-in" id="pilier-all" checked="checked" />
-                        <label for="pilier-all">Tous</label>
-                    </p>
-                    </div>
-                </li>
-            </ul>
-            <ul self-collapse class="collapsible no-shadow" data-collapsible="accordion">
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">zoom_out_map</i>Axes</div>
-                    <div class="collapsible-body">
-                    <p ng-repeat="axe in listAxes">
-                        <input type="checkbox" class="filled-in" id="axe-{{axe.id}}" checked="checked" />
-                        <label for="axe-{{axe.id}}">{{axe.nom}}</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" class="filled-in" id="axe-all" checked="checked" />
-                        <label for="axe-all">Tous</label>
-                    </p>
-                    </div>
-                </li>
-            </ul>
-            <ul self-collapse class="collapsible no-shadow" data-collapsible="accordion">
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">donut_small</i>Secteurs</div>
-                    <div class="collapsible-body">
-                    <p ng-repeat="secteur in listSecteurs">
-                        <input type="checkbox" class="filled-{{secteur.id}}" id="secteur-{{secteur.id}}" checked="checked" />
-                        <label for="secteur-{{secteur.id}}">{{secteur.nom}}</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" class="filled-in" id="secteur-all" checked="checked" />
-                        <label for="secteur-all">Tous</label>
-                    </p>
-                    </div>
-                </li>
-            </ul>
-            <ul self-collapse class="collapsible no-shadow" data-collapsible="accordion">
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">folder_open</i>Projets</div>
-                    <div class="collapsible-body">
-                    <p>
-                        <input type="checkbox" class="filled-in" id="secteur-all" checked="checked" />
-                        <label for="secteur-all">Tous</label>
-                    </p>
-                    </div>
-                </li>
-            </ul>
-          </div>
-          <div class="col s12 m10 search-page">
-            <div class="grey lighten-4">
-                <div class="row no-margin">
-                  <div class="input-field col s10">
-                    <input id="input-search-page" type="search" ng-model="search.content" style="border: none;" placeholder="Tapez votre recherche ">
-                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                    <i class="material-icons close">close</i>
-                  </div>
-                  <div class="input-field col s2">
-                    <a href="index.php?page=search" class="btn btn-large teal pag"><span class="hide-on-small-only">Trouver</span><span class="hide-on-med-and-up">OK</span></a>
-                  </div>
-                </div>
-                <div class="row no-margin content-search">
-                    <h5>{{search.titleResults}}</h5>
-                    <div class="reultats results-piliers" ng-show="results.returnPiliers">
-                        <div><i class="material-icons">arrow_forward</i> Piliers</div>
-                        <ul class="list-content">
-                            <li ng-repeat="pilier in listPiliersSearch">
-                                <a ui-sref="pilier({id:pilier.id})">{{pilier.nom}}</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="results-axes" ng-show="results.returnAxes">
-                        <h6><i class="material-icons">arrow_forward</i> Axes</h6>
-                        <ul>
-                            <li ng-repeat="axe in listAxesSearch"></li>
-                        </ul>
-                    </div>
-                    <div class="results-secteurs" ng-show="results.returnSecteurs">
-                        <h6><i class="material-icons">arrow_forward</i> Secteurs</h6>
-                        <ul>
-                            <li ng-repeat="secteur in listSecteursSearch"></li>
-                        </ul>
-                    </div>
-                    <div class="results-projets" ng-show="results.returnProjets">
-                        <h6><i class="material-icons">arrow_forward</i> Projets</h6>
-                        <ul>
-                            <li ng-repeat="projet in listProjetsSearch"></li>
-                        </ul>
-                    </div>
-                </div>
+  <div class="row no-margin">
+    <div class="col m2">
+      <ul self-collapse class="collapsible no-shadow" data-collapsible="accordion">
+          <li>
+              <div class="collapsible-header"><i class="material-icons">account_balance</i>Piliers</div>
+              <div class="collapsible-body">
+              <p ng-repeat="pilier in listPiliers">
+                  <input type="checkbox" class="filled-in" id="pilier-{{pilier.id}}" checked="checked" />
+                  <label for="pilier-{{pilier.id}}">{{pilier.nom}}</label>
+              </p>
+              <p>
+                  <input type="checkbox" class="filled-in" id="pilier-all" checked="checked" />
+                  <label for="pilier-all">Tous</label>
+              </p>
+              </div>
+          </li>
+      </ul>
+      <ul self-collapse class="collapsible no-shadow" data-collapsible="accordion">
+          <li>
+              <div class="collapsible-header"><i class="material-icons">zoom_out_map</i>Axes</div>
+              <div class="collapsible-body">
+              <p ng-repeat="axe in listAxes">
+                  <input type="checkbox" class="filled-in" id="axe-{{axe.id}}" checked="checked" />
+                  <label for="axe-{{axe.id}}">{{axe.nom}}</label>
+              </p>
+              <p>
+                  <input type="checkbox" class="filled-in" id="axe-all" checked="checked" />
+                  <label for="axe-all">Tous</label>
+              </p>
+              </div>
+          </li>
+      </ul>
+      <ul self-collapse class="collapsible no-shadow" data-collapsible="accordion">
+          <li>
+              <div class="collapsible-header"><i class="material-icons">donut_small</i>Secteurs</div>
+              <div class="collapsible-body">
+              <p ng-repeat="secteur in listSecteurs">
+                  <input type="checkbox" class="filled-{{secteur.id}}" id="secteur-{{secteur.id}}" checked="checked" />
+                  <label for="secteur-{{secteur.id}}">{{secteur.nom}}</label>
+              </p>
+            <p>
+                <input type="checkbox" class="filled-in" id="secteur-all" checked="checked" />
+                <label for="secteur-all">Tous</label>
+              </p>
+              </div>
+          </li>
+      </ul>
+      <ul self-collapse class="collapsible no-shadow" data-collapsible="accordion">
+          <li>
+              <div class="collapsible-header"><i class="material-icons">folder_open</i>Projets</div>
+              <div class="collapsible-body">
+              <p>
+                  <input type="checkbox" class="filled-in" id="secteur-all" checked="checked" />
+                  <label for="secteur-all">Tous</label>
+              </p>
+              </div>
+          </li>
+      </ul>
+    </div>
+    <div class="col s12 m10 search-page">
+      <div class="grey lighten-4">
+          <div class="row no-margin">
+            <div class="input-field col s10">
+              <input id="input-search-page" type="search" ng-model="search.content" style="border: none;" placeholder="Tapez votre recherche ">
+              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons close">close</i>
+            </div>
+            <div class="input-field col s2">
+              <a href="index.php?page=search" class="btn btn-large teal pag"><span class="hide-on-small-only">Trouver</span><span class="hide-on-med-and-up">OK</span></a>
             </div>
           </div>
-      
-        </div>
-      
+          <div class="row no-margin content-search">
+              <h5>{{search.titleResults}}</h5>
+              <div class="reultats results-piliers" ng-show="results.returnPiliers">
+                  <div><i class="material-icons">arrow_forward</i> Piliers</div>
+                  <ul class="list-content">
+                      <li ng-repeat="pilier in listPiliersSearch">
+                          <a ui-sref="pilier({id:pilier.id})">{{pilier.nom}}</a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="results-axes" ng-show="results.returnAxes">
+                  <h6><i class="material-icons">arrow_forward</i> Axes</h6>
+                  <ul>
+                      <li ng-repeat="axe in listAxesSearch"></li>
+                  </ul>
+              </div>
+              <div class="results-secteurs" ng-show="results.returnSecteurs">
+                  <h6><i class="material-icons">arrow_forward</i> Secteurs</h6>
+                  <ul>
+                      <li ng-repeat="secteur in listSecteursSearch"></li>
+                  </ul>
+              </div>
+              <div class="results-projets" ng-show="results.returnProjets">
+                  <h6><i class="material-icons">arrow_forward</i> Projets</h6>
+                  <ul>
+                      <li ng-repeat="projet in listProjetsSearch"></li>
+                  </ul>
+              </div>
+          </div>
       </div>
-      
+    </div>
+
+  </div>
+
+  </div>

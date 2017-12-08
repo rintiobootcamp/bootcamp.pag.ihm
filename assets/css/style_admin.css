@@ -14,3 +14,16 @@
 .custom-label {
   position: relative !important;
 }
+
+#add-new-subject {
+  margin-top: 7px !important;
+}
+
+.forum-content h4 {
+  font-size: 24px;
+  padding: 20px 0px;
+}
+
+.collection-item {
+  background: #fff !important;
+}
