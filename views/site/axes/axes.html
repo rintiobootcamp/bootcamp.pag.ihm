@@ -17,7 +17,8 @@
                 <b class="grey-text">{{axe.nom}}</b>
                 <p class="divider grey lighten-1"></p>
                 <p class="no-margin-bottom grey-text">
-                {{axe.description}}
+                    {{axe.description | limitTo: 150}}
+                    <span ng-show="axe.description.length > 150">...</span>
                 </p>
               </a>
             </div>
