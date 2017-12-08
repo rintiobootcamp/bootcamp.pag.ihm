@@ -1,5 +1,5 @@
 angular.module('pag-site')
-.controller("SiteHomeCtrl", function (ModelProjet, ModelAxe, $scope, leafletMapEvents) {
+.controller("SiteHomeCtrl", function (ModelProjet, ModelAxe, $scope, leafletMapEvents, leafletData) {
   $scope.mapDefaults = {
     scrollWheelZoom: false
   };
@@ -17,6 +17,29 @@ angular.module('pag-site')
 
   var initializeMap = function (){
     $scope.listProjetsRegions = [];
+
+    var feature = {
+      "type": "Feature",
+      "properties": {
+        "text": 122,
+        "labelPosition": [
+          10.029513,
+          3.187786
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 10.029513, 3.187786]
+      }
+    };
+    leafletData.getMap().then(function(map) {
+      new L.labeledCircleMarker(
+        feature.geometry.coordinates.slice().reverse(),
+        feature, {
+          markerOptions: { color: '#050' }
+        }).addTo(map);
+        //new L.Marker([10.029513,3.187786]).addTo(map);
+    });
 
     var paths = {
       circle: {
