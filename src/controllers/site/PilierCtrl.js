@@ -12,33 +12,24 @@ angular.module('pag-site')
         getListPiliers();
         
     })
-  .controller("SiteOnePilierCtrl", function(ModelPilier, ModelMedia, ModelComment, $scope,$stateParams, CONST, API, Upload){
-    var getListPiliers = function () {
-      ModelPilier.list()
-        .then( function(data) {
-          $scope.listPiliers = data.data;
-        }, function (error) {
-          console.log(error);
-        });
-    }
-    getListPiliers();
-
+  .controller("SiteOnePilierCtrl", function(ModelPilier, ModelMedia, ModelComment, $scope,$stateParams, CONST, API, Upload,$q){
+    
     var params_get_entity = {
         id:$stateParams.id
     }
 
-    var getPilier = function (params){
-        ModelPilier.get(params)
-            .then( function(data) {
-                $scope.pilier = data.data;
-            }, function (error) {
-                console.log(error);
-            });
-    }
-    getPilier(params_get_entity);
+    $q.all([ModelPilier.list(), ModelPilier.get(params_get_entity)])
+        .then( values => {
+            $scope.listPiliers = values[0].data;
+            $scope.pilier = values[1].data;
+        });
 
     $scope.getImage = function (axe){
-        ModelMedia.list(axe.id)
+        var params = {
+            entityId:axe.id,
+            entityType: 'AXE'
+        }
+        ModelMedia.list(params)
             .then( function(data) {
                 if(data.data.length > 0) {
                     var img_get = _.filter(data.data, {'mediaType':'image'});
