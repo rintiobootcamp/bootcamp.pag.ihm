@@ -5,14 +5,14 @@ angular.module('pag-site')
         return $http({
           method: 'GET',
           //url: API.url + '/projet/projet.json'
-          url: API.proj_fonct_url + 'projets/'+ obj.id
+          url: API.proj_fonct_url + obj.id
         });
       },
       list: function (){
         return $http({
           method: 'GET',
           //url: API.url + '/projet/projets.json'
-          url: API.proj_fonct_url + 'projets'
+          url: API.proj_fonct_url
         });
       },
       listBySecteur: function (idSecteur){
@@ -25,7 +25,7 @@ angular.module('pag-site')
         return $http({
           method: 'GET',
           //url: API.url + '/projet/count_projets.json',
-          url: API.proj_fonct_url + 'projets/count'
+          url: API.proj_fonct_url + '/count'
         });
       },
       listByRegions: function (){
