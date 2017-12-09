@@ -1,7 +1,8 @@
 <div class="main-content">
   <div class="container">
     <h4 class="no-margin-bottom title">Projet n° {{projet.id}} - {{projet.nom  | capitalizeFirst}}<span class=" hide-on-small-only"></span></h4>
-    <p class="flow-text subtitle grey-text text-lighten-1 no-margin-top">Secteur : {{projet.secteur.nom}} <span><a class="btn blue pag" target="_blank" href="{{get_synthese_file.lien}}" download="synthese-projet.pdf"><i class="material-icons left">file_download</i> fiche projet</a></span></p>
+    <p class="flow-text subtitle grey-text text-lighten-1 no-margin-top">Secteur : {{projet.secteur.nom}} <span><a class="btn blue pag" target="_blank" href="{{get_synthese_file.lien}}" download="synthese-projet.pdf"><i class="material-icons left">file_download</i> fiche projet</a> <a class="waves-effect waves-light btn">Suivre</a>
+    </span></p>
     <p class="no-margin grey-text breadcrumbs"><!--<span ncy-breadcrumb-text="{{ncyBreadcrumbLabel}}"></span>--></p>
     <div class="divider"></div>
     <div class="row no-margin">
@@ -19,6 +20,24 @@
 					<div id="projet" class="col s12">
 							{{projet.description}}
 					</div>
+
+          <ul class="ratings-icons">
+            <li>
+              <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+            </li>
+          </ul>
 					<div id="calendrier" class="col s12">
 						<div class="row no-margin">
 							Calendrier du projet
@@ -47,7 +66,7 @@
 									<div class="col s2" align="center">
 										OU
 									</div>
-	
+
 									<div class="input-field col s6">
 										<input type="text" id="email" class="validate" ng-model="comment.email">
 										<label for="email">Adresse email</label>
@@ -56,7 +75,7 @@
 								<div class="row">
 									<textarea ng-model="comment.contenu" name="commentaire" id="contenu" cols="30" rows="10" placeholder="Votre commentaire" class="materialize-textarea"></textarea>
 								</div>
-	
+
 								<div class="row">
 									<form name="formFile">
 										<div class="file-field input-field">
