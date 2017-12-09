@@ -1,7 +1,9 @@
 <div class="main-content">
   <div class="container">
     <h4 class="no-margin-bottom title">Projet n° {{projet.id}} - {{projet.nom  | capitalizeFirst}}<span class=" hide-on-small-only"></span></h4>
-    <p class="flow-text subtitle grey-text text-lighten-1 no-margin-top">Secteur : {{projet.secteur.nom}} <span><a class="btn blue pag" target="_blank" href="{{get_synthese_file.lien}}" download="synthese-projet.pdf"><i class="material-icons left">file_download</i> fiche projet</a></span></p>
+	<p class="flow-text subtitle grey-text text-lighten-1 no-margin-top">Secteur : {{projet.secteur.nom}} <span><a class="btn blue pag" target="_blank" href="{{get_synthese_file.lien}}" download="synthese-projet.pdf"><i class="material-icons left">file_download</i> fiche projet</a></span>
+	<span class="like_btn"><a ng-click="like('PROJET',projet.id,true)" href="#"><img ng-src="/assets/images/like.png" alt="J'aime"></a> {{nbLike.like}} </span><span class="like_btn"> <a ng-click="like('PROJET',projet.id,false)" href="#"><img ng-src="/assets/images/unlike.png" alt="J'aime pas"></a> {{nbLike.unlike}}</span>
+	</p>
     <p class="no-margin grey-text breadcrumbs"><!--<span ncy-breadcrumb-text="{{ncyBreadcrumbLabel}}"></span>--></p>
     <div class="divider"></div>
     <div class="row no-margin">

@@ -12,16 +12,21 @@ angular.module('pag-site')
         getListPiliers();
         
     })
-  .controller("SiteOnePilierCtrl", function(ModelPilier, ModelMedia, ModelComment, $scope,$stateParams, CONST, API, Upload,$q){
+  .controller("SiteOnePilierCtrl", function(ModelPilier, ModelMedia, ModelComment, $scope,$stateParams, CONST, API, Upload,$q, ModelLike){
     
     var params_get_entity = {
         id:$stateParams.id
     }
+    var params_get_comments = {
+        entityId:$stateParams.id,
+        entityType: 'PILIER'
+    }
 
-    $q.all([ModelPilier.list(), ModelPilier.get(params_get_entity)])
+    $q.all([ModelPilier.list(), ModelPilier.get(params_get_entity),ModelLike.get(params_get_comments)])
         .then( values => {
             $scope.listPiliers = values[0].data;
             $scope.pilier = values[1].data;
+            $scope.nbLike = values[2].data;
         });
 
     $scope.getImage = function (axe){
@@ -42,10 +47,6 @@ angular.module('pag-site')
             return CONST.defaultImageEntity;
     }
 
-    var params_get_comments = {
-        entityId:$stateParams.id,
-        entityType: 'PILIER'
-    }
     var getListComments = function (params) {
         ModelComment.list(params)
             .then( function(data) {
@@ -109,6 +110,26 @@ angular.module('pag-site')
             uploadFile(files[i]);
         }
       }
+    }
+
+    $scope.like = function (entityType,entityId,type){
+        var obj = {
+            likeType:type,
+            entityType:entityType,
+            entityId:entityId
+        }
+        // Logic code to verify cookie or localStorage to check customer has once voted
+        // ....
+        ModelLike.post(obj)
+        .then( function(data){
+            if(obj.likeType){
+                $scope.nbLike.like++;
+            }else {
+                $scope.nbLike.unlike++;
+            }
+        }, function(error){
+            console.log(error);
+        });
     }
 
 })

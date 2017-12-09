@@ -11,22 +11,23 @@ angular.module('pag-site')
         getListAxes();
         
     })
-    .controller("SiteOneAxeCtrl", function(ModelAxe, ModelMedia, ModelComment, $scope,$stateParams,$q){
+    .controller("SiteOneAxeCtrl", function(ModelAxe, ModelMedia, ModelComment, $scope,$stateParams,$q, ModelLike){
 
         var params_get_entity = {
             id:$stateParams.id
         }
 
-        $q.all([ModelAxe.list(), ModelAxe.get(params_get_entity)])
-        .then( values => {
-            $scope.listAxes = values[0].data;
-            $scope.axe = values[1].data;
-        });
-
         var params_get_comments = {
             entityId:$stateParams.id,
             entityType: 'AXE'
         }
+
+        $q.all([ModelAxe.list(), ModelAxe.get(params_get_entity),ModelLike.get(params_get_comments)])
+        .then( values => {
+            $scope.listAxes = values[0].data;
+            $scope.axe = values[1].data;
+            $scope.nbLike = values[2].data;
+        });
 
         var getListComments = function (params) {
             ModelComment.list(params)
@@ -91,6 +92,27 @@ angular.module('pag-site')
                 uploadFile(files[i]);
             }
           }
+        }
+
+        $scope.like = function (entityType,entityId,type){
+            var obj = {
+                likeType:type,
+                entityType:entityType,
+                entityId:entityId
+            }
+            // Logic code to verify cookie or localStorage to check customer has once voted
+            // ....
+            ModelLike.post(obj)
+                .then( function(data){
+                    if(obj.likeType){
+                        $scope.nbLike.like++;
+                    }else {
+                        $scope.nbLike.unlike++;
+                    }
+                
+                }, function(error){
+                    console.log(error);
+                });
         }
     })
 ;

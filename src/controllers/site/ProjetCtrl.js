@@ -12,7 +12,7 @@ angular.module('pag-site')
           console.log(err);
         });
     })
-    .controller("SiteOneProjetCtrl", function(ModelProjet, ModelSecteur, ModelComment, ModelMedia, $scope,$stateParams, $q){
+    .controller("SiteOneProjetCtrl", function(ModelProjet, ModelSecteur, ModelComment, ModelMedia, $scope,$stateParams, $q, ModelLike){
         var params_get_entity = {
             id:$stateParams.id
         }
@@ -32,8 +32,10 @@ angular.module('pag-site')
         }
         getListComments(params_get_comments);
 
-        $q.all([ModelSecteur.list(),ModelProjet.get(params_get_entity),ModelMedia.list(params_get_comments),ModelProjet.list()])//, ModelProjet.get(params_get_entity)])
+        $q.all([ModelSecteur.list(),ModelProjet.get(params_get_entity),ModelMedia.list(params_get_comments),ModelProjet.list(), ModelLike.get(params_get_comments)])//, ModelProjet.get(params_get_entity)])
         .then(values => {
+            // Nombre de likes sur le projet
+            $scope.nbLike = values[4].data;
             // Liste de tous les secteurs
             $scope.listProjetsSecteur = values[0].data;
             // Liste de tous les projets
@@ -51,6 +53,26 @@ angular.module('pag-site')
         },err => {
           console.log(err);
         });
+
+        $scope.like = function (entityType,entityId,type){
+            var obj = {
+                likeType:type,
+                entityType:entityType,
+                entityId:entityId
+            }
+            // Logic code to verify cookie or localStorage to check customer has once voted
+            // ....
+            ModelLike.post(obj)
+            .then( function(data){
+                if(obj.likeType){
+                    $scope.nbLike.like++;
+                }else {
+                    $scope.nbLike.unlike++;
+                }
+            }, function(error){
+                console.log(error);
+            });
+        }
     })
     ;
 

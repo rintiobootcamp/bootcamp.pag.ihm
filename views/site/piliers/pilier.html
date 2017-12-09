@@ -1,7 +1,7 @@
 <div class="main-content">
   <div class="container">
     <h4 class="no-margin-bottom title">{{pilier.description}}<span class=" hide-on-small-only"></span></h4>
-    <p class="flow-text subtitle grey-text text-lighten-1 no-margin-top">{{pilier.nom}}</p>
+    <p class="flow-text subtitle grey-text text-lighten-1 no-margin-top">{{pilier.nom}} | <span class="like_btn"><a ng-click="like('PILIER',pilier.id,true)" href="#"><img ng-src="/assets/images/like.png" alt="J'aime"></a> {{nbLike.like}} </span><span class="like_btn"> <a ng-click="like('PILIER',pilier.id,false)" href="#"><img ng-src="/assets/images/unlike.png" alt="J'aime pas"></a> {{nbLike.unlike}}</span></p>
     <p class="no-margin grey-text breadcrumbs"><!--<span ncy-breadcrumb-text="{{ncyBreadcrumbLabel}}"></span>--></p>
     <div class="divider"></div>
     <div class="row no-margin">
