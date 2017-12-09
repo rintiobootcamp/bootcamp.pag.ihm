@@ -18,9 +18,11 @@
 					</div>
 					<div class="col s12"><p class="no-margin">&nbsp;</p></div>
 					<div id="projet" class="col s12">
-							{{projet.description}}
+							{{projet.description}}<br>
 					</div>
-
+          <div>
+            <a class="waves-effect waves-light btn"><i class="material-icons left">share</i>Partager</a>
+          </div>
           <ul class="ratings-icons">
             <li>
               <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
@@ -110,7 +112,20 @@
                   <div class="collapsible-body no-padding" style="display: block;">
                   <ul class="collapsible no-margin no-shadow no-border" data-collapsible="accordion">
                       <li ng-repeat="oth in listOtherProjetsSecteur" ng-if="oth.id != projet.id">
-                          <a ui-sref="projet({id:oth.id})" class="collapsible-header amber-text text-pag">{{oth.nom | capitalizeFirst}}</a>
+                          <a ui-sref="projet({id:oth.id})" class="collapsible-header black-text text-pag">{{oth.nom | capitalizeFirst}}</a>
+                      </li>
+                  </ul>
+                  </div>
+              </li>
+          </ul>
+
+          <ul self-collpase class="collapsible no-shadow" data-collapsible="accordion">
+              <li class="active">
+                  <div class="collapsible-header teal pag white-text active">Autres projets qui pourraient vous intéresser</div>
+                  <div class="collapsible-body no-padding" style="display: block;">
+                  <ul class="collapsible no-margin no-shadow no-border" data-collapsible="accordion">
+                      <li ng-repeat="oth in listOtherProjetsSecteur" ng-if="oth.id != projet.id">
+                          <a ui-sref="projet({id:oth.id})" class="collapsible-header black-text text-pag">{{oth.nom | capitalizeFirst}}</a>
                       </li>
                   </ul>
                   </div>
