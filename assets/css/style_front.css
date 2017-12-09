@@ -31,4 +31,10 @@ a.pres_link {
 .forum-content {
   min-height: 700px; }
 
+.like_btn {
+  padding: 10px; }
+  .like_btn img {
+    padding-top: 10px;
+    height: 30px; }
+
 /*# sourceMappingURL=style_front.css.map */
