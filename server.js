@@ -8,6 +8,13 @@ const path = require('path');
 app.use(express.static(__dirname));
 // Start the app by listening on the default
 // Heroku port
+app.use(function (req, res, next){
+  if (req.headers['x-forwarded-proto'] === 'https') {
+    res.redirect('http://' + req.hostname + req.url);
+  } else {
+    next();
+  }
+});
 app.listen(process.env.PORT || 8080);
 
 app.get('/*', function(req, res) {
