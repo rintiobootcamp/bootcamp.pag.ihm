@@ -1,7 +1,7 @@
 <div class="main-content">
   <div class="container">
     <h4 class="no-margin-bottom title">Projet n° {{projet.id}} - {{projet.nom  | capitalizeFirst}}<span class=" hide-on-small-only"></span></h4>
-	<p class="flow-text subtitle grey-text text-lighten-1 no-margin-top">Secteur : {{projet.secteur.nom}} <span><a class="btn blue pag" target="_blank" href="{{get_synthese_file.lien}}" download="synthese-projet.pdf"><i class="material-icons left">file_download</i> fiche projet</a><a class="waves-effect waves-light btn">Suivre</a></span>
+	<p class="flow-text subtitle grey-text text-lighten-1 no-margin-top">Secteur : {{projet.secteur.nom}} <span><a class="btn blue pag" target="_blank" href="{{get_synthese_file.lien}}" download="synthese-projet.pdf"><i class="material-icons left">file_download</i> fiche projet</a> <a class="waves-effect waves-light btn">Suivre</a></span>
 	<span class="like_btn"><a ng-click="like('PROJET',projet.id,true)" href="#"><img ng-src="/assets/images/like.png" alt="J'aime"></a> {{nbLike.like}} </span><span class="like_btn"> <a ng-click="like('PROJET',projet.id,false)" href="#"><img ng-src="/assets/images/unlike.png" alt="J'aime pas"></a> {{nbLike.unlike}}</span>
 	</p>
     <p class="no-margin grey-text breadcrumbs"><!--<span ncy-breadcrumb-text="{{ncyBreadcrumbLabel}}"></span>--></p>
@@ -20,27 +20,25 @@
 					<div class="col s12"><p class="no-margin">&nbsp;</p></div>
 					<div id="projet" class="col s12">
 							{{projet.description}}<br>
+              <ul class="ratings-icons">
+                <li>
+                  <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                  <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                  <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                  <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                  <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                </li>
+              </ul>
 					</div>
-          <div>
-            <a class="waves-effect waves-light btn"><i class="material-icons left">share</i>Partager</a>
-          </div>
-          <ul class="ratings-icons">
-            <li>
-              <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-            </li>
-            <li>
-              <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-            </li>
-            <li>
-              <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-            </li>
-            <li>
-              <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-            </li>
-            <li>
-              <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-            </li>
-          </ul>
+
 					<div id="calendrier" class="col s12">
 						<div class="row no-margin">
 							Calendrier du projet
