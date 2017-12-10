@@ -1,5 +1,9 @@
 angular.module('pag-site')
 .controller("SiteSearchCtrl", function (ModelPilier, ModelAxe, ModelSecteur, ModelProjet, $scope,$state, $stateParams) {
+    $('ul.tabs').tabs({
+      swipeable : true
+    });
+
     $scope.search = {
         show:false,
         showAdvancedSearch:false,
@@ -82,8 +86,8 @@ angular.module('pag-site')
         $scope.search.content = $stateParams.params.content;
 
         $scope.results.returnPiliers = true;
-        
-        
+
+
 
     }
 });

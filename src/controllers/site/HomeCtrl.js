@@ -57,7 +57,7 @@ angular.module('pag-site')
       {
         lat: 9.357793,
         lng: 2.601571,
-        message: "Parakou",
+        message: "<h6>Titre du projet</h6><p>Une centrale solaire au Chili pour mieux répondre à la demande dans le centre du pays</p>",
         icon: {
           iconUrl: '/node_modules/leaflet/dist/images/marker-icon.png',
           shadowUrl: '/node_modules/leaflet/dist/images/marker-shadow.png',
@@ -67,7 +67,7 @@ angular.module('pag-site')
       {
         lat: 6.522945,
         lng: 2.666289,
-        message: "Ouémé",
+        message: "<h6>Titre du projet</h6><p>Une centrale solaire au Chili pour mieux répondre à la demande dans le centre du pays</p>",
         icon: {
           iconUrl: '/node_modules/leaflet/dist/images/marker-icon.png',
           shadowUrl: '/node_modules/leaflet/dist/images/marker-shadow.png',
@@ -77,7 +77,7 @@ angular.module('pag-site')
       {
         lat: 9.389607,
         lng:  2.634361,
-        message: "Parakou",
+        message: "<h6>Titre du projet</h6><p>Une centrale solaire au Chili pour mieux répondre à la demande dans le centre du pays</p>",
         icon: {
           iconUrl: '/node_modules/leaflet/dist/images/marker-icon.png',
           shadowUrl: '/node_modules/leaflet/dist/images/marker-shadow.png',
@@ -87,7 +87,7 @@ angular.module('pag-site')
       {
         lat: 10.189803,
         lng: 1.452991,
-        message: "Nati",
+        message: "<h6>Titre du projet</h6><p>Une centrale solaire au Chili pour mieux répondre à la demande dans le centre du pays</p>",
         icon: {
           iconUrl: '/node_modules/leaflet/dist/images/marker-icon.png',
           shadowUrl: '/node_modules/leaflet/dist/images/marker-shadow.png',
@@ -97,7 +97,7 @@ angular.module('pag-site')
       {
         lat: 10.029513,
         lng:  3.187786,
-        message: "Nikki",
+        message: "<h6>Titre du projet</h6><p>Une centrale solaire au Chili pour mieux répondre à la demande dans le centre du pays</p>",
         icon: {
           iconUrl: '/node_modules/leaflet/dist/images/marker-icon.png',
           shadowUrl: '/node_modules/leaflet/dist/images/marker-shadow.png',
@@ -117,26 +117,26 @@ angular.module('pag-site')
         scrollWheelZoom: false
       },
       paths: paths,
-      markers:[]
+      markers: markers
 
     };
 
-    $scope.markers = new Array();
-
-    $scope.$on('leafletDirectiveMap.zoomend', function (event, args) {
-      if (args.leafletObject._zoom >= 9) {
-        $scope.map.paths = [];
-        $scope.map.markers = markers;
-
-        $scope.$on('leafletDirectiveMarker.click', function(event, args){
-          $('#modal1').modal('open');
-        });
-
-      }else{
-        $scope.map.paths = paths;
-        $scope.map.markers = [];
-      }
-    });
+    // $scope.markers = new Array();
+    //
+    // $scope.$on('leafletDirectiveMap.zoomend', function (event, args) {
+    //   if (args.leafletObject._zoom >= 9) {
+    //     $scope.map.paths = [];
+    //     $scope.map.markers = markers;
+    //
+    //     $scope.$on('leafletDirectiveMarker.click', function(event, args){
+    //       $('#modal1').modal('open');
+    //     });
+    //
+    //   }else{
+    //     $scope.map.paths = paths;
+    //     $scope.map.markers = [];
+    //   }
+    // });
 
   }
 

@@ -30,4 +30,22 @@
 
 .ratings-icons i {
   font-size: 25px;
+  margin-top: 30px;
+}
+
+.share-section img {
+  width: 35px;
+  margin-top: 30px;
+}
+
+.share-section ul li {
+  display: inline-block;
+}
+
+footer {
+  padding-top: 19px;
+}
+
+.tabs-content {
+  height: 100%;
 }
