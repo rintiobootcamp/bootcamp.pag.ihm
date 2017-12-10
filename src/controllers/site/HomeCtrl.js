@@ -1,5 +1,15 @@
 angular.module('pag-site')
-.controller("SiteHomeCtrl", function (ModelProjet, ModelAxe, $scope, leafletMapEvents, leafletData) {
+.controller("SiteHomeCtrl", function (ModelProjet, ModelAxe, $scope, leafletMapEvents, leafletData, ModelSecteur) {
+
+  var getListSecteurs = function (){
+    ModelSecteur.list()
+      .then( function (data) {
+        $scope.listSecteurs = data.data;
+      }, function (error){
+
+      })
+  }
+  getListSecteurs();
   $scope.mapDefaults = {
     scrollWheelZoom: false
   };
