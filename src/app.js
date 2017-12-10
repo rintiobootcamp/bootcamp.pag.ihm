@@ -2,16 +2,11 @@
         'use strict';
     angular.module('pag-site', [
       "ui.router", "ngResource",
-      "ncy-angular-breadcrumb", "uiGmapgoogle-maps",
+      "ncy-angular-breadcrumb",
       "leaflet-directive",
       "ngFileUpload"
     ])
-    .config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider,uiGmapGoogleMapApiProvider) {
-
-        uiGmapGoogleMapApiProvider.configure({
-            key: 'AIzaSyCD5_awlriWQ8qURTghd_aisC5FSXZj4z0',
-            libraries: 'weather,geometry,visualization'
-        });
+    .config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
 
         $urlRouterProvider.otherwise("/");
           // Now set up the states

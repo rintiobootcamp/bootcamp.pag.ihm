@@ -1,0 +1,1127 @@
+/*===========================================================================*/
+							/*1366px CSS*/
+/*===========================================================================*/
+@media (max-width: 1366px) {
+#banner .caption {
+	top: 50px;
+}
+.footer-section-1::before{
+	height:100%;
+	background-size:cover;
+	width:686px;
+}
+.news-widget .text-area a, .news-widget .text-area span{
+	color:#fff;
+}
+}
+
+
+
+/*===========================================================================*/
+							/*1280px CSS*/
+/*===========================================================================*/
+@media (max-width: 1280px) {
+#banner .caption {
+	top: 50px;
+}
+.news-widget .text-area a, .news-widget .text-area span{
+	color:#fff;
+}
+.footer-section-1:before{
+	height:100%;
+	background-size:cover;
+	width:646px;
+}
+}
+
+
+
+/*===========================================================================*/
+							/*767px CSS*/
+/*===========================================================================*/
+@media (max-width: 767px) {
+.top-row .left-box ul li {
+	padding: 0 18px 0 0;
+}
+.news-detail.news-section .box{
+	width:100%;
+	margin:0 0 20px 0;
+}
+.top-row .left-box {
+	padding: 0 0 20px 0;
+}
+.top-row {
+	text-align: center;
+}
+.top-row a.btn-style-1 {
+	float: none;
+	display: inline-block;
+	margin-bottom: 7px;
+}
+strong.logo {
+	width: 100%;
+	text-align: center;
+	margin: 0 0 10px 0;
+}
+.menu-col {
+	width: 100%;
+}
+.menu-col-top {
+	width: 100%;
+}
+.cp-burger-nav {
+	display: none;
+}
+.menu-col .navbar {
+	width: 100%;
+}
+.navbar-inverse .navbar-toggle {
+	margin-right: 0;
+}
+.header-search .fa {
+	font-size: 20px;
+}
+#nav li {
+	float: none;
+	display: block;
+}
+#nav {
+	width: 100%;
+}
+#nav li ul {
+	width: 100%;
+	position: static;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+#nav li ul li > ul {
+	position: static;
+	width: 98%;
+}
+#banner .caption {
+	top: 15px;
+}
+#banner .caption .holder {
+	width: 100%;
+}
+#banner .caption .holder h1 {
+	font-size: 33px;
+	margin: 0 0 7px 0;
+}
+#banner .caption .holder strong.title {
+	font-size: 24px;
+	padding: 0 0 10px 0;
+}
+.highlight-box {
+	margin-bottom: 20px;
+}
+.highlights-row .thumb {
+	float: left;
+	width: 100%;
+}
+.highlights-row .thumb img {
+	display: block;
+	width: 100%;
+}
+.highlights-row {
+	padding: 50px 0;
+}
+.services-board .owl-nav {
+	top: -30px;
+}
+.services-board .box {
+	margin: 0;
+}
+.news-section a.btn-style-1, .upcoming-event a.btn-style-1 {
+	margin: 0 0 10px 0;
+}
+.heading-style-1::before {
+	display: none;
+}
+.governor-message .holder .image-frame {
+	display: none;
+}
+.governor-message .holder .text-box {
+	position: static;
+	width: 100%;
+	padding: 0 20px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.governor-message .holder {
+	background: #000;
+	height: auto;
+	width: 100%;
+	float: left;
+}
+.department-section {
+	margin: 0;
+}
+.explore-section .btn-style-1 {
+	margin: 0 0 15px 0;
+}
+.explore-section .video-frame {
+	background-size: cover;
+}
+.explore-section .video-frame .modal-dialog {
+	width: 100%;
+	padding: 0 30px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.explore-section .video-frame .modal-body iframe {
+	height: 300px;
+}
+.community-citizen .box {
+	margin-bottom: 20px;
+}
+.community-citizen .holder {
+	width: 100%;
+}
+.footer-section-1::before {
+	display: none;
+}
+.footer-box {
+	margin-bottom: 20px;
+}
+.footer-social strong.title {
+	padding: 0 0 20px 0;
+}
+.breadcrumb-col{
+	width:100%;
+	padding:20px 15px;
+	margin-bottom:30px;
+}
+#inner-banner{
+	margin-bottom:30px;
+}
+.about-section .text-box{
+	margin-bottom:30px;
+}
+.about-section .video-frame{
+	background-size:cover;
+}
+.about-section .video-frame .modal-dialog{
+	width:100%;
+	padding:0 30px;
+	margin:0;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+.about-section .video-frame .modal-body iframe{
+	height:350px;
+}
+.about-section{
+	padding-bottom:50px;
+}
+.gallery-box{
+	margin:0 20px 40px 0;
+}
+.governor-space{
+	margin:0;
+}
+.call-action-style-1 h2{
+	font-size:28px;
+}
+.call-action-style-1 .space-box{
+	width:100%;
+}
+#filter li a{
+	padding:10px 23px;
+}
+.portfolio_block .col-md-4, .portfolio_block .col-md-4 img{
+	width:100%;
+}
+.mayor-space{
+	padding:40px 0;
+}
+.event-list .frame{
+	float:left;
+	width:100%;
+}
+.event-list .event-caption{
+	width:100%;
+	height:auto;
+}
+.blog-page .pagination-col{
+	margin:20px 0 30px 0;
+}
+.popular-videos{
+	margin-bottom:20px;
+}
+.video-frame-5{
+	width:100%;
+	margin:0 0 20px 0;
+	background-size:cover;
+}
+.city-law .box img{
+	width:100%;
+}
+.causes-list .frame{
+	width:100%;
+}
+.causes-list .causes-box .text-box{
+	width:100%;
+}
+.coming-soon .inner-content{
+	width:100%;
+}
+.contact-style-1 .address .box{
+	margin-bottom:20px;
+}
+.contact-style-1 .address{
+	padding-bottom:20px;
+}
+.map-box-1 .map_canvas{
+	height:300px;
+}
+.map-box-1{
+	margin-bottom:20px;
+}
+.top-row, .menu-col-top, .header-search{
+	display:none;
+}
+.navbar-inverse .navbar-toggle{
+	width:100%;
+	margin-right:0;
+}
+.navbar-inverse .navbar-toggle .icon-bar{
+	margin:4px auto 0;
+}
+.logo-row .btm-row{
+	margin:0 0 10px 0;
+}
+.news-section .box{
+	width:46%;
+	margin:0 10px 30px 10px;
+}
+.news-section a.btn-style-1{
+	margin:-90px 0 0 0;
+}
+.department-section .box{
+	width:30%;
+	margin:0 10px 30px 10px;
+}
+}
+
+
+/*===========================================================================*/
+							/*480px CSS*/
+/*===========================================================================*/
+@media (min-width: 320px) and (max-width: 480px) {
+.top-row .left-box {
+	padding: 0;
+	margin-bottom: 15px;
+}
+.news-section .box{
+	width:100%;
+	margin:0 0 20px 0;
+}
+.menu-col-top a.btn-style-1, .header-search, .menu-col-top ul{
+	display:none;
+}
+.navbar-inverse .navbar-toggle{
+	width:100%;
+	margin-right:0;
+}
+.navbar-inverse .navbar-toggle .icon-bar{
+	margin:4px auto 0;
+}
+.logo-row .btm-row{
+	margin:0 0 10px 0;
+}
+.top-row{
+	display:none;
+}
+.department-section .box{
+	width:43%;
+	margin:0 10px 30px 10px;
+}
+.department-section .text-box h4{
+	font-size:14px;
+}
+.coming-soon{
+	padding:80px 0 0 0;
+}
+.error-section .holder{
+	width:100%;
+}
+.error-section h1{
+	font-size:145px;
+	margin:0;
+}
+.error-section{
+	padding:0 0 70px 0;
+}
+.contact-style-1 .address .box{
+	margin-bottom:20px;
+}
+.contact-style-1 .address{
+	padding-bottom:20px;
+}
+.map-box-1 .map_canvas{
+	height:300px;
+}
+.map-box-1{
+	margin-bottom:20px;
+}
+strong.logo-2 img{
+	width:100%;
+}
+.coming-soon .inner-content{
+	width:100%;
+}
+.coming-soon .inner-content h1{
+	font-size:58px;
+}
+.coming-soon .inner-content p{
+	margin-bottom:30px;
+}
+.coming-soon .inner-content h2{
+	margin-bottom:20px;
+}
+.donation-section form ul li{
+	margin:10px;
+}
+.donation-section form ul{
+	margin-bottom:20px;
+}
+.call-action-style-2 .text-col{
+	width:100%;
+}
+.causes-list .causes-box .text-box{
+	width:100%;
+}
+.post-box .link-box a.link-text{
+	font-size:20px;
+}
+.event-timer{
+	display:none;
+}
+.media-news iframe{
+	height:230px;
+}
+.media-news{
+	margin-bottom:30px;
+}
+.popular-videos{
+	margin-bottom:20px;
+}
+.video-frame-4{
+	margin:0 0 20px 0;
+	width:100%;
+	background-size:cover;
+}
+.img-frame{
+	margin:0 0 15px 0;
+	width:100%;
+}
+.video-frame-5{
+	margin:0 0 20px 0;
+	width:100%;
+	background-size:cover;
+}
+.explore-city .popular-videos .text-box{
+	width:100%;
+}
+.explore-style-2 .popular-videos{
+	width:100%;
+	margin:0 0 20px 0;
+}
+.city-law{
+	margin:30px 0;
+}
+.city-law .box img{
+	width:100%;
+}
+.img-frame img{
+	display:block;
+	width:100%;
+}
+.media-left, .media-right, .media-body{
+	float:left;
+	width:100%;
+}
+.comments-section{
+	margin-bottom:40px;
+}
+.event-list .event-caption{
+	width:100%;
+	padding:15px 10px;
+}
+.event-box{
+	margin-bottom:30px;
+}
+.blog-page .pagination-col{
+	margin:20px 0;
+}
+.event-list .frame{
+	float:left;
+}
+#inner-banner h1{
+	font-size:39px;
+}
+.news-list .frame{
+	width:100%;
+}
+#inner-banner{
+	padding:75px 0 120px 0;
+	margin-bottom:30px;
+}
+.about-section .text-box{
+	margin-bottom:40px;
+}
+.about-section .video-frame .modal-dialog{
+	width:100%;
+	margin:0;
+	padding:0 40px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+.about-section .video-frame .modal-body iframe{
+	height:260px;
+}
+.gallery-box{
+	margin:20px 0 40px 0;
+}
+.accordion-style-1{
+	margin-bottom:40px;
+}
+.governor-space{
+	margin:0;
+}
+.breadcrumb-col{
+	width:100%;
+	padding:20px 15px;
+	margin-bottom:30px;
+}
+.call-action-style-1 h2{
+	font-size:19px;
+	line-height:24px;
+}
+.call-action-style-1 .space-box{
+	width:100%;
+}
+#filter{
+	text-align:center;
+}
+#filter li{
+	float:none;
+	display:inline-block;
+	margin:4px 2px;
+}
+.mayor-office h2{
+	font-size:26px;
+}
+.mayor-space{
+	padding:40px 0;
+}
+.portfolio_block .col-md-4, .portfolio_block .col-md-4 img{
+	width:100%;
+}
+.gallery-box .thumb{
+	width:100%;
+}
+.gallery-box .thumb img{
+	display:block;
+	width:100%;
+}
+.accordion_cp{
+	font-size:16px;
+}
+.top-row .left-box ul {
+	display: block;
+	text-align: center;
+	float: none;
+}
+.top-row .left-box ul li {
+	display: inline-block;
+	float: none;
+	padding: 4px;
+}
+.top-row {
+	text-align: center;
+}
+.top-row a.btn-style-1 {
+	display: inline-block;
+	float: none;
+}
+strong.logo {
+	width: 100%;
+	text-align: center;
+	margin: 0 0 10px 0;
+}
+.menu-col {
+	width: 100%;
+}
+.menu-col-top {
+	float: left;
+	width: 100%;
+}
+.menu-col-top ul li {
+	padding: 0 7px;
+}
+.menu-col-top ul {
+	margin: 12px 0 0 0;
+}
+.cp-burger-nav {
+	display: none;
+}
+.menu-col .navbar {
+	float: left;
+}
+.header-search {
+	margin: 12px 0 0 0;
+}
+.header-search .fa {
+	font-size: 20px;
+}
+#banner .caption .holder {
+	width: 100%;
+}
+#banner .caption {
+	top: 20px;
+}
+#banner .caption .holder h1 {
+	font-size: 15px;
+	margin: 0 0 7px 0;
+}
+#banner .caption .holder strong.title {
+	font-size: 13px;
+}
+#banner .caption .holder a.btn-style-2 {
+	display: none;
+}
+.highlight-box {
+	padding: 28px 20px;
+}
+.highlights-row .thumb {
+	float: left;
+	width: 100%;
+}
+.highlights-row .thumb img {
+	display: block;
+	width: 100%;
+}
+.highlights-row {
+	padding: 50px 0;
+}
+.services-board .owl-nav {
+	top: 0;
+}
+.menu-col .navbar-inverse {
+	width: 100%;
+}
+#nav li {
+	float: none;
+	display: block;
+}
+.navbar-inverse .navbar-toggle {
+	margin-right: 0;
+}
+#nav {
+	width: 100%;
+}
+#nav li ul {
+	position: static;
+	border: 1px solid #ccc;
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+#nav li ul li > ul {
+	width: 96%;
+	position: static;
+}
+.facts-figures .holder .box strong.number {
+	font-size: 53px;
+}
+.facts-figures {
+	margin-bottom: 50px;
+}
+.news-section a.btn-style-1 {
+	margin: 0 0 10px 0;
+}
+.news-section {
+	padding: 0;
+}
+.upcoming-event {
+	padding: 40px 0;
+	height: auto;
+}
+.upcoming-event a.btn-style-1 {
+	margin: 0;
+}
+.event-caption {
+	width: 100%;
+	left: 0;
+	height: auto;
+}
+.governor-message .holder {
+	width: 100%;
+	height: auto;
+	background: #000;
+	float: left;
+}
+.governor-message .holder .image-frame {
+	display: none;
+}
+.governor-message .holder .text-box {
+	position: static;
+	width: 100%;
+	padding: 0 15px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.explore-section .btn-style-1 {
+	margin: 0 0 10px 0;
+}
+.explore-section .video-frame .modal-dialog {
+	width: 100%;
+	padding: 0 20px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.explore-section .video-frame .modal-body iframe {
+	height: 250px;
+}
+.explore-section .video-frame .close {
+	right: 0;
+	z-index: 999;
+}
+.popular-videos .popular-head h3 {
+	font-size: 20px;
+}
+.popular-videos .text-col {
+	float: left;
+	width: 100%;
+}
+.video-frame-1, .video-frame-2 {
+	margin: 0;
+	width: 100%;
+	background-size: cover;
+}
+.community-citizen .holder {
+	width: 100%;
+}
+.community-citizen .box {
+	margin-bottom: 20px;
+}
+.mayor-row {
+	top: 0;
+}
+.mayor-office, .mayor-colo-2 {
+	padding: 25px 20px;
+}
+.mayor-colo-2 a.link, .mayor-office a.link {
+	margin: 0;
+}
+.community-citizen {
+	padding-bottom: 40px;
+}
+.footer-box {
+	margin-bottom: 30px;
+}
+.footer-section-1::before {
+	display: none;
+}
+.footer-social ul {
+	display: block;
+	text-align: center;
+}
+.footer-social ul li {
+	float: none;
+	display: inline-block;
+	padding: 5px;
+}
+.footer-section-3 strong.copyrights {
+	line-height: 20px;
+}
+.heading-style-1::before {
+	display: none;
+}
+.flex-prev, .flex-next {
+	display: none;
+}
+.department-section {
+	margin: 0;
+}
+}
+
+
+
+/*===========================================================================*/
+						/*768px And 992px CSS*/
+/*===========================================================================*/
+@media (min-width: 768px) and (max-width: 992px) {
+.top-row .left-box ul li {
+	padding: 0 9px 0 0;
+}
+.post-box .text-box h3{
+	font-size:23px;
+}
+.team-section{
+	padding-top:50px;
+}
+.menu-col-top, .cp-burger-nav{
+	display:none;
+}
+#nav{
+	float:none;
+	display:block;
+	text-align:center;
+}
+#nav li{
+	display:inline-block;
+	float:none;
+}
+.menu-col .navbar{
+	width:100%;
+}
+#nav li a{
+	padding:15px 13px;
+}
+.logo-row .btm-row{
+	margin:0;
+}
+.logo-row{
+	padding:0;
+}
+#nav li ul li{
+	float:left;
+	width:100%;
+}
+.header-search{
+	display:none;
+}
+.department-section{
+	margin:0;
+}
+.footer-box{
+	min-height:345px;
+}
+.contact-style-1 .address .box{
+	min-height:265px;
+}
+.contact-style-1 .address{
+	padding:0;
+}
+.map-box-1{
+	margin-bottom:20px;
+}
+.map-box-1 .map_canvas{
+	height:500px;
+}
+.causes-list .causes-box .text-box, .causes-list .frame{
+	width:100%;
+}
+.coming-soon .inner-content{
+	width:100%;
+}
+#inner-banner{
+	margin-bottom:40px;
+}
+.video-frame-5{
+	width:100%;
+	background-size:cover;
+	margin:0 0 20px 0;
+}
+.donation-section .input-box{
+	min-height:98px;
+}
+.explore-city .popular-videos .text-col{
+	margin:0 0 20px 0;
+}
+.city-law{
+	margin:40px 0;
+}
+.city-law .box img{
+	width:100%;
+}
+.call-action-style-1 .space-box{
+	width:100%;
+}
+.event-list .frame{
+	float:left;
+	width:100%;
+}
+.event-list .event-caption{
+	width:100%;
+	height:auto;
+}
+.breadcrumb-col{
+	width:100%;
+}
+.about-section .video-frame .modal-dialog{
+	width:100%;
+	padding:0 40px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+.heading-style-1::before{
+	display:none;
+}
+.accordion_cp{
+	font-size:14px;
+}
+.gallery-box .thumb, .gallery-box .thumb img{
+	width:100%;
+}
+.gallery-box{
+	margin:10px 0 40px 0;
+}
+.team-section{
+	padding-bottom:50px;
+}
+.governor-space{
+	margin:0;
+}
+strong.logo {
+	width: 100%;
+	text-align: center;
+}
+.menu-col {
+	width: 100%;
+}
+.menu-col-top {
+	width: 100%;
+}
+.header-search {
+	float: left;
+	margin: 0;
+}
+.menu-col .navbar {
+	margin: 20px 0 0 0;
+}
+#nav li ul {
+	left: inherit;
+	right: 0;
+}
+#nav li ul li > ul {
+	left: inherit;
+	right: 100%;
+}
+#banner .caption {
+	top: 30px;
+}
+#banner .caption .holder h1 {
+	font-size: 33px;
+	margin: 0 0 5px 0;
+}
+#banner .caption .holder strong.title {
+	font-size: 24px;
+	padding: 0 0 15px 0;
+}
+.highlights-row .thumb {
+	float: left;
+	width: 100%;
+}
+.highlights-row .thumb img {
+	display: block;
+	width: 100%;
+}
+.highlight-box {
+	padding: 28px 15px;
+}
+.facts-figures .holder .box strong.number {
+	font-size: 43px;
+}
+.facts-figures .holder .box span {
+	font-size: 21px;
+	line-height: 21px;
+}
+.governor-message .holder .image-frame {
+	display: none;
+}
+.governor-message .holder {
+	width: 100%;
+}
+.governor-message .holder .text-box {
+	position: static;
+	width: 100%;
+	padding: 0 30px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.explore-section .video-frame .modal-dialog {
+	width: 100%;
+	padding: 0 30px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.video-frame-1, .video-frame-2 {
+	width: 100%;
+	margin: 0;
+	background-size: cover;
+}
+.popular-videos .text-col {
+	float: left;
+	width: 100%;
+}
+.community-citizen .holder {
+	width: 100%;
+	float: left;
+}
+.community-citizen .box {
+	margin-bottom: 20px;
+}
+.mayor-office {
+	padding: 27px 20px;
+}
+.mayor-office a.link, .mayor-colo-2 a.link {
+	margin: -28px 0 0 0;
+}
+.footer-section-1::before {
+	display: none;
+}
+.footer-box {
+	margin-bottom: 30px;
+}
+.footer-section-1 {
+	padding: 40px 0 0 0;
+}
+}
+
+
+
+
+/*===========================================================================*/
+							/*1199px CSS*/
+/*===========================================================================*/
+@media (min-width: 993px) and (max-width: 1199px) {
+.highlights-row .thumb {
+	float: left;
+	width: 100%;
+}
+.highlights-row .thumb img {
+	display: block;
+	width: 100%;
+}
+.donation-section form ul li{
+	margin:0 26px;
+}
+.services-board .box h3 a span{
+	display:inline-block;
+}
+.post-box .text-box h3{
+	font-size:19px;
+}
+.event-list .event-caption{
+	width:360px;
+	height:auto;
+	padding:10px;
+}
+.highlight-box {
+	padding: 26px 20px;
+}
+.news-section .box .text-box {
+	min-height: 377px;
+}
+.department-section .text-box h4 {
+	font-size: 14px;
+}
+.governor-message .holder .text-box {
+	right: 223px;
+}
+.popular-videos .text-col {
+	float: left;
+	width: 100%;
+}
+.community-citizen .holder {
+	width: 100%;
+}
+.community-citizen .box ul li a {
+	font-size: 12px;
+}
+.footer-section-1::before {
+	display: none;
+}
+.governor-message .holder {
+	width: 100%;
+}
+.menu-col {
+	width: 100%;
+}
+.menu-col-top {
+	width: 100%;
+}
+.menu-col .navbar {
+	float: left;
+}
+#nav li a {
+	padding: 5px 25px 28px 0;
+}
+#banner .caption {
+	top: 50px;
+}
+#banner .caption .holder h1 {
+	font-size: 37px;
+}
+.governor-message .holder .image-frame {
+	display: none;
+}
+.mayor-office, .mayor-colo-2 {
+	padding: 27px 30px;
+}
+.mayor-office a.link, .mayor-colo-2 a.link {
+	margin: -28px 0 0 0;
+}
+.breadcrumb-col{
+	width:100%;
+}
+.heading-style-1::before{
+	display:none;
+}
+.gallery-box .thumb, .gallery-box .thumb img{
+	width:100%;
+}
+.accordion_cp{
+	font-size:16px;
+}
+.gallery-box{
+	margin:10px 0 40px 0;
+}
+.governor-space{
+	margin:0;
+}
+.footer-box h3{
+	font-size:21px;
+}
+.services-board .box h3{
+	font-size:20px;
+}
+.services-board .box{
+	padding:38px 17px;
+}
+.news-list .frame{
+	width:100%;
+}
+.news-section.news-list .box .text-box{
+	min-height:inherit;
+	width:100%;
+}
+.city-law .box img{
+	width:100%;
+}
+.causes-btm-row ul li{
+	margin-bottom:5px;
+}
+.causes-list .frame{
+	width:308px;
+}
+.faq .accordion_cp{
+	font-size:21px;
+}
+}

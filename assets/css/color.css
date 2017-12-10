@@ -1,0 +1,63 @@
+/***********************************************************************************************PRIMARY BLUE COLOR START************************************************************************************************/
+
+/************************************BACKGROUND COLOR START*************************************/
+#nav li ul li a:hover, #nav li ul li:hover > a, .top-row, .services-board .owl-theme .owl-controls .owl-nav [class*="owl-"]:hover, .department-section .box .frame .caption .holder, .popular-videos:hover .popular-head, .mayor-colo-1, .flex-next:hover, .flex-prev:hover, #filter li a:hover, #filter .current, #filter li a.selected, .post-box .frame strong.sticky, .post-box .frame strong.date, .causes-box .owl-theme .owl-controls .owl-nav [class*="owl-"]:hover, .departments-box .owl-theme .owl-controls .owl-nav [class*="owl-"]:hover, .comment-form input[type="submit"], .community-citizen .box ul li:hover:before, .navbar-inverse .navbar-toggle{
+	background-color: #104382;
+}
+/************************************BACKGROUND COLOR END*************************************/
+
+/***********************************************TEXT COLOR START************************************************/
+.menu-col-top ul li a, .news-section .box:hover .text-box .inner h4 a, .news-section .box:hover .btm-row ul li a, .department-section .box:hover .text-box h4 a, .popular-videos .text-box ul li:hover .btm-row ul li a .fa, .breadcrumb-col a.btn-back:hover .fa, .breadcrumb-col .breadcrumb > li a:hover, .error-section h1, .news-widget ul li:hover .text-area a, .post-box .owl-next:hover:before, .post-box .owl-prev:hover:before, .post-box .link-box a.link-text:hover, .causes-box:hover .text-box h4 a, .events-widget ul li:hover .text-col a, .post-box:hover .text-box h3 a, .explore-style-2 .popular-videos:hover .btm-row ul li a .fa, .city-law .box:hover .caption h4 a, #nav li:hover > a{
+	color: #104382;
+}
+/***********************************************TEXT COLOR END************************************************/
+
+
+
+/************************************BUTTON COLOR START*************************************/
+a.btn-style-1, a.btn-style-2, .news-section .box .btm-row a.btn-1:hover, .news-section .box:hover .btm-row a.btn-1, .footer-box input[type="submit"], .footer-box .text-col a.btn-style-1:after, .contact-form input[type="submit"], .error-section form button[type="submit"], .error-section a.btn-back, .widget-box form button[type="submit"], .form-row input[type="submit"], input.radio:checked + label > span.show-hover{
+	background-color: #104382;
+}
+/************************************BUTTON COLOR END*************************************/
+
+
+
+/************************************BORDER COLOR START*************************************/
+.navbar-inverse .navbar-toggle{
+ border-color:#104382;
+}
+/************************************BORDER COLOR END*************************************/
+
+/***********************************************************************************************PRIMARY COLOR END************************************************************************************************/
+
+/***********************************************************************************************SECONDARY RED COLOR START************************************************************************************************/
+
+/************************************BACKGROUND COLOR START*************************************/
+.popular-videos .popular-head, .community-citizen .box .fa, .community-citizen .box ul li:before, .mayor-colo-2, .pagination-col .pagination > .active > a, .pagination-col .pagination > .active > span, .pagination-col .pagination > .active > a:hover, .pagination-col .pagination > .active > span:hover, .pagination-col .pagination > .active > a:focus, .pagination-col .pagination > .active > span:focus, .pagination-col .pagination > li > a:hover, .pagination-col .pagination > li > span:hover, .pagination-col .pagination > li > a:focus, .pagination-col .pagination > li > span:focus, .archive-widget ul li:before, .causes-box .progress-bar, .post-box blockquote, .event-timer .countdown-section, .links-widget ul li:hover:before{
+	background-color: #d33030;
+}
+/************************************BACKGROUND COLOR END*************************************/
+
+/***********************************************TEXT COLOR START************************************************/
+body h2 span, .menu-col-top ul li a:hover, .cp_side-menu a .fa, .news-section .box em, .news-section .box .btm-row ul li a .fa, .governor-message .holder .text-box blockquote span, .governor-message .holder .text-box blockquote em, .popular-videos .text-col .btm-row ul li a .fa, .popular-videos .text-box ul li:hover .text-col h4 a, .news-widget .text-area span .fa, .footer-section-3 strong.copyrights a:hover, .event-caption .date-box, .event-caption .text-col span.time .fa, #cp_side-menu strong.copy b, .breadcrumb-col a.btn-back .fa, .address-style-2 .box .fa, .team-section .box:hover h3 a, .accordion-open span, .post-box .text-box .top-section strong.name, .post-box .text-box .top-section a.link .fa, .post-box .link-box a.link-text, .causes-btm-row ul li strong.number, .events-widget .date-box, .events-widget .text-col span.time .fa, .departments-box:hover .text-box h4 a, .post-box:hover a.btn-read, .comments-section strong.name, .comments-section .text-outer a.btn-replay, .explore-style-2 .popular-videos:hover .text-col h4 a, .community-citizen .box ul li:hover a{
+	color: #d33030;
+}
+/***********************************************TEXT COLOR END************************************************/
+
+
+
+/************************************BUTTON COLOR START*************************************/
+a.btn-style-1:after, a.btn-style-2:after, .footer-box input[type="submit"]:hover, .contact-form input[type="submit"]:hover, .error-section form button[type="submit"]:hover, .error-section a.btn-back:hover, .widget-box form button[type="submit"]:hover, .form-row input[type="submit"]:hover, .comment-form input[type="submit"]:hover{
+	background-color: #d33030;
+}
+/************************************BUTTON COLOR END*************************************/
+
+
+
+/************************************BORDER COLOR START*************************************/
+{
+ border-color:#d33030;
+}
+/************************************BORDER COLOR END*************************************/
+
+/***********************************************************************************************SECONDARY COLOR START************************************************************************************************/
