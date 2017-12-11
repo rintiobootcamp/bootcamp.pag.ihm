@@ -1,5 +1,5 @@
 angular.module('pag-site')
-    .controller("SiteProjetsCtrl", function (ModelProjet, ModelSecteur, $scope, $q) {
+    .controller("SiteProjetsCtrl", function (ModelProjet, ModelSecteur, $scope, $q, ModelPilier, ModelAxe) {
         $q.all([ModelSecteur.list(),ModelProjet.list()])
         .then(values => {
           $scope.listSecteurs = values[0].data;
@@ -11,6 +11,26 @@ angular.module('pag-site')
         },err => {
           console.log(err);
         });
+        
+        var getListPiliers = function (){
+            ModelPilier.list()
+                .then(function (data){
+                    $scope.listPiliers = data.data;
+                }, function (error){
+
+                });
+        }
+        getListPiliers();
+
+        var getListAxes = function (){
+            ModelAxe.list()
+                .then(function (data){
+                    $scope.listAxes = data.data;
+                }, function (error){
+
+                });
+        }
+        getListAxes();
     })
     .controller("SiteOneProjetCtrl", function(ModelProjet, ModelSecteur, ModelComment, ModelMedia, $scope,$stateParams, $q, ModelLike){
         var params_get_entity = {
