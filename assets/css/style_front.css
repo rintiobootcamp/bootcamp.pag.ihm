@@ -47,5 +47,32 @@
 #main .liste-projets .frame {
   border: 1px solid #ccc;
   border-left: none; }
+#main .projet-page .projet-content .content {
+  padding: 0px 15px; }
+#main .projet-page .projet-content .title {
+  padding: 5px 10px;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+  text-transform: uppercase; }
+#main .projet-page .projet-content .bg1 .title {
+  background-color: #f03e22; }
+#main .projet-page .projet-content .bg2 .title {
+  background-color: #f79e7c; }
+#main .like_btn {
+  padding: 10px; }
+  #main .like_btn img {
+    padding-top: 5px;
+    height: 30px; }
+#main .ratings-icons ul {
+  display: inline-block; }
+  #main .ratings-icons ul li {
+    display: inline-block; }
+    #main .ratings-icons ul li i {
+      font-size: 25px; }
+      #main .ratings-icons ul li i:hover {
+        color: #f03e22; }
 
 /*# sourceMappingURL=style_front.css.map */

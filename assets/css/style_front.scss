@@ -97,4 +97,51 @@
         }
     }
 
+    .projet-page {
+        .projet-content {
+            .content{
+                padding: 0px 15px;
+            }
+            .title{
+                padding: 5px 10px;
+                color: #fff;
+                font-family: 'Raleway', sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                margin: 20px 0 10px 0;
+                text-transform: uppercase;
+            }
+            .bg1 {
+                .title {
+                    background-color: #f03e22;
+                }
+            }
+            .bg2 {
+                .title {
+                    background-color: #f79e7c;
+                }
+            }
+        }
+    }
+    .like_btn {
+        padding:10px;
+        img{
+            padding-top:5px;
+            height: 30px;
+        }
+    }
+
+    .ratings-icons ul{
+        display: inline-block;
+        li {
+            display: inline-block;
+            i {
+                font-size: 25px;
+                &:hover {
+                    color:#f03e22;
+                }
+            }
+        }
+    }
+
 }
