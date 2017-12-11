@@ -1,0 +1,73 @@
+<!--MAIN START-->
+<div id="main">
+        <!--INNER BANNER START-->
+        <div id="inner-banner">
+            <div class="container">
+                <div class="inner-banner-heading">
+                <h1>Projets</h1>
+                <em>Liste des projets phares du PAG</em> </div>
+            </div>
+            <div class="breadcrumb-col"> <a ui-sref="home" class="btn-back"><i class="fa fa-home" aria-hidden="true"></i>Retour à l'accueil</a>
+                <ol class="breadcrumb">
+                <li><a ui-sref="home">Accueil</a></li>
+                <li class="active">Projets</li>
+                </ol>
+            </div>
+        </div>
+        <!--INNER BANNER END-->
+        <!--BLOG PAGE START-->
+    <section class="blog-page event-list liste-projets">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-sm-8">
+                    <div class="event-box" ng-repeat="projet in listProjets">
+                        <div class="event-caption">
+                            <div class="date-box">
+                                <span>Prévu</span>
+                                {{projet.dateDebutPrevisionnel | date: 'dd'}}
+                                <span>{{projet.dateDebutPrevisionnel | date: 'MMM'}}</span>
+                                <span>{{projet.dateDebutPrevisionnel | date: 'yyyy'}}</span>
+                            </div>
+                            <div class="text-col">
+                            <h3 class="title"><a ui-sref="projet({id:projet.id})">{{projet.id}} - {{projet.nom | capitalizeFirst}}</a></h3 class="title">
+                            <p>{{projet.description | limitTo: 150}}<span ng-show="projet.description.length > 150">...</span></p>
+                            <a href="event-detail.html" class="btn-style-1">+ Détails</a> </div>
+                        </div>
+                        <div class="frame"><img src="/assets/images/project-page.jpg" alt="img"></div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <aside>
+                        <div class="sidebar">
+                            <div class="widget-box">
+                                <h3>Search</h3>
+                                <form action="#">
+                                    <input required type="text" placeholder="Enter Key words ">
+                                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div>
+                            <div class="widget-box">
+                                <h3>Piliers</h3>
+                                <div class="archive-widget">
+                                    <ul>
+                                        <li ng-repeat="p in listPiliers"><a href="" ng-click="filter('PILIER',p)">{{p.nom}}<span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="widget-box">
+                                <h3>Axes</h3>
+                                <div class="archive-widget">
+                                    <ul>
+                                        <li ng-repeat="a in listAxes"><a href="" ng-click="filter('AXE',a)">{{a.nom}}<span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!--MAIN END-->

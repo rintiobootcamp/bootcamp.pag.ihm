@@ -1,0 +1,47 @@
+<!--MAIN START-->
+<div id="main">
+        <!--INNER BANNER START-->
+        <div id="inner-banner">
+            <div class="container">
+                <div class="inner-banner-heading">
+                <h1>Axes</h1>
+                <em>Liste des axes du PAG</em> </div>
+            </div>
+            <div class="breadcrumb-col"> <a ui-sref="home" class="btn-back"><i class="fa fa-home" aria-hidden="true"></i>Retour à l'accueil</a>
+                <ol class="breadcrumb">
+                <li><a ui-sref="home">Accueil</a></li>
+                <li class="active">Axes</li>
+                </ol>
+            </div>
+        </div>
+        <!--INNER BANNER END-->
+    
+        <!--DEPARTMENTS SECTION START-->
+        <section class="department-page">
+            <section class="department-section department-space">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12" ng-repeat="pilier in listPiliers">
+                            <div class="bloc-axes">
+                                <div ng-repeat="axe in pilier.axes">
+                                    <div class="causes-box axes">
+                                        <div class="text-box">
+                                            <h4>{{axe.nom}}</h4>
+                                            <p class="description">
+                                                {{axe.description | limitTo: 100}}
+                                                <span ng-show="axe.description.length > 100">...</span>
+                                            </p>
+                                            <div class="btn-row"><a ui-sref="axe({id:axe.id})" class="btn-style-2">+ Détails</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    
+    
+    </div>
+    <!--MAIN END-->

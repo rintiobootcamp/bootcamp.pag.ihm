@@ -1,0 +1,34 @@
+<!--MAIN START-->
+<div id="main">
+        <!--INNER BANNER START-->
+        <div id="inner-banner">
+            <div class="container">
+                <div class="inner-banner-heading">
+                <h1>Secteurs</h1>
+                <em>Liste des secteurs du PAG</em> </div>
+            </div>
+            <div class="breadcrumb-col"> <a ui-sref="home" class="btn-back"><i class="fa fa-home" aria-hidden="true"></i>Retour à l'accueil</a>
+                <ol class="breadcrumb">
+                <li><a ui-sref="home">Accueil</a></li>
+                <li class="active">Secteurs</li>
+                </ol>
+            </div>
+        </div>
+        <!--INNER BANNER END-->
+
+        <!--SERVICES BOARD SECTION START-->
+        <section class="services-board">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6" ng-repeat="secteur in listSecteurs">
+                        <div class="box board-color-{{secteur.id}}">
+                            <div class="round-icon"><img class="flaticon-svg" src="/assets/images/svg/nature.svg" alt="{{secteur.nom}}"></div>
+                            <h3><a ui-sref="secteurs">{{secteur.nom}}</a> </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--SERVICES BOARD SECTION END-->
+</div>
+<!--MAIN END-->
