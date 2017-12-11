@@ -1,11 +1,26 @@
 
+#home-banner {
+    .holder {
+        h1{
+            font-size: 50px !important;
+        }
+        p{
+            color: #fff;
+            font-size: 25px;
+            line-height: 1.1em;
+        }
+    }
+}
 #main {
+    #inner-banner {
+        background-image: url(../images/pilier-bg.jpg);
+    }
     .title-block {
         margin-top: 30px;
     }
 
     .services-board {
-        .round-icon {
+            .round-icon {
             border:1px solid transparent;
             .flaticon-svg {
                 height: 50px;
@@ -17,6 +32,11 @@
     .facts-figures{
         .holder {
             background-image: url(../images/counter-bg.jpg);
+            a {
+                &:hover {
+                    text-decoration: none;
+                }
+            }
         }
     }
     .news-section {
@@ -26,7 +46,48 @@
     }
 
     .map-section {
+        float: left;
+        width: 100%;
         margin-bottom: 20px;
+    }
+    .department-page {
+        .piliers{
+            //background-color: #f6be15;
+            .title{
+            }
+            .description {
+                min-height: 50px;
+                font-size: 18px;
+                padding: 0 10px;
+                color:#222;
+            }
+        }
+        .axes {
+            min-height: 150px;
+            //background-color:#d3d3d3;
+            &.causes-box {
+                margin-bottom: 30px;
+                a{
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+                .text-box {
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    .liste-projets {
+        .title {
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .frame {
+            border: 1px solid #ccc;
+            border-left: none;
+        }
     }
 
 }
