@@ -7,7 +7,8 @@
         <div class="caption">
           <div class="container">
             <div class="holder">
-              <h1 class="animated fadeInUp delay-2">Une platerforme simple permettant de suivre et apprécier le PAG </h1>
+              <h1 class="animated fadeInUp delay-2">Suivre le PAG n'a jamais été aussi facile </h1>
+              <p>Une platerforme simple permettant de suivre, commenter et apprécier le Programme d'Action du Gouvernement Béninois</p>
               </div>
           </div>
         </div>
@@ -61,16 +62,16 @@
 
       <!--NEW SECTION START-->
     <section class="news-section">
-        <div class="container">
-          <div class="heading-style-1">
-            <h2>Les projets <span>les plus vus</span></h2>
-          </div>
-          <em>Une sélection des quatre projets les plus vus</em> <a ui-sref="projets" class="btn-style-1">Tous les projets</a>
-          <div class="row">
-            <div class="col-md-3 col-sm-6" ng-repeat="projet in listFourProjets">
-              <div class="box">
-                <div class="frame"><a ui-sref="projet({id:projet.id}}"><img src="/assets/images/project.jpg" alt="img"></a></div>
-                <div class="text-box">
+      <div class="container">
+        <div class="heading-style-1">
+          <h2>Les projets <span>les plus vus</span></h2>
+        </div>
+        <em>Une sélection des quatre projets les plus vus</em> <a ui-sref="projets" class="btn-style-1">Tous les projets</a>
+        <div class="row">
+          <div class="col-md-3 col-sm-6" ng-repeat="projet in listFourProjets">
+            <div class="box">
+              <div class="frame"><a ui-sref="projet({id:projet.id}}"><img src="/assets/images/project.jpg" alt="img"></a></div>
+              <div class="text-box">
                   <div class="tp-row">
                   <div class="inner">
                     <h4><a ui-sref="projet({id:projet.id}}">{{projet.nom | limitTo:60}} <span ng-show="projet.nom.length > 60">...</span></a></h4>
@@ -86,11 +87,12 @@
             </div>
           </div>
         </div>
+      </div>
       </section>
       <!--NEW SECTION END-->
 
       <!-- MAP SECTION START -->
-      <section class="map-section">
+      <section class="map-section" id="map-home">
         <div class="container">
           <leaflet lf-center="map.center"  paths="map.paths" markers="map.markers" defaults="map.defaults"  width="100%" height="480px"></leaflet>
         </div>
