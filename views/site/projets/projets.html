@@ -29,9 +29,9 @@
                                 <span>{{projet.dateDebutPrevisionnel | date: 'yyyy'}}</span>
                             </div>
                             <div class="text-col">
-                            <h3 class="title"><a ui-sref="projet({id:projet.id})">{{projet.id}} - {{projet.nom | capitalizeFirst}}</a></h3 class="title">
+                            <h3 class="title"><a ui-sref="projet({id:projet.id})">{{projet.id}} - {{projet.nom | capitalizeFirst}}</a></h3>
                             <p>{{projet.description | limitTo: 150}}<span ng-show="projet.description.length > 150">...</span></p>
-                            <a href="event-detail.html" class="btn-style-1">+ Détails</a> </div>
+                            <a ui-sref="projet({id:projet.id})" class="btn-style-1">+ Détails</a> </div>
                         </div>
                         <div class="frame"><img src="/assets/images/project-page.jpg" alt="img"></div>
                     </div>
