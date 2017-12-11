@@ -4,8 +4,12 @@
       "ui.router", "ngResource",
       "ncy-angular-breadcrumb",
       "leaflet-directive",
-      "ngFileUpload"
+      "ngFileUpload",
+      "angularMoment"
     ])
+    .run(function(amMoment) {
+        amMoment.changeLocale('fr');
+    })
     .config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
 
         $urlRouterProvider.otherwise("/");
