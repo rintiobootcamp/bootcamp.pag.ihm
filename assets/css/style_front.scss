@@ -1,7 +1,32 @@
 
 #main {
     .title-block {
-        padding: 30px 0 10px 0;
+        margin-top: 30px;
+    }
+
+    .services-board {
+        .round-icon {
+            border:1px solid transparent;
+            .flaticon-svg {
+                height: 50px;
+                width: 50px;
+                margin:20px;
+            }
+        }
+    }
+    .facts-figures{
+        .holder {
+            background-image: url(../images/counter-bg.jpg);
+        }
+    }
+    .news-section {
+        .inner {
+            min-height: 90px;
+        }
+    }
+
+    .map-section {
+        margin-bottom: 20px;
     }
 
 }
