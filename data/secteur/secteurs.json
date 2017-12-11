@@ -46,7 +46,7 @@
     },
     {
         "id": 6,
-        "nom": "CadreDeVie",
+        "nom": "Cadre de vie",
         "description": "",
         "icone": "appartment.svg",
         "dateCreation": 1511890840,
@@ -64,7 +64,7 @@
     },
     {
         "id": 8,
-        "nom": "ProtectionSociale",
+        "nom": "Protection sociale",
         "description": "",
         "icone": "shield.svg",
         "dateCreation": 1511890840,
