@@ -1,0 +1,183 @@
+<!--MAIN START-->
+<div id="main">
+    <!--INNER BANNER START-->
+    <div id="inner-banner">
+        <div class="container">
+            <div class="inner-banner-heading">
+            <h1>Projet n° {{projet.id}}</h1>
+            <em>{{projet.nom}}</em> </div>
+        </div>
+        <div class="breadcrumb-col"> <a ui-sref="home" class="btn-back"><i class="fa fa-home" aria-hidden="true"></i>Retour à l'accueil</a>
+            <ol class="breadcrumb">
+            <li><a ui-sref="home">Accueil</a></li>
+            <li class="active">Projet</li>
+            </ol>
+        </div>
+    </div>
+    <!--INNER BANNER END--> 
+<!--BLOG PAGE START-->
+    <section class="blog-page event-detail projet-page">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-sm-8">
+            <div class="event-box">
+                <div class="frame"> <img src="/assets/images/project-detail.jpg" alt="img">
+                    <div class="event-timer">
+                        <div class="defaultCountdown"></div>
+                    </div>
+                </div>
+                <div class="event-caption">
+                <div class="date-box">
+                    <span>Démarrage prévu</span>
+                    {{projet.dateDebutPrevisionnel | date: 'dd'}}
+                    {{projet.dateDebutPrevisionnel | date: 'MMM'}}
+                    <span>{{projet.dateDebutPrevisionnel | date: 'yyyy'}}</span>
+                </div>
+                <div class="text-col">
+                    <h3 class="title"><a ui-sref="projet({id:projet.id})">{{projet.nom | capitalizeFirst}}</a></h3>
+                </div>
+                </div>
+            </div>
+            <div class="post-box">
+                <div class="text-box">
+                    <div class="projet-content">
+                        <section class="presentation bg1">
+                            <div class="title">Présentation du projet</div>
+                            <p class="content">{{projet.description}}</p>
+                        </section>
+                        <section class="impacts bg2">
+                            <div class="title">Impacts économiques et sociaux à 10 ans</div>
+                            <p class="content"><img src="/assets/images/projets/impacts.jpg" alt="Impacts économiques et sociaux à 10 ans"></p>
+                        </section>
+                        <section class="calendrier bg2">
+                            <div class="title">Calendrier indicatif</div>
+                            <p class="content"><img src="/assets/images/projets/calendrier.jpg" alt="Calendrier indicatif"></p>
+                        </section>
+                        <section class="financement bg2">
+                            <!-- <div class="title">Besoins de financement</div>
+                            <p class="content"></p> -->
+                            <img src="/assets/images/projets/financement.jpg" alt="Financement">
+                        </section>
+                    </div>
+                <div class="share-box"> <strong class="title">Partager </strong>
+                    <ul>
+                    <li><a href="#" class="social-color-1"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="social-color-2"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="social-color-3"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="social-color-4"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>    
+                    </ul>
+                    <div class="like">
+                        | <span class="like_btn"><a ng-click="like('PILIER',pilier.id,true)" href="#"><img ng-src="/assets/images/like.png" alt="J'aime"></a> {{nbLike.like}} </span><span class="like_btn"> <a ng-click="like('PILIER',pilier.id,false)" href="#"><img ng-src="/assets/images/unlike.png" alt="J'aime pas"></a> {{nbLike.unlike}}</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="col s6 ratings-icons">
+                        <strong class="title">Noter ce projet </strong>
+                        <ul class="">
+                            <li>
+                            <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                            <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                            <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                            <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                            <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="comments-section">
+                    <h3>Commentaires</h3>
+                    <div class="media">
+                        <div class="media-left">
+                            <div class=""><a href="#"><i class="fa fa-user fa-2x"></i> </a> </div>
+                        </div>
+                        <div class="media-body">
+                            <div class="text-outer"> <strong class="name">Lanister Jammie</strong> <span class="date">Jan 12, 2017 at 11:00 pm</span> <a href="#" class="btn-replay"><i class="fa fa-mail-reply-all" aria-hidden="true"></i></a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat nisi sit amet odio convallis, non iaculis dolor rutrum. Donec condimentum nunc felis, ut ullamcorper . </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <div class=""><a href="#"><i class="fa fa-user fa-2x"></i> </a> </div>
+                        </div>
+                        <div class="media-body">
+                            <div class="text-outer"> <strong class="name">Lanister Jammie</strong> <span class="date">Jan 12, 2017 at 11:00 pm</span> <a href="#" class="btn-replay"><i class="fa fa-mail-reply-all" aria-hidden="true"></i></a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat nisi sit amet odio convallis, non iaculis dolor rutrum. Donec condimentum nunc felis, ut ullamcorper . </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="comment-form">
+                    <h3>Commenter</h3>
+                    <form action="#">
+                    <div class="row">
+                        <div class="col-md-4">
+                        <input required type="text" placeholder="Pseudonyme">
+                        </div>
+                        <div class="col-md-2">
+                            OU
+                        </div>
+                        <div class="col-md-4">
+                        <input required type="text" placeholder="Email">
+                        </div>
+                        <div class="col-md-12">
+                        <textarea required cols="6" rows="6" placeholder="Votre commentaire"></textarea>
+                        </div>
+                        <div class="col-md-12">
+                        <button class="btn submit bnt-success" type="button" ng-click="postComment()">Envoyer</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-3 col-sm-4">
+            <aside>
+                <div class="sidebar">
+                <div class="widget-box">
+                    <h3>Autre projets du même secteur</h3>
+                    <div class="events-widget">
+                    <ul>
+                        <li ng-repeat="oth in listOtherProjetsSecteur" ng-if="oth.id != projet.id">
+                            <div class="date-box"><span>{{oth.id}}</span></div>
+                            <div class="text-col">
+                                <a ui-sref="projet({id:oth.id})" class="">{{oth.nom | capitalizeFirst}}</a>
+                                <span class="time">Démarrage <i class="fa fa-clock-o" aria-hidden="true"></i>{{projet.dateDebutPrevisionnel | date: 'dd MMM yyyy'}}</span>
+                            </div>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="widget-box">
+                    <h3>Autres projets</h3>
+                    <div class="news-widget">
+                    <ul>
+                        <li ng-repeat="oth in listOtherProjetsSecteur | limitTo:3" ng-if="oth.id != projet.id">
+                            <div class="text-area">
+                                <a ui-sref="projet({id:oth.id})">{{oth.nom | capitalizeFirst}}</a>
+                                <span><i class="fa fa-calendar" aria-hidden="true"></i>{{projet.dateDebutPrevisionnel | date: 'dd MMM yyyy'}}</span>
+                            </div>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+            </aside>
+            </div>
+        </div>
+        </div>
+    </section>
+<!--BLOG PAGE END--> 
+</div>
+<!--MAIN END-->
