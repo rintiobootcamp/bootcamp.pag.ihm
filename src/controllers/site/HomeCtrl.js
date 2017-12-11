@@ -5,6 +5,7 @@ angular.module('pag-site')
     ModelSecteur.list()
       .then( function (data) {
         $scope.listSecteurs = data.data;
+        console.log($scope.listSecteurs);
       }, function (error){
 
       })
@@ -24,6 +25,37 @@ angular.module('pag-site')
     });
   };
   getListProjetsByRegions();
+
+  var getCountAxes = function (){
+    ModelAxe.countAxes()
+    .then(function(data){
+      $scope.count_axes = data.data.count;
+    }, function (error){
+      console.log(error);
+    });
+  }
+  getCountAxes();
+
+  var getCountProjets = function (){
+    ModelProjet.countProjets()
+    .then(function(data){
+      $scope.count_projets = data.data.count;
+    }, function (error){
+      console.log(error);
+    });
+  }
+  getCountProjets();
+
+  var getListProjets = function (){
+    ModelProjet.list()
+    .then(function(data){
+      //$scope.listProjets = data.data;
+      $scope.listFourProjets = data.data.slice(0,4);
+    }, function (error){
+      console.log(error);
+    });
+  }
+  getListProjets();
 
   var initializeMap = function (){
     $scope.listProjetsRegions = [];
@@ -151,24 +183,4 @@ angular.module('pag-site')
   }
 
   initializeMap();
-
-  var getCountAxes = function (){
-    ModelAxe.countAxes()
-    .then(function(data){
-      $scope.count_axes = data.data.count;
-    }, function (error){
-      console.log(error);
-    });
-  }
-  getCountAxes();
-
-  var getCountProjets = function (){
-    ModelProjet.countProjets()
-    .then(function(data){
-      $scope.count_projets = data.data.count;
-    }, function (error){
-      console.log(error);
-    });
-  }
-  getCountProjets();
 });
