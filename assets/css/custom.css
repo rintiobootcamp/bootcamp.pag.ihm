@@ -785,6 +785,42 @@ strong.logo {
 	background: #03a9f4 url(../images/icon-8-img.png) no-repeat right bottom;
 	color: #03a9f4;
 }
+.board-color-9 {
+	background-color: #795548;
+	color: #795548;
+}
+
+.secteur {
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-size: 30%;
+}
+
+.secteur.appartment {
+	background-image: url(../images/secteurs/appartment.png);
+}
+.secteur.nature {
+	background-image: url(../images/secteurs/nature.png);
+}
+.secteur.laptop-1 {
+	background-image: url(../images/secteurs/laptop-1.png);
+}
+.secteur.highway {
+	background-image: url(../images/secteurs/highway.png);
+}
+.secteur.open-book {
+	background-image: url(../images/secteurs/open-book.png);
+}
+.secteur.light-bulb {
+	background-image: url(../images/secteurs/light-bulb.png);
+}
+.secteur.drop-silhouette {
+	background-image: url(../images/secteurs/drop-silhouette.png);
+}
+.secteur.shield {
+	background-image: url(../images/secteurs/shield.png);
+}
+
 .round-icon {
 	width: 97px;
 	height: 97px;

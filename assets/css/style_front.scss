@@ -144,4 +144,17 @@
         }
     }
 
+    .sidebar {
+        .filter{
+            .elem {
+                margin-top: 10px;
+                margin-right: 10px;
+                &:hover {
+                    background: #d33030;
+                    color:#fff;
+                }
+            }
+        }
+    }
+
 }

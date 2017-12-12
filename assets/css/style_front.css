@@ -74,5 +74,11 @@
       font-size: 25px; }
       #main .ratings-icons ul li i:hover {
         color: #f03e22; }
+#main .sidebar .filter .elem {
+  margin-top: 10px;
+  margin-right: 10px; }
+  #main .sidebar .filter .elem:hover {
+    background: #d33030;
+    color: #fff; }
 
 /*# sourceMappingURL=style_front.css.map */
