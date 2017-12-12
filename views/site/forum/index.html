@@ -1,0 +1,85 @@
+<!--MAIN START-->
+<div id="main">
+    <!--INNER BANNER START-->
+    <div id="inner-banner">
+        <div class="container">
+            <div class="inner-banner-heading">
+            <h1>Piliers</h1>
+            <em>Le Programme “Bénin Révélé” repose sur 3 grands piliers, eux-mêmes divisés en 7 axes stratégiques.</em> </div>
+        </div>
+        <div class="breadcrumb-col"> <a ui-sref="home" class="btn-back"><i class="fa fa-home" aria-hidden="true"></i>Retour à l'accueil</a>
+            <ol class="breadcrumb">
+            <li><a ui-sref="home">Accueil</a></li>
+            <li class="active">Piliers</li>
+            </ol>
+        </div>
+    </div>
+    <!--INNER BANNER END-->
+
+    <!--FORUM SECTION START-->
+    <section class="forum-page department-page">
+        <section class="department-section department-space">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>Toutes les discussions</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item" ng-repeat="p in [1,2,3,4,5]">
+                                <div class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                        <i class="fa fa-user fa-2x"></i>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"> Concrétisation du PAG d'ici 2021</h4>
+                                        <p class="content">Que pensez-vous de la concrétisation du PAG vis à vis des difficultés actuelles ?</p>
+                                        <p>Par <span>Anonyme</span> <span class="badge success"><i class="fa fa-clock-o" aria-hidden="true"></i> 30 Jan 2017</span>  <span class="label label-success"> Pilier 1</span></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="pagination-col">
+                            <nav aria-label="Pagination">
+                                <ul class="pagination">
+                                <li> <a href="#" aria-label="Précédent"> <span aria-hidden="true">Précédent</span> </a> </li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li ><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li> <a href="#" aria-label="Suivant"> <span aria-hidden="true">Suivant</span> </a> </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-primary filter">
+                            <h4 class="panel-heading">Liste des forums</h4>
+                            <div class="panel-body">
+                                <h5>Projet</h5>
+                                <ui-select ng-model="projetChoose" theme="bootstrap" style="max-width: 400px;" title="Choisir un projet">
+                                    <ui-select-match placeholder="Sélectionner un projet">{{$select.selected.nom | limitTo:40}}<span ng-show="$select.selected.nom.length > 40">...</span></ui-select-match>
+                                    <ui-select-choices repeat="projet in listProjets | filter: $select.search track by projet.id">
+                                        <div ng-bind-html="projet.nom | highlight: $select.search" title="{{projet.nom}}"></div>
+                                    </ui-select-choices>
+                                </ui-select>
+                                <hr>
+                                <h5>Pilier</h5>
+                                <button class="btn btn-sm elem" ng-repeat="p in listPiliers" ng-click="filter('PILIER',p.id)">{{p.nom}}</button>
+                                <hr>
+                                <h5>Axe</h5>
+                                <button class="btn btn-sm elem" ng-repeat="a in listAxes" ng-click="filter('AXE',a.id)">{{a.nom}}</button>
+                                <hr>
+                                <h5>Secteur</h5>
+                                <button class="btn btn-sm elem" ng-repeat="sect in listSecteurs" ng-click="filter('SECTEUR',a.id)">{{sect.nom}}</button>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!--FORUM SECTION END-->
+</div>
