@@ -80,5 +80,14 @@
   #main .sidebar .filter .elem:hover {
     background: #d33030;
     color: #fff; }
+#main .forum-page .filter .elem {
+  margin-top: 10px;
+  margin-right: 10px; }
+  #main .forum-page .filter .elem:hover {
+    background: #d33030;
+    color: #fff; }
+#main .forum-page .ui-select-search {
+  margin-bottom: 2px !important;
+  height: 30px !important; }
 
 /*# sourceMappingURL=style_front.css.map */

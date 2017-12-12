@@ -157,4 +157,21 @@
         }
     }
 
+    .forum-page {
+        .filter{
+            .elem {
+                margin-top: 10px;
+                margin-right: 10px;
+                &:hover {
+                    background: #d33030;
+                    color:#fff;
+                }
+            }
+        }
+        .ui-select-search {
+            margin-bottom: 2px !important;
+            height: 30px !important;
+        }
+    }
+
 }
