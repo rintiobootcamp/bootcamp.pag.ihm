@@ -3,7 +3,7 @@
         "id": 1,
         "nom": "Agriculture",
         "description": "",
-        "icone": "nature.svg",
+        "icone": "nature",
         "dateCreation": 1511890840,
         "dateMiseAJour": 1511890840,
         "axe": null
@@ -12,7 +12,7 @@
         "id": 2,
         "nom": "Numerique",
         "description": "",
-        "icone": "laptop-1.svg",
+        "icone": "laptop-1",
         "dateCreation": 1511890840,
         "dateMiseAJour": 1511890840,
         "axe": null
@@ -21,7 +21,7 @@
         "id": 3,
         "nom": "Infrastructure",
         "description": "",
-        "icone": "highway.svg",
+        "icone": "highway",
         "dateCreation": 1511890840,
         "dateMiseAJour": 1511890840,
         "axe": null
@@ -30,7 +30,7 @@
         "id": 4,
         "nom": "CIIS",
         "description": "",
-        "icone": "open-book.svg",
+        "icone": "open-book",
         "dateCreation": 1511890840,
         "dateMiseAJour": 1511890840,
         "axe": null
@@ -39,7 +39,7 @@
         "id": 5,
         "nom": "Electricité",
         "description": "",
-        "icone": "light-bulb.svg",
+        "icone": "light-bulb",
         "dateCreation": 1511890840,
         "dateMiseAJour": 1511890840,
         "axe": null
@@ -48,7 +48,7 @@
         "id": 6,
         "nom": "Cadre de vie",
         "description": "",
-        "icone": "appartment.svg",
+        "icone": "appartment",
         "dateCreation": 1511890840,
         "dateMiseAJour": 1511890840,
         "axe": null
@@ -57,7 +57,7 @@
         "id": 7,
         "nom": "Eau",
         "description": "",
-        "icone": "drop-silhouette.svg",
+        "icone": "drop-silhouette",
         "dateCreation": 1511890840,
         "dateMiseAJour": 1511890840,
         "axe": null
@@ -66,7 +66,7 @@
         "id": 8,
         "nom": "Protection sociale",
         "description": "",
-        "icone": "shield.svg",
+        "icone": "shield",
         "dateCreation": 1511890840,
         "dateMiseAJour": 1511890840,
         "axe": null
@@ -75,7 +75,7 @@
         "id": 9,
         "nom": "Tourisme",
         "description": "",
-        "icone": "nature.svg",
+        "icone": "nature",
         "dateCreation": 1511890840,
         "dateMiseAJour": 1511890840,
         "axe": null
