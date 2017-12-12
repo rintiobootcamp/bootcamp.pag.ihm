@@ -74,14 +74,14 @@ angular.module('pag-site')
         "coordinates": [ 10.029513, 3.187786]
       }
     };
-    leafletData.getMap().then(function(map) {
+    /* leafletData.getMap().then(function(map) {
       new L.labeledCircleMarker(
         feature.geometry.coordinates.slice().reverse(),
         feature, {
           markerOptions: { color: '#050' }
         }).addTo(map);
         //new L.Marker([10.029513,3.187786]).addTo(map);
-    });
+    }); */
 
     var paths = {
       circle: {
@@ -158,7 +158,7 @@ angular.module('pag-site')
       defaults: {
         scrollWheelZoom: false
       },
-      paths: paths,
+      //paths: paths,
       markers: markers
 
     };
