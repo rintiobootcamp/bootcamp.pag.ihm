@@ -5,7 +5,9 @@
       "ncy-angular-breadcrumb",
       "leaflet-directive",
       "ngFileUpload",
-      "angularMoment"
+      "angularMoment",
+      "ui.select",
+      "ngSanitize"
     ])
     .run(function(amMoment) {
         amMoment.changeLocale('fr');
