@@ -22,7 +22,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
-                        <h3>Toutes les discussions</h3>
+                        
+                        <nav class="navbar navbar-default">
+                            <div class="container-fluid">
+                              <div class="navbar-header">
+                                <h3 class="navbar-text navbar-left">Toutes les discussions</h3>
+                              </div>
+                              <div class="collapse navbar-collapse">
+                                  <p class="navbar-text navbar-right"><a class="btn btn-success" ui-sref="newforum"><i class="fa fa-long-arrow-right"></i> Créer un sujet </a></p>
+                                </div>
+                            </div>
+                        </nav>
                         <ul class="list-group">
                             <li class="list-group-item" ng-repeat="p in [1,2,3,4,5]">
                                 <div class="media">
