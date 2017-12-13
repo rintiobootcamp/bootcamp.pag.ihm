@@ -7,6 +7,7 @@ angular.module('pag-site')
     comment_fonct_url: 'http://165.227.69.188:8083/commentaire/commentaires',
     note_fonct_url: 'http://165.227.69.188:8084/note/notes',
     like_fonct_url: 'http://165.227.69.188:8085/like/likes',
+    sondage_fonct_url: 'http://165.227.69.188:8087/sondage/sondages',
     assets:''
   }
   );

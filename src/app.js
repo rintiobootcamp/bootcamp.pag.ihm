@@ -184,6 +184,24 @@
                   }
             })
 
+            .state('sondage', {
+                url: "/sondage",
+                controller: "SiteSondageCtrl",
+                templateUrl: "views/site/sondage/index.html",
+                ncyBreadcrumb: {
+                    label: 'Sondage'
+                  }
+            })
+            .state('newsondage', {
+                url: "/sondage/new",
+                controller: "SiteSondageAddCtrl",
+                templateUrl: "views/site/sondage/add-new.html",
+                ncyBreadcrumb: {
+                    label: ''
+                  }
+            })
+
+
             .state('discussion', {
                 url: "/discussion",
                 controller: "SiteDiscussionCtrl",
