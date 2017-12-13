@@ -1,0 +1,103 @@
+<!--MAIN START-->
+<div id="main">
+        <!--INNER BANNER START-->
+        <div id="inner-banner">
+            <div class="container">
+                <div class="inner-banner-heading">
+                <h1>Créer un sujet</h1>
+                <em>Fil de discussion et de débat sur le PAG</em> </div>
+            </div>
+            <div class="breadcrumb-col"> <a ui-sref="home" class="btn-back"><i class="fa fa-home" aria-hidden="true"></i>Retour à l'accueil</a>
+                <ol class="breadcrumb">
+                <li><a ui-sref="home">Accueil</a></li>
+                <li class="active">Sujet</li>
+                </ol>
+            </div>
+        </div>
+        <!--INNER BANNER END-->
+    
+        <!--FORUM SECTION START-->
+        <section class="forum-page department-page">
+            <section class="department-section department-space">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <form class="bs-example bs-example-form">
+                                <nav class="navbar navbar-default">
+                                    <div class="container-fluid">
+                                        <div class="navbar-header">
+                                        <h3 class="navbar-text navbar-left">Démarrer une discussion </h3>
+                                        </div>
+                                        <div class="collapse navbar-collapse">
+                                            <p class="navbar-text navbar-right"><a class="btn btn-success" ui-sref="forum"><i class="fa fa-long-arrow-left"></i> Retour au forum </a></p>
+                                        </div>
+                                    </div>
+                                </nav>
+                                <div class="form-group">
+                                        <ui-select ng-model="sujet.forum" theme="bootstrap" style="max-width: 400px;" title="Choisir un forum" ui-select-required>
+                                            <ui-select-match allow-clear="true" placeholder="Sélectionner un forum">{{$select.selected.nom | limitTo:40}}<span ng-show="$select.selected.nom.length > 40">...</span></ui-select-match>
+                                            <ui-select-choices group-by="'type'" repeat="forum in listForum | filter: $select.search track by $index">
+                                                <div ng-bind-html="forum.nom | highlight: $select.search" title="{{forum.nom}}"></div>
+                                            </ui-select-choices>
+                                        </ui-select>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control input-lg" placeholder="Titre du sujet" aria-describedby="sizing-addon2" ng-model="sujet.titre" ng-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <textarea ui-tinymce="addSujetTinymceOptions" ng-model="sujet.contenu" ng-required="true" placeholder="Message"></textarea>
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-paperclip"></i> Fichiers</span>
+                                        <input class="form-control" type="file" ngf-select ng-model="comment.files" ngf-max-size="20MB" ngf-min-height="100" ngf-accept="'image/*,audio/*,video/*'" ngf-multiple="true">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="form-group row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="input-group">
+                                            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+                                            <input class="form-control" placeholder="Pseudo" aria-describedby="sizing-addon2" ng-model="sujet.pseudo">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="input-group">
+                                            <span class="input-group-addon" id="basic-addon1">OU</span>
+                                            <input class="form-control" placeholder="adresse email" aria-describedby="basic-addon2"  ng-model="sujet.email">
+                                        </div>  
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p>
+                                        Vous avez déjà un compte ? <a ui-sref="connectcompte">Connectez-vous </a> ou <a ui-sref="createcompte">Créer un compte</a>
+                                    </p>
+                                </div>
+                                <div class="form-group" align="center">
+                                    <button class="btn btn-primary" type="button" ng-click="submit()"> <i class="fa fa-check"></i> VALIDER</button>
+                                    <a class="btn btn-link" ui-sref="forum" style="margin-left:30px"> <i class="fa fa-undo"></i> ABANDONNER </a>
+                                </div>
+                            </form>    
+                        </div>
+                        <div class="col-md-4">
+                            <div class="panel panel-primary">
+                                <h4 class="panel-heading">Règles du forum</h4>
+                                <div class="panel-body">
+                                    <div class="archive-widget">
+                                        <ul>
+                                            <li>Faire usage de <b>politesse</b> et de <b>courtoisie</b></li>
+                                            <li>Rédiger les messages dans un langage clair sans <b>abréviations</b>.</li>
+                                            <li>Respecter les lois en vigeur en matière de <b>droits de l'homme</b></li>
+                                            <li>Utiliser la recherche dans les forums pour ne pas créer un sujet existant</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!--FORUM SECTION END-->
+    </div>
