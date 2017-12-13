@@ -89,5 +89,7 @@
 #main .forum-page .ui-select-search {
   margin-bottom: 2px !important;
   height: 30px !important; }
+#main .forum-page .archive-widget ul li {
+  line-height: 1.5em; }
 
 /*# sourceMappingURL=style_front.css.map */

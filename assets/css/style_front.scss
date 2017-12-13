@@ -172,6 +172,14 @@
             margin-bottom: 2px !important;
             height: 30px !important;
         }
+
+        .archive-widget {
+            ul {
+                li{
+                    line-height: 1.5em;
+                }
+            }
+        }
     }
 
 }
