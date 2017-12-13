@@ -7,7 +7,8 @@
       "ngFileUpload",
       "angularMoment",
       "ui.select",
-      "ngSanitize"
+      "ngSanitize",
+      "ui.tinymce"
     ])
     .run(function(amMoment) {
         amMoment.changeLocale('fr');
@@ -172,6 +173,14 @@
                 templateUrl: "views/site/forum/index.html",
                 ncyBreadcrumb: {
                     label: 'Forum'
+                  }
+            })
+            .state('newforum', {
+                url: "/forum/new",
+                controller: "SiteForumAddCtrl",
+                templateUrl: "views/site/forum/add-new.html",
+                ncyBreadcrumb: {
+                    label: ''
                   }
             })
 
