@@ -157,7 +157,7 @@
         }
     }
 
-    .forum-page {
+    .forum-page, .sondage-page {
         .filter{
             .elem {
                 margin-top: 10px;
@@ -178,6 +178,38 @@
                 li{
                     line-height: 1.5em;
                 }
+            }
+        }
+    }
+
+    .sondage-page {
+        .bloc-response{
+            max-width: 350px;
+            .choose-response{
+                height: 34px !important;
+            }
+        }
+        .view-response{
+            margin-top: 10px;
+            .list-group-item {
+                padding: 5px 10px;
+                display: inline-block;
+                margin-right: 10px;
+                .badge {
+                    margin-left: 5px;
+                    .fa {
+                        color:#fff;
+                    }
+                }
+            }
+        }
+        .score {
+            .list-group-item {
+                /* display: inline-block;
+                margin-right: 10px;
+                .badge {
+                    margin-left: 5px;
+                } */
             }
         }
     }

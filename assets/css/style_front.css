@@ -80,16 +80,36 @@
   #main .sidebar .filter .elem:hover {
     background: #d33030;
     color: #fff; }
-#main .forum-page .filter .elem {
+#main .forum-page .filter .elem, #main .sondage-page .filter .elem {
   margin-top: 10px;
   margin-right: 10px; }
-  #main .forum-page .filter .elem:hover {
+  #main .forum-page .filter .elem:hover, #main .sondage-page .filter .elem:hover {
     background: #d33030;
     color: #fff; }
-#main .forum-page .ui-select-search {
+#main .forum-page .ui-select-search, #main .sondage-page .ui-select-search {
   margin-bottom: 2px !important;
   height: 30px !important; }
-#main .forum-page .archive-widget ul li {
+#main .forum-page .archive-widget ul li, #main .sondage-page .archive-widget ul li {
   line-height: 1.5em; }
+#main .sondage-page .bloc-response {
+  max-width: 350px; }
+  #main .sondage-page .bloc-response .choose-response {
+    height: 34px !important; }
+#main .sondage-page .view-response {
+  margin-top: 10px; }
+  #main .sondage-page .view-response .list-group-item {
+    padding: 5px 10px;
+    display: inline-block;
+    margin-right: 10px; }
+    #main .sondage-page .view-response .list-group-item .badge {
+      margin-left: 5px; }
+      #main .sondage-page .view-response .list-group-item .badge .fa {
+        color: #fff; }
+#main .sondage-page .score .list-group-item {
+  /* display: inline-block;
+  margin-right: 10px;
+  .badge {
+      margin-left: 5px;
+  } */ }
 
 /*# sourceMappingURL=style_front.css.map */
