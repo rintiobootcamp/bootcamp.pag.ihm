@@ -138,5 +138,13 @@ angular.module('pag-site')
             themes : 'modern',
             language: 'fr_FR'
         };
+
+        $scope.getReadMoreState = false;
+        $scope.readMore = function (){
+            if($scope.getReadMoreState) {
+                $scope.getReadMoreState = false;
+            }
+            else $scope.getReadMoreState = true;
+        }
     })
 ;

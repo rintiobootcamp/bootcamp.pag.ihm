@@ -27,11 +27,21 @@
                         <h3 class="title-entity">{{axe.nom}}</h3>
                         <hr>
                         <blockquote>
-                          <p><em>{{axe.titre }}</em></p>
-                          <p>{{axe.description }}</p>
+                          <p><h4>{{axe.titre }}</h4></p>
+                          <p>
+                            <span ng-show="!getReadMoreState">{{axe.description | limitTo:165}}</span>
+                            <span ng-show="!getReadMoreState && axe.description.length > 165">
+                                 <button ng-click="readMore()" href="#" style="color:#fff" class="btn btn-link btn-xs"> [ ... Lire plus ] </button>
+                            </span>
+                            <span ng-show="getReadMoreState">
+                                {{axe.description}}
+                            </span>
+                            <span ng-show="getReadMoreState">
+                                <button ng-click="readMore()" href="#" style="color:#fff" class="btn btn-link btn-xs"> [ Réduire ... ] </button>
+                            </span></p>
                         </blockquote>
                         <p>
-                            <h4>Focus</h4>
+                            <h4>Focus : {{axe.titreFocus}}</h4>
                             <p>{{axe.descriptionFocus}}</p>
                         </p>
                         <div class="share-box"> <strong class="title">Partager </strong>
@@ -124,7 +134,7 @@
                             <h3>Autres axes du PAG </h3>
                             <div class="archive-widget">
                                 <ul>
-                                    <li ng-repeat="oth in listAxes" ng-if="oth.id != axe.id"><a ui-sref="axe({id:oth.id})"><b>{{oth.nom}}</b> <i class="fa fa-long-arrow-right"></i> <em>{{oth.description}}</em></a></li>
+                                    <li ng-repeat="oth in listAxes" ng-if="oth.id != axe.id"><a ui-sref="axe({id:oth.id})"><b>{{oth.nom}}</b> <i class="fa fa-long-arrow-right"></i>{{oth.description | limitTo:80}}<b ng-show="oth.description.length > 80">...</b></a></li>
                                 </ul>
                             </div>
                         </div>
