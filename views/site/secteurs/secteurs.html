@@ -17,13 +17,28 @@
         <!--INNER BANNER END-->
 
         <!--SERVICES BOARD SECTION START-->
-        <section class="services-board">
+        <section class="services-board secteurs-page">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 col-sm-6" ng-repeat="secteur in listSecteurs">
+                    <div class="col-md-3 col-sm-6 element" ng-repeat="secteur in listSecteurs">
                         <div class="box board-color-{{secteur.id}}">
                             <div class="round-icon"><img class="flaticon-svg" src="/assets/images/svg/nature.svg" alt="{{secteur.nom}}"></div>
                             <h3><a ui-sref="secteurs">{{secteur.nom}}</a> </h3>
+                        </div>
+                        <div>
+                            <div ng-show="!secteur.getreadMoreState">
+                                <h4 align="center"><a href="" class="btn btn-link" ng-click="showProjects($index)"><i class="fa fa-plus"></i> Projets</a> </h4>
+                            </div>
+                            <div ng-show="secteur.getreadMoreState">
+                                <ul class="listprojets">
+                                    <li ng-repeat="p in secteur.projets">
+                                        <a ui-sref="projet({id:p.id})">{{p.id}} - {{p.nom | capitalizeFirst}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div ng-show="secteur.getreadMoreState">
+                                    <h4 align="center"><a href="" class="btn btn-link" ng-click="showProjects($index)"><i class="fa fa-minus"></i> Projets</a> </h4>
+                            </div>
                         </div>
                     </div>
                 </div>
