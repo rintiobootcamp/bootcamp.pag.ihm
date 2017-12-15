@@ -26,14 +26,20 @@
           <h2 class="title-block">Les secteurs du <span>PAG</span></h2>
         </div>
         <em>Le Programme d'Action du Gouvernement 2016-2021 organisé par secteur.</em>
-          <data-self-owl-carousel class="owl-carousel" data-options="{loop:false ,dots:false
+          <data-self-owl-carousel class="owl-carousel" data-options="{loop:true ,dots:false
           ,nav:true ,navText:'' ,smartSpeed:1000 ,padding:0 ,margin:30, autoplay:true,autoplayTimeout:1000,
           autoplayHoverPause:true,responsiveClass: true,
             responsive: { 0: {items: 1,},768: {items: 2,},992: {items: 2,},1199: {items: 4,}}}">
             <div self-owl-carousel-item="" ng-repeat="secteur in listSecteurs" class="item">
-              <div class="box secteur {{secteur.icone}} board-color-{{secteur.id}}">
-                <!-- <div class="round-icon"><img class="flaticon-svg" src="/assets/images/svg/{{secteur.icone}}.svg" alt="{{secteur.nom}}"></div> -->
-                <div class="round-icon"><img class="flaticon-svg" src="/assets/images/svg/nature.svg" alt="{{secteur.nom}}"></div>
+              <div class="box secteur {{secteur.icone}} board-color-{{secteur.id}}" ng-if="$index < listSecteurs.length">
+                <div class="round-icon">
+                  <span ng-if="secteur.icone !=''">
+                    <img class="flaticon-svg" ng-src="/assets/images/svg/{{secteur.icone}}.svg" alt="{{secteur.nom}}">
+                  </span>
+                  <span ng-if="secteur.icone ==''">
+                    <img class="flaticon-svg" ng-src="/assets/images/svg/nature.svg" alt="{{secteur.nom}}">
+                  </span>
+                </div>
                 <h3><a ui-sref="secteurs">{{secteur.nom}}</a> </h3>
               </div>
             </div>
