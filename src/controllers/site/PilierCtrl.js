@@ -59,18 +59,41 @@ angular.module('pag-site')
         ModelComment.list(params)
             .then( function(data) {
                 $scope.listComments = data.data;
+                getMediaComment();
             }, function (error) {
                 console.log(error);
             });
     }
     getListComments(params_get_comments);
 
+    var getMediaComment = function (){
+        ModelMedia.getAll()
+            .then(function(data){
+                var data_medias = [];
+                angular.forEach($scope.listComments, function (comment, i){
+                    angular.forEach(data.data, function (media, i){
+                        if(media.entityType == 'COMMENTAIRE') {
+                            if(media.entityId == comment.id){
+                                data_medias.push(media);
+                            }
+                        }
+                    });
+                    comment.medias = data_medias;
+                    data_medias = [];
+                });
+                console.log($scope.listComments);
+            }, function (error){
+                console.log(error);
+            });
+    }
+
     $scope.comment = {
         show:false,
         id:0,
         pseudo:'',
-        email:'',
-        contenu:''
+        userMail:'',
+        contenu:'',
+        files:[]
     }
 
     $scope.showComment = function (){
@@ -78,46 +101,48 @@ angular.module('pag-site')
     }
 
     $scope.postComment = function (){
-        var params = {
-            entityType : "PILIER",
-            entityId : parseInt($stateParams.id),
-            pseudo: $scope.comment.pseudo,
-            userMail : $scope.comment.email,
-            contenu : $scope.comment.contenu
-        }
-        ModelComment.post(params)
+        var params = {};
+            params.entityType = "PILIER";
+            params.entityId  = parseInt($stateParams.id);
+            if($scope.comment.pseudo !='')
+                params.pseudo = $scope.comment.pseudo;
+            if($scope.comment.userMail !='')
+                params.userMail = $scope.comment.userMail;
+            params.contenu = $scope.comment.contenu;
+            //console.log(params);
+            ModelComment.post(params)
             .then(function(data){
-                getListComments(params_get_comments);
-                $scope.comment.show = false;
-
-                $scope.comment.id = data.data.id;
-                uploadFiles($scope.comment.files);
-
+                if($scope.comment.files.length > 0) {
+                    uploadFiles($scope.comment.files, data.data.id);
+                }else {
+                    getListComments(params_get_comments);
+                } 
+                $scope.comment = {};
             }, function (error){
                 console.log(error);
             });
     }
 
     // upload on file select or drop
-    $scope.uploadFile = function (file) {
+    var uploadFile = function (file, idCommentaire) {
         Upload.upload({
-            url: API.media_fonct_url + 'COMMENTAIRE/' + $scope.comment.id,
+            url: API.media_fonct_url + '/COMMENTAIRE/' + idCommentaire,
             data: {file: file}
         }).then(function (resp) {
-            console.log(resp);
         }, function (resp) {
-            console.log(resp.status);
+
         }, function (evt) {
 
         });
     };
     // for multiple files:
-    $scope.uploadFiles = function (files) {
+    var uploadFiles = function (files, idCommentaire) {
       if (files && files.length) {
         for (var i = 0; i < files.length; i++) {
-            uploadFile(files[i]);
+            uploadFile(files[i], idCommentaire);
         }
       }
+      getListComments(params_get_comments);
     }
 
     $scope.like = function (entityType,entityId,type){
@@ -157,6 +182,7 @@ angular.module('pag-site')
         themes : 'modern',
         language: 'fr_FR'
     };
+
 
 })
 ;

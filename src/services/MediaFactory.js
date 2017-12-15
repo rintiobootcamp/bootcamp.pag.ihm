@@ -15,6 +15,13 @@ angular.module('pag-site')
           //url: API.url + '/media/post_media.json'
           url: API.media_fonct_url
         })
+      },
+      getAll: function (){
+        return $http({
+          method: 'GET',
+          //url: API.url + '/media/get_media.json'
+          url: API.media_fonct_url
+        });
       }
     }
   });
