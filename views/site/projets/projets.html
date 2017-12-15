@@ -34,7 +34,14 @@
                             <p>{{projet.description | limitTo: 150}}<span ng-show="projet.description.length > 150">...</span></p>
                             <a ui-sref="projet({id:projet.id})" class="btn-style-1">+ Détails</a> </div>
                         </div>
-                        <div class="frame"><img src="/assets/images/project-page.jpg" alt="img"></div>
+                        <div class="frame">
+                            <span ng-if="projet.id > limitImgProjet">
+                                <img ng-src="/assets/images/projets/pag_preview.jpg" alt="img">
+                            </span>
+                            <span ng-if="projet.id <= limitImgProjet">
+                                <img ng-src="/assets/images/projets/projet{{projet.id}}/preview.jpg" alt="img">
+                            </span> 
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-4">

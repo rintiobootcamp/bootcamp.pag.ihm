@@ -11,6 +11,7 @@ angular.module('pag-site')
       list: function (){
         return $http({
           method: 'GET',
+          //
           //url: API.url + '/pilier/piliers.json'
           url: API.cat_fonct_url + 'piliers'
 

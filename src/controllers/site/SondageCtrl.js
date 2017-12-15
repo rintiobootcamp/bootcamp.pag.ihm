@@ -27,11 +27,9 @@ angular.module('pag-site')
             default:
               break;
           }
-          sondage.secteur = secteur_sondage.nom;
-            angular.forEach(sondage.typeReponses, function (response, j) {
-              response._sondage_response = Object.keys(response)[0];
-              response._sondage_score = response[response._sondage_response];
-            });
+          if(secteur_sondage != undefined )
+            sondage.secteur = secteur_sondage.nom;
+          else sondage.secteur = 'Non défini';
         });
       }, err => {
         console.log(err);
@@ -42,20 +40,24 @@ angular.module('pag-site')
         $scope.globalObject.message = $stateParams.message;
       }
 
-      function getEntity (entityType, entityId) {
-        return 
-      }
-
       var getListSondages = function (){
         ModelSondage.list()
           .then(function (data){
             $scope.listSondages = data.data;
-            angular.forEach($scope.listSondages, function (sondage, i) {
-              sondage.secteur = 
-                angular.forEach(sondage.typeReponses, function (response, j) {
-                  response._sondage_response = Object.keys(response)[0];
-                  response._sondage_score = response[response._sondage_response];
-                });
+          }, function (error){
+            console.log(error);
+          });
+      }
+
+      $scope.participe = function (key, sondage){
+        sondage.typeReponses[key]++;
+        ModelSondage.vote(sondage)
+          .then( function (data) {
+            var get_sondage_server = data.data;
+            var get_sondage = _.filter($scope.listSondages,{'id':get_sondage_server.id})[0];
+            get_sondage.typeReponses = {};
+            angular.forEach( get_sondage_server.typeReponses, function (value, i){
+              get_sondage.typeReponses[i] = value;
             });
           }, function (error){
             console.log(error);

@@ -820,7 +820,9 @@ strong.logo {
 .secteur.shield {
 	background-image: url(../images/secteurs/shield.png);
 }
-
+.secteur.tractor-side-view {
+	background-image: url(../images/secteurs/tractor-side-view.png);
+}
 .round-icon {
 	width: 97px;
 	height: 97px;

@@ -64,9 +64,8 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="panel panel-primary filter">
-                            <h4 class="panel-heading">Liste des forums</h4>
-                            <div class="panel-body">
+                        <div class="widget-box filter">
+                            <h3>Liste des forums</h3>
                                 <h5>Projet</h5>
                                 <ui-select ng-model="projetChoose" theme="bootstrap" style="max-width: 400px;" title="Choisir un projet">
                                     <ui-select-match placeholder="Sélectionner un projet">{{$select.selected.nom | limitTo:40}}<span ng-show="$select.selected.nom.length > 40">...</span></ui-select-match>
@@ -84,7 +83,6 @@
                                 <h5>Secteur</h5>
                                 <button class="btn btn-sm elem" ng-repeat="sect in listSecteurs" ng-click="filter('SECTEUR',a.id)">{{sect.nom}}</button>
                                 <hr>
-                            </div>
                         </div>
                     </div>
                 </div>

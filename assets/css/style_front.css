@@ -111,5 +111,17 @@
   .badge {
       margin-left: 5px;
   } */ }
+#main .blog-page .title-entity {
+  margin-bottom: 20px; }
+#main .blog-page .archive-widget ul li {
+  line-height: 1.5em; }
+  #main .blog-page .archive-widget ul li a {
+    line-height: 1.8em; }
+#main .secteurs-page .element {
+  margin-bottom: 30px; }
+#main .secteurs-page .box {
+  margin-bottom: 10px; }
+#main .secteurs-page ul.listprojets li {
+  list-style: none; }
 
 /*# sourceMappingURL=style_front.css.map */

@@ -56,18 +56,21 @@ angular.module('pag-site')
       }
 
       $scope.submit = function (){
-        var typeReponses = [];
+        var typeReponses = {};
         for(var i=0 ; i < $scope.listResponse.length; i++){
-          var response = {};
-          response[$scope.listResponse[i]] = 0;
-          typeReponses.push(response);
+          //var response = {};
+          //response[$scope.listResponse[i]] = 0;
+          typeReponses[$scope.listResponse[i]] = 0;
         }
         var params = {
-          "entityType": $scope.sondage.categorie.entityType,
-          "entityId": $scope.sondage.categorie.entityId,
+          /* "entityType": $scope.sondage.categorie.entityType,
+          "entityId": $scope.sondage.categorie.entityId, */
+          "entityType": 'PILIER',
+          "entityId": 3,
           "sujet": $scope.sondage.sujet,
           "typeReponses": typeReponses
         }
+        console.log(params);
         ModelSondage.create(params)
           .then(function(data){
             $state.go('sondage',{message:'Votre sondage a été crée ! '});

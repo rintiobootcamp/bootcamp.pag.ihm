@@ -3,7 +3,7 @@
         "id": 1,
         "nom": "Agriculture",
         "description": "",
-        "icone": "nature",
+        "icone": "tractor-side-view",
         "dateCreation": 1511890840,
         "dateMiseAJour": 1511890840,
         "axe": null
