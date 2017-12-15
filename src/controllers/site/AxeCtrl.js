@@ -22,12 +22,18 @@ angular.module('pag-site')
             entityType: 'AXE'
         }
 
-        $q.all([ModelAxe.list(), ModelAxe.get(params_get_entity),ModelLike.get(params_get_comments)])
+        $q.all([ModelAxe.list(), ModelAxe.get(params_get_entity)])
         .then( values => {
             $scope.listAxes = values[0].data;
             $scope.axe = values[1].data;
-            $scope.nbLike = values[2].data;
         });
+        var getLikeEntity =  function () {
+            ModelLike.get(params_get_comments)
+            .then(function (data) {
+                $scope.nbLike = data.data;
+            });
+        }
+        getLikeEntity();
 
         var getListComments = function (params) {
             ModelComment.list(params)
@@ -114,5 +120,23 @@ angular.module('pag-site')
                     console.log(error);
                 });
         }
+
+        $scope.addCommentTinymceOptions =  {
+            onChange: function(e) {
+    
+            },
+            height: 200,
+            menubar: false,
+            readonly:false,
+            plugins: [
+                'advlist autolink lists link image charmap print preview anchor textcolor',
+                'searchreplace visualblocks code',
+                'insertdatetime media table contextmenu code'
+              ],
+              toolbar: 'formatselect | bold italic underline strikethrough forecolor backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat',
+            skin: 'lightgray',
+            themes : 'modern',
+            language: 'fr_FR'
+        };
     })
 ;
