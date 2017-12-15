@@ -47,7 +47,7 @@
                                         <h4 class="media-heading"> {{sondage.sujet }}</h4>
                                         <p class="content">
                                             <ul class="list-group score">
-                                                <li class="list-group-item" ng-repeat="(key, resp) in sondage.typeReponses "><span class="badge">{{resp}}</span><button ng-click="participe(key, sondage.id)" class="btn btn-link">{{key}}</button></li>
+                                                <li class="list-group-item" ng-repeat="(key, resp) in sondage.typeReponses "><span class="badge">{{resp}}</span><button ng-click="participe(key, sondage)" class="btn btn-link">{{key}}</button></li>
                                             </ul>
                                         </p>
                                         <p>Par <span>Anonyme</span> <span class="label label-primary"><i class="fa fa-clock-o" aria-hidden="true"></i> {{sondage.dateCreation | date: 'dd MMM yyyy'}}</span> dans <span class="label label-success"> {{sondage.entityType}} | {{sondage.secteur | limitTo: 80 | capitalizeFirst}} <span ng-show="sondage.secteur.length > 80">...</span></span></p>
