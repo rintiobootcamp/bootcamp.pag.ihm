@@ -214,4 +214,20 @@
         }
     }
 
+    .blog-page {
+        .title-entity{
+            margin-bottom: 20px;
+        }
+        .archive-widget {
+            ul {
+                li{
+                    line-height: 1.5em;
+                    a{
+                        line-height: 1.8em;
+                    }
+                }
+            }
+        }
+    }
+
 }
