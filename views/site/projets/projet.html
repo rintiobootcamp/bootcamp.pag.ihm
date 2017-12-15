@@ -95,50 +95,72 @@
                     </div>
                     <hr>
                     <div class="comments-section">
-                        <h3>Commentaires</h3>
-                        <p> Aucun commentaire </p>
-                        <!-- <div class="media" ng-repeat="i in [1,2]">
-                            <div class="media-left">
-                                <div class=""><a href="#"><i class="fa fa-user fa-2x"></i> </a> </div>
-                            </div>
-                            <div class="media-body">
-                                <div class="text-outer"> <strong class="name">Lanister Jammie</strong> <span class="date">Jan 12, 2017 at 11:00 pm</span> <a href="#" class="btn-replay"><i class="fa fa-mail-reply-all" aria-hidden="true"></i></a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat nisi sit amet odio convallis, non iaculis dolor rutrum. Donec condimentum nunc felis, ut ullamcorper . </p>
+                            <h3>Commentaires</h3>
+                            <p ng-hide="listComments.length > 0">Aucun commentaire </p>
+                            <div class="media" ng-repeat="usercom in listComments | orderBy:'-id'">
+                                <div class="media-left">
+                                    <div class=""><a href="#"><i class="fa fa-user fa-2x"></i> </a> </div>
                                 </div>
-                            </div>
-                        </div> -->
-                        
-                    </div>
-                    <div class="comment-form">
-                        <h3>Donner votre avis </h3>
-                        <form ng-submit="postComment()">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group row">
-                                    <div class="col-md-6 col-sm-12">
-                                        <div class="input-group">
-                                            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
-                                            <input class="form-control" placeholder="Pseudo" aria-describedby="sizing-addon2" ng-model="sujet.pseudo">
-                                        </div>
+                                <div class="media-body">
+                                    <div class="text-outer">
+                                            <strong class="name"><span ng-show="usercom.pseudo == null">Anonyme</span></strong>
+                                            <strong class="name"><span ng-show="usercom.pseudo !=null">{{usercom.pseudo}}</span></strong>
+                                        <span class="date">Le {{usercom.dateCreation | date: 'dd MMM yyyy à HH:MM:ss'}}</span>
+                                    <p ng-bind-html="usercom.contenu"></p>
+                                    <div class="medias-comments">
+                                        <ul>
+                                            <li ng-repeat="media in usercom.medias">
+                                                <span ng-if="media.type.indexOf('image') != - 1">
+                                                    <img ng-src="{{media.lien}}" alt="Image" class="img-thumb-comment">
+                                                </span>
+                                                <span ng-if="media.type.indexOf(video)  != - 1 ">
+                                                    <iframe ng-src="{{media.lien}}" frameborder="0"></iframe>
+                                                </span>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <div class="col-md-6 col-sm-12">
-                                        <div class="input-group">
-                                            <span class="input-group-addon" id="basic-addon1">OU</span>
-                                            <input class="form-control" placeholder="adresse email" aria-describedby="basic-addon2"  ng-model="sujet.email">
-                                        </div>  
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-12">
-                                <textarea ui-tinymce="addCommentTinymceOptions" ng-model="sujet.contenu" ng-required="true" placeholder="Message"></textarea>
-                            </div>
-                            <div class="col-md-12" align="right">
-                                <br>
-                                <input type="submit" value="VALIDER" />
                             </div>
                         </div>
-                        </form>
-                    </div>
+                        <div class="comment-form">
+                            <h3>Donner votre avis </h3>
+                            <form ng-submit="postComment()">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group row">
+                                        <div class="col-md-6 col-sm-12">
+                                            <div class="input-group">
+                                                <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+                                                <input class="form-control" placeholder="Pseudo" aria-describedby="sizing-addon2" ng-model="comment.pseudo">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-12">
+                                            <div class="input-group">
+                                                <span class="input-group-addon" id="basic-addon1">OU</span>
+                                                <input class="form-control" placeholder="adresse email" aria-describedby="basic-addon2"  ng-model="comment.userMail">
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <textarea ui-tinymce="addCommentTinymceOptions" ng-model="comment.contenu" ng-required="true" placeholder="Message"></textarea>
+                                    <br>
+                                </div>
+                                <br>
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-paperclip"></i> Fichiers </span>
+                                        <input class="form-control" type="file" ngf-select="" name="file" ng-model="comment.files" ngf-max-size="20MB" ngf-min-height="100" ngf-accept="'image/*,audio/*,video/*'" ngf-multiple="true">
+                                    </div>
+                                </div>
+                                <div class="col-md-12" align="right">
+                                    <br>
+                                    <input type="submit" value="VALIDER" />
+                                </div>
+                            </div>
+                            </form>
+                        </div>
                 </div>
             </div>
             </div>

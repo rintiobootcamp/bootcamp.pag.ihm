@@ -33,8 +33,44 @@ angular.module('pag-site')
                 });
         }
         getListAxes();
+
+        $scope.comment = {
+            show:false,
+            id:0,
+            pseudo:'',
+            userMail:'',
+            contenu:''
+        }
+    
+        $scope.showComment = function (){
+            $scope.comment.show = true;
+        }
+    
+        $scope.postComment = function (){
+            var params = {};
+                params.entityType = "PROJET";
+                params.entityId  = parseInt($scope.projet.id);
+                if($scope.comment.pseudo !='')
+                    params.pseudo = $scope.comment.pseudo;
+                if($scope.comment.userMail !='')
+                    params.userMail = $scope.comment.userMail;
+                params.contenu = $scope.comment.contenu;
+                //console.log(params);
+            ModelComment.post(params)
+                .then(function(data){
+                    $scope.comment = {};
+                    getListComments(params_get_comments);
+                    $scope.comment.show = false;
+    
+                    $scope.comment.id = data.data.id;
+                    //uploadFiles($scope.comment.files);
+    
+                }, function (error){
+                    console.log(error);
+                });
+        }
     })
-    .controller("SiteOneProjetCtrl", function(ModelProjet, ModelSecteur, ModelComment, ModelMedia, $scope,$stateParams, $q, ModelLike){
+    .controller("SiteOneProjetCtrl", function(ModelProjet, ModelSecteur, ModelComment, ModelMedia, $scope,$stateParams, $q, ModelLike, Upload, API){
         var params_get_entity = {
             id:$stateParams.id
         }
@@ -48,11 +84,33 @@ angular.module('pag-site')
             ModelComment.list(params)
                 .then( function(data) {
                     $scope.listComments = data.data;
+                    getMediaComment();
                 }, function (error) {
                     console.log(error);
                 });
         }
         getListComments(params_get_comments);
+
+        var getMediaComment = function (){
+            ModelMedia.getAll()
+                .then(function(data){
+                    var data_medias = [];
+                    angular.forEach($scope.listComments, function (comment, i){
+                        angular.forEach(data.data, function (media, i){
+                            if(media.entityType == 'COMMENTAIRE') {
+                                if(media.entityId == comment.id){
+                                    data_medias.push(media);
+                                }
+                            }
+                        });
+                        comment.medias = data_medias;
+                        data_medias = [];
+                    });
+                    console.log($scope.listComments);
+                }, function (error){
+                    console.log(error);
+                });
+        }
 
         $q.all([ModelSecteur.list(),ModelProjet.get(params_get_entity),ModelProjet.list()])//, ModelProjet.get(params_get_entity)])
         .then(values => {
@@ -90,8 +148,64 @@ angular.module('pag-site')
         }
         getListMediasEntity();
 
-        
-
+        $scope.comment = {
+            show:false,
+            id:0,
+            pseudo:'',
+            userMail:'',
+            contenu:'',
+            files:[]
+        }
+    
+        $scope.showComment = function (){
+            $scope.comment.show = true;
+        }
+    
+        $scope.postComment = function (){
+            var params = {};
+                params.entityType = "PROJET";
+                params.entityId  = parseInt($stateParams.id);
+                if($scope.comment.pseudo !='')
+                    params.pseudo = $scope.comment.pseudo;
+                if($scope.comment.userMail !='')
+                    params.userMail = $scope.comment.userMail;
+                params.contenu = $scope.comment.contenu;
+                //console.log(params);
+                ModelComment.post(params)
+                .then(function(data){
+                    if($scope.comment.files.length > 0) {
+                        uploadFiles($scope.comment.files, data.data.id);
+                    }else {
+                        getListComments(params_get_comments);
+                    } 
+                    $scope.comment = {};
+                }, function (error){
+                    console.log(error);
+                });
+        }
+    
+        // upload on file select or drop
+        var uploadFile = function (file, idCommentaire) {
+            Upload.upload({
+                url: API.media_fonct_url + '/COMMENTAIRE/' + idCommentaire,
+                data: {file: file}
+            }).then(function (resp) {
+            }, function (resp) {
+    
+            }, function (evt) {
+    
+            });
+        };
+        // for multiple files:
+        var uploadFiles = function (files, idCommentaire) {
+          if (files && files.length) {
+            for (var i = 0; i < files.length; i++) {
+                uploadFile(files[i], idCommentaire);
+            }
+          }
+          getListComments(params_get_comments);
+        }
+    
         $scope.like = function (entityType,entityId,type){
             var obj = {
                 likeType:type,
@@ -111,6 +225,24 @@ angular.module('pag-site')
                 console.log(error);
             });
         }
+    
+        $scope.addCommentTinymceOptions =  {
+            onChange: function(e) {
+    
+            },
+            height: 200,
+            menubar: false,
+            readonly:false,
+            plugins: [
+                'advlist autolink lists link image charmap print preview anchor textcolor',
+                'searchreplace visualblocks code',
+                'insertdatetime media table contextmenu code'
+              ],
+              toolbar: 'formatselect | bold italic underline strikethrough forecolor backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat',
+            skin: 'lightgray',
+            themes : 'modern',
+            language: 'fr_FR'
+        };
     })
     ;
 
