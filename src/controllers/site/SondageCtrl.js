@@ -49,13 +49,9 @@ angular.module('pag-site')
           });
       }
 
-      $scope.participe = function (vote, id){
-        var params = {
-          id: id,
-          voted : vote
-        }
-        console.log(params)
-        ModelSondage.vote(params)
+      $scope.participe = function (key, sondage){
+        sondage.typeReponses[key]++;
+        ModelSondage.vote(sondage)
           .then( function (data) {
             var get_sondage_server = data.data;
             var get_sondage = _.filter($scope.listSondages,{'id':get_sondage_server.id})[0];
