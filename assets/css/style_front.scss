@@ -246,4 +246,16 @@
         }
     }
 
+    .medias-comments {
+        li {
+            list-style: none;
+            .img-thumb-comment {
+                max-height: 100px !important;
+                vertical-align: top;
+            }
+        }
+    }
+
+    
+
 }
