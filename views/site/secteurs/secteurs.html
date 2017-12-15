@@ -22,7 +22,14 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-6 element" ng-repeat="secteur in listSecteurs">
                         <div class="box board-color-{{secteur.id}}">
-                            <div class="round-icon"><img class="flaticon-svg" src="/assets/images/svg/nature.svg" alt="{{secteur.nom}}"></div>
+                            <div class="round-icon">
+                                    <span ng-if="secteur.icone !=''">
+                                        <img class="flaticon-svg" ng-src="/assets/images/svg/{{secteur.icone}}.svg" alt="{{secteur.nom}}">
+                                    </span>
+                                    <span ng-if="secteur.icone ==''">
+                                        <img class="flaticon-svg" ng-src="/assets/images/svg/nature.svg" alt="{{secteur.nom}}">
+                                    </span>
+                            </div>
                             <h3><a ui-sref="secteurs">{{secteur.nom}}</a> </h3>
                         </div>
                         <div>
