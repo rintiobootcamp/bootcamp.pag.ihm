@@ -230,4 +230,20 @@
         }
     }
 
+    .secteurs-page {
+        .element {
+            margin-bottom: 30px;
+        }
+        .box {
+            margin-bottom: 10px;
+        }
+        ul{
+            &.listprojets{
+                li{
+                    list-style: none;
+                }
+            }
+        }
+    }
+
 }
