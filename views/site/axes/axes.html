@@ -15,7 +15,7 @@
             </div>
         </div>
         <!--INNER BANNER END-->
-    
+
         <!--DEPARTMENTS SECTION START-->
         <section class="department-page">
             <section class="department-section department-space">
@@ -24,7 +24,7 @@
                         <div class="col-md-4 col-sm-12" ng-repeat="pilier in listPiliers">
                             <div class="bloc-axes">
                                 <div ng-repeat="axe in pilier.axes">
-                                    <div class="causes-box axes">
+                                    <div class="causes-box axes axe{{axe.id}}">
                                         <div class="text-box">
                                             <h4>{{axe.nom}}</h4>
                                             <p class="description">
@@ -41,7 +41,7 @@
                 </div>
             </section>
         </section>
-    
-    
+
+
     </div>
     <!--MAIN END-->
