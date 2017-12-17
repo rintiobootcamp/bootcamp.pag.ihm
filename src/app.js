@@ -8,7 +8,8 @@
       "angularMoment",
       "ui.select",
       "ngSanitize",
-      "ui.tinymce"
+      "ui.tinymce",
+      "ngCookies"
     ])
     .run(function(amMoment) {
         amMoment.changeLocale('fr');
