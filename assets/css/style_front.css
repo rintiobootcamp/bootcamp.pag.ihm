@@ -177,4 +177,14 @@
     max-height: 100px !important;
     vertical-align: top; }
 
+@media (max-width: 767px) {
+  #home-banner .holder h1 {
+    font-size: 18px !important; }
+  #home-banner .holder p {
+    font-size: 18px !important;
+    margin-top: 30px; }
+
+  .projet-content img {
+    width: 290px !important; } }
+
 /*# sourceMappingURL=style_front.css.map */
