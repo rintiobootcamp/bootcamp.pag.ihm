@@ -69,24 +69,6 @@
                 padding: 0 10px;
                 color:#fff;
             }
-
-            .pillier1 {
-              background: #3e51b5;
-            }
-
-            .pillier2 {
-              background: #785447;
-            }
-
-            .pillier3 {
-              background: #52af50;
-            }
-
-            .btn-style-2 {
-              background-color: transparent;
-              border: 1px solid #fff;
-              padding: 10px 20px 10px 20px;
-            }
         }
         .axes {
             min-height: 150px;
@@ -107,6 +89,29 @@
     }
 
     .bloc-axes {
+        .pillier1 {
+          min-height: 132px;
+          background: #52af50;
+          h4, p {
+            color: #fff;
+          }
+        }
+
+        .pillier2 {
+          min-height: 132px;
+          background: #009688;
+          h4, p {
+            color: #fff;
+          }
+        }
+
+        .pillier3 {
+          min-height: 132px;
+          background: #f44336;
+          h4, p {
+            color: #fff;
+          }
+        }
       .axe1 {
         background: #4caf50;
         .text-box{
@@ -118,7 +123,7 @@
       }
 
       .axe2 {
-        background: #795548;
+        background: #4caf50;
         min-height: 0;
         .text-box{
         h4, p {
@@ -129,7 +134,7 @@
       }
 
     .axe3 {
-      background: #3f51b5;
+      background: #009688;
       .text-box{
       h4, p {
           color: #fff;
@@ -139,7 +144,7 @@
     }
 
     .axe4 {
-      background: #f44336;
+      background: #009688;
       .text-box{
       h4, p {
           color: #fff;
@@ -159,7 +164,7 @@
     }
 
     .axe6 {
-      background: #03a9f4;
+      background: #f44336;
       .text-box{
       h4, p {
           color: #fff;
@@ -169,7 +174,7 @@
     }
 
     .axe7 {
-      background: #374046;
+      background: #f44336;
       .text-box{
       h4, p {
           color: #fff;

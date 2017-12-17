@@ -22,17 +22,20 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 col-sm-12" ng-repeat="pilier in listPiliers">
-                        <div class="box piliers">
-                            <div class="text-box pillier{{pilier.id}}">
-                                <a ui-sref="pilier({id:pilier.id})" class="">
-                                    <h3 class="title"><strong>{{pilier.nom}}</strong></h3>
-                                    <p class="description">
-                                        {{pilier.description}}
-                                    </p>
-                                    <div class="btn-row"><a ui-sref="pilier({id:pilier.id})" class="btn-style-2">+ Détails</a></div>
-                                </a>
-                            </div>
-                        </div>
+                      <div class="bloc-axes">
+                          <div>
+                              <div class="causes-box axes pillier{{pilier.id}}">
+                                  <div class="text-box">
+                                      <h4>{{pilier.nom}}</h4>
+                                      <p class="description">
+                                          {{pilier.description}}
+                                          <span ng-show="pilier.description.length > 100">...</span>
+                                      </p>
+                                      <div class="btn-row"><a ui-sref="pilier({id:pilier.id})" class="btn-style-2">+ Détails</a></div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
                     </div>
                 </div>
             </div>
