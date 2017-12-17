@@ -12,7 +12,7 @@ angular.module('pag-site')
         getListPiliers();
         
     })
-  .controller("SiteOnePilierCtrl", function(ModelPilier, ModelMedia, ModelComment, $scope,$stateParams, CONST, API, Upload,$q, ModelLike){
+  .controller("SiteOnePilierCtrl", function(ModelPilier, ModelMedia, ModelComment, $scope,$stateParams, CONST, API, Upload,$q, ModelLike, cookieModel){
     
     var params_get_entity = {
         id:$stateParams.id
@@ -110,8 +110,9 @@ angular.module('pag-site')
                 params.userMail = $scope.comment.userMail;
             params.contenu = $scope.comment.contenu;
             //console.log(params);
-            ModelComment.post(params)
+            /* ModelComment.post(params)
             .then(function(data){
+                
                 if($scope.comment.files.length > 0) {
                     uploadFiles($scope.comment.files, data.data.id);
                 }else {
@@ -120,9 +121,12 @@ angular.module('pag-site')
                 $scope.comment = {};
             }, function (error){
                 console.log(error);
-            });
-    }
+            }); */
+            // Save to cookie
+            
+            cookieModel.setPilier('comment',params.entityId);
 
+    }
     // upload on file select or drop
     var uploadFile = function (file, idCommentaire) {
         Upload.upload({
