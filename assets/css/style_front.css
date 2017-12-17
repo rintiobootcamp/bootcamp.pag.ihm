@@ -35,16 +35,6 @@
   font-size: 18px;
   padding: 0 10px;
   color: #fff; }
-#main .department-page .piliers .pillier1 {
-  background: #3e51b5; }
-#main .department-page .piliers .pillier2 {
-  background: #785447; }
-#main .department-page .piliers .pillier3 {
-  background: #52af50; }
-#main .department-page .piliers .btn-style-2 {
-  background-color: transparent;
-  border: 1px solid #fff;
-  padding: 10px 20px 10px 20px; }
 #main .department-page .axes {
   min-height: 150px; }
   #main .department-page .axes.causes-box {
@@ -53,21 +43,36 @@
       text-decoration: none; }
     #main .department-page .axes.causes-box .text-box {
       text-align: left; }
+#main .bloc-axes .pillier1 {
+  min-height: 132px;
+  background: #52af50; }
+  #main .bloc-axes .pillier1 h4, #main .bloc-axes .pillier1 p {
+    color: #fff; }
+#main .bloc-axes .pillier2 {
+  min-height: 132px;
+  background: #009688; }
+  #main .bloc-axes .pillier2 h4, #main .bloc-axes .pillier2 p {
+    color: #fff; }
+#main .bloc-axes .pillier3 {
+  min-height: 132px;
+  background: #f44336; }
+  #main .bloc-axes .pillier3 h4, #main .bloc-axes .pillier3 p {
+    color: #fff; }
 #main .bloc-axes .axe1 {
   background: #4caf50; }
   #main .bloc-axes .axe1 .text-box h4, #main .bloc-axes .axe1 .text-box p {
     color: #fff; }
 #main .bloc-axes .axe2 {
-  background: #795548;
+  background: #4caf50;
   min-height: 0; }
   #main .bloc-axes .axe2 .text-box h4, #main .bloc-axes .axe2 .text-box p {
     color: #fff; }
 #main .bloc-axes .axe3 {
-  background: #3f51b5; }
+  background: #009688; }
   #main .bloc-axes .axe3 .text-box h4, #main .bloc-axes .axe3 .text-box p {
     color: #fff; }
 #main .bloc-axes .axe4 {
-  background: #f44336; }
+  background: #009688; }
   #main .bloc-axes .axe4 .text-box h4, #main .bloc-axes .axe4 .text-box p {
     color: #fff; }
 #main .bloc-axes .axe5 {
@@ -75,11 +80,11 @@
   #main .bloc-axes .axe5 .text-box h4, #main .bloc-axes .axe5 .text-box p {
     color: #fff; }
 #main .bloc-axes .axe6 {
-  background: #03a9f4; }
+  background: #f44336; }
   #main .bloc-axes .axe6 .text-box h4, #main .bloc-axes .axe6 .text-box p {
     color: #fff; }
 #main .bloc-axes .axe7 {
-  background: #374046; }
+  background: #f44336; }
   #main .bloc-axes .axe7 .text-box h4, #main .bloc-axes .axe7 .text-box p {
     color: #fff; }
 #main .causes-box .text-box {
