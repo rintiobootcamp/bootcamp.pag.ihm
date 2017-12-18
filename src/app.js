@@ -9,7 +9,8 @@
       "ui.select",
       "ngSanitize",
       "ui.tinymce",
-      "ngCookies"
+      "ngCookies",
+      "angular-simple-chat"
     ])
     .run(function(amMoment) {
         amMoment.changeLocale('fr');
