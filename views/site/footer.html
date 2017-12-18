@@ -1,7 +1,22 @@
 <!--FOOTER SECTION 2 START-->
+<section class="widget-chat" ng-controller="WidgetChatCtrl">
+  <div class="container">
+      <div class="fixed-action-btn" ng-show="!data.toogle">
+        <a class="btn-floating" ng-click="toogleWidget()">
+          <i class="fa fa-commenting fa-2x"></i>
+        </a>
+      </div>
+      <div class="widget-container" ng-show="data.toogle">
+        <div align="right" class="header"> Discutez avec nous <a class="btn btn-link" ng-click="closeWidget()"><i class="fa fa-angle-down fa-2x"></i></a></div>
+        <simple-chat messages="data.messages" local-user="data.you" send-function="sendMessage" show-user-avatar="true"
+         send-button-text="Demander" composer-placeholder-text="Que voulez-vous savoir ?"></simple-chat>
+      </div>
+      
+    </div>  
+</section>
 <footer id="footer">
   <section class="footer-section-2">
-    <div class="container">
+    
       <div class="footer-social"> <strong class="title">Restez informé : </strong>
         <ul>
           <li><a href="http://web.facebook.com/scpagbenin" target="_blank"><i class="fa fa-facebook social-color-2" aria-hidden="true"></i>Aimer</a></li>
