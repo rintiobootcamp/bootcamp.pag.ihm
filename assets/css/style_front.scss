@@ -1,4 +1,3 @@
-
 #header {
     .logo{
         img{
@@ -407,4 +406,24 @@
             color: #fff;
         }
     }
+}
+// media query
+
+@media (max-width: 767px) {
+
+	#home-banner {
+    .holder {
+        h1{
+            font-size: 18px !important;
+        }
+
+        p {
+            font-size: 14px !important;
+        }
+    }
+	}
+
+  .projet-content img {
+    width: 290px !important;
+  }
 }

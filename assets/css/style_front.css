@@ -216,4 +216,13 @@
     background: #104382;
     color: #fff; }
 
+@media (max-width: 767px) {
+  #home-banner .holder h1 {
+    font-size: 18px !important; }
+  #home-banner .holder p {
+    font-size: 14px !important; }
+
+  .projet-content img {
+    width: 290px !important; } }
+
 /*# sourceMappingURL=style_front.css.map */
