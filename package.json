@@ -27,6 +27,7 @@
     "angular-moment": "^1.2.0",
     "angular-resource": "^1.6.7",
     "angular-sanitize": "^1.6.7",
+    "angular-simple-chat": "^1.0.11",
     "angular-ui-tinymce": "0.0.19",
     "express": "^4.16.2",
     "jquery": "^3.2.1",

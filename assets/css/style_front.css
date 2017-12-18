@@ -177,4 +177,43 @@
     max-height: 100px !important;
     vertical-align: top; }
 
+.widget-chat .fixed-action-btn {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  text-align: center;
+  margin-bottom: 0;
+  z-index: 997; }
+  .widget-chat .fixed-action-btn .btn-floating {
+    display: inline-block;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    background-color: #104382;
+    border-radius: 50%;
+    transition: .3s;
+    cursor: pointer;
+    vertical-align: middle; }
+.widget-chat .widget-container {
+  position: fixed;
+  right: 100px;
+  bottom: 60px;
+  width: 350px;
+  height: 450px;
+  text-align: center;
+  z-index: 997;
+  background: #fff; }
+  .widget-chat .widget-container message-composer {
+    position: inherit; }
+    .widget-chat .widget-container message-composer form {
+      background: #fff; }
+  .widget-chat .widget-container .header {
+    background: #104382;
+    color: #fff; }
+
 /*# sourceMappingURL=style_front.css.map */
