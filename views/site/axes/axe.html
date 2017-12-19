@@ -51,31 +51,33 @@
                             <li><a href="#" class="social-color-3"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
                             <li><a href="#" class="social-color-4"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>    
                             </ul>
-                            <div class="like">
+                            <div class="like" ng-show="axe.id > 0">
                                 | <span class="like_btn"><a title="J'aime" ng-click="like('PILIER',axe.id,true)" href="#"><img ng-src="/assets/images/like.png" alt="J'aime"></a> {{nbLike.like}} </span><span class="like_btn"> <a title="Je n'aime pas" ng-click="like('PILIER',axe.id,false)" href="#"><img ng-src="/assets/images/unlike.png" alt="J'aime pas"></a> {{nbLike.unlike}}</span>
                             </div>
                         </div>
-                        <div>
-                            <div class="col s6 ratings-icons">
-                                <strong class="title">Noter cet axe  </strong>
-                                <ul class="">
-                                    <li>
-                                    <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                    <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                    <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                    <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                    <a href="#!" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="col s6 ratings-icons" ng-show="axe.id > 0">
+                            <strong class="title">Noter cet axe  </strong>
+                            <ul>
+                                <li ng-repeat="n in noteList">
+                                    <span ng-if="n.indice == 1">
+                                        <a ng-click="doNote(n.noteType)" href="" title="{{n.indice}} étoile" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                                    </span>
+                                    <span ng-if="n.indice > 1">
+                                        <a ng-click="doNote(n.noteType)" href="" title="{{n.indice}} étoiles" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="all-note-view">
+                            <ul>
+                                <li ng-repeat="(key, note) in noteEntity.notes">
+                                    <div class="star block-view">{{key}} star<span ng-show="key > 1">s</span></div>
+                                    <div class="progress noteshow block-view">
+                                        <div align="center" class="progress-bar progress-bar-success" role="progressbar" ng-style="{width:{{((note / noteEntity.total) * 100)}} + '%'}"></div>
+                                    </div>
+                                    <div class="total block-view">{{note}}</div>
+                                </li>
+                            </ul>
                         </div>
                         <hr>
                         <div class="comments-section">
@@ -109,7 +111,7 @@
                             </div>
                             <div class="comment-form">
                                 <h3>Donner votre avis </h3>
-                                <form ng-submit="postComment()">
+                                <form ng-submit="postComment()" name="formComment">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group row">
@@ -138,12 +140,13 @@
                                             <input class="form-control" type="file" ngf-select="" name="file" ng-model="comment.files" ngf-max-size="20MB" ngf-min-height="100" ngf-accept="'image/*,audio/*,video/*'" ngf-multiple="true">
                                         </div>
                                     </div>
-                                    <div class="col-md-12" align="right">
+                                    <div class="col-md-12" align="right" ng-show="axe.id > 0">
                                         <br>
-                                        <input type="submit" value="VALIDER" />
+                                        <input type="submit" value="VALIDER" ng-disabled="formComment.$invalid" />
                                     </div>
                                 </div>
                                 </form>
+                                <toaster-container></toaster-container>
                             </div>
                       </div>
                     </div>

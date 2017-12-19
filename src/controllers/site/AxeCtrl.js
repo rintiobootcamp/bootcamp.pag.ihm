@@ -11,7 +11,7 @@ angular.module('pag-site')
         getListAxes();
         
     })
-    .controller("SiteOneAxeCtrl", function(ModelAxe, ModelMedia, ModelComment, $scope,$stateParams,$q, ModelLike, API, Upload){
+    .controller("SiteOneAxeCtrl", function(ModelAxe, ModelMedia, ModelComment, $scope,$stateParams,$q, ModelLike, API, Upload, cookieModel, toaster, ModelNote){
 
         var params_get_entity = {
             id:$stateParams.id
@@ -34,6 +34,23 @@ angular.module('pag-site')
             });
         }
         getLikeEntity();
+
+        var getNoteEntity =  function () {
+            ModelNote.get(params_get_comments)
+            .then(function (data) {
+                $scope.noteEntity = data.data;
+                $scope.noteEntity.total = $scope.noteEntity.noteFiveCounts
+                 + $scope.noteEntity.noteFourCounts + $scope.noteEntity.noteOneCounts
+                 + $scope.noteEntity.noteThreeCounts + $scope.noteEntity.noteTwoCounts;
+                $scope.noteEntity.notes = {};
+                $scope.noteEntity.notes[1] = $scope.noteEntity.noteOneCounts;
+                $scope.noteEntity.notes[2] = $scope.noteEntity.noteTwoCounts;
+                $scope.noteEntity.notes[3] = $scope.noteEntity.noteThreeCounts;
+                $scope.noteEntity.notes[4] = $scope.noteEntity.noteFourCounts;
+                $scope.noteEntity.notes[5] = $scope.noteEntity.noteFiveCounts;
+            });
+        }
+        getNoteEntity();
 
         var getListComments = function (params) {
             ModelComment.list(params)
@@ -74,6 +91,9 @@ angular.module('pag-site')
             contenu:'',
             files:[]
         }
+        if(cookieModel.getUser().pseudo != '') {
+            $scope.comment.pseudo = cookieModel.getUser().pseudo;
+        }
     
         $scope.showComment = function (){
             $scope.comment.show = true;
@@ -89,17 +109,41 @@ angular.module('pag-site')
                     params.userMail = $scope.comment.userMail;
                 params.contenu = $scope.comment.contenu;
                 //console.log(params);
-                ModelComment.post(params)
+
+                // Save Pseudo if user choose once
+                if($scope.comment.pseudo !=''){
+                    cookieModel.setUser('pseudo',$scope.comment.pseudo);
+                }
+                // Save userMail if user choose once
+                if($scope.comment.userMail !=''){
+                    cookieModel.setUser('email',$scope.comment.userMail);
+                }
+                // Check double action and Save to cookie
+                var checkCookie = cookieModel.getAxe();
+                if(checkCookie.comment.indexOf(params.entityId) === -1){
+                    var setCookie = cookieModel.setAxe('comment',params.entityId);
+                    if(setCookie.STATUS === 300) {
+                        toogleToaster('error','Alerte',setCookie.STATUS.message);
+                    }
+               /*  ModelComment.post(params)
                 .then(function(data){
+                    var setCookie = cookieModel.setAxe('comment',params.entityId);
+                    if(setCookie.STATUS === 300) {
+                        toogleToaster('error','Alerte',setCookie.STATUS.message);
+                    }
                     if($scope.comment.files.length > 0) {
                         uploadFiles($scope.comment.files, data.data.id);
                     }else {
                         getListComments(params_get_comments);
-                    } 
+                    }
                     $scope.comment = {};
                 }, function (error){
                     console.log(error);
-                });
+                }); */
+            }else {
+                console.log('Vous avez déjà commenté');
+                toogleToaster('error','Alerte',"Vous avez déjà commenté");
+            }
         }
     
         // upload on file select or drop
@@ -125,24 +169,37 @@ angular.module('pag-site')
         }
 
         $scope.like = function (entityType,entityId,type){
-            var obj = {
+            var params = {
                 likeType:type,
                 entityType:entityType,
-                entityId:entityId
+                entityId:parseInt(entityId)
             }
+            console.log(params);
             // Logic code to verify cookie or localStorage to check customer has once voted
-            // ....
-            ModelLike.post(obj)
+            // Check double action and Save to cookie
+            var checkCookie = cookieModel.getAxe();
+            if(checkCookie.like.indexOf(params.entityId) === -1){
+                var setCookie = cookieModel.setAxe('like',params.entityId);
+                if(setCookie.STATUS === 300) {
+                    toogleToaster('error','Alerte',setCookie.STATUS.message);
+                }
+                /* ModelLike.post(params)
                 .then( function(data){
-                    if(obj.likeType){
+                    if(params.likeType){
                         $scope.nbLike.like++;
                     }else {
                         $scope.nbLike.unlike++;
                     }
-                
+                    var setCookie = cookieModel.setAxe('like',params.entityId);
+                    if(setCookie.STATUS === 300) {
+                        toogleToaster('error','Alerte',setCookie.STATUS.message);
+                    }
                 }, function(error){
                     console.log(error);
-                });
+                }); */
+            }else {
+                toogleToaster('error','Alerte',"Vous avez déjà liké ");
+            }
         }
 
         $scope.addCommentTinymceOptions =  {
@@ -169,6 +226,54 @@ angular.module('pag-site')
                 $scope.getReadMoreState = false;
             }
             else $scope.getReadMoreState = true;
+        }
+
+        var toogleToaster = function (type,title, body){
+            toaster.pop({
+                 type: type,
+                 title: title,
+                 body: body,
+                 showCloseButton: true
+            })
+        }
+
+        $scope.noteList = [
+            { indice: 1, noteType:'noteOneCounts'},
+            { indice: 2, noteType:'noteTwoCounts'},
+            { indice: 3, noteType:'noteThreeCounts'},
+            { indice: 4, noteType:'noteFourCounts'},
+            { indice: 5, noteType:'noteFiveCounts'},
+        ];
+
+        $scope.doNote = function (noteId){
+            var params = {
+                entityType:'AXE',
+                entityId:$stateParams.id,
+                noteType:parseInt(noteId)
+            }
+
+            // Check double action and Save to cookie
+            var checkCookie = cookieModel.getAxe();
+            if(checkCookie.note.indexOf(params.entityId) === -1){
+                var setCookie = cookieModel.setAxe('note',params.entityId);
+                if(setCookie.STATUS === 300) {
+                    toogleToaster('error','Alerte',setCookie.STATUS.message);
+                }
+
+               /*  ModelNote.note(params)
+                    .then( function (data){
+                        getNoteEntity();
+                        var setCookie = cookieModel.setAxe('note',params.entityId);
+                        if(setCookie.STATUS === 300) {
+                            toogleToaster('error','Alerte',setCookie.STATUS.message);
+                        }
+
+                    }, function (error){
+
+                    }); */
+                }else{
+                    toogleToaster('error','Alerte',"Vous avez déjà noté ");
+                }
         }
     })
 ;
