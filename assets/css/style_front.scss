@@ -407,4 +407,28 @@
             color: #fff;
         }
     }
+
+}
+
+.all-note-view {
+    li{
+        margin-bottom: 10px;
+        list-style: none;
+    }
+    .block-view {
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: middle;
+        color: #104382;
+    }
+    .noteshow{
+        width: 120px;
+        margin-bottom: 0px;
+        .percent{
+            padding:0 10px;
+        }
+    }
+    .star {
+        width: 50px;
+    }
 }

@@ -216,4 +216,20 @@
     background: #104382;
     color: #fff; }
 
+.all-note-view li {
+  margin-bottom: 10px;
+  list-style: none; }
+.all-note-view .block-view {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  color: #104382; }
+.all-note-view .noteshow {
+  width: 120px;
+  margin-bottom: 0px; }
+  .all-note-view .noteshow .percent {
+    padding: 0 10px; }
+.all-note-view .star {
+  width: 50px; }
+
 /*# sourceMappingURL=style_front.css.map */
