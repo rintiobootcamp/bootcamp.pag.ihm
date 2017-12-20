@@ -2,10 +2,11 @@
     'use strict';
     angular.module('pag-site', [
             "ui.router", "ngResource",
-            "ui.select", "chart.js"
+            "ui.select", "chart.js", "angular-google-analytics"
         ])
-        .config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider, ChartJsProvider) {
+        .config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider, ChartJsProvider, AnalyticsProvider) {
             ChartJsProvider.setOptions({ colors : [ '#803690', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'] });
+            AnalyticsProvider.setAccount('UA-38996803-1');
 
             $urlRouterProvider.otherwise("/");
             // Now set up the states
