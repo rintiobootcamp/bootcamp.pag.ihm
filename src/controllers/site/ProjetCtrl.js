@@ -72,7 +72,7 @@ angular.module('pag-site')
     })
     .controller("SiteOneProjetCtrl", function(ModelProjet, ModelSecteur, ModelComment, ModelMedia, $scope,$stateParams, $q, ModelLike, Upload, API, cookieModel, toaster, ModelNote){
         var params_get_entity = {
-            id:$stateParams.id
+            entityId:$stateParams.id
         }
 
         var params_get_comments = {
