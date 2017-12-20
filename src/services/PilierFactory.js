@@ -4,16 +4,16 @@ angular.module('pag-site')
       get: function (obj){
         return $http({
           method: 'GET',
-          url: API.url + '/pilier/pilier.json'
-          //url: API.cat_fonct_url + 'piliers/'+ obj.id
+          //url: API.url + '/pilier/pilier.json'
+          url: API.cat_fonct_url + 'piliers/'+ obj.id
         });
       },
       list: function (){
         return $http({
           method: 'GET',
           //
-          url: API.url + '/pilier/piliers.json'
-          //url: API.cat_fonct_url + 'piliers'
+          //url: API.url + '/pilier/piliers.json'
+          url: API.cat_fonct_url + 'piliers'
 
         });
       },

@@ -4,15 +4,15 @@ angular.module('pag-site')
       get: function (obj){
         return $http({
           method: 'GET',
-          url: API.url + '/axe/axe.json',
-          //url: API.cat_fonct_url + 'axes/'+ obj.id
+          //url: API.url + '/axe/axe.json',
+          url: API.cat_fonct_url + 'axes/'+ obj.id
         });
       },
       list: function (){
         return $http({
           method: 'GET',
-          url: API.url + '/axe/axes.json',
-          //url: API.cat_fonct_url + 'axes'
+          //url: API.url + '/axe/axes.json',
+          url: API.cat_fonct_url + 'axes'
         });
       },
       countAxes: function (){

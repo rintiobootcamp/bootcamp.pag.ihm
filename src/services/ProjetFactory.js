@@ -4,21 +4,15 @@ angular.module('pag-site')
       get: function (obj){
         return $http({
           method: 'GET',
-          url: API.url + '/projet/projet.json'
-          //url: API.proj_fonct_url + '/' + obj.id
+          //url: API.url + '/projet/projet.json'
+          url: API.proj_fonct_url + '/' + obj.id
         });
       },
       list: function (){
         return $http({
           method: 'GET',
-          url: API.url + '/projet/projets.json'
-          //url: API.proj_fonct_url
-        });
-      },
-      listBySecteur: function (idSecteur){
-        return $http({
-          method: 'GET',
-          url: API.url + '/projet/projets_one_secteur.json'
+          //url: API.url + '/projet/projets.json'
+          url: API.proj_fonct_url
         });
       },
       countProjets: function (){

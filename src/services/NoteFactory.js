@@ -4,8 +4,8 @@ angular.module('pag-site')
       get: function (obj){
         return $http({
           method: 'GET',
-          url:  API.url + '/note/notes.json',
-          //url: API.note_fonct_url + '/' + obj.entityType + '/' + obj.entityId
+          //url:  API.url + '/note/notes.json',
+          url: API.note_fonct_url + '/' + obj.entityType + '/' + obj.entityId
         });
       },
       note : function(note) {

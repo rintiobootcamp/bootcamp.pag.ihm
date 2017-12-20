@@ -11,8 +11,8 @@ angular.module('pag-site')
       list: function (){
         return $http({
           method: 'GET',
-          url: API.url + '/secteur/secteurs.json'
-          //url: API.cat_fonct_url + 'secteurs'
+          //url: API.url + '/secteur/secteurs.json'
+          url: API.cat_fonct_url + 'secteurs'
         });
       },
       create: function(secteur) {
