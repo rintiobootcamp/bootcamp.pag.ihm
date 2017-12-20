@@ -15,6 +15,12 @@ angular.module('pag-site')
           url: API.cat_fonct_url + 'secteurs'
         });
       },
+      countSecteurs: function (){
+        return $http({
+          method: 'GET',
+          url: API.cat_fonct_url + 'secteurs/count'
+        });
+      },
       create: function(secteur) {
         return $http({
           method: 'POST',
