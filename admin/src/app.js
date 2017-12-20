@@ -4,7 +4,8 @@
             "ui.router", "ngResource",
             "ui.select", "chart.js"
         ])
-        .config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
+        .config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider, ChartJsProvider) {
+            ChartJsProvider.setOptions({ colors : [ '#803690', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'] });
 
             $urlRouterProvider.otherwise("/");
             // Now set up the states
