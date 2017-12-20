@@ -125,11 +125,11 @@ angular.module('pag-site')
             // Check double action and Save to cookie
             var checkCookie = cookieModel.getPilier();
             if(checkCookie.comment.indexOf(params.entityId) === -1){
-                var setCookie = cookieModel.setPilier('comment',params.entityId);
+                /* var setCookie = cookieModel.setPilier('comment',params.entityId);
                 if(setCookie.STATUS === 300) {
                     toogleToaster('error','Alerte',setCookie.STATUS.message);
-                }
-                /* ModelComment.post(params)
+                } */
+                ModelComment.post(params)
                 .then(function(data){
                     var setCookie = cookieModel.setPilier('comment',params.entityId);
                     if(setCookie.STATUS === 300) {
@@ -143,7 +143,7 @@ angular.module('pag-site')
                     $scope.comment = {};
                 }, function (error){
                     console.log(error);
-                }); */
+                });
             }else {
                 toogleToaster('error','Alerte',"Vous avez déjà commenté ");
             }
@@ -171,6 +171,8 @@ angular.module('pag-site')
     }
 
     $scope.like = function (entityType,entityId,type){
+        if($scope.waiting) return;
+        else $scope.waiting = true;
         var params = {
             likeType:type,
             entityType:entityType,
@@ -180,12 +182,13 @@ angular.module('pag-site')
         // Check double action and Save to cookie
         var checkCookie = cookieModel.getPilier();
         if(checkCookie.like.indexOf(params.entityId) === -1){
-            var setCookie = cookieModel.setPilier('like',params.entityId);
+            /* var setCookie = cookieModel.setPilier('like',params.entityId);
             if(setCookie.STATUS === 300) {
                 toogleToaster('error','Alerte',setCookie.STATUS.message);
-            }
-            /* ModelLike.post(params)
+            } */
+            ModelLike.post(params)
             .then( function(data){
+                $scope.waiting = false;
                 if(params.likeType){
                     $scope.nbLike.like++;
                 }else {
@@ -196,9 +199,11 @@ angular.module('pag-site')
                     toogleToaster('error','Alerte',setCookie.STATUS.message);
                 }
             }, function(error){
+                $scope.waiting = false;
                 console.log(error);
-            }); */
+            });
         }else {
+            $scope.waiting = false;
             toogleToaster('error','Alerte',"Vous avez déjà liké ");
         }
     }
@@ -231,30 +236,35 @@ angular.module('pag-site')
     }
 
     $scope.noteList = [
-        { indice: 1, noteType:'noteOneCounts'},
-        { indice: 2, noteType:'noteTwoCounts'},
-        { indice: 3, noteType:'noteThreeCounts'},
-        { indice: 4, noteType:'noteFourCounts'},
-        { indice: 5, noteType:'noteFiveCounts'},
+        { indice: 1, noteType:'UN'},
+        { indice: 2, noteType:'DEUX'},
+        { indice: 3, noteType:'TROIS'},
+        { indice: 4, noteType:'QUATRE'},
+        { indice: 5, noteType:'CINQ'},
     ];
 
+    $scope.waiting = false;
     $scope.doNote = function (noteType){
+        if($scope.waiting) return;
+        else $scope.waiting = true;
+        $scope.waiting = true;
         var params = {
             entityType:'PILIER',
             entityId:$stateParams.id,
-            noteType:parseInt(noteId)
+            noteType:noteType
         }
 
         // Check double action and Save to cookie
         var checkCookie = cookieModel.getPilier();
         if(checkCookie.note.indexOf(params.entityId) === -1){
-            var setCookie = cookieModel.setPilier('note',params.entityId);
+            /* var setCookie = cookieModel.setPilier('note',params.entityId);
             if(setCookie.STATUS === 300) {
                 toogleToaster('error','Alerte',setCookie.STATUS.message);
-            }
+            } */
 
-           /*  ModelNote.note(params)
+            ModelNote.note(params)
                 .then( function (data){
+                    $scope.waiting = false;
                     getNoteEntity();
                     var setCookie = cookieModel.setPilier('note',params.entityId);
                     if(setCookie.STATUS === 300) {
@@ -262,9 +272,10 @@ angular.module('pag-site')
                     }
 
                 }, function (error){
-
-                }); */
+                    $scope.waiting = false;
+                });
             }else{
+                $scope.waiting = false;
                 toogleToaster('error','Alerte',"Vous avez déjà noté ");
             }
     }

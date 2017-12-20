@@ -79,6 +79,7 @@
                                     </div>
                                     <div class="total block-view">{{note}}</div>
                                 </li>
+                                <li>Note moyenne : <b><span ng-show="noteEntity.moyenne == 'NaN'">0</span>{{noteEntity.moyenne  | number:2 }} / 5 </b></li>
                             </ul>
                         </div>
                         <hr>

@@ -68,7 +68,7 @@
                         <li><a href="#" class="social-color-4"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>    
                         </ul>
                         <div class="like" ng-show="projet.id > 0">
-                            | <span class="like_btn"><a title="J'aime" ng-click="like('PILIER',projet.id,true)" href="#"><img ng-src="/assets/images/like.png" alt="J'aime"></a> {{nbLike.like}} </span><span class="like_btn"> <a title="Je n'aime pas" ng-click="like('PILIER',projet.id,false)" href="#"><img ng-src="/assets/images/unlike.png" alt="J'aime pas"></a> {{nbLike.unlike}}</span>
+                            | <span class="like_btn"><a title="J'aime" ng-click="like('PROJET',projet.id,true)" href="#"><img ng-src="/assets/images/like.png" alt="J'aime"></a> {{nbLike.like}} </span><span class="like_btn"> <a title="Je n'aime pas" ng-click="like('PROJET',projet.id,false)" href="#"><img ng-src="/assets/images/unlike.png" alt="J'aime pas"></a> {{nbLike.unlike}}</span>
                         </div>
                     </div>
                     <div class="col s6 ratings-icons" ng-show="projet.id > 0">
@@ -93,6 +93,7 @@
                                 </div>
                                 <div class="total block-view">{{note}}</div>
                             </li>
+                            <li>Note moyenne : <b><span ng-show="noteEntity.moyenne == 'NaN'">0</span>{{noteEntity.moyenne | number:2 }} / 5 </b></li>
                         </ul>
                     </div>
                     <hr>
