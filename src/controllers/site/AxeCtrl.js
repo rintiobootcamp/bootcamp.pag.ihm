@@ -14,7 +14,7 @@ angular.module('pag-site')
     .controller("SiteOneAxeCtrl", function(ModelAxe, ModelMedia, ModelComment, $scope,$stateParams,$q, ModelLike, API, Upload, cookieModel, toaster, ModelNote){
 
         var params_get_entity = {
-            id:$stateParams.id
+            entityId:$stateParams.id
         }
 
         var params_get_comments = {

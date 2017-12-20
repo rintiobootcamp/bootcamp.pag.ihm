@@ -5,7 +5,7 @@ angular.module('pag-site')
         return $http({
           method: 'GET',
           //url: API.url + '/pilier/pilier.json'
-          url: API.cat_fonct_url + 'piliers/'+ obj.id
+          url: API.cat_fonct_url + 'piliers/'+ obj.entityId
         });
       },
       list: function (){
@@ -17,28 +17,11 @@ angular.module('pag-site')
 
         });
       },
-      create: function(pilier) {
+      countPiliers: function (){
         return $http({
-          method: 'POST',
-          //url: API.url + '/pilier',
-          url: API.cat_fonct_url + 'piliers',
-          data: angular.toJson(pilier)
-        })
-      },
-      update: function(pilier) {
-        return $http({
-          method: 'POST',
-          //url: API.url + '/pilier/' + pilier.id,
-          url: API.cat_fonct_url + 'piliers/' + pilier.id,
-          data: angular.toJson(pilier)
+          method: 'GET',
+          url: API.cat_fonct_url + 'piliers/count'
         });
-      },
-      delete(pilier_id) {
-        return $http({
-          method: 'DELETE',
-          //url: API.url + '/pilier/' + pilier_id
-          url: API.cat_fonct_url + 'piliers/' + pilier_id
-        })
       }
     }
   });

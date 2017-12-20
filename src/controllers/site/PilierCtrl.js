@@ -15,7 +15,7 @@ angular.module('pag-site')
   .controller("SiteOnePilierCtrl", function(ModelPilier, ModelMedia, ModelComment, $scope,$stateParams, CONST, API, Upload,$q, ModelLike, cookieModel, toaster, ModelNote){
     
     var params_get_entity = {
-        id:$stateParams.id
+        entityId:$stateParams.id
     }
     var params_get_comments = {
         entityId:$stateParams.id,
