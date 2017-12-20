@@ -2,7 +2,7 @@
     'use strict';
     angular.module('pag-site', [
             "ui.router", "ngResource",
-            "ui.select"
+            "ui.select", "chart.js"
         ])
         .config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
 
