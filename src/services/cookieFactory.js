@@ -231,19 +231,19 @@ angular.module('pag-site')
     }
 
     // Modèle de Débat ( Forum)
-    cookie.getForum = function () {
-      var values_get = $cookies.get('FORUM');
+    cookie.getDebat = function () {
+      var values_get = $cookies.get('DEBAT');
       if(values_get != undefined ){
         var dataJson = JSON.parse(values_get);
         var array_index = Object.keys(dataJson);
         for(var i = 0; i < array_index.length; i++) {
-          cookie.FORUM[array_index[i]] =  dataJson[array_index[i]];
+          cookie.DEBAT[array_index[i]] =  dataJson[array_index[i]];
         }
       }
-      return cookie.FORUM;
+      return cookie.DEBAT;
     }
-    cookie.setForum = function (type, value) {
-      var values = cookie.getForum();
+    cookie.setDebat = function (type, value) {
+      var values = cookie.getDebat();
       if(values[type].length > 0){
         if(values[type].indexOf(value) != -1){
           cookie.STATUS.code = 300;
@@ -254,7 +254,7 @@ angular.module('pag-site')
           old_content.push(value);
           var obj = {};
           obj[type] = old_content;
-          $cookies.put('FORUM',JSON.stringify(obj));
+          $cookies.put('DEBAT',JSON.stringify(obj));
           cookie.STATUS.code = 200;
           cookie.STATUS.message = "Action effectuée";
           return cookie.STATUS;
@@ -265,7 +265,7 @@ angular.module('pag-site')
         var obj = {};
         obj[type] = [];
         obj[type].push(value);
-        $cookies.put('FORUM',JSON.stringify(obj));
+        $cookies.put('DEBAT',JSON.stringify(obj));
         cookie.STATUS.code = 200;
         cookie.STATUS.message = "Action effectuée";
         return cookie.STATUS;
