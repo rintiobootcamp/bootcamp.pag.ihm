@@ -5,6 +5,9 @@ angular.module('pag-site')
         peudo:'',
         email:''
       },
+      PREFERENCES:{
+        sitevisited:false,
+      },
       PILIER:{
         comment:[],
         note:[],
@@ -32,6 +35,40 @@ angular.module('pag-site')
         message:''
       }
     };
+
+    // Modèle de PREFERENCES
+    cookie.getPreferences = function () {
+      var values_get = $cookies.get('PREFERENCES');
+      if(values_get != undefined ){
+        var dataJson = JSON.parse(values_get);
+        var array_index = Object.keys(dataJson);
+        for(var i = 0; i < array_index.length; i++) {
+          cookie.PREFERENCES[array_index[i]] =  dataJson[array_index[i]];
+        }
+      }
+      return cookie.PREFERENCES;
+    }
+    cookie.setPreferences = function (type, value) {
+      var values = cookie.getPreferences();
+      if(values[type] != ''){
+        if(values[type] != value){
+          var obj = {};
+          obj[type] = value;
+          $cookies.put('PREFERENCES',JSON.stringify(obj));
+          cookie.STATUS.code = 200;
+          cookie.STATUS.message = "Action effectuée";
+          return cookie.STATUS;
+        }
+      }else{
+        // User never use action need to save in cookie
+        var obj = {};
+        obj[type] = value;
+        $cookies.put('PREFERENCES',JSON.stringify(obj));
+        cookie.STATUS.code = 200;
+        cookie.STATUS.message = "Action effectuée";
+        return cookie.STATUS;
+      }
+    }
 
     // Modèle de USER
     cookie.getUser = function () {
