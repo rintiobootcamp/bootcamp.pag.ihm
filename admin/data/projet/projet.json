@@ -1,0 +1,78 @@
+{ 
+  "id":1,
+  "nom":"Faire de la Pendjari/W le parc de référence de l'Afrique de l'Ouest ",
+  "reference":"",
+  "description":"Revitalisation animalière (introduction d’espèces telles que le rhinocéros, le guépard, la girafe) Renforcement des infrastructures du parc (aménagement des pistes, construction d’une piste d’atterrissage, autonomie énergétique…) Construction de lodges de luxe, aménagement d’une zone de chasse Renforcement des capacités (installation d’un camp militaire, formation des guides, promotion, élaboration d’un circuit touristique intégré…)",
+  "dateDebutReel":"1511890346",
+  "dateFinReel":"1511890346",
+  "dateDebutPrevisionel":"1511890346",
+  "dateFinPrevisionel":"1511890346",
+  "budgetPrevisionel":"123",
+  "budgetReel":"123",
+  "coutReel":"123",
+  "phaseActuelle": {
+     "id": 0,
+     "nom": "string",
+     "dateDebut": 0,
+     "dateFin": 0
+   },
+   "phases": [
+     {
+       "id": 0,
+       "nom": "string",
+       "dateDebut": 0,
+       "dateFin": 0
+     }
+   ],
+   "secteur": {
+     "id": 1,
+     "nom": "Tourisme",
+     "icone": "string",
+     "axe": {
+       "id": 0,
+       "nom": "string",
+       "titre": "string",
+       "titreFocus": "string",
+       "description": "string",
+       "descriptionFocus": "string",
+       "dateCreation": 0,
+       "dateMiseAJour": 0,
+       "pilier": {
+         "id": 0,
+         "nom": "string",
+         "description": "string",
+         "dateCreation": 0,
+         "dateMiseAJour": 0
+       }
+     }
+   },
+   "regions": [
+       {
+         "id": 0,
+         "nom": "string",
+         "type": "PAYS",
+         "latitude": 0,
+         "longitude": 0
+       }
+     ],
+    "medias": [
+      {
+        "id": 1,
+        "lien": "https://lorempixel.com/580/250/nature/1",
+        "mediaType": "IMAGE",
+        "nom": "lorem 1"
+      },
+      {
+        "id": 2,
+        "lien": "https://lorempixel.com/580/250/nature/2",
+        "mediaType": "IMAGE",
+        "nom": "lorem 2"
+      },
+      {
+        "id": 3,
+        "lien": "https://lorempixel.com/580/250/nature/3",
+        "mediaType": "IMAGE",
+        "nom": "lorem 3"
+      }
+    ]
+}

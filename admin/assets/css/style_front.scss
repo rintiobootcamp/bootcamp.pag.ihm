@@ -1,0 +1,34 @@
+#search-bar{
+    z-index: 999999999999;
+    .material-icons.close{
+        color:#e95151;
+    }
+    .input-filed{
+        &.recherche-avancee{
+            padding-left: 30px;
+        }
+    }
+}
+
+.search-page{
+
+    #input-search-page{
+        width: 90%;
+        padding-left: 10px;
+        margin-left: 40px;
+        background-color: #fff;
+    }
+
+    .content-search {
+        padding: 20px;
+        .reultats{
+            font-size: 14px !important;
+            .list-content{
+                padding-left: 20px;
+            }
+            .material-icons{
+                font-size: 14px !important;
+            }
+        }
+    }
+}

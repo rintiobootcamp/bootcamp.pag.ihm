@@ -1,0 +1,236 @@
+[
+  {
+    "id": 1,
+    "nom": "string",
+    "description": "string",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "aPropos":"La stabilité démocratique et institutionnelle du Bénin est reconnue sur la scène internationale. Elle constitue d’ores et déjà un atout fort pour le pays, un véritable gage de confiance à mettre au service de son développement.",
+    "axes": [
+      {
+        "id": 0,
+        "nom": "axe1",
+        "titre": "string",
+        "titreFocus": "string",
+        "description": "string",
+        "descriptionFocus": "string",
+        "dateCreation": 0,
+        "dateMiseAJour": 0,
+        "secteurs": [
+          [
+            {
+              "id": 0,
+              "nom": "string",
+              "icone": "string",
+              "projets": [
+                {
+                  "id": 0,
+                  "nom": "string",
+                  "reference": "string",
+                  "description": "string",
+                  "dateDebutReel": 0,
+                  "dateFinReel": 0,
+                  "dateDebutPrevisionel": 0,
+                  "dateFinPrevisionel": 0,
+                  "budgetPrevisionel": 0,
+                  "budgetReel": 0,
+                  "coutReel": 0,
+                  "phaseActuelle": {
+                    "id": 0,
+                    "nom": "string",
+                    "dateDebut": 0,
+                    "dateFin": 0
+                  },
+                  "phases": [
+                    {
+                      "id": 0,
+                      "nom": "string",
+                      "dateDebut": 0,
+                      "dateFin": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        ]
+      }
+    ],
+    "medias": [
+      {
+        "id": 1,
+        "lien": "https://lorempixel.com/580/250/nature/1",
+        "mediaType": "IMAGE",
+        "nom": "lorem 1"
+      },
+      {
+        "id": 2,
+        "lien": "https://lorempixel.com/580/250/nature/2",
+        "mediaType": "IMAGE",
+        "nom": "lorem 2"
+      },
+      {
+        "id": 3,
+        "lien": "https://lorempixel.com/580/250/nature/3",
+        "mediaType": "IMAGE",
+        "nom": "lorem 3"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nom": "string",
+    "description": "string",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "aPropos":"La stabilité démocratique et institutionnelle du Bénin est reconnue sur la scène internationale. Elle constitue d’ores et déjà un atout fort pour le pays, un véritable gage de confiance à mettre au service de son développement.",
+    "axes": [
+      {
+        "id": 0,
+        "nom": "axe2",
+        "titre": "string",
+        "titreFocus": "string",
+        "description": "string",
+        "descriptionFocus": "string",
+        "dateCreation": 0,
+        "dateMiseAJour": 0,
+        "secteurs": [
+          [
+            {
+              "id": 0,
+              "nom": "string",
+              "icone": "string",
+              "projets": [
+                {
+                  "id": 0,
+                  "nom": "string",
+                  "reference": "string",
+                  "description": "string",
+                  "dateDebutReel": 0,
+                  "dateFinReel": 0,
+                  "dateDebutPrevisionel": 0,
+                  "dateFinPrevisionel": 0,
+                  "budgetPrevisionel": 0,
+                  "budgetReel": 0,
+                  "coutReel": 0,
+                  "phaseActuelle": {
+                    "id": 0,
+                    "nom": "string",
+                    "dateDebut": 0,
+                    "dateFin": 0
+                  },
+                  "phases": [
+                    {
+                      "id": 0,
+                      "nom": "string",
+                      "dateDebut": 0,
+                      "dateFin": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        ]
+      }
+    ],
+    "medias": [
+      {
+        "id": 1,
+        "lien": "https://lorempixel.com/580/250/nature/1",
+        "mediaType": "IMAGE",
+        "nom": "lorem 1"
+      },
+      {
+        "id": 2,
+        "lien": "https://lorempixel.com/580/250/nature/2",
+        "mediaType": "IMAGE",
+        "nom": "lorem 2"
+      },
+      {
+        "id": 3,
+        "lien": "https://lorempixel.com/580/250/nature/3",
+        "mediaType": "IMAGE",
+        "nom": "lorem 3"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nom": "string",
+    "description": "string",
+    "dateCreation": 0,
+    "dateMiseAJour": 0,
+    "aPropos":"La stabilité démocratique et institutionnelle du Bénin est reconnue sur la scène internationale. Elle constitue d’ores et déjà un atout fort pour le pays, un véritable gage de confiance à mettre au service de son développement.",
+    "axes": [
+      {
+        "id": 0,
+        "nom": "axe3",
+        "titre": "string",
+        "titreFocus": "string",
+        "description": "string",
+        "descriptionFocus": "string",
+        "dateCreation": 0,
+        "dateMiseAJour": 0,
+        "secteurs": [
+          [
+            {
+              "id": 0,
+              "nom": "string",
+              "icone": "string",
+              "projets": [
+                {
+                  "id": 0,
+                  "nom": "string",
+                  "reference": "string",
+                  "description": "string",
+                  "dateDebutReel": 0,
+                  "dateFinReel": 0,
+                  "dateDebutPrevisionel": 0,
+                  "dateFinPrevisionel": 0,
+                  "budgetPrevisionel": 0,
+                  "budgetReel": 0,
+                  "coutReel": 0,
+                  "phaseActuelle": {
+                    "id": 0,
+                    "nom": "string",
+                    "dateDebut": 0,
+                    "dateFin": 0
+                  },
+                  "phases": [
+                    {
+                      "id": 0,
+                      "nom": "string",
+                      "dateDebut": 0,
+                      "dateFin": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        ]
+      }
+    ],
+    "medias": [
+      {
+        "id": 1,
+        "lien": "https://lorempixel.com/580/250/nature/1",
+        "mediaType": "IMAGE",
+        "nom": "lorem 1"
+      },
+      {
+        "id": 2,
+        "lien": "https://lorempixel.com/580/250/nature/2",
+        "mediaType": "IMAGE",
+        "nom": "lorem 2"
+      },
+      {
+        "id": 3,
+        "lien": "https://lorempixel.com/580/250/nature/3",
+        "mediaType": "IMAGE",
+        "nom": "lorem 3"
+      }
+    ]
+  }
+]

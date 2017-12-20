@@ -1,0 +1,33 @@
+<div class="main-content white">
+  <div class="container">
+
+    <h4 class="no-margin-bottom title">
+      Liste des axes<span class=" hide-on-small-only"></span>
+      <a ui-sref="admin.newaxe" class="btn green pag hide-on-small-only right"> <i class="material-icons">add</i> Nouvel axe</a>
+    </h4>
+    <p class="subtitle grey-text text-lighten-1 no-margin-top">Consulter la liste de tous les axes du PAG</p>
+
+    <table class="striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Titre</th>
+          <th>Pilier</th>
+          <th class="center text-center">-</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr ng-repeat='axe in listAxes'>
+          <td>{{$index + 1}}</td>
+          <td>{{axe.titre}}</td>
+          <td>Pilier 1</td>
+          <td class="center text-center">
+            <a href="#" ui-sref="admin.editaxe({'id': axe.id})" class=""><i class="material-icons">edit</i></a>
+            <a href="#!" ng-click="deleteAxe($index)"><i class="material-icons">delete</i></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

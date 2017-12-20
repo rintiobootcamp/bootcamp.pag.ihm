@@ -1,0 +1,13 @@
+
+[
+    {
+        "link": "https://lorempixel.com/580/250/nature/2",
+        "mediaType": "IMAGE",
+        "nom": "string"
+    },
+    {
+        "link": "https://lorempixel.com/580/250/nature/3",
+        "mediaType": "IMAGE",
+        "nom": "string"
+    }
+]
