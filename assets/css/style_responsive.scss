@@ -1,0 +1,32 @@
+// media query
+
+@media (max-width: 767px) {
+
+	#home-banner {
+    .holder {
+        h1{
+            font-size: 18px !important;
+        }
+
+        p {
+            font-size: 14px !important;
+        }
+    }
+	}
+
+  .projet-content img {
+    width: 290px !important;
+  }
+}
+
+/* For chat bot view */
+@media screen and (max-width: 470px) {
+    .widget-chat {
+        .widget-container {
+            right: 30px;
+            bottom: 60px;
+            width: 80%;
+        }
+    }
+}
+

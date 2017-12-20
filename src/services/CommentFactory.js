@@ -4,8 +4,6 @@ angular.module('pag-site')
             list: function (params){
                 return $http({
                     method: 'GET',
-                    //url: API.url + '/comment/comments.json'
-                    //url: API.comment_fonct_url + 'entityId=' + params.entityId + '&entityType=' + params.entityType
                     url: API.comment_fonct_url + '/' + params.entityType +'/' + params.entityId
                 });
             },
@@ -13,7 +11,6 @@ angular.module('pag-site')
                 return $http({
                     method: 'POST',
                     data: angular.toJson(obj),
-                    //url: API.url + '/comment/post_comment.json'
                     url: API.comment_fonct_url
                 })
             }

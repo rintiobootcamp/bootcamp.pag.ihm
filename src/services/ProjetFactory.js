@@ -15,12 +15,6 @@ angular.module('pag-site')
           url: API.proj_fonct_url
         });
       },
-      listBySecteur: function (idSecteur){
-        return $http({
-          method: 'GET',
-          url: API.url + '/projet/projets_one_secteur.json'
-        });
-      },
       countProjets: function (){
         return $http({
           method: 'GET',

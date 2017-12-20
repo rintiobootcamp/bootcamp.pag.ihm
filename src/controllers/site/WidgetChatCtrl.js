@@ -1,6 +1,17 @@
 angular.module('pag-site')
-  .controller("WidgetChatCtrl", function ($scope, ModelWidget, ModelProjet) {
+  .controller("WidgetChatCtrl", function ($scope, ModelWidget, ModelProjet, cookieModel) {
     $scope.data = {};
+
+    var checkCookie = cookieModel.getPreferences();
+    if(checkCookie.sitevisited === false){
+       // Site is never visited by user
+       $scope.data.toogle = true;
+
+      var setCookie = cookieModel.setPreferences('sitevisited',true);
+      if(setCookie.STATUS === 300) {
+          toogleToaster('error','Alerte',setCookie.STATUS.message);
+      }
+    }
 
     var getListProjets = function (responseBot){
       sendWaiting();
