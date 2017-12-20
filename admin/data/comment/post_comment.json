@@ -1,0 +1,13 @@
+/* I - Enregistrer le commentaire en premier lieu */
+{
+    "entityId" : 3,
+    "entityType" : "PROJET", // Enumération des différentes entités du système
+    "contenu" : "contenu du commentaire à enrégistrer ici",
+    "pseudo" : "Baom", // Or empty if anonyme
+    "userId" : 23, // Or 0 if anonyme
+    "userMail" : ""
+}
+
+/* II - Pour les médias ratachés à un commentaire
+1. Enregistrer le commentaire vers le Service Web
+2. Le SW renvoie le id du commentaire enregistré

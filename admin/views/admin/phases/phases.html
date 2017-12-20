@@ -1,0 +1,35 @@
+<div class="main-content white">
+  <div class="container">
+
+    <h4 class="no-margin-bottom title">
+      Liste des phases<span class=" hide-on-small-only"></span>
+      <a ui-sref="admin.newphase" class="btn green pag hide-on-small-only right"> <i class="material-icons">add</i> Nouvelle phase</a>
+    </h4>
+    <p class="subtitle grey-text text-lighten-1 no-margin-top">Consulter la liste de tous les phases du PAG</p>
+
+    <table class="striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nom</th>
+          <th>Date début</th>
+          <th>Date fin</th>
+          <th class="center text-center">-</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr ng-repeat='phase in listPhases'>
+          <td>{{$index + 1}}</td>
+          <td>{{phase.nom}}</td>
+          <td>{{phase.dateDebut}}</td>
+          <td>{{phase.dateFin}}</td>
+          <td class="center text-center">
+            <a href="#" ui-sref="admin.editphase({'id': phase.id})" class=""><i class="material-icons">edit</i></a>
+            <a href="#!" ng-click="deletePhase($index)"><i class="material-icons">delete</i></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

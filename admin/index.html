@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>monPAG</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <link
+            type="text/css"
+            rel="stylesheet"
+            href="/admin/assets/css/style.min.css"
+            media="screen,projection"/>
+        <link
+            type="text/css"
+            rel="stylesheet"
+            href="/admin/assets/css/style_admin.css"
+            media="screen,projection"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <base href="/">
+    </head>
+    <body ng-app="pag-site">
+
+        <div ui-view></div>
+
+        <div ng-include="'/admin/views/site/footer.html'"></div>
+
+        <script type="text/javascript" src="/admin/assets/js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="/admin/assets/js/materialize.min.js"></script>
+
+        <!-- AngularJs core -->
+        <script src="/node_modules/angular/angular.js"></script>
+
+        <script src="/node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
+        <script src="/node_modules/angular-resource/angular-resource.js"></script>
+        <script src="/admin/assets/js/lodash.js"></script>
+
+        <script src="/node_modules/ui-select/dist/select.js"></script>
+
+        <!-- Core application -->
+        <script src="/admin/src/app.js"></script>
+
+        <!-- Site Controllers -->
+        <script src="/admin/src/controllers/site/NavBarCtrl.js"></script>
+
+        <!-- Adimin Controllers -->
+        <script src="/admin/src/controllers/admin/HomeCtrl.js"></script>
+        <script src="/admin/src/controllers/admin/PiliersCtrl.js"></script>
+        <script src="/admin/src/controllers/admin/PhasesCtrl.js"></script>
+        <script src="/admin/src/controllers/admin/AxesCtrl.js"></script>
+        <script src="/admin/src/controllers/admin/SecteursCtrl.js"></script>
+        <script src="/admin/src/controllers/admin/ProjetsCtrl.js"></script>
+
+        <!-- Consatantes -->
+        <script src="/admin/src/constantes/api.js"></script>
+        <script src="/admin/src/constantes/enumerations.js"></script>
+        <script src="/admin/src/constantes/frontend.js"></script>
+
+        <!-- Sevices -->
+        <script src="/admin/src/services/PilierFactory.js"></script>
+        <script src="/admin/src/services/ProjetFactory.js"></script>
+        <script src="/admin/src/services/PhaseFactory.js"></script>
+        <script src="/admin/src/services/AxeFactory.js"></script>
+        <script src="/admin/src/services/SecteurFactory.js"></script>
+        <script src="/admin/src/services/MediaFactory.js"></script>
+
+        <!-- Directives -->
+        <script src="/admin/src/directives/dropdownDirective.js"></script>
+        <script src="/admin/src/directives/tabsDirective.js"></script>
+        <script src="/admin/src/directives/collapseDirective.js"></script>
+        <script src="/admin/src/directives/sliderDirective.js"></script>
+        <script src="/admin/src/directives/selectDirective.js"></script>
+        <script src="/admin/src/directives/dateDirective.js"></script>
+
+        <!-- End Core application -->
+
+    </body>
+</html>

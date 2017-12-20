@@ -1,0 +1,34 @@
+<div class="main-content white">
+  <div class="container">
+
+    <h4 class="no-margin-bottom title">
+      Liste des piliers<span class=" hide-on-small-only"></span>
+      <a ui-sref="admin.newpilier" class="btn green pag hide-on-small-only right">Nouveau pilier</a></h4>
+    <p class="subtitle grey-text text-lighten-1 no-margin-top">Consulter la liste de tous les piliers du PAG</p>
+
+    <table class="striped">
+      <thead>
+        <tr>
+          <th>N</th>
+          <th>Nom</th>
+          <th>Description</th>
+          <th>Date création</th>
+          <th class="center text-center">Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr ng-repeat='pilier in listPiliers'>
+          <td>{{$index+1}}</td>
+          <td>{{pilier.nom}}</td>
+          <td>{{pilier.description}}</td>
+          <td>{{pilier.dateCreation}}</td>
+          <td class="center text-center">
+            <a ui-sref="admin.editpilier({'id': pilier.id})" class=""><i class="material-icons">edit</i></a>
+            <a href="#!" ng-click="deletePil($index)"><i class="material-icons">delete</i></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

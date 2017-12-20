@@ -1,0 +1,41 @@
+<div class="main-content white">
+  <div class="container">
+    <h4 class="no-margin-bottom title">{{phase_title}}</h4>
+    <p class="grey-text text-lighten-1 no-margin-top" ng-show="{{phase.id}}">Créer une nouvelle phase</p>
+    <div class="divider"></div>
+    <!-- Content -->
+    <div class="row no-margin">
+      <div class="col s12">
+        <div class="row">
+          <div class="col s12"><p class="no-margin">&nbsp;</p></div>
+          <form  ng-submit="savePhase()" class="col s12">
+            <div class="row">
+              <div class="col s12 m-top-infos">
+                <h4 class="no-margin teal-text text-pag">Informations</h4>
+                <b>Veuillez remplir ce formulaire</b>
+              </div>
+              <div class="col s12">
+                <label for="name"> Nom de la phase</label>
+                <input id="nom" type="text" class="validate" ng-model="nom">
+              </div>
+              <div class="col s6">
+                <label for="date debut"> Date début de la phase</label>
+                <input time-picker type="text" class="timepicker" ng-model="dateD">
+              </div>
+              <div class="col s6">
+                <label for="date fin"> Date fin de la phase</label>
+                <input time-picker type="text" class="timepicker" ng-model="dateF">
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 center center-align">
+                <a href="#" class="btn btn-large teal pag">{{save}}</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Content -->
+  </div>
+</div>

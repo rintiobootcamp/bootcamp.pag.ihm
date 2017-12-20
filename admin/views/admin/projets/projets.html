@@ -1,0 +1,42 @@
+<div class="main-content white">
+  <div class="container">
+
+    <h4 class="no-margin-bottom title">
+      Liste des projets<span class=" hide-on-small-only"></span>
+      <a ui-sref="admin.newprojet" class="btn green pag hide-on-small-only right">Nouveau projet</a></h4>
+    <p class="subtitle grey-text text-lighten-1 no-margin-top">Consulter la liste de tous les projets du PAG</p>
+
+    <table class="striped">
+      <thead>
+        <tr>
+          <th>#N</th>
+          <th>Titre</th>
+          <th>Description</th>
+          <th>Date Début</th>
+          <th>Date Fin</th>
+          <th>Budget</th>
+          <th>Coût réel</th>
+          <th>Phases</th>
+          <th class="center text-center">Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr ng-repeat='projet in listProjets'>
+          <td>{{$index + 1}}</td>
+          <td>{{projet.nom}}</td>
+          <td>{{projet.description}}</td>
+          <td>{{projet.dateDebutReel}}</td>
+          <td>{{projet.dateFinReel}}</td>
+          <td>{{projet.budgetPrevisionnel}}</td>
+          <td>{{projet.coutReel}}</td>
+          <td>{{projet.phases}}</td>
+          <td class="center text-center">
+            <a ui-sref="admin.editprojet({'id': projet.id})"><i class="material-icons">edit</i></a>
+            <a href="#!" ng-click="deletePro($index)"><i class="material-icons">delete</i></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

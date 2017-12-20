@@ -1,0 +1,294 @@
+[
+    {
+        "id":1,
+        "nom":"Axe stratégique 1",
+        "titre":"Renforcement des bases de la démocratie et de l’État de droit",
+        "description":"Cela passera notamment par une révision de la Constitution, par le renforcement des institutions de contre-pouvoir et par un meilleur accès à la justice.",
+        "titreFocus":"un cadre institutionnel et démocratique plus équilibré",
+        "descriptionFocus":"Cet axe stratégique insistera sur la mise en place d’instruments juridiques ayant vocation à répondre aux défis de l’État de droit tels que la révision de la Constitution du 11 décembre 1990, l’adoption de la loi organique sur l’administration publique, la revitalisation du système partisan et la modernisation dusystème électoral.De plus, d’autres instruments juridiques auront pour objectif de renforcer les institutions de contre-pouvoir, dont la Cour Constitutionnelle et la Haute Cour de justice, et l’indépendance de la justice. La cour des comptes sera créée en tant qu’institution constitutionnelle.",
+        "dateCreation":"1511890840",
+        "dateMiseAJour":"1511890840",
+        "pilier": {
+          "id": 0,
+          "nom": "string",
+          "description": "string",
+          "dateCreation": 0,
+          "dateMiseAJour": 0
+        },
+        "medias": [
+          {
+            "id": 1,
+            "lien": "https://lorempixel.com/580/250/nature/1",
+            "mediaType": "IMAGE",
+            "nom": "lorem 1"
+          },
+          {
+            "id": 2,
+            "lien": "https://lorempixel.com/580/250/nature/2",
+            "mediaType": "IMAGE",
+            "nom": "lorem 2"
+          },
+          {
+            "id": 3,
+            "lien": "https://lorempixel.com/580/250/nature/3",
+            "mediaType": "IMAGE",
+            "nom": "lorem 3"
+          }
+        ],
+        "secteurs": [
+          {
+            "id": 0,
+            "nom": "string",
+            "icone": "string",
+            "projets": [
+              {
+                "id": 0,
+                "nom": "string",
+                "reference": "string",
+                "description": "string",
+                "dateDebutReel": 0,
+                "dateFinReel": 0,
+                "dateDebutPrevisionel": 0,
+                "dateFinPrevisionel": 0,
+                "budgetPrevisionel": 0,
+                "budgetReel": 0,
+                "coutReel": 0,
+                "phaseActuelle": {
+                  "id": 0,
+                  "nom": "string",
+                  "dateDebut": 0,
+                  "dateFin": 0
+                },
+                "phases": [
+                  {
+                    "id": 0,
+                    "nom": "string",
+                    "dateDebut": 0,
+                    "dateFin": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+    },
+    {
+        "id":2,
+        "nom":"Axe stratégique 2",
+        "titre":"Renforcement des bases de la démocratie et de l’État de droit",
+        "description":"Cela passera notamment par une révision de la Constitution, par le renforcement des institutions de contre-pouvoir et par un meilleur accès à la justice.",
+        "titreFocus":"un cadre institutionnel et démocratique plus équilibré",
+        "descriptionFocus":"Cet axe stratégique insistera sur la mise en place d’instruments juridiques ayant vocation à répondre aux défis de l’État de droit tels que la révision de la Constitution du 11 décembre 1990, l’adoption de la loi organique sur l’administration publique, la revitalisation du système partisan et la modernisation dusystème électoral.De plus, d’autres instruments juridiques auront pour objectif de renforcer les institutions de contre-pouvoir, dont la Cour Constitutionnelle et la Haute Cour de justice, et l’indépendance de la justice. La cour des comptes sera créée en tant qu’institution constitutionnelle.",
+        "dateCreation":"1511890840",
+        "dateMiseAJour":"1511890840",
+        "pilier": {
+          "id": 0,
+          "nom": "string",
+          "description": "string",
+          "dateCreation": 0,
+          "dateMiseAJour": 0
+        },
+        "medias": [
+          {
+            "id": 1,
+            "lien": "https://lorempixel.com/580/250/nature/1",
+            "mediaType": "IMAGE",
+            "nom": "lorem 1"
+          },
+          {
+            "id": 2,
+            "lien": "https://lorempixel.com/580/250/nature/2",
+            "mediaType": "IMAGE",
+            "nom": "lorem 2"
+          },
+          {
+            "id": 3,
+            "lien": "https://lorempixel.com/580/250/nature/3",
+            "mediaType": "IMAGE",
+            "nom": "lorem 3"
+          }
+        ],
+        "secteurs": [
+          {
+            "id": 0,
+            "nom": "string",
+            "icone": "string",
+            "projets": [
+              {
+                "id": 0,
+                "nom": "string",
+                "reference": "string",
+                "description": "string",
+                "dateDebutReel": 0,
+                "dateFinReel": 0,
+                "dateDebutPrevisionel": 0,
+                "dateFinPrevisionel": 0,
+                "budgetPrevisionel": 0,
+                "budgetReel": 0,
+                "coutReel": 0,
+                "phaseActuelle": {
+                  "id": 0,
+                  "nom": "string",
+                  "dateDebut": 0,
+                  "dateFin": 0
+                },
+                "phases": [
+                  {
+                    "id": 0,
+                    "nom": "string",
+                    "dateDebut": 0,
+                    "dateFin": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+    },
+    {
+        "id":3,
+        "nom":"Axe stratégique 3",
+        "titre":"Renforcement des bases de la démocratie et de l’État de droit",
+        "description":"Cela passera notamment par une révision de la Constitution, par le renforcement des institutions de contre-pouvoir et par un meilleur accès à la justice.",
+        "titreFocus":"un cadre institutionnel et démocratique plus équilibré",
+        "descriptionFocus":"Cet axe stratégique insistera sur la mise en place d’instruments juridiques ayant vocation à répondre aux défis de l’État de droit tels que la révision de la Constitution du 11 décembre 1990, l’adoption de la loi organique sur l’administration publique, la revitalisation du système partisan et la modernisation dusystème électoral.De plus, d’autres instruments juridiques auront pour objectif de renforcer les institutions de contre-pouvoir, dont la Cour Constitutionnelle et la Haute Cour de justice, et l’indépendance de la justice. La cour des comptes sera créée en tant qu’institution constitutionnelle.",
+        "dateCreation":"1511890840",
+        "dateMiseAJour":"1511890840",
+        "pilier": {
+          "id": 0,
+          "nom": "string",
+          "description": "string",
+          "dateCreation": 0,
+          "dateMiseAJour": 0
+        },
+        "medias": [
+          {
+            "id": 1,
+            "lien": "https://lorempixel.com/580/250/nature/1",
+            "mediaType": "IMAGE",
+            "nom": "lorem 1"
+          },
+          {
+            "id": 2,
+            "lien": "https://lorempixel.com/580/250/nature/2",
+            "mediaType": "IMAGE",
+            "nom": "lorem 2"
+          },
+          {
+            "id": 3,
+            "lien": "https://lorempixel.com/580/250/nature/3",
+            "mediaType": "IMAGE",
+            "nom": "lorem 3"
+          }
+        ],
+        "secteurs": [
+          {
+            "id": 0,
+            "nom": "string",
+            "icone": "string",
+            "projets": [
+              {
+                "id": 0,
+                "nom": "string",
+                "reference": "string",
+                "description": "string",
+                "dateDebutReel": 0,
+                "dateFinReel": 0,
+                "dateDebutPrevisionel": 0,
+                "dateFinPrevisionel": 0,
+                "budgetPrevisionel": 0,
+                "budgetReel": 0,
+                "coutReel": 0,
+                "phaseActuelle": {
+                  "id": 0,
+                  "nom": "string",
+                  "dateDebut": 0,
+                  "dateFin": 0
+                },
+                "phases": [
+                  {
+                    "id": 0,
+                    "nom": "string",
+                    "dateDebut": 0,
+                    "dateFin": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+    },
+    {
+        "id":4,
+        "nom":"Axe stratégique 4",
+        "titre":"Renforcement des bases de la démocratie et de l’État de droit",
+        "description":"Cela passera notamment par une révision de la Constitution, par le renforcement des institutions de contre-pouvoir et par un meilleur accès à la justice.",
+        "titreFocus":"un cadre institutionnel et démocratique plus équilibré",
+        "descriptionFocus":"Cet axe stratégique insistera sur la mise en place d’instruments juridiques ayant vocation à répondre aux défis de l’État de droit tels que la révision de la Constitution du 11 décembre 1990, l’adoption de la loi organique sur l’administration publique, la revitalisation du système partisan et la modernisation dusystème électoral.De plus, d’autres instruments juridiques auront pour objectif de renforcer les institutions de contre-pouvoir, dont la Cour Constitutionnelle et la Haute Cour de justice, et l’indépendance de la justice. La cour des comptes sera créée en tant qu’institution constitutionnelle.",
+        "dateCreation":"1511890840",
+        "dateMiseAJour":"1511890840",
+        "pilier": {
+          "id": 0,
+          "nom": "string",
+          "description": "string",
+          "dateCreation": 0,
+          "dateMiseAJour": 0
+        },
+        "medias": [
+          {
+            "id": 1,
+            "lien": "https://lorempixel.com/580/250/nature/1",
+            "mediaType": "IMAGE",
+            "nom": "lorem 1"
+          },
+          {
+            "id": 2,
+            "lien": "https://lorempixel.com/580/250/nature/2",
+            "mediaType": "IMAGE",
+            "nom": "lorem 2"
+          },
+          {
+            "id": 3,
+            "lien": "https://lorempixel.com/580/250/nature/3",
+            "mediaType": "IMAGE",
+            "nom": "lorem 3"
+          }
+        ],
+        "secteurs": [
+          {
+            "id": 0,
+            "nom": "string",
+            "icone": "string",
+            "projets": [
+              {
+                "id": 0,
+                "nom": "string",
+                "reference": "string",
+                "description": "string",
+                "dateDebutReel": 0,
+                "dateFinReel": 0,
+                "dateDebutPrevisionel": 0,
+                "dateFinPrevisionel": 0,
+                "budgetPrevisionel": 0,
+                "budgetReel": 0,
+                "coutReel": 0,
+                "phaseActuelle": {
+                  "id": 0,
+                  "nom": "string",
+                  "dateDebut": 0,
+                  "dateFin": 0
+                },
+                "phases": [
+                  {
+                    "id": 0,
+                    "nom": "string",
+                    "dateDebut": 0,
+                    "dateFin": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+    }
+]

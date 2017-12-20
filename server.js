@@ -10,6 +10,10 @@ app.use(express.static(__dirname));
 // Heroku port
 app.listen(process.env.PORT || 8080);
 
+app.get('/admin/*', function(req, res) {
+  res.sendFile(path.join(__dirname + '/admin/index.html'));
+});
+
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
