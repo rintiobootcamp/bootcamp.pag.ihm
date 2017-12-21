@@ -2,7 +2,14 @@ angular.module('pag-site')
   .controller("SiteForumAddCtrl", function ($scope,$q, $state, ModelSecteur, ModelPilier, ModelAxe, ModelProjet, Upload, API, cookieModel, ModelComment, ModelDebat) {
     console.log('Add controller');
     
-    $scope.sujet = {};
+    $scope.sujet = {
+      forum:{},
+      pseudo:'',
+      userMail:'',
+      contenu:'',
+      titre:'',
+      files:[]
+    }
     
     $q.all([ModelPilier.list(),ModelAxe.list(),ModelSecteur.list(), ModelProjet.list()])
       .then(values => {
@@ -43,8 +50,6 @@ angular.module('pag-site')
 
       $scope.submit = function (){
         var params = {};
-            params.entityType = $scope.sujet.forum.entityType;
-            params.entityId  = parseInt($scope.sujet.forum.id);
             if($scope.sujet.pseudo !='')
                 params.pseudo = $scope.sujet.pseudo;
             if($scope.sujet.userMail !='')
@@ -52,26 +57,29 @@ angular.module('pag-site')
             params.contenu = $scope.sujet.contenu;
             //console.log(params);
 
-             // Save Pseudo if user choose once
-            if($scope.sujet.pseudo !=''){
-                cookieModel.setUser('pseudo',$scope.sujet.pseudo);
-            }
-            // Save userMail if user choose once
-            if($scope.sujet.userMail !=''){
-                cookieModel.setUser('email',$scope.sujet.userMail);
-            }
             var params_create = {
-              entityId: params.entityId,
-              entityType: params.entityType,
+              entityId: parseInt($scope.sujet.forum.id),
+              entityType: $scope.sujet.forum.entityType,
               sujet: $scope.sujet.titre,
               pseudo: $scope.sujet.pseudo,
               userMail: $scope.sujet.userMail
             }
             ModelDebat.create(params_create)
               .then(function(debat){
+                // Save Pseudo if user choose once
+                if($scope.sujet.pseudo !=''){
+                    cookieModel.setUser('pseudo',$scope.sujet.pseudo);
+                }
+                // Save userMail if user choose once
+                if($scope.sujet.userMail !=''){
+                    cookieModel.setUser('email',$scope.sujet.userMail);
+                }
+                params.entityType = "DEBAT";
+                params.entityId = debat.data.id;
+
                 ModelComment.post(params)
                 .then(function(data){
-                    var setCookie = cookieModel.setDebat('comment',parseInt(debat.id));
+                    var setCookie = cookieModel.setDebat('comment',parseInt(debat.data.id));
                     if(setCookie.STATUS === 300) {
                         toogleToaster('error','Alerte',setCookie.STATUS.message);
                     }

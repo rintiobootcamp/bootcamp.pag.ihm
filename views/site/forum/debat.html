@@ -34,7 +34,7 @@
                             </div>
                         </div>
                     </nav>
-                    <p>Crée par <span ng-show="debat.pseudo =='' || debat.pseudo == undefined">Anonyme</span><span ng-show="debat.pseudo !='' && debat.pseudo != undefined">{{debat.pseudo}}</span> <span class="badge success"><i class="fa fa-clock-o" aria-hidden="true"></i>{{debat.dateCreation | date: 'dd MMM yyyy à HH:MM:ss'}}</span> dans <span class="label label-success"> {{debat.entityType}} | {{debat.secteur | limitTo: 80 | capitalizeFirst}} <span ng-show="debat.secteur.length > 80">...</span></span></p>
+                    <p>Crée par <span ng-show="debat.pseudo =='' || debat.pseudo == undefined">Anonyme</span><span ng-show="debat.pseudo !='' && debat.pseudo != undefined">{{debat.pseudo}}</span> <span class="badge success"> <i class="fa fa-clock-o" aria-hidden="true"></i>{{debat.dateCreation | date: 'dd MMM yyyy à HH:MM'}}</span> dans <span class="label label-success"> {{debat.entityType}} | {{debat.secteur | limitTo: 80 | capitalizeFirst}} <span ng-show="debat.secteur.length > 80">...</span></span></p>
                     <hr>
                     <div class="comment-form">
                             <h3>Donner votre avis </h3>

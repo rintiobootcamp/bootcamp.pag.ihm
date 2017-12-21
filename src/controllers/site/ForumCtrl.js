@@ -36,7 +36,7 @@ angular.module('pag-site')
       });
   })
 
-  .controller("SiteDebatCtrl", function (ModelMedia, ModelComment, $scope,$stateParams, CONST, API, Upload,$q, ModelLike, cookieModel, toaster, ModelDebat) {
+  .controller("SiteDebatCtrl", function (ModelSecteur, ModelPilier, ModelAxe, ModelProjet, $scope,$stateParams, CONST, API, Upload,$q, ModelComment, ModelMedia, cookieModel, toaster, ModelDebat) {
     var params_get_entity = {
       entityId:$stateParams.id
     }
@@ -44,16 +44,73 @@ angular.module('pag-site')
       entityId:$stateParams.id,
       entityType: 'DEBAT'
     }
+
+    var getPilier = function (obj){
+      ModelPilier.get(obj)
+        .then(function (data){
+          console.log(data);
+          $scope.debat.secteur = data.data.nom;
+        }, function (){
+
+        });
+    }
+    var getAxe = function (){
+      ModelAxe.get(obj)
+        .then(function (data){
+          $scope.debat.secteur = data.data.nom;
+        }, function (){
+
+        });
+    }
+    var getSecteur = function (){
+      ModelSecteur.get(obj)
+        .then(function (data){
+          $scope.debat.secteur = data.data.nom;
+        }, function (){
+
+        });
+    }
+    var getProjet = function (){
+      ModelProjet.get(obj)
+        .then(function (data){
+          $scope.debat.secteur = data.data.nom;
+        }, function (){
+
+        });
+    }
     
     var getDebat = function (obj){
       ModelDebat.get(obj)
         .then(function (data){
           $scope.debat = data.data;
+          var obj = {};
+          switch ($scope.debat.entityType) {
+            case 'PILIER':
+              obj.entityId = $scope.debat.id;
+              getPilier(obj);
+              break;
+            case 'AXE':
+              obj.entityId = $scope.debat.id;
+              getAxe(obj);
+            break;
+            case 'SECTEUR':
+              obj.entityId = $scope.debat.id;
+              getSecteur(obj);
+            break;
+            case 'PROJET':
+              obj.entityId = $scope.debat.id;
+              getProjet(obj);
+            break;
+          
+            default:
+              $scope.debat.secteur = {};
+              break;
+          }
           var params_get_rubrique = {
             entityId: data.data.entityId,
             entityType: data.data.entityType
           }
-          getListDebatRbrique(params_get_rubrique);
+          getListDebatRubrique(params_get_rubrique);
         }, function (error){
           console.log(error);
         });
@@ -91,7 +148,7 @@ angular.module('pag-site')
         });
     }
 
-    var getListDebatRbrique = function (params){
+    var getListDebatRubrique = function (params){
       ModelDebat.getByEntity(params)
         .then(function(data){
           $scope.listOtherDebats = data.data;
@@ -118,7 +175,7 @@ angular.module('pag-site')
 
   $scope.postComment = function (){
       var params = {};
-          params.entityType = "PILIER";
+          params.entityType = "DEBAT";
           params.entityId  = parseInt($stateParams.id);
           if($scope.comment.pseudo !='')
               params.pseudo = $scope.comment.pseudo;
@@ -126,21 +183,20 @@ angular.module('pag-site')
               params.userMail = $scope.comment.userMail;
           params.contenu = $scope.comment.contenu;
           //console.log(params);
-
-           // Save Pseudo if user choose once
-          if($scope.comment.pseudo !=''){
-              cookieModel.setUser('pseudo',$scope.comment.pseudo);
-          }
-          // Save userMail if user choose once
-          if($scope.comment.userMail !=''){
-              cookieModel.setUser('email',$scope.comment.userMail);
-          }
           // Check double action and Save to cookie
-          var checkCookie = cookieModel.getPilier();
+          var checkCookie = cookieModel.getDebat();
           if(checkCookie.comment.indexOf(params.entityId) === -1){
               ModelComment.post(params)
               .then(function(data){
-                  var setCookie = cookieModel.setPilier('comment',params.entityId);
+                // Save Pseudo if user choose once
+                  if($scope.comment.pseudo !=''){
+                    cookieModel.setUser('pseudo',$scope.comment.pseudo);
+                }
+                // Save userMail if user choose once
+                if($scope.comment.userMail !=''){
+                    cookieModel.setUser('email',$scope.comment.userMail);
+                }
+                  var setCookie = cookieModel.setDebat('comment',params.entityId);
                   if(setCookie.STATUS === 300) {
                       toogleToaster('error','Alerte',setCookie.STATUS.message);
                   }
