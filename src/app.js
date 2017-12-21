@@ -206,10 +206,10 @@
             })
 
 
-            .state('discussion', {
-                url: "/discussion",
-                controller: "SiteDiscussionCtrl",
-                templateUrl: "views/site/forum/discussion.html",
+            .state('debat', {
+                url: "/debat/:id",
+                controller: "SiteDebatCtrl",
+                templateUrl: "views/site/forum/debat.html",
                 ncyBreadcrumb: {
                     label: 'Discussion'
                   }
