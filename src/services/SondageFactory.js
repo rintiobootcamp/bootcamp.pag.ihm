@@ -13,9 +13,16 @@ angular.module('pag-site')
           url: API.sondage_fonct_url
         });
       },
-      vote: function(sondage) {
+      vote: function(key, idSondage) {
         return $http({
-          method: 'PUT',
+          method: 'POST',
+          url: API.sondage_fonct_url + '/' + idSondage + '/' + key,
+          data: angular.toJson(sondage)
+        })
+      },
+      create: function(sondage) {
+        return $http({
+          method: 'POST',
           url: API.sondage_fonct_url,
           data: angular.toJson(sondage)
         })
