@@ -207,7 +207,7 @@
 
 
             .state('debat', {
-                url: "/debat/:id",
+                url: "/forum/debat/:id",
                 controller: "SiteDebatCtrl",
                 templateUrl: "views/site/forum/debat.html",
                 ncyBreadcrumb: {
@@ -226,6 +226,15 @@
                     params: null,
                     do:false
                 }
+            })
+
+            .state('resetpassword', {
+                url: "/resetpassword",
+                controller: "SiteUserCtrl",
+                templateUrl: "views/site/user/resetpassword.html",
+                ncyBreadcrumb: {
+                    label: 'Modifier mot de passe'
+                  }
             })
 
             ; // End stateProvider
