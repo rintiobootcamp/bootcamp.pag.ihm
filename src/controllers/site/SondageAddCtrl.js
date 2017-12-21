@@ -63,10 +63,8 @@ angular.module('pag-site')
           typeReponses[$scope.listResponse[i]] = 0;
         }
         var params = {
-          /* "entityType": $scope.sondage.categorie.entityType,
-          "entityId": $scope.sondage.categorie.entityId, */
-          "entityType": 'PILIER',
-          "entityId": 3,
+          "entityType": $scope.sondage.categorie.entityType,
+          "entityId": $scope.sondage.categorie.entityId,
           "sujet": $scope.sondage.sujet,
           "typeReponses": typeReponses
         }
