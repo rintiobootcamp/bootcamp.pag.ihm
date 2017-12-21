@@ -12,10 +12,18 @@
       "ngCookies",
       "angular-simple-chat",
       "toaster",
-      "ngAnimate", "angular-google-analytics"
+      "ngAnimate",
+      "angular-google-analytics",
+        "com.2fdevs.videogular",
+        "com.2fdevs.videogular.plugins.controls",
+        "com.2fdevs.videogular.plugins.overlayplay",
+        "com.2fdevs.videogular.plugins.poster"
     ])
-    .run(function(amMoment) {
+    .run(function(amMoment, $rootScope) {
         amMoment.changeLocale('fr');
+        $rootScope.videogularThemes = "/node_modules/videogular/dist/themes/default/videogular.css";
+        $rootScope.ngfMaxUpload = '1MB';
+        $rootScope.ngfMinUpload = '100';
     })
     .config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider, AnalyticsProvider) {
         AnalyticsProvider.setAccount('UA-38996803-1');
