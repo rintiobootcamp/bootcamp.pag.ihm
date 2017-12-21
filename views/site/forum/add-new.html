@@ -54,8 +54,9 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <span class="input-group-addon" id="basic-addon1"><i class="fa fa-paperclip"></i> Fichiers</span>
-                                        <input class="form-control" type="file" ngf-select ng-model="sujet.files" ngf-max-size="20MB" ngf-min-height="100" ngf-accept="'image/*,audio/*,video/*'" ngf-multiple="true">
+                                        <input class="form-control" type="file" ngf-select ng-model="sujet.files" ngf-max-size="ngfMaxUpload" ngf-min-height="ngfMinUpload" ngf-accept="'image/*,audio/*,video/*'" ngf-multiple="true">
                                     </div>
+                                    <span class="help">Taille maximale : {{ngfMaxUpload}}</span>
                                 </div>
                                 <br>
                                 <div class="form-group row">
