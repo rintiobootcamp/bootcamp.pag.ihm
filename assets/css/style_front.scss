@@ -307,11 +307,11 @@
         }
         .score {
             .list-group-item {
-                /* display: inline-block;
-                margin-right: 10px;
+                padding-left: 0px;
+                padding-bottom: 0px;
                 .badge {
-                    margin-left: 5px;
-                } */
+                    //margin-left: 5px;
+                } 
             }
         }
     }
@@ -357,6 +357,17 @@
             }
         }
     }
+
+    videogular {
+        max-width: 500px;
+        margin: 20px 0;
+        vg-controls {
+            position: initial;
+            .controls-container{
+              background-color: #337ab7;
+            }
+          }
+      }
 
 }
 

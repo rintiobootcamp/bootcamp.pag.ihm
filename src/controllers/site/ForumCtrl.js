@@ -36,7 +36,7 @@ angular.module('pag-site')
       });
   })
 
-  .controller("SiteDebatCtrl", function (ModelSecteur, ModelPilier, ModelAxe, ModelProjet, $scope,$stateParams, CONST, API, Upload,$q, ModelComment, ModelMedia, cookieModel, toaster, ModelDebat) {
+  .controller("SiteDebatCtrl", function ($sce, ModelSecteur, ModelPilier, ModelAxe, ModelProjet, $scope,$stateParams, CONST, API, Upload,$q, ModelComment, ModelMedia, cookieModel, toaster, ModelDebat) {
     var params_get_entity = {
       entityId:$stateParams.id
     }
@@ -44,7 +44,7 @@ angular.module('pag-site')
       entityId:$stateParams.id,
       entityType: 'DEBAT'
     }
-
+    
     var getPilier = function (obj){
       ModelPilier.get(obj)
         .then(function (data){
@@ -141,6 +141,32 @@ angular.module('pag-site')
                     }
                 });
                 comment.medias = data_medias;
+                angular.forEach(comment.medias, function (media, i){
+                  if(media.type.indexOf('audio') != -1 || media.type.indexOf('video') != -1) {
+                    comment.medias[i].vgsrc = [];
+                    var obj = {
+                      src: $sce.trustAsResourceUrl(media.lien),
+                      type: media.type
+                    }
+                    comment.medias[i].vgsrc.push(obj);
+                    /* var obj = {
+                      src: $sce.trustAsResourceUrl("http://localhost:8080/assets/test.mp3"),
+                      type: "audio/mpeg"
+                    }
+                    var obj2 = {
+                      src: $sce.trustAsResourceUrl("http://localhost:8080/assets/test_video.mp4"),
+                      type: "video/mp4"
+                    }
+                    if(i < 2) {
+                      comment.medias[i].type = "audio/mpeg";
+                      comment.medias[i].vgsrc.push(obj);
+                    }
+                    else {
+                      comment.medias[i].type = "video/mp4";
+                      comment.medias[i].vgsrc.push(obj2);
+                    } */
+                  }
+                });
                 data_medias = [];
             });
         }, function (error){

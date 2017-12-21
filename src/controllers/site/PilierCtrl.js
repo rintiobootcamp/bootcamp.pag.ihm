@@ -12,7 +12,7 @@ angular.module('pag-site')
         getListPiliers();
         
     })
-  .controller("SiteOnePilierCtrl", function(ModelPilier, ModelMedia, ModelComment, $scope,$stateParams, CONST, API, Upload,$q, ModelLike, cookieModel, toaster, ModelNote){
+  .controller("SiteOnePilierCtrl", function($sce, ModelPilier, ModelMedia, ModelComment, $scope,$stateParams, CONST, API, Upload,$q, ModelLike, cookieModel, toaster, ModelNote){
     
     var params_get_entity = {
         entityId:$stateParams.id
@@ -79,6 +79,32 @@ angular.module('pag-site')
                         }
                     });
                     comment.medias = data_medias;
+                    angular.forEach(comment.medias, function (media, i){
+                        if(media.type.indexOf('audio') != -1 || media.type.indexOf('video') != -1) {
+                          comment.medias[i].vgsrc = [];
+                          var obj = {
+                            src: $sce.trustAsResourceUrl(media.lien),
+                            type: media.type
+                          }
+                          comment.medias[i].vgsrc.push(obj);
+                          /* var obj = {
+                            src: $sce.trustAsResourceUrl("http://localhost:8080/assets/test.mp3"),
+                            type: "audio/mpeg"
+                          }
+                          var obj2 = {
+                            src: $sce.trustAsResourceUrl("http://localhost:8080/assets/test_video.mp4"),
+                            type: "video/mp4"
+                          }
+                          if(i < 2) {
+                            comment.medias[i].type = "audio/mpeg";
+                            comment.medias[i].vgsrc.push(obj);
+                          }
+                          else {
+                            comment.medias[i].type = "video/mp4";
+                            comment.medias[i].vgsrc.push(obj2);
+                          } */
+                        }
+                      });
                     data_medias = [];
                 });
                 console.log($scope.listComments);
