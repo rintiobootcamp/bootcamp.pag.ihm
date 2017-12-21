@@ -6,3 +6,7 @@ div.main.dashboard {
     height: auto !important;
     margin-top: 0;
 }
+
+.ng-show {
+    display: block !important;
+}
