@@ -1,12 +1,20 @@
 angular.module('pag-site')
-    .directive("likeChart", function() {
+    .directive("likeChart", function(ModelProjet, StatProjet) {
         return {
             restrict: 'E',
-            replace: true,
+            scope: {
+                data: "="
+            },
             templateUrl: '/admin/views/directives/like-chart.html',
             link: function(scope, element) {
-                scope.labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
-                scope.data = [300, 500, 100];
+                scope.chartData = [];
+                scope.labels = ['Like', 'Unlike'];
+
+                scope.$watch('data', function() {
+                    if(scope.data) {
+                        scope.chartData = [scope.data.nbreLike, scope.data.nbreUnLike];
+                    }
+                });
             }
         }
     });

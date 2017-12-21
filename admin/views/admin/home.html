@@ -1,12 +1,15 @@
 <div class="main dashboard">
     <h2>Dashboard</h2>
+    <select class="ng-show"
+        ng-options="projet.id as projet.nom for projet in projets track by projet.id"
+        ng-model="selectedProjet" ng-change="onProjectChanged(selectedProjet)"></select>
     <div class="row">
         <div class="col m6">
             <div class="card-panel">
                 <div class="panel-heading">
                     Evolution du nombre de likes par projets
                 </div>
-                <like-chart></like-chart>
+                <like-chart data="data"></like-chart>
             </div>
         </div>
         <div class="col m6">
@@ -14,7 +17,7 @@
                 <div class="panel-heading">
                     Le nombre de commentaire par projets
                 </div>
-                <comment-chart></comment-chart>
+                <comment-chart data="data"></comment-chart>
             </div>
         </div>
 
@@ -25,7 +28,7 @@
                 <div class="panel-heading">
                     Le nombre de débat par projets
                 </div>
-                <debat-par-post-chart></debat-par-post-chart>
+                <debat-par-post-chart data="data"></debat-par-post-chart>
             </div>
         </div>
     </div>

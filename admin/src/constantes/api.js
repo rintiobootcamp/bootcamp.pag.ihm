@@ -8,5 +8,6 @@ angular.module('pag-site')
         note_fonct_url: 'http://104.131.60.151/note/notes',
         like_fonct_url: 'http://104.131.60.151/like/likes',
         sondage_fonct_url: 'http://104.131.60.151/sondage/sondages',
+        stat_fonct_url: 'http://104.131.60.151/stat/stats',
         assets: ''
     });

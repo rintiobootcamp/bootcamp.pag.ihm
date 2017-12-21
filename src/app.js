@@ -12,13 +12,13 @@
       "ngCookies",
       "angular-simple-chat",
       "toaster",
-      "ngAnimate"
+      "ngAnimate", "angular-google-analytics"
     ])
     .run(function(amMoment) {
         amMoment.changeLocale('fr');
     })
-    .config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
-
+    .config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider, AnalyticsProvider) {
+        AnalyticsProvider.setAccount('UA-38996803-1');
         $urlRouterProvider.otherwise("/");
           // Now set up the states
         $stateProvider

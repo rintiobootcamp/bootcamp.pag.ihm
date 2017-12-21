@@ -18,6 +18,7 @@
             media="screen,projection"/>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <base href="/">
+        <link href="/node_modules/angular/angular-csp.css"></link>
     </head>
     <body ng-app="pag-site">
 
@@ -36,8 +37,9 @@
         <script src="/admin/assets/js/lodash.js"></script>
 
         <script src="/node_modules/ui-select/dist/select.js"></script>
-        <script src="node_modules/chart.js/dist/Chart.min.js"></script>
-        <script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+        <script src="/node_modules/chart.js/dist/Chart.min.js"></script>
+        <script src="/node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+        <script src="/node_modules/angular-google-analytics/dist/angular-google-analytics.js"></script>
 
         <!-- Core application -->
         <script src="/admin/src/app.js"></script>
@@ -65,6 +67,7 @@
         <script src="/admin/src/services/AxeFactory.js"></script>
         <script src="/admin/src/services/SecteurFactory.js"></script>
         <script src="/admin/src/services/MediaFactory.js"></script>
+        <script src="/admin/src/services/StatFactory.js"></script>
 
         <!-- Directives -->
         <script src="/admin/src/directives/dropdownDirective.js"></script>
