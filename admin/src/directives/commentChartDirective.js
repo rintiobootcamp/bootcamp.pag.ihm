@@ -12,7 +12,6 @@ angular.module('pag-site')
                 scope.chartData = [];
 
                 scope.$watch('data', function() {
-                    console.log(scope.data);
                     if(scope.data) {
                         scope.chartData = [scope.data.nbreComment, scope.data.nbreTotalComment];
                     }
