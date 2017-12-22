@@ -99,7 +99,7 @@ angular.module('pag-site')
       {
         lat: 9.357793,
         lng: 2.601571,
-        message: "<h6>Titre du projet</h6><p>Une centrale solaire au Chili pour mieux répondre à la demande dans le centre du pays</p>",
+        message: "<h6>Les projets dans cette région</h6><p>- Faire de la Pendjari/W le parc de référence de l'Afrique de l'Ouest </p><p>- Réinventer la cité lacustre de Ganvié</p><p>- Pôle touristique d'Abomey/Porto-Novo: Arts, Cultures, et Arènes d'expression Vaudou</p>",
         icon: {
           iconUrl: '/node_modules/leaflet/dist/images/marker-icon.png',
           shadowUrl: '/node_modules/leaflet/dist/images/marker-shadow.png',
@@ -109,7 +109,7 @@ angular.module('pag-site')
       {
         lat: 6.522945,
         lng: 2.666289,
-        message: "<h6>Titre du projet</h6><p>Une centrale solaire au Chili pour mieux répondre à la demande dans le centre du pays</p>",
+        message: "<h6>Les projets dans cette région</h6><p>- Créer une expérience touristique premium autour des TATA SOMBA</p><p>- Recréer à l’identique la cité historique de ouidah</p><p>- Aménager des stations balnéaires</p>",
         icon: {
           iconUrl: '/node_modules/leaflet/dist/images/marker-icon.png',
           shadowUrl: '/node_modules/leaflet/dist/images/marker-shadow.png',
@@ -119,7 +119,7 @@ angular.module('pag-site')
       {
         lat: 9.389607,
         lng:  2.634361,
-        message: "<h6>Titre du projet</h6><p>Une centrale solaire au Chili pour mieux répondre à la demande dans le centre du pays</p>",
+        message: "<h6>Les projets dans cette région</h6><p>- Filières à haute valeur ajoutée (ananas, anacarde, produits maraîchers)</p><p>- Renforcer les filières conventionnelles  (riz, maïs, manioc)</p><p>- </p>",
         icon: {
           iconUrl: '/node_modules/leaflet/dist/images/marker-icon.png',
           shadowUrl: '/node_modules/leaflet/dist/images/marker-shadow.png',
@@ -129,7 +129,7 @@ angular.module('pag-site')
       {
         lat: 10.189803,
         lng: 1.452991,
-        message: "<h6>Titre du projet</h6><p>Une centrale solaire au Chili pour mieux répondre à la demande dans le centre du pays</p>",
+        message: "<h6>Les projets dans cette région</h6><p>- Développer l’aquaculture continentale</p><p>- Mettre en valeur la basse et moyenne Vallée  de l’Ouémé</p><p>- Augmenter la production de viande, de lait  et d’œufs de table</p>",
         icon: {
           iconUrl: '/node_modules/leaflet/dist/images/marker-icon.png',
           shadowUrl: '/node_modules/leaflet/dist/images/marker-shadow.png',
@@ -139,7 +139,7 @@ angular.module('pag-site')
       {
         lat: 10.029513,
         lng:  3.187786,
-        message: "<h6>Titre du projet</h6><p>Une centrale solaire au Chili pour mieux répondre à la demande dans le centre du pays</p>",
+        message: "<h6>Les projets dans cette région</h6><p>- Construction d’un nouvel aéroport international</p><p>- Modernisation et extension du port</p>",
         icon: {
           iconUrl: '/node_modules/leaflet/dist/images/marker-icon.png',
           shadowUrl: '/node_modules/leaflet/dist/images/marker-shadow.png',
