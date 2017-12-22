@@ -23,17 +23,17 @@
 
       <tbody>
         <tr ng-repeat='projet in listProjets'>
-          <td>{{$index + 1}}</td>
+          <td>{{projet.id}}</td>
           <td>{{projet.nom}}</td>
-          <td>{{projet.description}}</td>
+          <td>{{ projet.description | limitTo: 10 }}...</td>
           <td>{{projet.dateDebutReel}}</td>
           <td>{{projet.dateFinReel}}</td>
           <td>{{projet.budgetPrevisionnel}}</td>
           <td>{{projet.coutReel}}</td>
           <td>{{projet.phases}}</td>
           <td class="center text-center">
-            <a ui-sref="admin.editprojet({'id': projet.id})"><i class="material-icons">edit</i></a>
-            <a href="#!" ng-click="deletePro($index)"><i class="material-icons">delete</i></a>
+            <a ui-sref="admin.editprojet({ 'id': projet.id })"><i class="material-icons">edit</i></a>
+            <a href ng-click="deletePro(projet.id)"><i class="material-icons">delete</i></a>
           </td>
         </tr>
       </tbody>
