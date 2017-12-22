@@ -154,11 +154,8 @@
       #main .sondage-page .view-response .list-group-item .badge .fa {
         color: #fff; }
 #main .sondage-page .score .list-group-item {
-  /* display: inline-block;
-  margin-right: 10px;
-  .badge {
-      margin-left: 5px;
-  } */ }
+  padding-left: 0px;
+  padding-bottom: 0px; }
 #main .blog-page .title-entity {
   margin-bottom: 20px; }
 #main .blog-page .archive-widget ul li {
@@ -176,6 +173,13 @@
   #main .medias-comments li .img-thumb-comment {
     max-height: 100px !important;
     vertical-align: top; }
+#main videogular {
+  max-width: 500px;
+  margin: 20px 0; }
+  #main videogular vg-controls {
+    position: initial; }
+    #main videogular vg-controls .controls-container {
+      background-color: #337ab7; }
 
 .widget-chat .fixed-action-btn {
   position: fixed;

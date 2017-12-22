@@ -11,6 +11,10 @@
   .widget-chat .widget-container {
     right: 30px;
     bottom: 60px;
-    width: 80%; } }
+    width: 80%; }
+
+  videogular {
+    max-width: 80%; } }
+/* Video and audio player */
 
 /*# sourceMappingURL=style_responsive.css.map */

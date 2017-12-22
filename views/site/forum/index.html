@@ -34,7 +34,7 @@
                             </div>
                         </nav>
                         <ul class="list-group">
-                            <li class="list-group-item" ng-repeat="debat in listDebats">
+                            <li class="list-group-item" ng-repeat="debat in listDebats | orderBy:'-id'">
                                 <div class="media">
                                     <div class="media-left media-top">
                                         <a ui-sref="debat({id:debat.id})">

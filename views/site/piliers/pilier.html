@@ -99,13 +99,47 @@
                                     <div class="medias-comments">
                                         <ul>
                                             <li ng-repeat="media in usercom.medias">
-                                                <span ng-if="media.type.indexOf('image') != - 1">
-                                                    <img ng-src="{{media.lien}}" alt="Image" class="img-thumb-comment">
-                                                </span>
-                                                <span ng-if="media.type.indexOf(video)  != - 1 ">
-                                                    <iframe ng-src="{{media.lien}}" frameborder="0"></iframe>
-                                                </span>
-                                            </li>
+                                                    <span ng-if="media.type.indexOf('image') != - 1">
+                                                        <img ng-src="{{media.lien}}" alt="Image" class="img-thumb-comment">
+                                                    </span>
+                                                    <span ng-if="media.type.indexOf('video')  != - 1 ">
+                                                        <videogular vg-theme="videogularThemes" class="video">
+                                                            <vg-media vg-src="media.vgsrc">
+                                                            </vg-media>
+                                                            <vg-controls>
+                                                                <vg-play-pause-button></vg-play-pause-button>
+                                                                <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
+                                                                <vg-scrub-bar>
+                                                                    <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                                                </vg-scrub-bar>
+                                                                <vg-time-display>{{ timeLeft | date:'mm:ss' }}</vg-time-display>
+                                                                <vg-volume>
+                                                                    <vg-mute-button></vg-mute-button>
+                                                                    <vg-volume-bar></vg-volume-bar>
+                                                                </vg-volume>
+                                                                <vg-fullscreen-button></vg-fullscreen-button>
+                                                            </vg-controls>
+                                                            <vg-overlay-play></vg-overlay-play>
+                                                        </videogular>
+                                                    </span>
+                                                    <span ng-if="media.type.indexOf('audio')  != - 1 ">
+                                                        <div><videogular vg-theme="videogularThemes" class="audio">
+                                                            <vg-media vg-src="media.vgsrc" vg-type="audio"></vg-media>
+                                                            <vg-controls>
+                                                                <vg-play-pause-button></vg-play-pause-button>
+                                                                <vg-time-display>{{ currentTime | date:'mm:ss':'+0000' }}</vg-time-display>
+                                                                <vg-scrub-bar>
+                                                                    <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                                                </vg-scrub-bar>
+                                                                <vg-time-display>{{ timeLeft | date:'mm:ss':'+0000' }}</vg-time-display>
+                                                                <vg-volume>
+                                                                    <vg-mute-button></vg-mute-button>
+                                                                    <vg-volume-bar></vg-volume-bar>
+                                                                </vg-volume>
+                                                            </vg-controls>
+                                                        </videogular></div>
+                                                    </span>
+                                                </li>
                                         </ul>
                                     </div>
                                     </div>
@@ -140,8 +174,9 @@
                                 <div class="col-md-12">
                                     <div class="input-group">
                                         <span class="input-group-addon" id="basic-addon1"><i class="fa fa-paperclip"></i> Fichiers </span>
-                                        <input class="form-control" type="file" ngf-select="" name="file" ng-model="comment.files" ngf-max-size="20MB" ngf-min-height="100" ngf-accept="'image/*,audio/*,video/*'" ngf-multiple="true">
+                                        <input class="form-control" type="file" ngf-select="" name="file" ng-model="comment.files" ngf-max-size="ngfMaxUpload" ngf-min-height="ngfMinUpload" ngf-accept="'image/*,audio/*,video/*'" ngf-multiple="true">
                                     </div>
+                                    <span class="help">Taille maximale : {{ngfMaxUpload}}</span>
                                 </div>
                                 <div class="col-md-12" align="right" ng-show="pilier.id > 0">
                                     <br>

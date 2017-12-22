@@ -12,10 +12,18 @@
       "ngCookies",
       "angular-simple-chat",
       "toaster",
-      "ngAnimate", "angular-google-analytics"
+      "ngAnimate",
+      "angular-google-analytics",
+        "com.2fdevs.videogular",
+        "com.2fdevs.videogular.plugins.controls",
+        "com.2fdevs.videogular.plugins.overlayplay",
+        "com.2fdevs.videogular.plugins.poster"
     ])
-    .run(function(amMoment) {
+    .run(function(amMoment, $rootScope) {
         amMoment.changeLocale('fr');
+        $rootScope.videogularThemes = "/node_modules/videogular/dist/themes/default/videogular.css";
+        $rootScope.ngfMaxUpload = '1MB';
+        $rootScope.ngfMinUpload = '100';
     })
     .config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider, AnalyticsProvider) {
         AnalyticsProvider.setAccount('UA-38996803-1');
@@ -207,7 +215,7 @@
 
 
             .state('debat', {
-                url: "/debat/:id",
+                url: "/forum/debat/:id",
                 controller: "SiteDebatCtrl",
                 templateUrl: "views/site/forum/debat.html",
                 ncyBreadcrumb: {
@@ -226,6 +234,15 @@
                     params: null,
                     do:false
                 }
+            })
+
+            .state('resetpassword', {
+                url: "/resetpassword",
+                controller: "SiteUserCtrl",
+                templateUrl: "views/site/user/resetpassword.html",
+                ncyBreadcrumb: {
+                    label: 'Modifier mot de passe'
+                  }
             })
 
             ; // End stateProvider

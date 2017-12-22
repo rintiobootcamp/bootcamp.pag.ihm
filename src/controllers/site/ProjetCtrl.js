@@ -70,7 +70,7 @@ angular.module('pag-site')
                 });
         }
     })
-    .controller("SiteOneProjetCtrl", function(ModelProjet, ModelSecteur, ModelComment, ModelMedia, $scope,$stateParams, $q, ModelLike, Upload, API, cookieModel, toaster, ModelNote){
+    .controller("SiteOneProjetCtrl", function($sce, ModelProjet, ModelSecteur, ModelComment, ModelMedia, $scope,$stateParams, $q, ModelLike, Upload, API, cookieModel, toaster, ModelNote){
         var params_get_entity = {
             entityId:$stateParams.id
         }
@@ -104,6 +104,16 @@ angular.module('pag-site')
                             }
                         });
                         comment.medias = data_medias;
+                        angular.forEach(comment.medias, function (media, i){
+                            if(media.type.indexOf('audio') != -1 || media.type.indexOf('video') != -1) {
+                              comment.medias[i].vgsrc = [];
+                              var obj = {
+                                src: $sce.trustAsResourceUrl(media.lien),
+                                type: media.type
+                              }
+                              comment.medias[i].vgsrc.push(obj);
+                            }
+                          });
                         data_medias = [];
                     });
                     console.log($scope.listComments);

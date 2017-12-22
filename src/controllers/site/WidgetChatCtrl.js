@@ -344,7 +344,7 @@ angular.module('pag-site')
     $scope.data.messages = [
       {
           id: moment.now(),
-          text: 'Bienvenue sur Veille citoyenne ! Posez-moi vos préoccupations et je vous répondrez.',
+          text: 'Bienvenue sur Veille citoyenne ! Posez-moi vos préoccupations et je vous répondrai.',
           userId: '1',
           userName: 'VeilleBot',
           avatar: '/assets/images/bot-icon.svg',

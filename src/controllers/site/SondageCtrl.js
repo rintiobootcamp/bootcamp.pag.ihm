@@ -1,5 +1,5 @@
 angular.module('pag-site')
-  .controller("SiteSondageCtrl", function ($scope,$q, ModelSecteur, ModelPilier, ModelAxe, ModelProjet, ModelSondage, $stateParams) {
+  .controller("SiteSondageCtrl", function ($scope,$q, ModelSecteur, ModelPilier, ModelAxe, ModelProjet, ModelSondage, $stateParams, cookieModel, toaster) {
     $q.all([ModelSecteur.list(),ModelPilier.list(),ModelAxe.list(), ModelProjet.list(), ModelSondage.list()])
       .then(values => {
         $scope.listSecteurs = values[0].data;
@@ -48,19 +48,43 @@ angular.module('pag-site')
             console.log(error);
           });
       }
-
+      $scope.waiting = false;
       $scope.participe = function (key, sondage){
-        sondage.typeReponses[key]++;
-        ModelSondage.vote(sondage)
-          .then( function (data) {
-            var get_sondage_server = data.data;
-            var get_sondage = _.filter($scope.listSondages,{'id':get_sondage_server.id})[0];
-            get_sondage.typeReponses = {};
-            angular.forEach( get_sondage_server.typeReponses, function (value, i){
-              get_sondage.typeReponses[i] = value;
-            });
-          }, function (error){
-            console.log(error);
-          });
+        if($scope.waiting) return;
+        else $scope.waiting = true;
+        var checkCookie = cookieModel.getSondage();
+          if(checkCookie.vote.indexOf(sondage.id) === -1){
+            ModelSondage.vote(key, sondage.id)
+              .then( function (data) {
+                sondage.typeReponses[key]++;
+                $scope.waiting = false;
+                var setCookie = cookieModel.setSondage('vote',params.entityId);
+                if(setCookie.STATUS === 300) {
+                    toogleToaster('error','Alerte',setCookie.STATUS.message);
+                }
+                var get_sondage_server = data.data;
+                var get_sondage = _.filter($scope.listSondages,{'id':get_sondage_server.id})[0];
+                get_sondage.typeReponses = {};
+                angular.forEach( get_sondage_server.typeReponses, function (value, i){
+                  get_sondage.typeReponses[i] = value;
+                });
+              }, function (error){
+                toogleToaster('error','Alerte',"Le serveur rencontre des difficultés actuellement! Veuillez réessayer plus tard ! ");
+                $scope.waiting = false;
+                console.log(error);
+              });
+          }else {
+            $scope.waiting = false;
+            toogleToaster('error','Alerte',"Vous avez déjà commenté ");
+        }
       }
+
+      var toogleToaster = function (type,title, body){
+        toaster.pop({
+             type: type,
+             title: title,
+             body: body,
+             showCloseButton: true
+        })
+    }
   })
