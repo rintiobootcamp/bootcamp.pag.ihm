@@ -8,11 +8,26 @@ angular.module('pag-site')
             var get_piliers = _.filter($scope.listProjets, {'idSecteur':value.id});
             value.projets = get_piliers;
           });
+          $scope.globalListProjets = $scope.listProjets;
         },err => {
           console.log(err);
         });
 
-        $scope.limitImgProjet = CONST.limitImgProjet;
+        $scope.searchvalue = '';
+
+        $scope.filter = function (type, id){
+            $scope.listProjets = _.filter($scope.globalListProjets,{'idSecteur':parseInt(id)});
+        }
+
+        $scope.filterSearch = function (){
+            $scope.listProjets = _.find($scope.globalListProjets, function (object){
+                /* console.log(object.nom);
+                console.log(object.searchvalue); */
+                //return object.nom.indexOf($scope.searchvalue) != -1;
+                return object.id === 1;
+            });
+            console.log($scope.listProjets);
+        }
         
         var getListPiliers = function (){
             ModelPilier.list()
