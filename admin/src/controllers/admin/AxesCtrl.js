@@ -57,6 +57,6 @@ angular.module('pag-site')
         $scope.saveAxe = function() {
             ModelAxe.save($scope.axe).then(function() {
                 $state.go('admin.axes');
-            })
+            });
         }
     });
