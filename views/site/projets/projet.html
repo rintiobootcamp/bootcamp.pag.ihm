@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <div class="event-caption">
-                <div class="date-box">
+                <div class="date-box" ng-show="(projet.dateDebutPrevisionnel | date: 'yyyy') > '2015'">
                     <span>Démarrage prévu</span>
                     {{projet.dateDebutPrevisionnel | date: 'dd'}}
                     {{projet.dateDebutPrevisionnel | date: 'MMM'}}
@@ -60,13 +60,14 @@
                             <img ng-src="/assets/images/projets/projet{{projet.id}}/3.png" alt="Financement">
                         </section>
                     </div>
-                    <div class="share-box"> <strong class="title">Partager </strong>
+                    <div class="share-box">
+                        <!-- <strong class="title">Partager </strong>
                         <ul>
                         <li><a href="#" class="social-color-1"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                         <li><a href="#" class="social-color-2"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                         <li><a href="#" class="social-color-3"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
                         <li><a href="#" class="social-color-4"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>    
-                        </ul>
+                        </ul> -->
                         <div class="like" ng-show="projet.id > 0">
                             | <span class="like_btn"><a title="J'aime" ng-click="like('PROJET',projet.id,true)" href="#"><img ng-src="/assets/images/like.png" alt="J'aime"></a> {{nbLike.like}} </span><span class="like_btn"> <a title="Je n'aime pas" ng-click="like('PROJET',projet.id,false)" href="#"><img ng-src="/assets/images/unlike.png" alt="J'aime pas"></a> {{nbLike.unlike}}</span>
                         </div>

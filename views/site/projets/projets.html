@@ -44,19 +44,21 @@
                 <div class="col-md-3 col-sm-4">
                     <aside>
                         <div class="sidebar">
-                            <div class="widget-box">
+                            <!-- <div class="widget-box">
                                 <h3>Rechercher</h3>
                                 <form ng-submit="filterSearch()">
                                     <input required type="text" placeholder="Rechercher..." ng-model="searchvalue">
                                     <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                                 </form>
-                            </div>
+                            </div> -->
                             <div class="widget-box filter">
                                 <h3>Filter par secteur</h3>
                                 <div class="archive-widget">
                                     <button class="btn btn-sm elem" ng-repeat="sect in listSecteurs" ng-click="filter('SECTEUR',sect.id)">{{sect.nom}}</button>
                                 </div>
                             </div>
+                            <hr>
+                            <button class="btn btn-sm btn-success" ng-click="resetFilter()">Réinitialiser</button>
                             <!-- <div class="widget-box filter">
                                 <h3>Filter par pilier</h3>
                                 <div class="archive-widget">

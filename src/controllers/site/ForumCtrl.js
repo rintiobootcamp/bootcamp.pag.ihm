@@ -215,8 +215,8 @@ angular.module('pag-site')
           params.contenu = $scope.comment.contenu;
           //console.log(params);
           // Check double action and Save to cookie
-          var checkCookie = cookieModel.getDebat();
-          if(checkCookie.comment.indexOf(params.entityId) === -1){
+          /* var checkCookie = cookieModel.getDebat();
+          if(checkCookie.comment.indexOf(params.entityId) === -1){ */
               ModelComment.post(params)
               .then(function(data){
                 // Save Pseudo if user choose once
@@ -227,22 +227,23 @@ angular.module('pag-site')
                 if($scope.comment.userMail !=''){
                     cookieModel.setUser('email',$scope.comment.userMail);
                 }
-                  var setCookie = cookieModel.setDebat('comment',params.entityId);
+                  /* var setCookie = cookieModel.setDebat('comment',params.entityId);
                   if(setCookie.STATUS === 300) {
                       toogleToaster('error','Alerte',setCookie.STATUS.message);
-                  }
+                  } */
                   if($scope.comment.files.length > 0) {
                       uploadFiles($scope.comment.files, data.data.id);
                   }else {
                       getListComments(params_get_comments);
                   }
                   $scope.comment = {};
+                  $scope.comment.files = [];
               }, function (error){
                   console.log(error);
               });
-          }else {
+         /*  }else {
               toogleToaster('error','Alerte',"Vous avez déjà commenté ");
-          }
+          } */
   }
   // upload on file select or drop
   var uploadFile = function (file, idCommentaire) {

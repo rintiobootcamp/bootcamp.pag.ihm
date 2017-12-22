@@ -44,13 +44,14 @@
                             <h4>Focus : {{axe.titreFocus}}</h4>
                             <p>{{axe.descriptionFocus}}</p>
                         </p>
-                        <div class="share-box"> <strong class="title">Partager </strong>
+                        <div class="share-box">
+                            <!-- <strong class="title">Partager </strong>
                             <ul>
                             <li><a href="#" class="social-color-1"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                             <li><a href="#" class="social-color-2"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                             <li><a href="#" class="social-color-3"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
                             <li><a href="#" class="social-color-4"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>    
-                            </ul>
+                            </ul> -->
                             <div class="like" ng-show="axe.id > 0">
                                 | <span class="like_btn"><a title="J'aime" ng-click="like('AXE',axe.id,true)" href="#"><img ng-src="/assets/images/like.png" alt="J'aime"></a> {{nbLike.like}} </span><span class="like_btn"> <a title="Je n'aime pas" ng-click="like('AXE',axe.id,false)" href="#"><img ng-src="/assets/images/unlike.png" alt="J'aime pas"></a> {{nbLike.unlike}}</span>
                             </div>
@@ -98,7 +99,9 @@
                                             <ul>
                                                     <li ng-repeat="media in usercom.medias">
                                                         <span ng-if="media.type.indexOf('image') != - 1">
-                                                            <img ng-src="{{media.lien}}" alt="Image" class="img-thumb-comment">
+                                                            <div>
+                                                                <img ng-src="{{media.lien}}" alt="Image" class="img-thumb-comment">
+                                                            </div>
                                                         </span>
                                                         <span ng-if="media.type.indexOf('video')  != - 1 ">
                                                             <videogular vg-theme="videogularThemes" class="video">

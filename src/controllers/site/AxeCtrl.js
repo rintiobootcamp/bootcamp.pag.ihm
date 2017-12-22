@@ -129,8 +129,8 @@ angular.module('pag-site')
                     cookieModel.setUser('email',$scope.comment.userMail);
                 }
                 // Check double action and Save to cookie
-                var checkCookie = cookieModel.getAxe();
-                if(checkCookie.comment.indexOf(params.entityId) === -1){
+                /* var checkCookie = cookieModel.getAxe();
+                if(checkCookie.comment.indexOf(params.entityId) === -1){ */
                     /* var setCookie = cookieModel.setAxe('comment',params.entityId);
                     if(setCookie.STATUS === 300) {
                         toogleToaster('error','Alerte',setCookie.STATUS.message);
@@ -147,13 +147,14 @@ angular.module('pag-site')
                         getListComments(params_get_comments);
                     }
                     $scope.comment = {};
+                    $scope.comment.files = [];
                 }, function (error){
                     console.log(error);
                 });
-            }else {
+            /* }else {
                 console.log('Vous avez déjà commenté');
                 toogleToaster('error','Alerte',"Vous avez déjà commenté");
-            }
+            } */
         }
     
         // upload on file select or drop

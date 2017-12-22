@@ -168,11 +168,14 @@
   margin-bottom: 10px; }
 #main .secteurs-page ul.listprojets li {
   list-style: none; }
-#main .medias-comments li {
-  list-style: none; }
-  #main .medias-comments li .img-thumb-comment {
-    max-height: 100px !important;
-    vertical-align: top; }
+#main .medias-comments ul {
+  padding-left: 0px !important; }
+  #main .medias-comments ul li {
+    list-style: none; }
+    #main .medias-comments ul li .img-thumb-comment {
+      margin: 10px 0;
+      max-height: 100px !important;
+      vertical-align: top; }
 #main videogular {
   max-width: 500px;
   margin: 20px 0; }

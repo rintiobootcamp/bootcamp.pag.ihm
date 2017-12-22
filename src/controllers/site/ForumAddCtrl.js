@@ -79,10 +79,10 @@ angular.module('pag-site')
 
                 ModelComment.post(params)
                 .then(function(data){
-                    var setCookie = cookieModel.setDebat('comment',parseInt(debat.data.id));
+                    /* var setCookie = cookieModel.setDebat('comment',parseInt(debat.data.id));
                     if(setCookie.STATUS === 300) {
                         toogleToaster('error','Alerte',setCookie.STATUS.message);
-                    }
+                    } */
                     if($scope.sujet.files.length > 0) {
                         uploadFiles($scope.sujet.files, data.data.id);
                     }else {

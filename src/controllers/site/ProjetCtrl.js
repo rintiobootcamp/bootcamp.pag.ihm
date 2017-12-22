@@ -24,9 +24,13 @@ angular.module('pag-site')
                 /* console.log(object.nom);
                 console.log(object.searchvalue); */
                 //return object.nom.indexOf($scope.searchvalue) != -1;
-                return object.id === 1;
+                return object.nom.indexOf($scope.searchvalue) != -1;
             });
             console.log($scope.listProjets);
+        }
+
+        $scope.resetFilter = function (){
+            $scope.listProjets = $scope.globalListProjets;
         }
         
         var getListPiliers = function (){
@@ -210,30 +214,31 @@ angular.module('pag-site')
                 }
 
                 // Check double action and Save to cookie
-                var checkCookie = cookieModel.getProjet();
-                if(checkCookie.comment.indexOf(params.entityId) === -1){
+                /* var checkCookie = cookieModel.getProjet();
+                if(checkCookie.comment.indexOf(params.entityId) === -1){ */
                     /* var setCookie = cookieModel.setProjet('comment',params.entityId);
                     if(setCookie.STATUS === 300) {
                         toogleToaster('error','Alerte',setCookie.STATUS.message);
                     } */
                 ModelComment.post(params)
                 .then(function(data){
-                    var setCookie = cookieModel.setProjet('comment',params.entityId);
+                    /* var setCookie = cookieModel.setProjet('comment',params.entityId);
                     if(setCookie.STATUS === 300) {
                         toogleToaster('error','Alerte',setCookie.STATUS.message);
-                    }
+                    } */
                     if($scope.comment.files.length > 0) {
                         uploadFiles($scope.comment.files, data.data.id);
                     }else {
                         getListComments(params_get_comments);
                     }
                     $scope.comment = {};
+                    $scope.comment.files = [];
                 }, function (error){
                     console.log(error);
                 });
-            }else {
+            /* }else {
                 toogleToaster('error','Alerte',"Vous avez déjà commenté ");
-            }
+            } */
         }
     
         // upload on file select or drop

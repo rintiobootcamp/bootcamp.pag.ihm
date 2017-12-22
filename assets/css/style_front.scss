@@ -349,13 +349,18 @@
     }
 
     .medias-comments {
-        li {
-            list-style: none;
-            .img-thumb-comment {
-                max-height: 100px !important;
-                vertical-align: top;
+        ul{
+            padding-left:0px !important;
+            li {
+                list-style: none;
+                .img-thumb-comment {
+                    margin: 10px 0;
+                    max-height: 100px !important;
+                    vertical-align: top;
+                }
             }
         }
+        
     }
 
     videogular {
