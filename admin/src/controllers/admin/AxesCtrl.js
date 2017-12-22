@@ -21,35 +21,22 @@ angular.module('pag-site')
         getListAxes();
     })
 
-    .controller("AdminNewAxeCtrl", function(ModelAxe, ModelPilier, $scope, $http) {
-        console.log('Admin Nouveau axes controller');
-        var getListPiliers = function() {
-            ModelPilier.list()
-                .then(function(data) {
-                    $scope.listPiliers = data.data;
-                    console.log('$scope.listPiliers', $scope.listPiliers);
-                }, function(error) {
-                    console.log(error);
-                });
-        }
-        getListPiliers();
-
+    .controller("AdminNewAxeCtrl", function(ModelAxe, ModelPilier, $scope, $http, $state) {
+        $scope.axe = {};
         $scope.saveAxe = function() {
-            console.log('Axe saving function called');
-            ModelAxe.create($scope.axe);
+            ModelAxe.save($scope.axe).then(function() {
+                $state.go('admin.axes');
+            });
         }
-
     })
     .controller("AdminEditAxeCtrl", function(ModelAxe, $rootScope, $scope, $stateParams, $state) {
-        console.log('Admin edit axe controller');
-
-        let axe_id = $stateParams.id;
-        $scope.save = axe_id ? 'Mettre à jour' : 'Terminer';
-        $scope.axe_title = axe_id ? "Modifier l'axe " : 'Nouvel axe';
+        let id = $stateParams.id;
+        $scope.save = id ? 'Mettre à jour' : 'Terminer';
+        $scope.axe_title = id ? "Modifier l'axe " : 'Nouvel axe';
         $rootScope.loading = true;
         $scope.axe = {};
 
-        ModelAxe.get(axe_id).then(function(s) {
+        ModelAxe.get(id).then(function(s) {
             $scope.axe = s.data
             $rootScope.loading = false;
         });

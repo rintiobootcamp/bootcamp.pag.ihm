@@ -15,20 +15,13 @@ angular.module('pag-site')
         }
         getListSecteurs();
     })
-    .controller("AdminNewSecteurCtrl", function(ModelSecteur, ModelPilier, $scope, $stateParams) {
-        console.log('Admin Nouveau secteur controller');
-        let secteur_id = $stateParams.id;
-        $scope.save = secteur_id ? 'Mettre à jour' : 'Terminer';
-        var getListPiliers = function() {
-            ModelPilier.list()
-                .then(function(data) {
-                    $scope.listPiliers = data.data;
-                }, function(error) {
-                    console.log(error);
-                });
-        }
-        getListPiliers();
-
+    .controller("AdminNewSecteurCtrl", function(ModelSecteur, ModelPilier, $scope, $state) {
+        $scope.secteur = {};
+        $scope.saveSecteur = function() {
+            ModelAxe.save($scope.secteur).then(function() {
+                $state.go('admin.secteurs');
+            });
+        };
         $scope.pilier = {
             name: ''
         };
