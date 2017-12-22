@@ -31,19 +31,12 @@ angular.module('pag-site')
                     url: API.url + '/projet/projets_regions.json'
                 });
             },
-            create: function(projet) {
+            save: function(projet) {
                 return $http({
-                    method: 'POST',
-                    url: API.url + '/projet',
+                    method: projet.id ? 'PUT' : 'POST',
+                    url: API.proj_fonct_url,
                     data: angular.toJson(projet)
                 })
-            },
-            update: function(projet) {
-                return $http({
-                    method: 'PUT',
-                    url: API.url + '/projet/' + projet.id,
-                    data: angular.toJson(projet)
-                });
             },
             delete(projet_id) {
                 return $http({

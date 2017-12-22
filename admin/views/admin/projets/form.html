@@ -1,74 +1,85 @@
 <div class="main-content white">
-  <div class="container">
-    <h4 class="no-margin-bottom title">{{proj_title}}</h4>
-    <p class="subtitle grey-text text-lighten-1 no-margin-top" ng-show="{{projet.id}}">Créer un nouveau projet</p>
-    <div class="divider"></div>
-    <!-- Content -->
-    <div class="row no-margin">
-      <div class="col s12">
-        <div class="row">
-          <div class="col s12"><p class="no-margin">&nbsp;</p></div>
-          <form class="col s12">
-            <div class="row">
-              <div class="col s12 m-top-infos">
-                <h4 class="no-margin teal-text text-pag">Informations</h4>
-                <b>Veuillez remplir ce formulaire</b>
-              </div>
-              <div class="col s6">
-                <label for="titre"> Nom du projet</label>
-                <input type="text" class="validate" ng-model="titre">
-              </div>
-              <div class="col s6">
-                <label for="titre"> Référence du projet</label>
-                <input type="text" class="validate" ng-model="reference">
-              </div>
-              <div class="col s12">
-                <label for="description">Description du projet</label>
-                <textarea class="materialize-textarea" ng-model="desc"></textarea>
-              </div>
-            <div class="col s6">
-              <label for="date debut"> Date début réel du projet</label>
-              <input time-picker type="text" class="timepicker" ng-model="dateD">
+    <div class="container">
+        <h4 class="no-margin-bottom title">{{proj_title}}</h4>
+        <p
+            class="subtitle grey-text text-lighten-1 no-margin-top"
+            ng-show="{{projet.id}}">Créer un nouveau projet</p>
+        <div class="divider"></div>
+        <!-- Content -->
+        <div class="row no-margin">
+            <div class="col s12">
+                <div class="row">
+                    <div class="col s12">
+                        <p class="no-margin">&nbsp;</p>
+                    </div>
+                    <form class="col s12" ng-submit="saveProject()">
+                        <div class="row">
+                            <div class="col s12 m-top-infos">
+                                <h4 class="no-margin teal-text text-pag">Informations</h4>
+                                <b>Veuillez remplir ce formulaire</b>
+                            </div>
+                            <div class="col s6">
+                                <label for="titre">
+                                    Nom du projet</label>
+                                <input type="text" class="validate" ng-model="projet.nom">
+                            </div>
+                            <div class="col s6">
+                                <label for="titre">
+                                    Référence du projet</label>
+                                <input type="text" class="validate" ng-model="projet.reference">
+                            </div>
+                            <div class="col s12">
+                                <label for="description">Description du projet</label>
+                                <textarea class="materialize-textarea" ng-model="projet.description"></textarea>
+                            </div>
+                            <div class="col s6">
+                                <label for="date debut">
+                                    Date début réel du projet</label>
+                                <input time-picker type="text" class="timepicker" ng-model="projet.dateDebutReel">
+                            </div>
+                            <div class="col s6">
+                                <label for="date fin">
+                                    Date fin réel du projet</label>
+                                <input time-picker type="text" class="timepicker" ng-model="projet.dateFinReel">
+                            </div>
+                            <div class="col s6">
+                                <label for="date debut">
+                                    Date début prévisionel du projet</label>
+                                <input time-picker type="text" class="timepicker" ng-model="projet.dateDebutPrevisionnel">
+                            </div>
+                            <div class="col s6">
+                                <label for="date fin">
+                                    Date fin prévisionel du projet</label>
+                                <input time-picker type="text" class="timepicker" ng-model="projet.dateFinPrevisionnel">
+                            </div>
+                            <div class="col s6">
+                                <label for="budget">Budget prévisionel du projet</label>
+                                <input type="text" class="validate" ng-model="projet.budgetPrevisionnel">
+                            </div>
+                            <div class="col s6">
+                                <label for="cout">
+                                    Coût réel du projet</label>
+                                <input type="text" class="validate" ng-model="projet.coutReel">
+                            </div>
+                            <div class="col s6">
+                                <label for="financement-pr">Financement privé du projet</label>
+                                <input type="text" class="timepicker" ng-model="projet.financementPriveReel">
+                            </div>
+                            <div class="col s6">
+                                <label for="financement-pu">Financement public du projet</label>
+                                <input type="text" class="timepicker" ng-model="projet.financementPublicReel">
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12 center center-align">
+                                    <button type="submit" class="btn btn-large teal pag">Enregistrer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="col s6">
-              <label for="date fin"> Date fin réel du projet</label>
-              <input time-picker type="text" class="timepicker" ng-model="dateF">
-            </div>
-            <div class="col s6">
-              <label for="date debut"> Date début prévisionel du projet</label>
-              <input time-picker type="text" class="timepicker" ng-model="dateDp">
-            </div>
-            <div class="col s6">
-              <label for="date fin"> Date fin prévisionel du projet</label>
-              <input time-picker type="text" class="timepicker" ng-model="dateFp">
-            </div>
-            <div class="col s6">
-              <label for="budget">Budget prévisionel du projet</label>
-              <input type="text" class="validate" ng-model="budget">
-            </div>
-            <div class="col s6">
-              <label for="cout"> Coût réel du projet</label>
-              <input type="text" class="validate" ng-model="cout">
-            </div>
-            <div class="col s6">
-              <label for="financement-pr">Financement privé du projet</label>
-              <input type="text" class="timepicker" ng-model="financementPr">
-            </div>
-            <div class="col s6">
-              <label for="financement-pu">Financement public du projet</label>
-              <input type="text" class="timepicker" ng-model="financementPu">
-            </div>
-            <div class="row">
-              <div class="input-field col s12 center center-align">
-                <a href="#" class="btn btn-large teal pag">{{save}}</a>
-              </div>
-            </div>
-            </div>
-          </form>
         </div>
-      </div>
+        <!-- Content -->
     </div>
-    <!-- Content -->
-  </div>
 
 </div>

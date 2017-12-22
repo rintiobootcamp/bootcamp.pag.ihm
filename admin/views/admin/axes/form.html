@@ -1,53 +1,58 @@
 <div class="main-content white">
-  <div class="container">
-    <h4 class="no-margin-bottom title">{{axe_title}}</h4>
-    <p class="grey-text text-lighten-1 no-margin-top" ng-show="{{axe.id}}">Créer un nouvel axe stratégique</p>
-    <div class="divider"></div>
-    <!-- Content -->
-    <div class="row no-margin">
-      <div class="col s12">
-        <div class="row">
-          <div class="col s12"><p class="no-margin">&nbsp;</p></div>
-          <form  ng-submit="saveAxe()" class="col s12">
-            <div class="row">
-              <div class="col s12 m-top-infos">
-                <h4 class="no-margin teal-text text-pag">Informations</h4>
-                <b>Veuillez remplir ce formulaire</b>
-              </div>
-              <div class="col s6">
-                <label for="name"> Nom de l'axe</label>
-                <input id="nom" type="text" class="validate" ng-model="nom">
-              </div>
-              <div class="col s6">
-                <label class="custom-label">Titre de l'axe</label>
-                <input id="titre" type="text" class="validate" ng-model="titre">
-              </div>
-              <div class="col s12">
-                <label for="textaredescriptiona1">Description de l'axe</label>
-                <textarea id="description" class="materialize-textarea" ng-model="desc"></textarea>
-              </div>
-              <div class="col s12">
-                <label class="custom-label">Description focus de l'axe</label>
-                <textarea id="descriptionF" class="materialize-textarea" ng-model="descF"></textarea>
-              </div>
-              <div class="col s6">
-                <label class="custom-label">Titre focus de l'axe</label>
-                <input id="name" type="text" class="validate" ng-model="titreF">
-              </div>
-              <div class="col s6">
-                <label class="custom-label">Date mise à jour de l'axe</label>
-                <input time-picker id="dateM" type="text" class="validate" ng-model="dateM">
-              </div>
+    <div class="container">
+        <h4 class="no-margin-bottom title">{{axe_title}}</h4>
+        <p class="grey-text text-lighten-1 no-margin-top" ng-show="{{axe.id}}">Créer un nouvel axe stratégique</p>
+        <div class="divider"></div>
+        <!-- Content -->
+        <div class="row no-margin">
+            <div class="col s12">
+                <div class="row">
+                    <div class="col s12">
+                        <p class="no-margin">&nbsp;</p>
+                    </div>
+                    <form ng-submit="saveAxe()" class="col s12">
+                        <div class="row">
+                            <div class="col s12 m-top-infos">
+                                <h4 class="no-margin teal-text text-pag">Informations</h4>
+                                <b>Veuillez remplir ce formulaire</b>
+                            </div>
+                            <div class="col s6">
+                                <label for="name">
+                                    Nom de l'axe</label>
+                                <input id="nom" type="text" class="validate" ng-model="axe.nom">
+                            </div>
+                            <div class="col s6">
+                                <label class="custom-label">Titre de l'axe</label>
+                                <input id="titre" type="text" class="validate" ng-model="axe.titre">
+                            </div>
+                            <div class="col s12">
+                                <label for="textaredescriptiona1">Description de l'axe</label>
+                                <textarea
+                                    id="description"
+                                    class="materialize-textarea"
+                                    ng-model="axe.description"></textarea>
+                            </div>
+                            <div class="col s12">
+                                <label class="custom-label">Description focus de l'axe</label>
+                                <textarea
+                                    id="descriptionF"
+                                    class="materialize-textarea"
+                                    ng-model="axe.descriptionFocus"></textarea>
+                            </div>
+                            <div class="col s6">
+                                <label class="custom-label">Titre focus de l'axe</label>
+                                <input id="name" type="text" class="validate" ng-model="axe.titreFocus">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 center center-align">
+                                <button type="submit" class="btn btn-large teal pag">Enregistrer</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="row">
-              <div class="input-field col s12 center center-align">
-                <a href="#" class="btn btn-large teal pag">{{save}}</a>
-              </div>
-            </div>
-          </form>
         </div>
-      </div>
+        <!-- Content -->
     </div>
-    <!-- Content -->
-  </div>
 </div>

@@ -1,37 +1,47 @@
 <div class="main-content white">
-  <div class="container">
-    <h4 class="no-margin-bottom title">{{sect_title}}</h4>
-    <p class="subtitle grey-text text-lighten-1 no-margin-top" ng-show="{{secteur.id}}">Créer un nouveau secteur</p>
-    <div class="divider"></div>
-    <!-- Content -->
-    <div class="row no-margin">
-      <div class="col s12">
-        <div class="row">
-          <div class="col s12"><p class="no-margin">&nbsp;</p></div>
-          <form class="col s12">
-            <div class="row">
-              <div class="col s12 m-top-infos">
-                <h4 class="no-margin teal-text text-pag">Informations</h4>
-                <b>Veuillez remplir ce formulaire</b>
-              </div>
-              <div class=" col s12">
-                <label for="name"> Nom du secteur</label>
-                <input id="name" type="text" class="validate" ng-model="nom">
-              </div>
-              <div class="col s12">
-                <label for="textarea1">Description du secteur</label>
-                <textarea id="textarea1" class="materialize-textarea" ng-model="desc"></textarea>
-              </div>
+    <div class="container">
+        <h4 class="no-margin-bottom title">{{sect_title}}</h4>
+        <p
+            class="subtitle grey-text text-lighten-1 no-margin-top"
+            ng-show="{{secteur.id}}">Créer un nouveau secteur</p>
+        <div class="divider"></div>
+        <!-- Content -->
+        <div class="row no-margin">
+            <div class="col s12">
+                <div class="row">
+                    <div class="col s12">
+                        <p class="no-margin">&nbsp;</p>
+                    </div>
+                    <form class="col s12" ng-submit="saveSecteur()">
+                        <div class="row">
+                            <div class="col s12 m-top-infos">
+                                <h4 class="no-margin teal-text text-pag">Informations</h4>
+                                <b>Veuillez remplir ce formulaire</b>
+                            </div>
+                            <div class=" col s6">
+                                <label for="name">
+                                    Nom du secteur</label>
+                                <input id="name" type="text" class="validate" ng-model="secteur.nom">
+                            </div>
+                            <div class=" col s6">
+                                <label for="name">
+                                    Icone du secteur</label>
+                                <input id="name" type="text" class="validate" ng-model="secteur.icone">
+                            </div>
+                            <div class="col s12">
+                                <label for="textarea1">Description du secteur</label>
+                                <textarea id="textarea1" class="materialize-textarea" ng-model="secteur.description"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 center center-align">
+                                <button type="submit" class="btn btn-large teal pag">Enregistrer</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="row">
-              <div class="input-field col s12 center center-align">
-                <a href="#" class="btn btn-large teal pag">{{save}}</a>
-              </div>
-            </div>
-          </form>
         </div>
-      </div>
+        <!-- Content -->
     </div>
-    <!-- Content -->
-  </div>
 </div>
