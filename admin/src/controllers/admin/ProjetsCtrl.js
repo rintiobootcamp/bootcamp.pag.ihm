@@ -1,23 +1,26 @@
 angular.module('pag-site')
     .controller("AdminProjetsCtrl", function(ModelProjet, $scope) {
-        $scope.deletePro = function(projet_id) {
-            console.log('Projet delete function ', projet_id);
-            ModelProjet.delete(projet_id);
+        $scope.deletePro = function(id) {
+            if(window.confirm('Êtes-vous sûr de supprimer ce projet?')) {
+                ModelProjet.delete(id).then(getListProjets);
+            }
         }
 
         var getListProjets = function() {
             ModelProjet.list()
                 .then(function(data) {
                     $scope.listProjets = data.data;
-                    console.log('$scope.listProjets ', $scope.listProjets);
                 }, function(error) {
-                    console.log(error);
                 });
         }
         getListProjets();
     })
-    .controller("AdminNewProjetCtrl", function(ModelPilier, $scope, $stateParams) {
+    .controller("AdminNewProjetCtrl", function(ModelProjet, $scope, $stateParams, $state) {
         $scope.saveProject = function() {
+            $scope.projet.dateDebutReel = moment($scope.projet.dateDebutReel).valueOf();
+            $scope.projet.dateFinReel = moment($scope.projet.dateFinReel).valueOf();
+            $scope.projet.dateDebutPrevisionnel = moment($scope.projet.dateDebutPrevisionnel).valueOf();
+            $scope.projet.dateFinPrevisionnel = moment($scope.projet.dateFinPrevisionnel).valueOf();
             ModelProjet.save($scope.projet).then(function() {
                 $state.go('admin.projets');
             });

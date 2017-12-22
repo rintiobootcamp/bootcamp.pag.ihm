@@ -1,13 +1,11 @@
 angular.module('pag-site')
     .controller("AdminPiliersCtrl", function(ModelPilier, $scope, $stateParams) {
-        let pilier_id = $stateParams.id;
-        $scope.save = pilier_id ? 'Mettre à jour' : 'Terminer';
-
-        $scope.deletePil = function(pilier_id) {
-            console.log('Secteur delete function ', pilier_id);
-            ModelPilier.delete(pilier_id);
+        $scope.deletePil = function(id) {
+            if(window.confirm('Êtes-vous sûr de supprimer ce pilier?')) {
+                ModelPilier.delete(id);
+            }
         }
-        console.log('Admin Piliers controller');
+
         var getListPiliers = function() {
             ModelPilier.list()
                 .then(function(data) {
