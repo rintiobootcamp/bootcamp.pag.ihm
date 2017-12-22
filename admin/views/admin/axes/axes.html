@@ -17,8 +17,9 @@
       </thead>
 
       <tbody>
-        <tr ng-repeat='axe in listAxes'>
-          <td>{{$index + 1}}</td>
+        <tr ng-repeat='axe in listAxes track by axe.id'>
+          <td>{{axe.id}}</td>
+          <td>{{axe.nom}}</td>
           <td>{{axe.titre}}</td>
           <td class="center text-center">
             <a href="#" ui-sref="admin.editaxe({'id': axe.id})" class=""><i class="material-icons">edit</i></a>
