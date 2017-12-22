@@ -1,21 +1,16 @@
 angular.module('pag-site')
     .controller("AdminAxesCtrl", function(ModelAxe, $scope, $stateParams) {
-        let axe_id = $stateParams.id;
-        $scope.save = axe_id ? 'Mettre à jour' : 'Terminer';
+        let id = $stateParams.id;
+        $scope.save = id ? 'Mettre à jour' : 'Terminer';
 
-        $scope.deleteAxe = function(axe_id) {
-            console.log('Axe delete function ', axe_id);
-            ModelAxe.delete(axe_id);
+        $scope.deleteAxe = function(id) {
+            ModelAxe.delete(id);
         }
-        console.log('admin ax ctrl');
+
         var getListAxes = function() {
             ModelAxe.list()
                 .then(function(data) {
-                    console.log('data ', data);
                     $scope.listAxes = data.data;
-                    console.log('$scope.listAxes ', $scope.listAxes);
-                }, function(error) {
-                    console.log(error);
                 });
         }
         getListAxes();
