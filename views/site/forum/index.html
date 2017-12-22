@@ -64,24 +64,23 @@
                     </div>
                     <div class="col-md-4">
                         <div class="widget-box filter">
-                            <h3>Liste des forums</h3>
-                                <h5>Projet</h5>
-                                <ui-select ng-model="projetChoose" theme="bootstrap" style="max-width: 400px;" title="Choisir un projet">
-                                    <ui-select-match placeholder="Sélectionner un projet">{{$select.selected.nom | limitTo:40}}<span ng-show="$select.selected.nom.length > 40">...</span></ui-select-match>
-                                    <ui-select-choices repeat="projet in listProjets | filter: $select.search track by projet.id">
-                                        <div ng-bind-html="projet.nom | highlight: $select.search" title="{{projet.nom}}"></div>
-                                    </ui-select-choices>
-                                </ui-select>
-                                <hr>
-                                <h5>Pilier</h5>
-                                <button class="btn btn-sm elem" ng-repeat="p in listPiliers" ng-click="filter('PILIER',p.id)">{{p.nom}}</button>
-                                <hr>
-                                <h5>Axe</h5>
-                                <button class="btn btn-sm elem" ng-repeat="a in listAxes" ng-click="filter('AXE',a.id)">{{a.nom}}</button>
-                                <hr>
-                                <h5>Secteur</h5>
-                                <button class="btn btn-sm elem" ng-repeat="sect in listSecteurs" ng-click="filter('SECTEUR',a.id)">{{sect.nom}}</button>
-                                <hr>
+                            <h3>Filtrer par Projet</h3>
+                            <ui-select ng-model="projetChoose" theme="bootstrap" style="max-width: 400px;" title="Choisir un projet" on-select="filter('PROJET',$item.id)">
+                                <ui-select-match placeholder="Sélectionner un projet">{{$select.selected.nom | limitTo:40}}<span ng-show="$select.selected.nom.length > 40">...</span></ui-select-match>
+                                <ui-select-choices repeat="projet in listProjets | filter: $select.search track by projet.id">
+                                    <div ng-bind-html="projet.nom | highlight: $select.search" title="{{projet.nom}}"></div>
+                                </ui-select-choices>
+                            </ui-select>
+                            <hr>
+                            <h3>Filtrer par Pilier</h3>
+                            <button class="btn btn-sm elem" ng-repeat="p in listPiliers" ng-click="filter('PILIER',p.id)" title="{{p.description}}">{{p.nom}}</button>
+                            <hr>
+                            <h3>Filtrer par Axe</h3>
+                            <button class="btn btn-sm elem" ng-repeat="a in listAxes" ng-click="filter('AXE',a.id)">{{a.nom}}</button>
+                            <hr>
+                            <h3>Filtrer par Secteur</h3>
+                            <button class="btn btn-sm elem" ng-repeat="sect in listSecteurs" ng-click="filter('SECTEUR',sect.id)">{{sect.nom}}</button>
+                            <hr>
                         </div>
                     </div>
                 </div>

@@ -31,6 +31,7 @@ angular.module('pag-site')
             sondage.secteur = secteur_sondage.nom;
           else sondage.secteur = 'Non défini';
         });
+        $scope.globalListSondages = $scope.listSondages;
       }, err => {
         console.log(err);
       });
@@ -58,7 +59,7 @@ angular.module('pag-site')
               .then( function (data) {
                 sondage.typeReponses[key]++;
                 $scope.waiting = false;
-                var setCookie = cookieModel.setSondage('vote',params.entityId);
+                var setCookie = cookieModel.setSondage('vote',sondage.id);
                 if(setCookie.STATUS === 300) {
                     toogleToaster('error','Alerte',setCookie.STATUS.message);
                 }
@@ -77,6 +78,10 @@ angular.module('pag-site')
             $scope.waiting = false;
             toogleToaster('error','Alerte',"Vous avez déjà commenté ");
         }
+      }
+
+      $scope.filter = function (type, id){
+        $scope.listSondages = _.filter($scope.globalListSondages,{'entityId':parseInt(id),'entityType':type});
       }
 
       var toogleToaster = function (type,title, body){

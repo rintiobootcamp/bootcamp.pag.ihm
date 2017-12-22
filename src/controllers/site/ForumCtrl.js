@@ -31,9 +31,14 @@ angular.module('pag-site')
             debat.secteur = secteur_debat.nom;
           else debat.secteur = 'Non défini';
         });
+        $scope.globalListSondages = $scope.listDebats;
       }, err => {
         console.log(err);
       });
+
+      $scope.filter = function (type, id){
+        $scope.listDebats = _.filter($scope.globalListSondages,{'entityId':parseInt(id),'entityType':type});
+      }
   })
 
   .controller("SiteDebatCtrl", function ($sce, ModelSecteur, ModelPilier, ModelAxe, ModelProjet, $scope,$stateParams, CONST, API, Upload,$q, ModelComment, ModelMedia, cookieModel, toaster, ModelDebat) {
