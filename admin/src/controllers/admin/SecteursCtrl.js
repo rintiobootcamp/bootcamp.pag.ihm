@@ -1,9 +1,11 @@
 angular.module('pag-site')
     .controller("AdminSecteursCtrl", function(ModelSecteur, $scope) {
-        $scope.deleteSect = function(secteur_id) {
-            console.log('Secteur delete function ', secteur_id);
-            ModelSecteur.delete(secteur_id);
+        $scope.deleteSect = function(id) {
+            if(window.confirm('Êtes-vous sûr de supprimer ce secteur?')) {
+                ModelSecteur.delete(id).then(getListSecteurs);
+            }
         }
+
         var getListSecteurs = function() {
             ModelSecteur.list()
                 .then(function(data) {

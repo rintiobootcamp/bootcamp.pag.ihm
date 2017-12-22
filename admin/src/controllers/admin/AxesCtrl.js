@@ -1,10 +1,9 @@
 angular.module('pag-site')
     .controller("AdminAxesCtrl", function(ModelAxe, $scope, $stateParams) {
-        let id = $stateParams.id;
-        $scope.save = id ? 'Mettre à jour' : 'Terminer';
-
         $scope.deleteAxe = function(id) {
-            ModelAxe.delete(id);
+            if(window.confirm('Êtes-vous sûr de supprimer cet axe?')) {
+                ModelAxe.delete(id).then(getListAxes);
+            }
         }
 
         var getListAxes = function() {

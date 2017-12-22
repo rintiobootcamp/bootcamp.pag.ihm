@@ -74,14 +74,6 @@ angular.module('pag-site')
         "coordinates": [ 10.029513, 3.187786]
       }
     };
-    /* leafletData.getMap().then(function(map) {
-      new L.labeledCircleMarker(
-        feature.geometry.coordinates.slice().reverse(),
-        feature, {
-          markerOptions: { color: '#050' }
-        }).addTo(map);
-        //new L.Marker([10.029513,3.187786]).addTo(map);
-    }); */
 
     var paths = {
       circle: {
@@ -156,30 +148,14 @@ angular.module('pag-site')
       },
 
       defaults: {
-        scrollWheelZoom: false
+        scrollWheelZoom: false,
+        dragging: false,
+        tap: true,
+        panControl: true
       },
       //paths: paths,
       markers: markers
-
     };
-
-    // $scope.markers = new Array();
-    //
-    // $scope.$on('leafletDirectiveMap.zoomend', function (event, args) {
-    //   if (args.leafletObject._zoom >= 9) {
-    //     $scope.map.paths = [];
-    //     $scope.map.markers = markers;
-    //
-    //     $scope.$on('leafletDirectiveMarker.click', function(event, args){
-    //       $('#modal1').modal('open');
-    //     });
-    //
-    //   }else{
-    //     $scope.map.paths = paths;
-    //     $scope.map.markers = [];
-    //   }
-    // });
-
   }
 
   initializeMap();
