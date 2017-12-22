@@ -17,7 +17,7 @@ angular.module('pag-site')
         return $http({
           method: 'POST',
           url: API.sondage_fonct_url + '/' + idSondage + '/' + key,
-          data: angular.toJson(sondage)
+          data: {}
         })
       },
       create: function(sondage) {

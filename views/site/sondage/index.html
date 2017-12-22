@@ -73,7 +73,7 @@
                     <div class="col-md-4">
                         <div class="filter widget-box">
                             <h3>Filtrer par Projet</h3>
-                            <ui-select ng-model="projetChoose" theme="bootstrap" style="max-width: 400px;" title="Choisir un projet">
+                            <ui-select ng-model="projetChoose" theme="bootstrap" style="max-width: 400px;" title="Choisir un projet" on-select="filter('PROJET',$item.id)">
                                 <ui-select-match placeholder="Sélectionner un projet">{{$select.selected.nom | limitTo:40}}<span ng-show="$select.selected.nom.length > 40">...</span></ui-select-match>
                                 <ui-select-choices repeat="projet in listProjets | filter: $select.search track by projet.id">
                                     <div ng-bind-html="projet.nom | highlight: $select.search" title="{{projet.nom}}"></div>
@@ -87,7 +87,7 @@
                             <button class="btn btn-sm elem" ng-repeat="a in listAxes" ng-click="filter('AXE',a.id)">{{a.nom}}</button>
                             <hr>
                             <h3>Filtrer par Secteur</h3>
-                            <button class="btn btn-sm elem" ng-repeat="sect in listSecteurs" ng-click="filter('SECTEUR',a.id)">{{sect.nom}}</button>
+                            <button class="btn btn-sm elem" ng-repeat="sect in listSecteurs" ng-click="filter('SECTEUR',sect.id)">{{sect.nom}}</button>
                             <hr>
                         </div>
                     </div>

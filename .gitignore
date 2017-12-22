@@ -21,5 +21,6 @@
 /bower_components
 /yarn-error.log
 /vendor
-
+/.vscode
+/.sass-cache
 .byebug_history
