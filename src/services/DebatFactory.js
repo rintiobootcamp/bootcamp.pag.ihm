@@ -4,18 +4,21 @@ angular.module('pag-site')
       get: function (obj){
         return $http({
           method: 'GET',
+          cache:true,
           url: API.debat_fonct_url + '/' + obj.entityId
         });
       },
       getByEntity: function (obj){
         return $http({
           method: 'GET',
+          cache:true,
           url: API.debat_fonct_url + '/'+ obj.entityType + '/' + obj.entityId
         });
       },
       list: function (obj){
         return $http({
           method: 'GET',
+          cache:true,
           url: API.debat_fonct_url
         });
       },

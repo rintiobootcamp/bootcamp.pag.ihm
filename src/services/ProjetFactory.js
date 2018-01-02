@@ -4,6 +4,7 @@ angular.module('pag-site')
       get: function (obj){
         return $http({
           method: 'GET',
+          cache:true,
           //url: API.url + '/projet/projet.json'
           url: API.proj_fonct_url + '/' + obj.entityId
         });
@@ -11,6 +12,7 @@ angular.module('pag-site')
       list: function (){
         return $http({
           method: 'GET',
+          cache:true,
           //url: API.url + '/projet/projets.json'
           url: API.proj_fonct_url
         });
@@ -25,6 +27,7 @@ angular.module('pag-site')
       listByRegions: function (){
         return $http({
           method:'GET',
+          cache:true,
           url:API.url + '/projet/projets_regions.json'
         });
       }

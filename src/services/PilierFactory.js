@@ -4,6 +4,7 @@ angular.module('pag-site')
       get: function (obj){
         return $http({
           method: 'GET',
+          cache:true,
           //url: API.url + '/pilier/pilier.json'
           url: API.cat_fonct_url + 'piliers/'+ obj.entityId
         });
@@ -11,7 +12,7 @@ angular.module('pag-site')
       list: function (){
         return $http({
           method: 'GET',
-          //
+          cache:true,
           //url: API.url + '/pilier/piliers.json'
           url: API.cat_fonct_url + 'piliers'
 

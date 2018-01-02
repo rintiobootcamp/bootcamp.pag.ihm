@@ -4,6 +4,7 @@ angular.module('pag-site')
       list: function (params){
         return $http({
           method: 'GET',
+          cache:true,
           url: API.media_fonct_url + '/' + params.entityType + '/' + params.entityId 
         });
       },
@@ -17,6 +18,7 @@ angular.module('pag-site')
       getAll: function (){
         return $http({
           method: 'GET',
+          cache:true,
           url: API.media_fonct_url
         });
       }

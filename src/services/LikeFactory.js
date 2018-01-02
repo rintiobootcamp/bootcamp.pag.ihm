@@ -3,7 +3,9 @@ angular.module('pag-site')
         return {
             get: function (params){
                 return $http({
-                    method: 'GET',url: API.like_fonct_url + '/' + params.entityType +'/' + params.entityId
+                    method: 'GET',
+                    cache:true,
+                    url: API.like_fonct_url + '/' + params.entityType +'/' + params.entityId
                 });
             },
             post: function (obj){

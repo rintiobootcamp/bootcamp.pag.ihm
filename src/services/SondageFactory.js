@@ -4,12 +4,14 @@ angular.module('pag-site')
       get: function (obj){
         return $http({
           method: 'GET',
+          cache:true,
           url: API.sondage_fonct_url + '/'+ obj.entityType + '/' + obj.entityId
         });
       },
       list: function (obj){
         return $http({
           method: 'GET',
+          cache:true,
           url: API.sondage_fonct_url
         });
       },
