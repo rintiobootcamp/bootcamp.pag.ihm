@@ -8,10 +8,22 @@
   font-size: 25px;
   line-height: 1.1em; }
 
+#main .content-page {
+  min-height: 300px; }
 #main #inner-banner {
   background-image: url(../images/pilier-bg.jpg); }
 #main .title-block {
   margin-top: 30px; }
+#main .btn-style-submit {
+  background-color: #104382;
+  color: #fff;
+  padding: 5px 20px;
+  border: 1px solid transparent; }
+#main .btn-style-undo {
+  background-color: #d33030;
+  color: #fff;
+  padding: 5px 20px;
+  border: 1px solid transparent; }
 #main .services-board .round-icon {
   border: 1px solid transparent; }
   #main .services-board .round-icon .flaticon-svg {
@@ -183,6 +195,9 @@
     position: initial; }
     #main videogular vg-controls .controls-container {
       background-color: #337ab7; }
+#main .filtre-projets-page input.ui-select-search {
+  border: 1px solid #ccc;
+  border-radius: 3px; }
 
 .widget-chat .fixed-action-btn {
   position: fixed;

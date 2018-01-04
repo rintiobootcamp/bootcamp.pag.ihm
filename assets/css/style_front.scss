@@ -18,11 +18,27 @@
     }
 }
 #main {
+    .content-page {
+        min-height: 300px;
+    }
     #inner-banner {
         background-image: url(../images/pilier-bg.jpg);
     }
     .title-block {
         margin-top: 30px;
+    }
+
+    .btn-style-submit {
+        background-color: #104382;
+        color: #fff;
+        padding: 5px 20px;
+        border: 1px solid transparent;
+    }
+    .btn-style-undo {
+        background-color:#d33030;
+        color: #fff;
+        padding: 5px 20px;
+        border: 1px solid transparent;
     }
 
     .services-board {
@@ -372,7 +388,13 @@
               background-color: #337ab7;
             }
           }
-      }
+    }
+    .filtre-projets-page {
+        input.ui-select-search{
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+    }
 
 }
 
