@@ -1,0 +1,81 @@
+<!--MAIN START-->
+<div id="main">
+    <!--INNER BANNER START-->
+    <div id="inner-banner">
+        <div class="container">
+            <div class="inner-banner-heading">
+            <h1>FILTRE SUR LES PROJETS</h1>
+            <em>Filtrer la liste des projets et exporter sous plusieurs formats</em> </div>
+        </div>
+        <div class="breadcrumb-col"> <a ui-sref="home" class="btn-back"><i class="fa fa-home" aria-hidden="true"></i>Retour à l'accueil</a>
+            <ol class="breadcrumb">
+            <li><a ui-sref="home">Accueil</a></li>
+            <li class="active">Filtre projet</li>
+            </ol>
+        </div>
+    </div>
+    <!--INNER BANNER END-->
+
+    <!--SERVICES BOARD SECTION START-->
+    <section class="services-board filtre-projets-page">
+        <div class="container content-page">
+            <div ng-show="table.isSearching" align="center">
+                <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                <br>
+                <span class="">Récupération des projets...</span>
+            </div>
+            
+            <div ng-if="!table.isSearching">
+                <div>
+                    <h3>Filtre sur les projets</h3>
+                    <div class="row">
+                        <div class="col-md-4">
+                            Secteur
+                            <ui-select multiple ng-model="filter.secteurs" theme="bootstrap" close-on-select="false">
+                                <ui-select-match placeholder="Sélectionner les secteurs...">{{$item.nom}}</ui-select-match>
+                                <ui-select-choices repeat="secteur in listSecteurs | filter: $select.search">
+                                    {{secteur.nom}}
+                                </ui-select-choices>
+                            </ui-select>
+                        </div>
+                        <div class="col-md-4">
+
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12" align="center">
+                            <button type="button" ng-click="filter()" class="btn-style-submit">Filter</button>
+                            <button type="button" ng-click="resetFilter()" class="btn-style-undo">Réinitialiser</button>
+                        </div>
+                        
+                    </div>
+                </div>
+                <hr>
+            <table datatable="ng" class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>N°</th>
+                        <th>Projet</th>
+                        <th>Secteur</th>
+                        <th>Date démarrage prévue</th>
+                        <th>Date démar. réel</th>
+                        <th>Budget Prévisionnel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="proj in listProjets">
+                        <td><input type="checkbox"></td>
+                        <td>{{$index + 1}}</td>
+                        <td>{{proj.nom}}</td>
+                        <td>{{proj.secteur.nom}}</td>
+                        <td><span ng-show="(projet.dateDebutPrevisionnel | date: 'yyyy') > '2015'">{{proj.dateDebutPrevisionnel | date:'dd/MMM/yyyy'}}</span></td>
+                        <td><span ng-show="(projet.dateDebutPrevisionnel | date: 'yyyy') > '2015'">{{proj.dateDebutReel | date:'dd/MMM/yyyy'}}</span></td>
+                        <td><span ng-show="proj.budgetPrevisionnel != '1511890346'">{{proj.budgetPrevisionnel}}</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
