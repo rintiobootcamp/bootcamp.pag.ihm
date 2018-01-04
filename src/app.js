@@ -245,6 +245,14 @@
                   }
             })
 
+            .state('filterprojet', {
+                url: "/filtre-projet",
+                controller: "SiteFiltreProjetsCtrl",
+                templateUrl: "views/site/projets/filtreprojets.html",
+                ncyBreadcrumb: {
+                    label: 'Filtre projets'
+                  }
+            })
             ; // End stateProvider
           $locationProvider.html5Mode(true);
     });
