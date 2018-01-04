@@ -17,14 +17,22 @@
         "com.2fdevs.videogular",
         "com.2fdevs.videogular.plugins.controls",
         "com.2fdevs.videogular.plugins.overlayplay",
-        "com.2fdevs.videogular.plugins.poster"
+        "com.2fdevs.videogular.plugins.poster",
+      "datatables",
+      "datatables.columnfilter"
     ])
-    .run(function(amMoment, $rootScope) {
+    .run(function(amMoment, $rootScope, DTDefaultOptions) {
         amMoment.changeLocale('fr');
         $rootScope.videogularThemes = "/node_modules/videogular/dist/themes/default/videogular.css";
-        $rootScope.ngfMaxUpload = '1MB';
+        $rootScope.ngfMaxUpload = '5MB';
         $rootScope.ngfMinUpload = '100';
-    })
+
+        // Path must begin at root folder
+        DTDefaultOptions.setLanguage({
+            sUrl: "src/constantes/datatables-french.json"
+        });
+    }
+    )
     .config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider, AnalyticsProvider) {
         AnalyticsProvider.setAccount('UA-38996803-1');
         $urlRouterProvider.otherwise("/");
@@ -246,7 +254,7 @@
             })
 
             .state('filterprojet', {
-                url: "/filtre-projet",
+                url: "/filtre-projets",
                 controller: "SiteFiltreProjetsCtrl",
                 templateUrl: "views/site/projets/filtreprojets.html",
                 ncyBreadcrumb: {
