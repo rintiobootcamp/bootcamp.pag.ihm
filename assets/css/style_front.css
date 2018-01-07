@@ -1,5 +1,9 @@
 #header .logo img {
   width: 150px; }
+#header .top-row {
+  display: none !important; }
+#header .menu-col {
+  display: none !important; }
 
 #home-banner .holder h1 {
   font-size: 50px !important; }
