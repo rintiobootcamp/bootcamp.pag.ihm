@@ -19,7 +19,8 @@
         "com.2fdevs.videogular.plugins.overlayplay",
         "com.2fdevs.videogular.plugins.poster",
       "datatables",
-      "datatables.columnfilter"
+      "datatables.columnfilter",
+      "slugifier"
     ])
     .run(function(amMoment, $rootScope, DTDefaultOptions) {
         amMoment.changeLocale('fr');
@@ -35,7 +36,7 @@
     )
     .config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider, AnalyticsProvider) {
         AnalyticsProvider.setAccount('UA-38996803-1');
-        $urlRouterProvider.otherwise("/");
+        $urlRouterProvider.otherwise("/erreur");
           // Now set up the states
         $stateProvider
           // ADMIN
@@ -179,7 +180,7 @@
                 }
             })
             .state('projet', {
-                url: "/projet/:id",
+                url: "/projet/:nom/{id:int}",
                 controller: "SiteOneProjetCtrl",
                 templateUrl: "views/site/projets/projet.html",
                 ncyBreadcrumb: {
@@ -259,6 +260,15 @@
                 templateUrl: "views/site/projets/filtreprojets.html",
                 ncyBreadcrumb: {
                     label: 'Filtre projets'
+                  }
+            })
+
+            .state('404', {
+                url: "/erreur",
+                controller: "SiteNotFoundCtrl",
+                templateUrl: "views/site/not-found/error.html",
+                ncyBreadcrumb: {
+                    label: '404'
                   }
             })
             ; // End stateProvider
