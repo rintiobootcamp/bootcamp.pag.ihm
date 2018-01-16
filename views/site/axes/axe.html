@@ -57,30 +57,39 @@
                             </div>
                         </div>
                         <div class="col s6 ratings-icons" ng-show="axe.id > 0">
-                            <strong class="title">Noter cet axe  </strong>
-                            <ul>
-                                <li ng-repeat="n in noteList">
-                                    <span ng-if="n.indice == 1">
-                                        <a ng-click="doNote(n.noteType)" href="" title="{{n.indice}} étoile" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-                                    </span>
-                                    <span ng-if="n.indice > 1">
-                                        <a ng-click="doNote(n.noteType)" href="" title="{{n.indice}} étoiles" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="all-note-view">
-                            <ul>
-                                <li ng-repeat="(key, note) in noteEntity.notes">
-                                    <div class="star block-view">{{key}} star<span ng-show="key > 1">s</span></div>
-                                    <div class="progress noteshow block-view">
-                                        <div align="center" class="progress-bar progress-bar-success" role="progressbar" ng-style="{width:{{((note / noteEntity.total) * 100)}} + '%'}"></div>
-                                    </div>
-                                    <div class="total block-view">{{note}}</div>
-                                </li>
-                                <li>Note moyenne : <b><span ng-show="noteEntity.moyenne == 'NaN'">0</span>{{noteEntity.moyenne   | number:2 }} / 5 </b></li>
-                            </ul>
-                        </div>
+                                <strong class="title">Noter cet axe  </strong>
+                                <ul style="margin-bottom:0">
+                                    <li ng-repeat="n in noteList">
+                                        <span ng-if="n.indice == 1">
+                                            <a ng-click="doNote(n.noteType)" href="" title="{{n.indice}} étoile" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                                        </span>
+                                        <span ng-if="n.indice > 1">
+                                            <a ng-click="doNote(n.noteType)" href="" title="{{n.indice}} étoiles" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                                        </span>
+                                    </li>
+                                    <li><strong style="font-size:18px"><span ng-show="noteEntity.moyenne == 'NaN'">0</span>{{noteEntity.allNotesCount}}</strong> avis</li>
+                                    <li><span ng-show="waiting"><i class="fa fa-circle-o-notch fa-spin"></i></span></li>
+                                </ul>
+                                <div>
+                                    <ul>
+                                        <li>
+                                            <b><span ng-show="noteEntity.moyenne == 'NaN'">0</span>{{noteEntity.moyenne | number:2 }} sur 5 étoiles </b></li>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="all-note-view">
+                                <ul>
+                                    <li ng-repeat="note in noteEntity.notes | orderBy: '-i'">
+                                        <div class="star block-view">{{note.i}} star<span ng-show="note.i > 1">s</span></div>
+                                        <div class="progress noteshow block-view">
+                                            <div align="center" class="progress-bar progress-bar-success" role="progressbar" style="width: {{ ((note.value / noteEntity.allNotesCount) * 100) + '%' }}"></div>
+                                        </div>
+                                        <div class="total block-view"><span ng-show="note.value == 0">0</span>{{ ((note.value / noteEntity.allNotesCount) * 100) | number:2 }} % </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
                         <hr>
                         <div class="comments-section">
                                 <h3>Commentaires</h3>
