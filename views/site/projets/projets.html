@@ -20,26 +20,39 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-9 col-sm-8">
-                    <div class="event-box" ng-repeat="projet in listProjets">
-                        <div class="event-caption">
-                            <div class="date-box" ng-show="(projet.dateDebutPrevisionnel | date: 'yyyy') > '2015'">
-                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                <span>Prévu</span>
-                                {{projet.dateDebutPrevisionnel | date: 'dd'}}
-                                <span>{{projet.dateDebutPrevisionnel | date: 'MMM'}}</span>
-                                <span>{{projet.dateDebutPrevisionnel | date: 'yyyy'}}</span>
-                            </div>
-                            <div class="text-col">
-                            <h3 class="title"><a ui-sref="projet({id:projet.id})">{{projet.id}} - {{projet.nom | capitalizeFirst}}</a></h3>
-                            <p>{{projet.description | limitTo: 150}}<span ng-show="projet.description.length > 150">...</span></p>
-                            <a ui-sref="projet({id:projet.id})" class="btn-style-1">+ Détails</a> </div>
-                        </div>
-                        <div class="frame">
-                            <span>
-                                <img ng-src="/assets/images/projets/projet{{projet.id}}/preview.jpg" alt="img">
-                            </span> 
-                        </div>
-                    </div>
+                    <table datatable="ng" dt-options="tableProjets.dtOptions">
+                        <thead>
+                            <tr>
+                                <td style="display:none"></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="projet in listProjets">
+                                <td>
+                                    <div class="event-box">
+                                        <div class="event-caption">
+                                            <div class="date-box" ng-show="(projet.dateDebutPrevisionnel | date: 'yyyy') > '2015'">
+                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                <span>Prévu</span>
+                                                {{projet.dateDebutPrevisionnel | date: 'dd'}}
+                                                <span>{{projet.dateDebutPrevisionnel | date: 'MMM'}}</span>
+                                                <span>{{projet.dateDebutPrevisionnel | date: 'yyyy'}}</span>
+                                            </div>
+                                            <div class="text-col">
+                                            <h3 class="title"><a ui-sref="projet({nom: (projet.nom | slugify), id: projet.id})">{{projet.id}} - {{projet.nom | capitalizeFirst}}</a></h3>
+                                            <p>{{projet.description | limitTo: 150}}<span ng-show="projet.description.length > 150">...</span></p>
+                                            <a ui-sref="projet({nom: (projet.nom | slugify), id: projet.id})" class="btn-style-1">+ Détails</a> </div>
+                                        </div>
+                                        <div class="frame">
+                                            <span>
+                                                <img ng-src="/assets/images/projets/projet{{projet.id}}/preview.jpg" alt="img">
+                                            </span> 
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="col-md-3 col-sm-4">
                     <aside>

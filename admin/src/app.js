@@ -2,8 +2,25 @@
     'use strict';
     angular.module('pag-site', [
             "ui.router", "ngResource",
-            "ui.select", "chart.js", "angular-google-analytics"
+            "ui.select", "chart.js", "angular-google-analytics",
+            "ui.tinymce"
         ])
+        .run(function($rootScope) {
+            $rootScope.globalConfigEditText = {
+                height: 100,
+                menubar: false,
+                readonly:false,
+                plugins: [
+                    'advlist autolink lists link image charmap print preview anchor textcolor',
+                    'searchreplace visualblocks code',
+                    'insertdatetime media table contextmenu code'
+                  ],
+                  toolbar: 'formatselect | bold italic underline strikethrough forecolor backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat',
+                skin: 'lightgray',
+                themes : 'modern',
+                language: 'fr_FR'
+            };
+        })
         .config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider, ChartJsProvider, AnalyticsProvider) {
             ChartJsProvider.setOptions({ colors : [ '#803690', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'] });
             AnalyticsProvider.setAccount('UA-38996803-1');

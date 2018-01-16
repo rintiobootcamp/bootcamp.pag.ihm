@@ -4,7 +4,6 @@ angular.module('pag-site')
       get: function (obj){
         return $http({
           method: 'GET',
-          cache:true,
           //url:  API.url + '/note/notes.json',
           url: API.note_fonct_url + '/' + obj.entityType + '/' + obj.entityId
         });

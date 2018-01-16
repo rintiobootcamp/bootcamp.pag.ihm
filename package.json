@@ -32,6 +32,7 @@
     "angular-resource": "^1.6.7",
     "angular-sanitize": "^1.6.7",
     "angular-simple-chat": "^1.0.11",
+    "angular-slugify": "^1.0.3",
     "angular-ui-tinymce": "0.0.19",
     "angularjs-toaster": "^2.2.0",
     "datatables.net": "^1.10.16",

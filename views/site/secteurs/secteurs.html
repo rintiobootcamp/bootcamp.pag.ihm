@@ -39,7 +39,7 @@
                             <div ng-show="secteur.getreadMoreState">
                                 <ul class="listprojets">
                                     <li ng-repeat="p in secteur.projets">
-                                        <a ui-sref="projet({id:p.id})">{{p.id}} - {{p.nom | capitalizeFirst}}</a>
+                                        <a ui-sref="projet({nom: (p.nom | slugify), id: p.id})">{{p.id}} - {{p.nom | capitalizeFirst}}</a>
                                     </li>
                                 </ul>
                             </div>

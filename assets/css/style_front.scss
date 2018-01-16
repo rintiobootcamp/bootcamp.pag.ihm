@@ -219,6 +219,23 @@
             border: 1px solid #ccc;
             border-left: none;
         }
+        .event-caption {
+            height: 288px;
+        }
+        .dataTable {
+            border:none;
+        }
+        .dataTables_length {
+            display: none;
+        }
+        .dataTables_filter {
+            float: left;
+            text-align: left;
+            margin-left: 10px;
+            input {
+                margin-left: 0px;
+            }
+        }
     }
 
     .projet-page {
@@ -395,10 +412,39 @@
             }
           }
     }
+
+    .dataTables_filter {
+        input[type="search"] {
+            height: 35px;
+        }
+    }
+
     .filtre-projets-page {
         input.ui-select-search{
-            border: 1px solid #ccc;
-            border-radius: 3px;
+            float:none;
+        }
+    }
+
+    .dataTables_paginate {
+        .paginate_button{
+            background-color: #fff !important;
+            border: 2px solid #ccc;
+            color: #777 !important;
+            font-size:14px;
+            padding: 8px 15px;
+            text-transform: uppercase;
+            margin:0 2px;
+            border-radius: 0;
+            &:hover {
+                background: #d33030 !important;
+                color:#fff !important;
+                border: 2px solid #d33030;
+            }
+            &.current {
+                background: #d33030 !important;
+                color:#fff !important;
+                border: 2px solid #d33030;
+            }
         }
     }
 
@@ -449,11 +495,15 @@
             background: #104382;
             color: #fff;
         }
+        .message {
+            text-align: left;
+        }
     }
 
 }
 
 .all-note-view {
+    margin-top:15px;
     li{
         margin-bottom: 10px;
         list-style: none;
@@ -494,4 +544,19 @@
   .projet-content img {
     width: 290px !important;
   }
+}
+
+footer {
+    .footer-social {
+        width: 50%;
+        min-width: 400px;
+        display: inline-block;
+    }
+    .copyright {
+        display: inline-block;
+        float: right;
+        img{
+            width: 200px;
+        }
+    }
 }
