@@ -73,8 +73,8 @@
                         </div>
                     </div>
                     <div class="col s6 ratings-icons" ng-show="projet.id > 0">
-                        <strong class="title">Noter ce projet  </strong>
-                        <ul>
+                        <p class="title"><b>Noter ce projet</b>  </p>
+                        <ul style="margin-bottom:0">
                             <li ng-repeat="n in noteList">
                                 <span ng-if="n.indice == 1">
                                     <a ng-click="doNote(n.noteType)" href="" title="{{n.indice}} étoile" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
@@ -83,18 +83,27 @@
                                     <a ng-click="doNote(n.noteType)" href="" title="{{n.indice}} étoiles" class="secondary-content"><i class="fa fa-star-o" aria-hidden="true"></i></a>
                                 </span>
                             </li>
+                            <li><strong style="font-size:18px"><span ng-show="noteEntity.moyenne == 'NaN'">0</span>{{noteEntity.allNotesCount}}</strong> avis</li>
+                            <li><span ng-show="waiting"><i class="fa fa-circle-o-notch fa-spin"></i></span></li>
                         </ul>
+                        <div>
+                            <ul>
+                                <li>
+                                    <b><span ng-show="noteEntity.moyenne == 'NaN'">0</span>{{noteEntity.moyenne | number:2 }} sur 5 étoiles </b></li>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="all-note-view">
                         <ul>
-                            <li ng-repeat="(key, note) in noteEntity.notes">
-                                <div class="star block-view">{{key}} star<span ng-show="key > 1">s</span></div>
+                            <li ng-repeat="note in noteEntity.notes | orderBy: '-i'">
+                                <div class="star block-view">{{note.i}} star<span ng-show="note.i > 1">s</span></div>
                                 <div class="progress noteshow block-view">
-                                    <div align="center" class="progress-bar progress-bar-success" role="progressbar" ng-style="{width:{{((note / noteEntity.total) * 100)}} + '%'}"></div>
+                                    <div align="center" class="progress-bar progress-bar-success" role="progressbar" style="width: {{ ((note.value / noteEntity.allNotesCount) * 100) + '%' }}"></div>
                                 </div>
-                                <div class="total block-view">{{note}}</div>
+                                <div class="total block-view"><span ng-show="note.value == 0">0</span>{{ ((note.value / noteEntity.allNotesCount) * 100) | number:2 }} % </div>
                             </li>
-                            <li>Note moyenne : <b><span ng-show="noteEntity.moyenne == 'NaN'">0</span>{{noteEntity.moyenne | number:2 }} / 5 </b></li>
+                            
                         </ul>
                     </div>
                     <hr>
@@ -214,7 +223,7 @@
                         <li ng-repeat="oth in listOtherProjetsSecteur" ng-if="oth.id != projet.id">
                             <div class="date-box"><span>{{oth.id}}</span></div>
                             <div class="text-col">
-                                <a ui-sref="projet({id:oth.id})" class="">{{oth.nom | capitalizeFirst}}</a>
+                                <a ui-sref="projet({nom: (oth.nom | slugify), id: oth.id})" class="">{{oth.nom | capitalizeFirst}}</a>
                                 <span class="time">Démarrage <i class="fa fa-clock-o" aria-hidden="true"></i>{{projet.dateDebutPrevisionnel | date: 'dd MMM yyyy'}}</span>
                             </div>
                         </li>
@@ -227,7 +236,7 @@
                     <ul>
                         <li ng-repeat="oth in listOtherProjetsSecteur | limitTo:3" ng-if="oth.id != projet.id">
                             <div class="text-area">
-                                <a ui-sref="projet({id:oth.id})">{{oth.nom | capitalizeFirst}}</a>
+                                <a ui-sref="projet({nom: (oth.nom | slugify), id: oth.id})">{{oth.nom | capitalizeFirst}}</a>
                                 <span><i class="fa fa-calendar" aria-hidden="true"></i>{{projet.dateDebutPrevisionnel | date: 'dd MMM yyyy'}}</span>
                             </div>
                         </li>
