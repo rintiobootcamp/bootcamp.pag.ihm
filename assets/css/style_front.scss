@@ -391,8 +391,12 @@
     }
     .filtre-projets-page {
         input.ui-select-search{
-            border: 1px solid #ccc;
-            border-radius: 3px;
+            float:none;
+        }
+        .dataTables_filter {
+            input[type="search"] {
+                height: 35px;
+            }
         }
     }
 

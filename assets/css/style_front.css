@@ -196,8 +196,9 @@
     #main videogular vg-controls .controls-container {
       background-color: #337ab7; }
 #main .filtre-projets-page input.ui-select-search {
-  border: 1px solid #ccc;
-  border-radius: 3px; }
+  float: none; }
+#main .filtre-projets-page .dataTables_filter input[type="search"] {
+  height: 35px; }
 
 .widget-chat .fixed-action-btn {
   position: fixed;
