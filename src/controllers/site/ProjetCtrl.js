@@ -1,5 +1,5 @@
 angular.module('pag-site')
-    .controller("SiteProjetsCtrl", function (ModelProjet, ModelSecteur, $scope, $q, ModelPilier, ModelAxe, CONST) {
+    .controller("SiteProjetsCtrl", function (DTOptionsBuilder, ModelProjet, ModelSecteur, $scope, $q, ModelPilier, ModelAxe, CONST) {
         $q.all([ModelSecteur.list(),ModelProjet.list()])
         .then(values => {
           $scope.listSecteurs = values[0].data;
@@ -15,6 +15,9 @@ angular.module('pag-site')
 
         $scope.searchvalue = '';
 
+        $scope.tableProjets = {};
+        $scope.tableProjets.dtOptions = DTOptionsBuilder.newOptions().withDisplayLength(5);
+            
         $scope.filter = function (type, id){
             $scope.listProjets = _.filter($scope.globalListProjets,{'idSecteur':parseInt(id)});
         }
@@ -377,15 +380,12 @@ angular.module('pag-site')
             ModelNote.get(params_get_comments)
             .then(function (data) {
                 $scope.noteEntity = data.data;
-                $scope.noteEntity.total = $scope.noteEntity.noteFiveCounts
-                 + $scope.noteEntity.noteFourCounts + $scope.noteEntity.noteOneCounts
-                 + $scope.noteEntity.noteThreeCounts + $scope.noteEntity.noteTwoCounts;
-                $scope.noteEntity.notes = {};
-                $scope.noteEntity.notes[1] = $scope.noteEntity.noteOneCounts;
-                $scope.noteEntity.notes[2] = $scope.noteEntity.noteTwoCounts;
-                $scope.noteEntity.notes[3] = $scope.noteEntity.noteThreeCounts;
-                $scope.noteEntity.notes[4] = $scope.noteEntity.noteFourCounts;
-                $scope.noteEntity.notes[5] = $scope.noteEntity.noteFiveCounts;
+                $scope.noteEntity.notes = [];
+                $scope.noteEntity.notes.push({i: 1,value: $scope.noteEntity.noteOneCounts});
+                $scope.noteEntity.notes.push({i: 2,value: $scope.noteEntity.noteTwoCounts});
+                $scope.noteEntity.notes.push({i: 3,value: $scope.noteEntity.noteThreeCounts});
+                $scope.noteEntity.notes.push({i: 4,value: $scope.noteEntity.noteFourCounts});
+                $scope.noteEntity.notes.push({i: 5,value: $scope.noteEntity.noteFiveCounts});
 
                 console.log($scope.noteEntity);
             });
