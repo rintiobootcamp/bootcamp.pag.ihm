@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Widget sondage</title>
+  <link href="/assets/css/custom.css" rel="stylesheet" type="text/css">
+  <!--BOOTSTRAP CSS-->
+  <link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <!--COLOR CSS-->
+  <link href="/assets/css/color.css" rel="stylesheet" type="text/css">
+  <!--RESPONSIVE CSS-->
+  <link href="/assets/css/responsive.css" rel="stylesheet" type="text/css">
+  <!--OWL CAROUSEL CSS-->
+  <link href="/assets/css/owl.carousel.css" rel="stylesheet" type="text/css">
+  <!--Fontawesome CSS-->
+  <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!--Annimation CSS-->
+  <link href="/assets/css/animate.css" rel="stylesheet" type="text/css">
+  <!--Custom Scrollbar CSS-->
+  <link href="/assets/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css">
+  <!--BxSlider CSS-->
+  <link href="/assets/css/jquery.bxslider.css" rel="stylesheet" type="text/css">
+
+  <!-- Datatables -->
+  <link rel="stylesheet" href="/node_modules/angular-datatables/dist/css/angular-datatables.min.css">
+  <link rel="stylesheet" href="/node_modules/datatables.net-dt/css/jquery.datatables.css">
+  <!--FAVICON ICON-->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+  <link type="text/css" rel="stylesheet" href="/node_modules/ui-select/dist/select.css" media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="/node_modules/angularjs-toaster/toaster.min.css">
+  <link href="/assets/css/style_front.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/style_responsive.css" rel="stylesheet" type="text/css">
+  <base href="/">
+</head>
+<body ng-app="pag-site">
+  <!--WRAPPER START-->
+  <div id="wrapper">
+    <div ui-view></div>
+  </div>
+  <!--jQuery min-->
+  <script src="/assets/js/jquery-1.11.3.js"></script>
+  <!--BOOTSTRAP JS-->
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <!--OWL CAROUSEL JS-->
+  <script src="/assets/js/owl.carousel.min.js"></script>
+  <!--SCROLL FOR SIDEBAR NAVIGATION-->
+  <script src="/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <!--BxSlider-->
+  <script src="/assets/js/jquery.bxslider.min.js"></script>
+  <!--FlexSlider -->
+  <script defer src="/assets/js/jquery.flexslider.js"></script>
+  <!--CUSTOM js-->
+  <script src="/assets/js/custom.js"></script>
+
+    <!-- AngularJs core -->
+    <script src="/node_modules/angular/angular.js"></script>
+
+    <script src="/assets/js/lodash.js"></script>
+    <script src="/node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
+    <script src="/node_modules/angular-resource/angular-resource.js"></script>
+    <script src="/node_modules/moment/moment.js"></script>
+    <script src="/node_modules/moment/locale/fr.js"></script>
+    <script src="/node_modules/angular-moment/angular-moment.js"></script>
+    <script src="/node_modules/ui-select/dist/select.js"></script>
+    <script src="/node_modules/angular-sanitize/angular-sanitize.js"></script>
+
+    <script src="/node_modules/angular-cookies/angular-cookies.js"></script>
+    <script src="/node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="/node_modules/angularjs-toaster/toaster.min.js"></script>
+
+    <!-- Datatables -->
+    <!-- <script src="/node_modules/datatables.net/js/jquery.dataTables.js"></script> -->
+
+    <!-- Angular datatables -->
+<!--     <script src="/node_modules/angular-datatables/dist/angular-datatables.js"></script>
+    <script src="/node_modules/angular-datatables/dist/plugins/columnfilter/angular-datatables.columnfilter.min.js"></script> -->
+    
+    <!-- Core application -->
+    <script src="/widget/app.js"></script>
+
+    <!-- Site Controllers -->
+    <script src="/widget/sondage/controllers/WidgetSondageCtrl.js"></script>
+
+    <!-- Constantes -->
+    <script src="/src/constantes/api.js"></script>
+    <script src="/src/constantes/enumerations.js"></script>
+    <script src="/src/constantes/frontend.js"></script>
+
+    <!-- Sevices -->
+    <script src="/src/services/PilierFactory.js"></script>
+    <script src="/src/services/ProjetFactory.js"></script>
+    <script src="/src/services/AxeFactory.js"></script>
+    <script src="/src/services/SecteurFactory.js"></script>
+    <script src="/src/services/SondageFactory.js"></script>
+    <script src="/src/services/cookieFactory.js"></script>
+
+    <!-- Directives -->
+    <script src="/src/directives/dropdownDirective.js"></script>
+    <script src="/src/directives/tabsDirective.js"></script>
+    <script src="/src/directives/collapseDirective.js"></script>
+    <script src="/src/directives/sliderDirective.js"></script>
+    <script src="/src/directives/selectDirective.js"></script>
+    <script src="/src/directives/modalDirective.js"></script>
+    <script src="/src/directives/buttonCollapseDirective.js"></script>
+    <script src="/src/directives/owlCarouselDirective.js"></script>
+    <script src="/src/directives/enterPressDirective.js"></script>
+
+    <!-- Filtres -->
+    <script src="/src/filtres/textTransform.js"></script>
+
+  <!-- End Core application -->
+
+
+</body>
