@@ -32,7 +32,7 @@
           <td>{{projet.coutReel}}</td>
           <td>{{projet.phases}}</td>
           <td class="center text-center">
-            <a ui-sref="admin.editprojet({nom: (projet.nom | slugify), id: projet.id})"><i class="material-icons">edit</i></a>
+            <a ui-sref="admin.editprojet({id: projet.id})"><i class="material-icons">edit</i></a>
             <a href ng-click="deletePro(projet.id)"><i class="material-icons">delete</i></a>
           </td>
         </tr>
