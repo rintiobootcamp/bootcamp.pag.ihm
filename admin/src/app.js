@@ -3,9 +3,12 @@
     angular.module('pag-site', [
             "ui.router", "ngResource",
             "ui.select", "chart.js", "angular-google-analytics",
-            "ui.tinymce"
+            "ui.tinymce",
+            "ngFileUpload"
         ])
-        .run(function($rootScope) {
+        .run(function($rootScope,) {
+            $rootScope.ngfMaxUpload = '5MB';
+            $rootScope.ngfMinUpload = '1';
             $rootScope.globalConfigEditText = {
                 height: 100,
                 menubar: false,
