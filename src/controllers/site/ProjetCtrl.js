@@ -101,6 +101,7 @@ angular.module('pag-site')
             entityId:$stateParams.id,
             entityType: 'PROJET'
         }
+        $scope.images_projets = [];
 
         var getListComments = function (params) {
             ModelComment.list(params)
@@ -112,6 +113,17 @@ angular.module('pag-site')
                 });
         }
         getListComments(params_get_comments);
+
+        var getListMedias = function(params) {
+            ModelMedia.list(params)
+                .then( function(data) {
+                    $scope.images_projets = data.data;
+                    console.log($scope.images_projets);
+                    }, function (error) {
+                        console.log(error);
+                });
+        }
+        getListMedias(params_get_comments);
 
         var getMediaComment = function (){
             ModelMedia.getAll()
@@ -391,6 +403,11 @@ angular.module('pag-site')
             });
         }
         getNoteEntity();
+
+        $scope.getImageContent =  function (name){
+            var t = _.filter($scope.images_projets, {'originalName':name});
+            return (t.length > 0) ? (t[0].lien) : '';
+        }
     })
     ;
 
