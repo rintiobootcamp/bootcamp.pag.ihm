@@ -1,11 +1,10 @@
 angular.module('pag-site')
-.controller("SiteHomeCtrl", function (ModelProjet, ModelAxe, $scope, leafletMapEvents, leafletData, ModelSecteur) {
+.controller("SiteHomeCtrl", function (ModelProjet, ModelAxe,ModelMedia , $scope, leafletMapEvents, leafletData, ModelSecteur) {
 
   var getListSecteurs = function (){
     ModelSecteur.list()
       .then( function (data) {
         $scope.listSecteurs = data.data;
-        console.log($scope.listSecteurs);
       }, function (error){
 
       })
@@ -46,14 +45,35 @@ angular.module('pag-site')
   }
   getCountProjets();
 
+  var params_medias_projet = {
+    entityType: 'PROJET'
+  };
+
   var getListProjets = function (){
     ModelProjet.list()
     .then(function(data){
       //$scope.listProjets = data.data;
-      $scope.listFourProjets = data.data.slice(0,4);
+      $scope.listFourProjets_temp = data.data.slice(0,4);
+      angular.forEach($scope.listFourProjets_temp, function (value, i){
+        params_medias_projet.entityId = value.id;
+        getListMedias(params_medias_projet)
+          .then(function(medias){
+            var t = _.filter(medias.data, {'originalName':'preview.jpg'});
+            var lien  = (t.length > 0) ? (t[0].lien) : '';
+            $scope.listFourProjets_temp[i].lien_preview = lien;
+          }, function (error){
+
+          });
+      });
+      $scope.listFourProjets = $scope.listFourProjets_temp;
     }, function (error){
       console.log(error);
     });
+  }
+
+  var getListMedias = function(params) {
+    return ModelMedia.list(params);
+        
   }
   getListProjets();
 

@@ -22,7 +22,7 @@
             <div class="col-md-9 col-sm-8">
             <div class="event-box">
                 <div class="frame">
-                    <img ng-src="/assets/images/projets/projet{{projet.id}}/preview.jpg" alt="img">
+                    <img ng-src="{{getImageContent('preview.jpg')}}" alt="Image illustratif du projet">
                     <div class="event-timer">
                         <div class="defaultCountdown"></div>
                     </div>
@@ -48,16 +48,16 @@
                         </section>
                         <section class="impacts bg2">
                             <div class="title">Impacts économiques et sociaux à 10 ans</div>
-                            <p class="content"><img ng-src="/assets/images/projets/projet{{projet.id}}/1.png" alt="Impacts économiques et sociaux à 10 ans"></p>
+                            <p class="content"><img ng-src="{{getImageContent('1.png')}}" alt="Impacts économiques et sociaux à 10 ans"></p>
                         </section>
                         <section class="calendrier bg2">
                             <div class="title">Calendrier indicatif</div>
-                            <p class="content"><img ng-src="/assets/images/projets/projet{{projet.id}}/2.png" alt="Calendrier indicatif"></p>
+                            <p class="content"><img ng-src="{{getImageContent('2.png')}}" alt="Calendrier indicatif"></p>
                         </section>
                         <section class="financement bg2">
                             <!-- <div class="title">Besoins de financement</div>
                             <p class="content"></p> -->
-                            <img ng-src="/assets/images/projets/projet{{projet.id}}/3.png" alt="Financement">
+                            <img ng-src="{{getImageContent('3.png')}}" alt="Financement">
                         </section>
                     </div>
                     <div class="share-box">

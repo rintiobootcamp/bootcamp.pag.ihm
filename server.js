@@ -14,6 +14,10 @@ app.get('/admin/*', function(req, res) {
   res.sendFile(path.join(__dirname + '/admin/index.html'));
 });
 
+app.get('/widget/*', function(req, res) {
+  res.sendFile(path.join(__dirname + '/widget/index.html'));
+});
+
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });

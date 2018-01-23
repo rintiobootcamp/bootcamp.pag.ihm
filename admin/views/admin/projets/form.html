@@ -69,9 +69,32 @@
                                 <label for="financement-pu">Financement public du projet</label>
                                 <input type="text" class="timepicker" ng-model="projet.financementPublicReel">
                             </div>
+                            <div class="col s6">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-paperclip"></i> Fichiers </span>
+                                    <input class="form-control" type="file" ngf-select="" name="file" ng-model="uploadFiles" ngf-max-size="ngfMaxUpload" ngf-min-height="ngfMinUpload" ngf-accept="'image/*,audio/*,video/*'" ngf-multiple="true">
+                                </div>
+                                <span class="help">Taille maximale : {{ngfMaxUpload}}</span>
+                            </div>
                             <div class="row">
                                 <div class="input-field col s12 center center-align">
                                     <button type="submit" class="btn btn-large teal pag">Enregistrer</button>
+                                </div>
+                            </div>
+                            <div ng-if="projet.id">
+                                <h3>Prévisualisation des images</h3>
+                                <div class="row">
+                                    <div ng-repeat="media in medias" class="col s4">
+                                        <span ng-if="media.type.indexOf('image') != - 1">
+                                            <p>
+                                                <strong>{{media.originalName}}</strong>
+                                                <img ng-src="{{media.lien}}" alt="Image" class="img-thumb-comment" style="max-width: 100%">
+                                            </p>
+                                        </span>
+                                        <span ng-if="media.type.indexOf('video') != - 1">
+                                            <p><iframe src="{{media.lien}}" alt="Vidéo" class="img-thumb-comment"></iframe></p>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>

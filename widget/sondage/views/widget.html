@@ -1,0 +1,67 @@
+<!--MAIN START-->
+<div id="main">
+    <!--FORUM SECTION START-->
+    <section class="sondage-page department-page">
+        <section class="department-section department-space">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="messages">
+                            {{globalObject.message}}
+                        </div>
+                        <nav class="navbar navbar-default">
+                            <div class="container-fluid">
+                                <div class="navbar-header">
+                                <h3 class="navbar-text navbar-left">Tous les sondages</h3>
+                                </div>
+                            </div>
+                        </nav>
+                        <ul class="list-group">
+                            <li class="list-group-item" ng-repeat="sondage in listSondages | orderBy:'-id'">
+                                <div class="media">
+                                    <div class="media-left media-top">
+                                        <a href="#">
+                                        <i class="fa fa-user fa-2x"></i>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"> {{sondage.sujet }}</h4>
+                                        <p class="content">
+                                            <ul class="list-group score">
+                                                <li class="list-group-item" ng-repeat="(key, resp) in sondage.typeReponses "><span class="badge">{{resp}}</span><button ng-click="participe(key, sondage)" class="btn btn-link">{{key}}</button></li>
+                                            </ul>
+                                        </p>
+                                        <p>Par <span>Anonyme</span> <span class="label label-primary"><i class="fa fa-clock-o" aria-hidden="true"></i> {{sondage.dateCreation | date: 'dd MMM yyyy'}}</span> dans <span class="label label-success"> {{sondage.entityType}} | {{sondage.secteur | limitTo: 80 | capitalizeFirst}} <span ng-show="sondage.secteur.length > 80">...</span></span></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <toaster-container></toaster-container>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="filter widget-box">
+                            <h3>Filtrer par Projet</h3>
+                            <ui-select ng-model="projetChoose" theme="bootstrap" style="max-width: 400px;" title="Choisir un projet" on-select="filter('PROJET',$item.id)">
+                                <ui-select-match placeholder="Sélectionner un projet">{{$select.selected.nom | limitTo:40}}<span ng-show="$select.selected.nom.length > 40">...</span></ui-select-match>
+                                <ui-select-choices repeat="projet in listProjets | filter: $select.search track by projet.id">
+                                    <div ng-bind-html="projet.nom | highlight: $select.search" title="{{projet.nom}}"></div>
+                                </ui-select-choices>
+                            </ui-select>
+                            <hr>
+                            <h3>Filtrer par Pilier</h3>
+                            <button class="btn btn-sm elem" ng-repeat="p in listPiliers" ng-click="filter('PILIER',p.id)" title="{{p.description}}">{{p.nom}}</button>
+                            <hr>
+                            <h3>Filtrer par Axe</h3>
+                            <button class="btn btn-sm elem" ng-repeat="a in listAxes" ng-click="filter('AXE',a.id)">{{a.nom}}</button>
+                            <hr>
+                            <h3>Filtrer par Secteur</h3>
+                            <button class="btn btn-sm elem" ng-repeat="sect in listSecteurs" ng-click="filter('SECTEUR',sect.id)">{{sect.nom}}</button>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!--FORUM SECTION END-->
+</div>
