@@ -1,14 +1,41 @@
 angular.module('pag-site')
-    .controller("SiteProjetsCtrl", function (DTOptionsBuilder, ModelProjet, ModelSecteur, $scope, $q, ModelPilier, ModelAxe, CONST) {
+    .controller("SiteProjetsCtrl", function (DTOptionsBuilder, ModelProjet, ModelSecteur, $scope, $q, ModelPilier, ModelAxe, CONST, ModelMedia) {
+        var params_medias_projet = {
+            entityType: 'PROJET'
+        };
+
+        var getListMedias = function(params) {
+            return ModelMedia.list(params);   
+        }
+
+        $scope.loadingPage = true;
+
         $q.all([ModelSecteur.list(),ModelProjet.list()])
         .then(values => {
           $scope.listSecteurs = values[0].data;
-          $scope.listProjets = values[1].data;
-          angular.forEach($scope.listSecteurs, function (value, i){
-            var get_piliers = _.filter($scope.listProjets, {'idSecteur':value.id});
-            value.projets = get_piliers;
-          });
-          $scope.globalListProjets = $scope.listProjets;
+          //$scope.listProjets = values[1].data;
+          
+          //$scope.globalListProjets = $scope.listProjets;
+
+          $scope.listProjets_temp = values[1].data;
+            angular.forEach($scope.listProjets_temp, function (value, i){
+                params_medias_projet.entityId = value.id;
+                getListMedias(params_medias_projet)
+                .then(function(medias){
+                    var t = _.filter(medias.data, {'originalName':'preview.jpg'});
+                    var lien  = (t.length > 0) ? (t[0].lien) : '';
+                    $scope.listProjets_temp[i].lien_preview = lien;
+                }, function (error){
+
+                });
+            });
+            $scope.loadingPage = false;
+            $scope.listProjets = $scope.listProjets_temp;
+            
+            angular.forEach($scope.listSecteurs, function (value, i){
+                var get_piliers = _.filter($scope.listProjets, {'idSecteur':value.id});
+                value.projets = get_piliers;
+              });
         },err => {
           console.log(err);
         });

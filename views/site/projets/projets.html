@@ -27,6 +27,11 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <tr ng-show="loadingPage">
+                                <td align="center">
+                                    <span ><i class="fa fa-circle-o-notch fa-spin"></i></span></li>
+                                </td>
+                            </tr>
                             <tr ng-repeat="projet in listProjets">
                                 <td>
                                     <div class="event-box">
@@ -45,7 +50,7 @@
                                         </div>
                                         <div class="frame">
                                             <span>
-                                                <img ng-src="/assets/images/projets/projet{{projet.id}}/preview.jpg" alt="img">
+                                                <img ng-src="{{projet.lien_preview}}" alt="Image preview">
                                             </span> 
                                         </div>
                                     </div>
