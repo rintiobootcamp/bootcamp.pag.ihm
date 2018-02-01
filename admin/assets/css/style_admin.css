@@ -5,6 +5,7 @@
 div.main.dashboard {
     height: auto !important;
     margin-top: 0;
+    font-size: 12px;
 }
 
 .ng-show {

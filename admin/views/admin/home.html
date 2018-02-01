@@ -1,35 +1,85 @@
-<div class="main dashboard">
-    <h2>Dashboard</h2>
-    <select class="ng-show"
-        ng-options="projet.id as projet.nom for projet in projets track by projet.id"
-        ng-model="selectedProjet" ng-change="onProjectChanged(selectedProjet)"></select>
+<div class="main dashboard white">
     <div class="row">
-        <div class="col m6">
-            <div class="card-panel">
-                <div class="panel-heading">
-                    Evolution du nombre de likes par projets
+        <div class="col s12 m12 l12">
+              <div class="card ">
+                <div class="card-content dark-text">
+                  <span class="card-title">Tableau de Bord</span>
                 </div>
-                <like-chart data="data"></like-chart>
             </div>
-        </div>
-        <div class="col m6">
-            <div class="card-panel">
-                <div class="panel-heading">
-                    Le nombre de commentaire par projets
+          </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m6 l6">
+              <div class="card ">
+                <div class="card-content dark-text">
+                  <span class="card-title">Bienvenue sur SUIVIPAG</span>
+                  <p>Ceci est une interface qui vous permet de d'administrer les données publiées sur votre site</p>
+                  <p>Sur votre tableau de bord prenez quelque minutes pour avoir un bref apercu des activités récentes de votre site. </p>
                 </div>
-                <comment-chart data="data"></comment-chart>
+            </div>
+          </div>
+
+        <div class="col s12 m6 l6">
+              <div class="card ">
+                <div class="card-content dark-text">
+                  <span class="card-title">Clin d'oeil</span>
+                  <p>
+                      
+                     <div class="collection">
+                        <a href="#!" class="collection-item"><span class="badge">13</span>commentaires</a>
+                        <a href="#!" class="collection-item"><span class="new badge">1</span>Sondages</a>
+                        <a href="#!" class="collection-item"><span class="badge">0</span>Forum de discussion</a>
+                        <a href="#!" class="collection-item"><span class="badge">137</span>Visites</a>
+                      </div> 
+                  </p>
+                  
+                </div>
+            </div>
+          </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m6 l12">
+            <div class="card ">
+                <div class="card-content dark-text">
+                  <span class="card-title">Stats</span>
+                </div>
             </div>
         </div>
 
+        <div class="col s12 m6 l12">
+                  <div class="col s12 m6 l12">
+                         <select class="ng-show"
+                                ng-options="projet.id as projet.nom for projet in projets track by projet.id"
+                                ng-model="selectedProjet" ng-change="onProjectChanged(selectedProjet)"></select>
+                  </div>
+                  <div class="col s12 m6 l12">
+                    <div class="card-panel">
+                        <div class="panel-heading">
+                            Evolution du nombre de likes par projets
+                        </div>
+                        <like-chart data="data"></like-chart>
+                    </div>
+                  </div>
+
+                  <div class="col s12 m6 l6">
+                    <div class="card-panel">
+                        <div class="panel-heading">
+                            Le nombre de commentaire par projets
+                        </div>
+                        <comment-chart data="data"></comment-chart>
+                    </div>
+                  </div>
+
+                  <div class="col m6">
+                        <div class="card-panel">
+                            <div class="panel-heading">
+                                Le nombre de débat par projets
+                            </div>
+                            <debat-par-post-chart data="data"></debat-par-post-chart>
+                        </div>
+                    </div>
+          </div>
     </div>
-    <div class="row">
-        <div class="col m6">
-            <div class="card-panel">
-                <div class="panel-heading">
-                    Le nombre de débat par projets
-                </div>
-                <debat-par-post-chart data="data"></debat-par-post-chart>
-            </div>
-        </div>
-    </div>
+   
 </div>
