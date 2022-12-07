@@ -37,7 +37,7 @@
     "angularjs-toaster": "^2.2.0",
     "datatables.net": "^1.10.22",
     "datatables.net-dt": "^1.10.16",
-    "express": "^4.16.2",
+    "express": "^4.17.3",
     "jquery": "^3.2.1",
     "leaflet": "^1.2.0",
     "leaflet-labeled-circle": "^1.0.1",
